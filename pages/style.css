@@ -267,6 +267,10 @@ div#playground {
   margin: 0;
   text-align: left;
 	}
+img.IMAGE_CENTER {
+    display: block;
+    margin: 0 auto;
+}
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,600&display=swap');
 .text-special {
 	background-color: #fff;
