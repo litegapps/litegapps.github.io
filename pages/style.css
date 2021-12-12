@@ -269,7 +269,8 @@ div#playground {
 	}
 img.IMAGE_CENTER {
     display: block;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,600&display=swap');
 .text-special {
