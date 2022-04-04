@@ -272,6 +272,14 @@ img.IMAGE_CENTER {
     margin-left: auto;
     margin-right: auto;
 }
+
+.ICON {
+	width: 23px;
+     height: 23px;
+     vertical-align: middle;
+	
+	}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,600&display=swap');
 .text-special {
 	background-color: #fff;
