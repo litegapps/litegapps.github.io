@@ -281,7 +281,8 @@ img.IMAGE_CENTER {
 	}
 
 
-@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@700&family=Neucha&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+
 
 .text-special {
 	background-color: #fff;
@@ -289,10 +290,8 @@ img.IMAGE_CENTER {
 	line-height: 1.3;
 	margin: 0;
 	text-align: center;
-    font-family: 'Edu VIC WA NT Beginner', cursive;
-    font-family: 'Neucha', cursive;
-    font-family: 'Poppins', sans-serif;
     font-size: 20px;
+    font-family: 'Caveat', cursive;
 	}
 	
 
