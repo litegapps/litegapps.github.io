@@ -280,9 +280,7 @@ img.IMAGE_CENTER {
 	
 	}
 
-
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
 
 .text-special {
 	background-color: #fff;
@@ -291,12 +289,12 @@ img.IMAGE_CENTER {
 	margin: 0;
 	text-align: center;
     font-size: 20px;
-    font-family: 'Caveat', cursive;
+    font-family: 'Rubik Moonrocks', cursive;
 	}
 	
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 p{
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
