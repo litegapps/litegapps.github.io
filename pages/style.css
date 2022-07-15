@@ -280,8 +280,7 @@ img.IMAGE_CENTER {
 	
 	}
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 .text-special {
 	background-color: #fff;
 	color: #FF00FF;
@@ -289,7 +288,7 @@ img.IMAGE_CENTER {
 	margin: 0;
 	text-align: center;
     font-size: 20px;
-    font-family: 'Rubik Moonrocks', cursive;
+    font-family: 'Indie Flower', cursive;
 	}
 	
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
