@@ -280,6 +280,11 @@ img.IMAGE_CENTER {
 	
 	}
 
+@font-utama {
+        font-family: font-default;
+        src: url(/pages/font/font-default.ttf);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 .text-special {
@@ -295,5 +300,5 @@ img.IMAGE_CENTER {
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 p{
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'font-default';
 }
