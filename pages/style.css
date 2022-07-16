@@ -299,6 +299,7 @@ img.IMAGE_CENTER {
 	
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-p{
+p, 
+strong {
     font-family: 'font-default';
 }
