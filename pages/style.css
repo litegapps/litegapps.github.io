@@ -285,9 +285,11 @@ img.IMAGE_CENTER {
         src: url(/pages/font/font-default.ttf);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+
 .text-special {
-    font-family: 'Rubik Moonrocks', cursive;
+    font-family: 'Shadows Into Light', cursive;
 	background-color: #fff;
 	color: #FF00FF;
 	line-height: 1.3;
