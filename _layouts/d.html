@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="{{ page.lang }}">
+  <head>
+  {% include google_tag_manager_head.html %}
+  {% include google_adsense.html %}
+  {% include Google_Search_Consose.html %}
+  {% seo title=false %}
+  {% include default.html %}
+  {% include bootstrap_in.html %}
+	<link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+	<title>{{ page.title }}</title>
+	<link rel="shortcut icon" type="image/png" href="/assets/img/icon.ico">
+	</head>
+
+<body>
+{% include google_tag_manager_body.html %}
+{% include navigation.html %}
+{% include ads.html %}
+{{ content }}
+{% include ads_footer.html %}
+{% include footer.html %}
+{% include bootstrap_out.html %}
+
+</body>
+</html>

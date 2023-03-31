@@ -1,0 +1,16 @@
+---
+layout: default
+title: Blog
+lang: eng
+description: blog wahyu6070
+permalink: /blog
+---
+<h1>Latest Post</h1>
+
+<ul> 
+  {% for post in site.posts %}
+    <li>
+      <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+    </li>
+  {% endfor %}
+</ul>

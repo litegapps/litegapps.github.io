@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Mali:wght@600&display=swap');
+.notes {
+	font-family: 'Italianno', cursive;
+	font-family: 'Mali', cursive;
+	}
+@font-face {
+	font-family: main;
+	src: url(/assets/font/main.ttf);
+	}
+p{
+	font-family: main;
+	}
+td, th{
+	font-family: 'Italianno', cursive;
+	font-family: 'Mali', cursive;
+	
+}
+@font-face {
+	font-family: h1;
+	src: url(/assets/font/h1.ttf);
+	}
+	
+h1{
+	font-family: h1;
+	font-size: 27px;
+		}
+.footer{
+  background-color: #fff;
+  color: #3e4042;
+  font-family: 'Italianno', cursive;
+  font-family: 'Mali', cursive;
+  line-height: 1.3;
+  margin: 0;
+  text-align: center;
+}
+.img_mid {
+  background-color: #fff;
+  color: #3e4042;
+  line-height: 1.3;
+  margin: 0;
+  text-align: center;
+}

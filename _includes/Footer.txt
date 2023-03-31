@@ -1,0 +1,22 @@
+<p><div class="MID"><a href="https://www.privacypolicyonline.com/live.php?token=iItZk2mFujekLR9UnSy0SttmUPylMIsP">Privacy Policy</a></div></p>
+<hr>
+<div class="container-fluid">
+ <div class="img_mid">
+	
+	<span><a href="https://youtube.com/channel/UCoqHuQ6CssiZCk3q4haOLUQ"><img src="https://github.com/wahyu6070/Cloud/raw/main/image/social_media/youtube.png" alt="icon sosmed svg" class="ICON"></img></a></span>
+	<span><a href="https://fb.me/litegapps"><img src="https://github.com/wahyu6070/Cloud/raw/main/image/social_media/facebook.png" alt="icon sosmed svg" class="ICON"></img></a></span>
+	<span><a href="https://t.me/litegapps"><img src="https://github.com/wahyu6070/Cloud/raw/main/image/social_media/telegram.png" alt="icon sosmed svg" class="ICON"></img></a></span>
+	<span><a href="https://twitter.com/litegapps"><img src="https://github.com/wahyu6070/Cloud/raw/main/image/social_media/twitter.png" alt="icon sosmed svg" class="ICON"></img></a></span>
+	<span><a href="https://www.tiktok.com/@litegapps"><img src="https://github.com/wahyu6070/Cloud/raw/main/image/social_media/tiktok.png" alt="icon sosmed svg" class="ICON"></img></a></span>
+	<span><a href="https://forum.xda-developers.com/t/litegapps-systemless-custom-gapps.4146013/"><img src="https://github.com/wahyu6070/Cloud/raw/main/image/social_media/xda.png" alt="icon sosmed svg" class="ICON"></img></a></span>
+	<span><a href="https://github.com/litegapps"><img src="https://github.com/wahyu6070/Cloud/raw/main/image/social_media/github.png" alt="icon sosmed svg" class="ICON"></img></a></span>
+	<span><a href="https://paypal.me/wahyu6070"><img src="https://github.com/wahyu6070/Cloud/raw/main/image/social_media/paypal.png" alt="icon sosmed svg" class="ICON"></img></a></span>
+	<span><a href="mailto: litegapps@gmail.com"><img src="https://github.com/wahyu6070/Cloud/raw/main/image/social_media/email.png" alt="icon sosmed svg" class="ICON"></img></a></span>
+ </div>
+</div>
+
+<hr>
+
+<p><div class="MID"><a href="https://www.privacypolicyonline.com/live.php?token=iItZk2mFujekLR9UnSy0SttmUPylMIsP">Privacy Policy</a></div></p>
+<p><div class="MID"><b>© 2022 The LiteGapps Project</b></div></p>
+<p></p>

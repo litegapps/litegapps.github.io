@@ -1,0 +1,16 @@
+
+title: LiteGapps
+email: litegapps@gmail.com
+description: "The LiteGapps Project Official Website"
+baseurl: "/"
+google_site_verification: "94rkeyddW-e9GtaJKEc9vvHYylZvmO9XxdQKoEJ7zTU"
+url: "wahyu6070.github.io"
+twitter_username: litegapps
+github_username:  litegapps
+author: wahyu6070
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
