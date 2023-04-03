@@ -6,8 +6,7 @@ body {
   margin: 0;
   text-align: left;
 }
-h1,
-h2 {
+h1 {
 	margin: 1.25rem 0 1.25rem;
   padding: 0;
   color: #202224;
@@ -19,6 +18,10 @@ h2 {
   color: #777;
 	}
 h2 {
+	margin: 1.25rem 0 1.25rem;
+  padding: 0;
+  color: #202224;
+  font-family: 'Work Sans', sans-serif;
 	font-size: 1.25rem;
   background: #e0ebf5;
   padding: 0.5rem;
@@ -26,6 +29,10 @@ h2 {
   font-weight: normal;
   overflow-wrap: break-word;
   font-weight: bold;
+  float: right;
+  margin: 0 25px 0 0;
+  font-weight: normal;
+  color: #5279c7;
 	}
 .MID {
   background-color: #fff;
