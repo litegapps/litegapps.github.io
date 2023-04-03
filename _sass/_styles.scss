@@ -107,6 +107,17 @@ p {
      vertical-align: middle;
 	
 	}
+a:hover,
+.exampleHeading .text:hover,
+.expandAll:hover {
+  text-decoration: underline;
+}
+a,
+.exampleHeading .text,
+.expandAll {
+  color: #007d9c;
+  text-decoration: none;
+}
 .notes {
 	font-family: 'notes';
 	color: #008000;
