@@ -1,0 +1,49 @@
+h1,
+h2,
+h3,
+h4 {
+  margin: 1.25rem 0 1.25rem;
+  padding: 0;
+  color: #202224;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+}
+h1 {
+  font-size: 1.75rem;
+  line-height: 1;
+  text-align: center;
+}
+h1 .text-muted {
+  color: #777;
+}
+h2 {
+  font-size: 1.25rem;
+  background: #e0ebf5;
+  padding: 0.5rem;
+  line-height: 1.25;
+  font-weight: normal;
+  overflow-wrap: break-word;
+}
+h2 a {
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  overflow-wrap: break-word;
+}
+h3,
+h4 {
+  margin: 1.25rem 0.3125rem;
+}
+h4 {
+  font-size: 1rem;
+  color: #FF8C00;
+}
+h2 > span,
+h3 > span {
+  float: right;
+  margin: 0 25px 0 0;
+  font-weight: normal;
+  color: #5279c7;
+}
