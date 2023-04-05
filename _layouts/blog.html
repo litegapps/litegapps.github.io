@@ -7,17 +7,16 @@
   {% seo title=false %}
   {% include default.html %}
   {% include bootstrap_in.html %}
-    <link rel="stylesheet" href="{{ "/assets/css/doc.css" | relative_url }}">
+	<link rel="stylesheet" href="{{ "/assets/css/doc.css" | relative_url }}">
 	<title>{{ page.title }}</title>
 	<link rel="shortcut icon" type="image/png" href="/assets/img/icon.ico">
 	</head>
-	
 
 <body>
 {% include google_tag_manager_body.html %}
 <nav class="navbar navbar-expand-md navbar-light bg-light mb-4">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/index.html">LiteGapps</a>
+    <a class="navbar-brand" href="https://sourceforge.net/projects/litegapps/files/litegapps_controller/"> <img class="ICON_MAIN" src="/assets/img/icon.png" alt="Litegapps Icon"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -30,29 +29,20 @@
           <a class="nav-link" href="/download.html">Download</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/documentation.html">Documentation</a>
+          <a class="nav-link active" href="/documentation.html">Documentation</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/doc/contributors.html">Contributors</a>
+          <a class="nav-link" href="/doc/contributors.html">Contributors</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 {% include ads.html %}
-	
-<h1>{{ page.title }}</h1>
-<p>{{ page.date | date_to_string }}</p>
-
 {{ content }}
-
 {% include ads_footer.html %}
-
-{% include footer.html %}
-
+{% include footerr.html %}
 {% include bootstrap_out.html %}
+
 </body>
 </html>
-
-
-
