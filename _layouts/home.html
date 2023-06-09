@@ -12,9 +12,47 @@
 	<link rel="stylesheet" href="{{ "/assets/css/home.css" | relative_url }}">
 	<title>{{ page.title }}</title>
 	<link rel="shortcut icon" type="image/png" href="/assets/img/icon.ico">
+	<style>
+        .search-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-right: 5px;
+            width: 300px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+	<script>
+        function search() {
+            var searchTerm = document.getElementById("searchTerm").value;
+            var url = "https://litegapps.site/?search=" + encodeURIComponent(searchTerm);
+            window.location.href = url;
+        }
 	</head>
 
 <body>
+<input type="text" id="searchTerm" placeholder="Enter your search term">
+    <button onclick="search()">Search</button>
 {% include google_tag_manager_body.html %}
 <nav class="navbar navbar-expand-md navbar-light bg-light mb-4">
   <div class="container-fluid">
