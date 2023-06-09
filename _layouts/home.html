@@ -51,8 +51,10 @@
 	</head>
 
 <body>
-<input type="text" id="searchTerm" placeholder="Enter your search term">
-    <button onclick="search()">Search</button>
+<div class="search-container">
+        <input type="text" id="searchTerm" class="search-input" placeholder="Enter your search term">
+        <button onclick="search()" class="search-button">Search</button>
+    </div>
 {% include google_tag_manager_body.html %}
 <nav class="navbar navbar-expand-md navbar-light bg-light mb-4">
   <div class="container-fluid">
