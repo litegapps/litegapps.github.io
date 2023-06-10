@@ -91,4 +91,33 @@ a {
 	font-family: 'notes';
 	color: #008000;
 	}
-	
+
+.search-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-right: 5px;
+            width: 300px;
+        }
+
+        .search-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .search-button:hover {
+            background-color: #45a049;
+        }
+    
