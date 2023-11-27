@@ -1,12 +1,12 @@
 
-title: LiteGapps
-email: litegapps@gmail.com
-description: "The LiteGapps Project Official Website"
+title: LiteG
+email: LiteG@gmail.com
+description: "LiteG Official Website"
 baseurl: "/"
 url: "https://litegapps.github.io"
-twitter_username: litegapps
-github_username:  litegapps
-author: LiteGapps
+twitter_username: liteg
+github_username:  liteg
+author: LiteG
 
 # Build settings
 theme: minima
