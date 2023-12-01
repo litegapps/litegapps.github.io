@@ -1,6 +1,6 @@
 function search() {
             var searchTerm = document.getElementById("searchTerm").value;
-            var url = "https://litegapps.site/?search=" + encodeURIComponent(searchTerm);
+            var url = "https://www.google.com/search?q=" + encodeURIComponent(searchTerm);
             window.location.href = url;
         }
 	
