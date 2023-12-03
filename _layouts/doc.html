@@ -15,29 +15,7 @@
 <body>
 <script src="{{ "/assets/js/a.js" | relative_url }}"></script>
 {% include google_tag_manager_body.html %}
-<nav class="navbar navbar-expand-md navbar-light bg-light mb-4">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/index.html"> <img class="ICON_MAIN" src="/assets/img/icon.png" alt="Litegapps Icon"></a>
-    <div class="search-container">
-        <input type="text" id="searchTerm" class="search-input" placeholder="Search ">
-        <button onclick="search()" class="search-button">Search</button>
-    </div>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/index.html">Home</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" href="/doc/contributors.html">Contributors</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+{% include navbar.html %}
 {% include ads.html %}
 {{ content }}
 {% include ads_footer.html %}
