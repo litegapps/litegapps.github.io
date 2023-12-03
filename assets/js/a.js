@@ -3,5 +3,4 @@ function search() {
             var url = "https://www.google.com/search?q=litegapps+" + encodeURIComponent(searchTerm);
             window.location.href = url;
         }
-	
         
