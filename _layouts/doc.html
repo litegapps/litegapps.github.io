@@ -1,14 +1,11 @@
 <!doctype html>
 <html lang="{{ page.lang }}">
   <head>
-  {% include google_tag_manager_head.html %}
-  {% include google_adsense.html %}
-  {% include Google_Search_Consose.html %}
+  {% include google_head.html %}
+  {% include framework_head.html %}
   {% seo title=false %}
   {% include default.html %}
-  {% include bootstrap_in.html %}
-  <script async src="/assets/js/cookie.js"></script>
-	<link rel="stylesheet" href="{{ "/assets/css/doc.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/doc.css" | relative_url }}">
 	<title>{{ page.title }}</title>
 	<link rel="shortcut icon" type="image/png" href="/assets/img/icon.ico">
 	</head>

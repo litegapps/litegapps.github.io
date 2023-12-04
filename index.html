@@ -186,28 +186,32 @@ tagline: LiteG
         </div>
       </div>
   </div>
-  	<p> </p>
+  	
+</div>
+
+<p> </p>
   	<header class="pb-3 mb-4 border-bottom">
       <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
         <img class="product_title" src="/assets/img/product-title.png" alt="download">
       <span class="fs-4"><p>Post</p></span>
       </a>
     </header>
+    
 	{% if site.paginate %}
     {% assign posts = paginator.posts %}
     {% else %}
     {% assign posts = site.posts %}
     {% endif %}
    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+   
+   <div class="container py-4">
         {%- for post in posts -%}
-        <div class="col-md-6 col-product">
         <div class="h-100 p-5 bg-light border rounded-3">
           <h2> {{ post.title | escape }}</h2>
           <p>{% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | truncate: 185 }}{% endif %}</p>
           <a href="{{ post.url | relative_url }}"><button class="btn btn-outline-secondary" type="button">Read More</button></a>
         </div>
-      </div>
-        {%- endfor -%}
-  
+      {%- endfor -%}
+   </div>   
 </div>
 </main>
