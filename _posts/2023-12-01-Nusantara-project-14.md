@@ -4,7 +4,7 @@ title: Nusantara Project Embracing Android 14 with Custom ROM Excellence
 date:   2023-12-01 11:02:07 +0100
 description: The Nusantara Project, known for its customizable OS based on the Android Open Source Project (AOSP), is set to embrace Android 14 with its upcoming release. This project has garnered attention for offering a unique blend of features and optimizations that cater to the needs of Android enthusiasts
 lang: en
-categories: windows
+categories: Android
 ---
 
 The Nusantara Project, known for its customizable OS based on the Android Open Source Project (AOSP), is set to embrace Android 14 with its upcoming release. This project has garnered attention for offering a unique blend of features and optimizations that cater to the needs of Android enthusiasts
