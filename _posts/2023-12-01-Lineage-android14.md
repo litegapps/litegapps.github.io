@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: LineageOS: The Gateway to Android 14
+title: LineageOS The Gateway to Android 14
 date:   2023-12-01 11:02:07 +0100
 description: LineageOS, the open-source operating system that has captivated the Android community
 lang: en
