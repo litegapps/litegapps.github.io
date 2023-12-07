@@ -53,5 +53,5 @@ Nethunter Kernel is a kernel designed for ethical and penetration testing on Poc
 - Enabled Bluetooth Injection and Sniffing for Bluetooth attacks
 - Enabled various tools and scripts for hacking and testing
 
-Nethunter Kernel is compatible with the Kali Nethunter ROM and app, which provide a full-fledged Linux environment and a graphical interface for hacking and testing. Nethunter Kernel can be downloaded from [GitHub](^5^).
+Nethunter Kernel is compatible with the Kali Nethunter ROM and app, which provide a full-fledged Linux environment and a graphical interface for hacking and testing. Nethunter Kernel can be downloaded from.
 
