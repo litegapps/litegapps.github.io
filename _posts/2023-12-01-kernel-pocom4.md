@@ -8,10 +8,6 @@ categories: kernel
 ---
 
 
-Here is an article I wrote about the best kernel for Poco M4 in markdown format:
-
-# Best Kernel for Poco M4
-
 Poco M4 is a mid-range smartphone that offers a 90Hz display, a 50MP camera, and a 5000mAh battery. It runs on the MediaTek Dimensity 810 chipset, which is a powerful and efficient processor. However, some users may want to customize their device further by installing a custom kernel. A custom kernel can enhance the performance, battery life, stability, and features of the device.
 
 There are not many custom kernels available for Poco M4, as the device is relatively new and the kernel source code has not been released by Xiaomi yet¹³. However, some developers have managed to port some kernels from other devices or create their own kernels based on the stock kernel. In this article, we will review some of the best kernels for Poco M4 based on their features, performance, and user feedback.
