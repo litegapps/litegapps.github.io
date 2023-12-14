@@ -205,7 +205,7 @@ tagline: LiteG, magisk
    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
    
    <div class="container py-4">
-        {%- for post in posts -%}
+        {%- for post in site.posts limit:10 -%}
         <div class="h-100 p-5 bg-light border rounded-3">
           <h2> {{ post.title | escape }}</h2>
           <p>{% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | truncate: 185 }}{% endif %}</p>
