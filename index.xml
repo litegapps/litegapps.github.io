@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LiteGapps on Android News Update</title>
+    <link>https://litegapps.github.io/</link>
+    <description>Recent content in LiteGapps on Android News Update</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="https://litegapps.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://litegapps.github.io/about.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://litegapps.github.io/about.html</guid>
+      <description>We are very open to input and problem reports on the LiteGapps project&#xA;You can contact us Telegram</description>
+    </item>
+    <item>
+      <title>Contact Us</title>
+      <link>https://litegapps.github.io/contact.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://litegapps.github.io/contact.html</guid>
+      <description>To contact all input and problems, contact me Telegram</description>
+    </item>
+    <item>
+      <title>Disclaimer</title>
+      <link>https://litegapps.github.io/disclaimer.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://litegapps.github.io/disclaimer.html</guid>
+      <description>The information provided by litegapps (“we,” “us” or “our”) on https://litegapps.github.io (the “Site”) is for general informational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.&#xA;Under no circumstance shall we have any liability to you for any loss or damage of any kind incurred as a result of the use of the site or reliance on any information provided on the site.</description>
+    </item>
+    <item>
+      <title>Documentation</title>
+      <link>https://litegapps.github.io/doc.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://litegapps.github.io/doc.html</guid>
+      <description>halaman ini berisi documentasi yang lengkap,ikut langkah-langkah dan juga catatan agar tidak salah menggunakan litegapps.&#xA;Install Systemless Install ROM Install magisk in twrp Open Magisk Manager Install LiteGapps Reboot Non systemless Wiped /data Reboot recovery Install ROM Install litegapps reboot system How To Fix ContactNot Sync </description>
+    </item>
+    <item>
+      <title>legal</title>
+      <link>https://litegapps.github.io/legal.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://litegapps.github.io/legal.html</guid>
+      <description> We do not collect any information! </description>
+    </item>
+    <item>
+      <title>Privacy And Policy</title>
+      <link>https://litegapps.github.io/privacypolicy.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://litegapps.github.io/privacypolicy.html</guid>
+      <description>What I Collect, How i use and Changes Third party vendors, including Google, use cookies to serve ads and analyze traffic based on a user&amp;rsquo;s prior visits to this website. Google&amp;rsquo;s use of advertising cookies enables it and its partners to serve ads to this website users based on their visit. Users may opt out of personalized advertising by visiting Ads Settings.&#xA;The information we gather is used to offer, maintain, and secure our users&amp;rsquo; services.</description>
+    </item>
+    <item>
+      <title>Terms Of Service</title>
+      <link>https://litegapps.github.io/termsofservice.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://litegapps.github.io/termsofservice.html</guid>
+      <description>Last updated: December 04, 2023&#xA;Please read these terms and conditions carefully before using Our Service.&#xA;Interpretation and Definitions Interpretation The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.&#xA;Definitions For the purposes of these Terms and Conditions:&#xA;Affiliate means an entity that controls, is controlled by or is under common control with a party, where &amp;quot;control&amp;quot; means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</description>
+    </item>
+  </channel>
+</rss>

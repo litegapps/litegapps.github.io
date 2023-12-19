@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://litegapps.github.io/about.html</loc>
+    <changefreq>always</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://litegapps.github.io/categories/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://litegapps.github.io/contact.html</loc>
+    <changefreq>always</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://litegapps.github.io/disclaimer.html</loc>
+    <changefreq>always</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://litegapps.github.io/doc.html</loc>
+    <changefreq>always</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://litegapps.github.io/legal.html</loc>
+    <changefreq>always</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://litegapps.github.io/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://litegapps.github.io/privacypolicy.html</loc>
+    <changefreq>always</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://litegapps.github.io/tags/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://litegapps.github.io/termsofservice.html</loc>
+    <changefreq>always</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
