@@ -37,9 +37,5 @@
     <loc>https://litegapps.github.io/tags/</loc>
     <changefreq>always</changefreq>
     <priority>0.8</priority>
-  </url><url>
-    <loc>https://litegapps.github.io/termsofservice.html</loc>
-    <changefreq>always</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>
