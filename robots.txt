@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://litegapps.github.io/sitemap.xml

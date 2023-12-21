@@ -5,7 +5,7 @@
     <link>https://litegapps.github.io/</link>
     <description>Recent content in LiteGapps on Android News Update</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en</language>
     <atom:link href="https://litegapps.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
@@ -22,6 +22,20 @@
       <description>To contact all input and problems, contact me Telegram</description>
     </item>
     <item>
+      <title>Cookie policy</title>
+      <link>https://litegapps.github.io/cookie-policy.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://litegapps.github.io/cookie-policy.html</guid>
+      <description>Cookie Policy This is the Cookie Policy, accessible from https://litegapps.github.io/.&#xA;What Are Cookies As is common practice with almost all professional websites this site uses cookies, which are tiny files that are downloaded to your computer, to improve your experience. This page describes what information they gather, how we use it, and why we sometimes need to store these cookies. We will also share how you can prevent these cookies from being stored however this may downgrade or ‘break’ certain elements of the site’s functionality.</description>
+    </item>
+    <item>
+      <title>Cookie policy</title>
+      <link>https://litegapps.github.io/terms-of-service.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://litegapps.github.io/terms-of-service.html</guid>
+      <description>Terms Of Service The information on this page was last updated on july 23, 2023.&#xA;Before using the https://litegapps.github.io website (the “Service”) owned by LiteGapps (“us”, “we”, or “our”), please read these Terms of Service (“Terms”, “Terms of Service”).&#xA;Acceptance and compliance with these Terms are required for access to and use of the Service. All visitors, users, and others who access or use the Service are bound by these Terms.</description>
+    </item>
+    <item>
       <title>Disclaimer</title>
       <link>https://litegapps.github.io/disclaimer.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -33,7 +47,7 @@
       <link>https://litegapps.github.io/doc.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://litegapps.github.io/doc.html</guid>
-      <description>This page contains complete documents, please follow the steps and also notes so as not to use LitegApps incorrectly.&#xA;Install Systemless Install ROM Install magisk in twrp Open Magisk Manager Install LiteGapps Reboot Non systemless Wiped /data Reboot recovery Install ROM Install litegapps reboot system How To Fix ContactNot Sync To overcome this, you can give contact permission in the Google Play Services settings.</description>
+      <description>This page contains complete documents, please follow the steps and also notes so as not to use LitegApps incorrectly.&#xA;Install Systemless Install ROM Install magisk in twrp Open Magisk Manager Install LiteGapps Reboot Non systemless Wiped /data Reboot recovery Install ROM Install litegapps reboot system How To Fix Contact Not Sync To overcome this, you can give contact permission in the Google Play Services settings.</description>
     </item>
     <item>
       <title>legal</title>
@@ -44,9 +58,9 @@
     </item>
     <item>
       <title>Privacy And Policy</title>
-      <link>https://litegapps.github.io/privacypolicy.html</link>
+      <link>https://litegapps.github.io/privacy-policy.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://litegapps.github.io/privacypolicy.html</guid>
+      <guid>https://litegapps.github.io/privacy-policy.html</guid>
       <description>What I Collect, How i use and Changes Third party vendors, including Google, use cookies to serve ads and analyze traffic based on a user&amp;rsquo;s prior visits to this website. Google&amp;rsquo;s use of advertising cookies enables it and its partners to serve ads to this website users based on their visit. Users may opt out of personalized advertising by visiting Ads Settings.&#xA;The information we gather is used to offer, maintain, and secure our users&amp;rsquo; services.</description>
     </item>
   </channel>
