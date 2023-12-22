@@ -18,15 +18,15 @@
     <changefreq>always</changefreq>
     <priority>0.8</priority>
   </url><url>
-    <loc>https://litegapps.github.io/terms-of-service.html</loc>
-    <changefreq>always</changefreq>
-    <priority>0.8</priority>
-  </url><url>
     <loc>https://litegapps.github.io/disclaimer.html</loc>
     <changefreq>always</changefreq>
     <priority>0.8</priority>
   </url><url>
     <loc>https://litegapps.github.io/doc.html</loc>
+    <changefreq>always</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://litegapps.github.io/faq.html</loc>
     <changefreq>always</changefreq>
     <priority>0.8</priority>
   </url><url>
@@ -43,6 +43,10 @@
     <priority>0.8</priority>
   </url><url>
     <loc>https://litegapps.github.io/tags/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.8</priority>
+  </url><url>
+    <loc>https://litegapps.github.io/terms-of-service.html</loc>
     <changefreq>always</changefreq>
     <priority>0.8</priority>
   </url>
