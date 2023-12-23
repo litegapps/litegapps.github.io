@@ -36,18 +36,25 @@
       <description>The information provided by litegapps (“we,” “us” or “our”) on https://litegapps.github.io (the “Site”) is for general informational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.&#xA;Under no circumstance shall we have any liability to you for any loss or damage of any kind incurred as a result of the use of the site or reliance on any information provided on the site.</description>
     </item>
     <item>
-      <title>Documentation</title>
+      <title>Documentation | LiteGapps</title>
       <link>https://litegapps.github.io/doc.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://litegapps.github.io/doc.html</guid>
-      <description>This page contains complete documents, please follow the steps and also notes so as not to use LitegApps incorrectly.&#xA;Install 1.Magisk Module Only [MAGISK] You can install it via magisk manager or twrp or other recovery provided that magisk is installed.&#xA;Device A Only Reboot recovery Install rom Install Recovery Install magisk.zip format data/wipe (if necessary) Reboot system Install magisk.apk Open Magisk Manager Reboot system/OS Open magisk manager and install litegapps Reboot Device A/B partition Reboot Recovery Install rom Install Recovery Reboot Recovery Install Magisk.</description>
+      <description>This page contains complete documents, please follow the steps and also notes so as not to use LitegApps incorrectly.&#xA;How To Fix Contact Not Sync Version [MAGISK], [KSU] or [AUTO] converted into magisk, making Litegapps not working fully. this causes contact sync sometimes not working.&#xA;One &amp;ldquo;solution is you have to install the litegapps version [RECOVERY] it will work fully.&#xA;but there is an alternative way to solve this problem</description>
     </item>
     <item>
-      <title>Documentation</title>
+      <title>FAQ | LiteGapps</title>
       <link>https://litegapps.github.io/faq.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://litegapps.github.io/faq.html</guid>
-      <description>This page contains complete documents, please follow the steps and also notes so as not to use LitegApps incorrectly.&#xA;Install Systemless Install ROM Install magisk in twrp Open Magisk Manager Install LiteGapps Reboot Non systemless Wiped /data Reboot recovery Install ROM Install litegapps reboot system How To Fix Contact Not Sync To overcome this, you can give contact permission in the Google Play Services settings.</description>
+      <description>This page contains some general user questions that we answered.&#xA;What are the risks of installing LiteApps? If you install LiteApps you will not run into serious risks, that&amp;rsquo;s because LiteApps has a safe system when installing. If your device is not compatible then LiteApps will refuse to install.&#xA;Litegapps supports what version of Android? Litegapps has a wide and complete version of Android, supporting Android 5.0 Lollipop up to the latest release of Android 15, and we will quickly respond to updates from Google.</description>
+    </item>
+    <item>
+      <title>Installation | LiteGapps</title>
+      <link>https://litegapps.github.io/install.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://litegapps.github.io/install.html</guid>
+      <description>This page contains all the instructions for installing LiteApps in various modes, make sure you follow the steps correctly.&#xA;Install 1. MAGISK Module Only [MAGISK] Even though this is only [MAGISK] mode, you can install it anywhere, for example via: Magisk Manager, TWRP, Orangefox and others as long as Magisk and its components have been installed.&#xA;Device A Only Reboot recovery Install rom Install Recovery Install magisk.zip format data/wipe (if necessary) Reboot system Install magisk.</description>
     </item>
     <item>
       <title>legal</title>
@@ -55,6 +62,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://litegapps.github.io/legal.html</guid>
       <description> We do not collect any information! </description>
+    </item>
+    <item>
+      <title>News | LiteGapps</title>
+      <link>https://litegapps.github.io/news.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://litegapps.github.io/news.html</guid>
+      <description>This page contains every update and change of LiteGapps&#xA;Update v3.0 Android 14 support At the beginning of January we released the first Android 14 beta support in the release of Google Apps and gradually we released the beta version with several improvements which were reported on GitHub. now we officially release stable android 14 support.&#xA;This update will be immediately released to the four arm 32/64 bit x86 32/64 bit architectures and for the temporary variant we are only releasing the lite variant but we will gradually add the supported variants.</description>
     </item>
     <item>
       <title>Privacy And Policy</title>
