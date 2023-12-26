@@ -40,7 +40,7 @@
       <link>https://litegapps.github.io/doc.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://litegapps.github.io/doc.html</guid>
-      <description>This page contains complete documents, please follow the steps and also notes so as not to use LitegApps incorrectly.&#xA;How To Fix Contact Not Sync Version [MAGISK], [KSU] or [AUTO] converted into magisk, making Litegapps not working fully. this causes contact sync sometimes not working.&#xA;One &amp;ldquo;solution is you have to install the litegapps version [RECOVERY] it will work fully.&#xA;but there is an alternative way to solve this problem</description>
+      <description>This page contains complete documents, please follow the steps and also notes so as not to use LiteGapps incorrectly.&#xA;How To Fix Contact Not Sync Version [MAGISK], [KSU] or [AUTO] converted into magisk, making Litegapps not working fully. this causes contact sync sometimes not working.&#xA;One &amp;ldquo;solution is you have to install the litegapps version [RECOVERY] it will work fully.&#xA;but there is an alternative way to solve this problem</description>
     </item>
     <item>
       <title>FAQ | LiteGapps</title>
@@ -54,7 +54,7 @@
       <link>https://litegapps.github.io/install.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://litegapps.github.io/install.html</guid>
-      <description>This page contains all the instructions for installing LiteApps in various modes, make sure you follow the steps correctly.&#xA;Install 1. MAGISK Module Only [MAGISK] Even though this is only [MAGISK] mode, you can install it anywhere, for example via: Magisk Manager, TWRP, Orangefox and others as long as Magisk and its components have been installed.&#xA;Device A Only Reboot recovery Install rom Install Recovery Install magisk.zip format data/wipe (if necessary) Reboot system Install magisk.</description>
+      <description>This page contains all the instructions for installing LiteGapps in various modes, make sure you follow the steps correctly.&#xA;Install 1. MAGISK Module Only [MAGISK] Even though this is only [MAGISK] mode, you can install it anywhere, for example via: Magisk Manager, TWRP, Orangefox and others as long as Magisk and its components have been installed.&#xA;Device A Only Reboot recovery Install rom Install Recovery Install magisk.zip format data/wipe (if necessary) Reboot system Install magisk.</description>
     </item>
     <item>
       <title>legal</title>
