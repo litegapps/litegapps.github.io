@@ -1,0 +1,18 @@
+_site
+public
+node_modules
+resources
+.sass-cache
+.jekyll-metadata
+*.swp
+*.swo
+
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
