@@ -1,0 +1,135 @@
+<nav class="pagination is-small is-centered"
+     role="navigation" aria-label="pagination">
+  {{ $s := .s }}
+  {{ $p := .p }}
+  {{ $color := .c }}
+
+  {{ if gt .p.TotalPages 1 }}
+    <!-- Previous Page. -->
+    {{ if .p.HasPrev }}
+      <a class="pagination-previous" href="{{ .p.Prev.URL }}" 
+         rel="prev">Previous</a>
+    {{ else }}
+      <a class="pagination-previous" title="This is the first page"
+         disabled>Previous</a>
+    {{ end }}
+
+    <!-- Next Page. -->
+    {{ if .p.HasNext }}
+      <a class="pagination-next" href="{{ .p.Next.URL }}" 
+         rel="next">Next</a>
+    {{ else }}
+      <a class="pagination-next" title="This is the last page"
+         disabled>Next</a>
+    {{ end }}
+
+    <ul class="pagination-list">
+
+    <!-- Page numbers. -->
+    {{- $pagenumber := $p.PageNumber -}}
+
+    <!-- Number of links either side of the current page. -->
+    {{ $adjacent_links := 2 }}
+
+    <!-- $max_links = ($adjacent_links * 2) + 1 -->
+    {{ $max_links := (add (mul $adjacent_links 2) 1) }}
+
+    <!-- $lower_limit = 1 + $adjacent_links -->
+    {{ $lower_limit := (add 1 $adjacent_links) }}
+
+    <!-- $upper_limit = $paginator.TotalPages - $adjacent_links -->
+    {{ $upper_limit := (sub $p.TotalPages $adjacent_links) }}
+
+    {{ if gt $p.TotalPages $max_links }}
+      <!-- First Page. -->
+      {{ if gt (sub $p.PageNumber $adjacent_links) 1 }}
+      <li>
+        <a href="{{ $p.First.URL }}" class="pagination-link" 
+           aria-label="Goto page 1">1</a>
+      </li>
+      {{ end }}
+
+      <!-- Early (More Pages) Indicator. -->
+      {{ if gt (sub $p.PageNumber $adjacent_links) 2 }}
+      <li>
+        <span class="pagination-ellipsis">&hellip;</span>
+      </li>
+      {{ end }}
+    {{ end }}
+
+    {{- range $p.Pagers -}}
+      {{ $s.Set "page_number_flag" false }}
+
+      <!-- Complex page numbers. -->
+      {{ if gt $p.TotalPages $max_links }}
+
+        <!-- Lower limit pages. -->
+        <!-- If the user is on a page which is in the lower limit.  -->
+        {{ if le $p.PageNumber $lower_limit }}
+
+          <!-- If the current loop page is less than max_links. -->
+          {{ if le .PageNumber $max_links }}
+            {{ $s.Set "page_number_flag" true }}
+          {{ end }}
+
+        <!-- Upper limit pages. -->
+        <!-- If the user is on a page which is in the upper limit. -->
+        {{ else if ge $p.PageNumber $upper_limit }}
+
+          <!-- If the current loop page is greater than total pages minus $max_links -->
+          {{ if gt .PageNumber (sub .TotalPages $max_links) }}
+            {{ $s.Set "page_number_flag" true }}
+          {{ end }}
+
+        <!-- Middle pages. -->
+        {{ else }}
+          
+          {{ if and ( ge .PageNumber (sub $p.PageNumber $adjacent_links) ) ( le .PageNumber (add $p.PageNumber $adjacent_links) ) }}
+            {{ $s.Set "page_number_flag" true }}
+          {{ end }}
+
+        {{ end }}
+
+      <!-- Simple page numbers. -->
+      {{ else }}
+
+        {{ $s.Set "page_number_flag" true }}
+      {{ end }}
+
+      <!-- Show Pager. -->
+      {{- if eq ($s.Get "page_number_flag") true -}}
+      <li>
+        {{ if not (eq $pagenumber .PageNumber) }} 
+        <a href="{{ .URL }}" class="pagination-link" 
+           aria-label="Goto page {{ .PageNumber }}">
+          {{ .PageNumber }}
+        </a>
+        {{ else }}
+        <a class="pagination-link is-current {{ $color }}" 
+           aria-label="Page {{ .PageNumber }}">
+          {{ .PageNumber }}
+        </a>
+        {{ end }}
+      </li>
+      {{- end -}}
+    {{ end }}
+
+    {{ if gt $p.TotalPages $max_links }}
+      <!-- Late (More Pages) Indicator. -->
+      {{ if lt (add $p.PageNumber $adjacent_links) (sub $p.TotalPages 1) }}
+      <li>
+        <span class="pagination-ellipsis">&hellip;</span>
+      </li>
+      {{ end }}
+
+      <!-- Last Page. -->
+      {{ if lt (add $p.PageNumber $adjacent_links) $p.TotalPages }}
+      <li>
+        <a href="{{ $p.Last.URL }}" class="pagination-link" 
+           aria-label="Goto page {{ $p.TotalPages }}">{{ $p.TotalPages }}</a>
+      </li>
+      {{ end }}
+    {{ end }}
+    </ul>
+  {{ end }}
+</nav>

@@ -1,0 +1,197 @@
+<nav class="pagination is-small is-centered" 
+     role="navigation" aria-label="pagination">
+  {{ $s := .s }}
+  {{ $p := .p }}
+  {{ $color := .c }}
+
+  {{ if gt .p.TotalPages 1 }}
+    <ul class="pagination-list">
+
+    <!-- Page numbers. -->
+    {{- $pagenumber := $p.PageNumber -}}
+
+    <!-- Number of links either side of the current page. -->
+    {{ $adjacent_links := 2 }}
+
+    <!-- $max_links = ($adjacent_links * 2) + 1 -->
+    {{ $max_links := (add (mul $adjacent_links 2) 1) }}
+
+    <!-- $lower_limit = 1 + $adjacent_links -->
+    {{ $lower_limit := (add 1 $adjacent_links) }}
+
+    <!-- $upper_limit = $paginator.TotalPages - $adjacent_links -->
+    {{ $upper_limit := (sub $p.TotalPages $adjacent_links) }}
+
+      <!-- First Page. -->
+      <li class="icon-first">
+      {{ if not (eq $p.PageNumber 1) }}
+        <a class="pagination-previous hoverable"
+           href="{{ $p.First.URL }}"
+           rel="first">
+          <span class="fas fa-step-backward"></span>&nbsp;
+          <span class="sr-only">First</span>
+        </a>
+      {{ else }}
+        <a class="pagination-previous"
+           title="This is the first page"
+           disabled>
+          <span class="fas fa-step-backward"></span>&nbsp;</a>
+      {{ end }}
+      </li>
+
+      <!-- Previous Page. -->
+      <li class="icon-previous">
+      {{ if .p.HasPrev }}
+        <a class="pagination-previous hoverable"
+           href="{{ $p.Prev.URL }}" 
+           rel="prev">
+          <span class="fas fa-backward"></span>&nbsp;
+          <span class="sr-only">Previous</span>
+        </a>
+      {{ else }}
+        <a class="pagination-previous"
+           title="This is the first page"
+           disabled>
+          <span class="fas fa-backward"></span>&nbsp;</a>
+      {{ end }}
+      </li>
+
+    {{ if gt $p.TotalPages $max_links }}
+      <!-- First Page. -->
+      {{ if gt (sub $p.PageNumber $adjacent_links) 1 }}
+      <li class="first">
+        <a href="{{ $p.First.URL }}" class="pagination-link" 
+           aria-label="Goto page 1">
+           <span class="sr-only">Goto page </span>1</a>
+      </li>
+      {{ end }}
+
+      <!-- Early (More Pages) Indicator. -->
+      {{ if gt (sub $p.PageNumber $adjacent_links) 2 }}
+      <li class="pages-indicator first">
+        <span class="pagination-ellipsis">&hellip;</span>
+      </li>
+      {{ end }}
+    {{ end }}
+
+    {{- range $p.Pagers -}}
+      {{ $s.Set "page_number_flag" false }}
+
+      <!-- Complex page numbers. -->
+      {{ if gt $p.TotalPages $max_links }}
+
+        <!-- Lower limit pages. -->
+        <!-- If the user is on a page which is in the lower limit.  -->
+        {{ if le $p.PageNumber $lower_limit }}
+
+          <!-- If the current loop page is less than max_links. -->
+          {{ if le .PageNumber $max_links }}
+            {{ $s.Set "page_number_flag" true }}
+          {{ end }}
+
+        <!-- Upper limit pages. -->
+        <!-- If the user is on a page which is in the upper limit. -->
+        {{ else if ge $p.PageNumber $upper_limit }}
+
+          <!-- If the current loop page is greater than total pages minus $max_links -->
+          {{ if gt .PageNumber (sub .TotalPages $max_links) }}
+            {{ $s.Set "page_number_flag" true }}
+          {{ end }}
+
+        <!-- Middle pages. -->
+        {{ else }}
+          
+          {{ if and ( ge .PageNumber (sub $p.PageNumber $adjacent_links) ) ( le .PageNumber (add $p.PageNumber $adjacent_links) ) }}
+            {{ $s.Set "page_number_flag" true }}
+          {{ end }}
+
+        {{ end }}
+
+      <!-- Simple page numbers. -->
+      {{ else }}
+
+        {{ $s.Set "page_number_flag" true }}
+      {{ end }}
+
+      {{- if eq ($s.Get "page_number_flag") true -}}
+      <!-- Calculate Offset Class. -->
+        {{ $s.Set "page_offset" (sub .PageNumber $p.PageNumber) }}
+
+        {{ $s.Set "page_offset_class" "" }}
+        {{- if ge ($s.Get "page_offset") 0 -}}
+          {{ $s.Set "page_offset_class" (print "pagination--offset-" ($s.Get "page_offset") ) }}
+        {{- else -}}
+          {{ $s.Set "page_offset_class" (print "pagination--offset" ($s.Get "page_offset") ) }}
+        {{- end -}}
+
+      <!-- Show Pager. -->
+      <li class="{{ $s.Get "page_offset_class" }}">
+        {{ if not (eq $pagenumber .PageNumber) }} 
+        <a href="{{ .URL }}" class="pagination-link" 
+           aria-label="Goto page {{ .PageNumber }}">
+          <span class="sr-only">Goto page </span>{{ .PageNumber }}
+        </a>
+        {{ else }}
+        <a class="pagination-link is-current {{ $color }}" 
+           aria-label="Page {{ .PageNumber }}">
+          <span class="sr-only">Page </span>{{ .PageNumber }}
+        </a>
+        {{ end }}
+      </li>
+      {{- end -}}
+    {{ end }}
+
+    {{ if gt $p.TotalPages $max_links }}
+      <!-- Late (More Pages) Indicator. -->
+      {{ if lt (add $p.PageNumber $adjacent_links) (sub $p.TotalPages 1) }}
+      <li class="pages-indicator last">
+        <span class="pagination-ellipsis">&hellip;</span>
+      </li>
+      {{ end }}
+
+      <!-- Last Page. -->
+      {{ if lt (add $p.PageNumber $adjacent_links) $p.TotalPages }}
+      <li class="last">
+        <a href="{{ $p.Last.URL }}" class="pagination-link" 
+           aria-label="Goto page {{ $p.TotalPages }}">
+           <span class="sr-only">Goto page </span>{{ $p.TotalPages }}</a>
+      </li>
+      {{ end }}
+    {{ end }}
+
+      <!-- Next Page. -->
+      <li class="icon-next">
+      {{ if .p.HasNext }}
+        <a class="pagination-next hoverable"
+           href="{{ $p.Next.URL }}"
+           rel="next">&nbsp;
+          <span class="fas fa-forward"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      {{ else }}
+        <a class="pagination-next"
+           title="This is the last page"
+           disabled>&nbsp;
+          <span class="fas fa-forward"></span></a>
+      {{ end }}
+      </li>
+
+      <!-- Last Page. -->
+      <li class="icon-last">
+      {{ if not (eq $p.PageNumber $p.TotalPages) }}
+        <a class="pagination-next hoverable"
+           href="{{ $p.Last.URL }}"
+           rel="last">&nbsp;
+          <span class="fas fa-step-forward"></span>
+          <span class="sr-only">Last</span>
+        </a>
+      {{ else }}
+        <a class="pagination-next"
+           title="This is the last page"
+           disabled>&nbsp;
+          <span class="fas fa-step-forward"></span></a>
+      {{ end }}
+      </li>
+    </ul>
+  {{ end }}
+</nav>

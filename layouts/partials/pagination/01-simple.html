@@ -1,0 +1,51 @@
+<nav class="pagination is-small is-centered" 
+     role="navigation" aria-label="pagination">
+  {{ if gt .p.TotalPages 1 }}
+    <!-- First Page. -->
+    {{ if not (eq .p.PageNumber 1) }}
+      <a class="pagination-previous" href="{{ .p.First.URL }}" 
+         rel="first">First</a>
+    {{ else }}
+      <a class="pagination-previous" title="This is the first page"
+         disabled>First</a>
+    {{ end }}
+
+    <!-- Previous Page. -->
+    {{ if .p.HasPrev }}
+      <a class="pagination-previous" href="{{ .p.Prev.URL }}" 
+         rel="prev">Previous</a>
+    {{ else }}
+      <a class="pagination-previous" title="This is the first page"
+         disabled>Previous</a>
+    {{ end }}
+
+    <!-- Indicator Number. -->
+    <a class="pagination-link" 
+       disabled>Page: {{ .p.PageNumber }} of {{ .p.TotalPages }}</a>
+
+    <!-- Next Page. -->
+    {{ if .p.HasNext }}
+      <a class="pagination-next" href="{{ .p.Next.URL }}" 
+         rel="next">Next</a>
+    {{ else }}
+      <a class="pagination-next" title="This is the last page"
+         disabled>Next</a>
+    {{ end }}
+
+    <!-- Last Page. -->
+    {{ if not (eq .p.PageNumber .p.TotalPages) }}
+      <a class="pagination-next" href="{{ .p.Last.URL }}" 
+         rel="last">Last</a>
+    {{ else }}
+      <a class="pagination-next" title="This is the last page"
+         disabled>Last</a>
+    {{ end }}
+
+    <!-- Dummy. Do not delete! -->
+    <ul class="pagination-list">
+    </ul>
+
+  {{ end }}
+</nav>
+
+
