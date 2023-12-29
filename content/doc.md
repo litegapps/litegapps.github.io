@@ -89,7 +89,7 @@ Litegapps uses a sophisticated installer so you can use several modes with one f
 
 To do this, simply add an empty file with the name ``/sdcard/force_kopi``.
 
-## How to insall in adb sideload
+## How to install in adb sideload
 
 litegaps supports installation via ``sideload`` on mobile and desktop, the method is quite easy, you just type into the terminal ``adb sideload name_file.zip`` then enter.  The installation process will start and wait for it to finish.
 

@@ -7,7 +7,7 @@ languageCode = "en"
 resourceDir = "../resources"
 DefaultContentLanguage = "en"
 Paginate     = false
-theme        = "wahyu6070"
+theme        = "bootstrap-5"
 
 PygmentsCodeFences = true
 PygmentsStyle      = "monokai"
