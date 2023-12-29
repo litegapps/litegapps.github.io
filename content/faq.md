@@ -67,18 +67,17 @@ Litegapps has many differences from other Google apps, for example:
 4. Litegapps has many variants that users can choose from
 5. Litegapps has an active community and developers.
 
-## Apa yang terjadi jika saya menginstall litegapps++ dengan modul tweaks lain
-jika anda menginstall litegapps dengan modul tweaks lain, ini tidak akan menyebabkan konflik antar modul. karena litegapps controller tidak akan aktif fiturnya jika kalian tidak mengaktifkanya secara manual, jadi ini aman dan tidak menyebabkan konflik antar modul lain.
+## What happens if I install litegaps++ with other tweaks modules
+If you install LiteApps with other tweaks modules, this will not cause conflicts between modules.  because the Litegapps controller feature will not activate if you don't activate it manually, so this is safe and doesn't cause conflicts between other modules.
 
-## apakah saya bisa menginstall addon tanpa paket litegapps atau litegapps++
-ya anda bisa menginstall addon tanpa memasang paket utama litegapps di perangkat, anda bahkan bisa memadukanya dengan custom gapps lain.
+## Can I install the addon without the litegaps or litegaps++ package
+Yes, you can install the addon without installing the main Litegapps package on the device, you can even combine it with other custom GAPPS.
 
-## apakah saya bisa mendistribusikan litegapps
-litegapps memiliki license MIT, jadi anda bebas mendistribuskanya
+## Can i distribute litegaps
+Litegapps has an MIT license, so you are free to distribute it.
 
-## apakah saya bisa menginstall litegapps yang di mana rom saya sudah include gapps
-jika rom anda sudah include gapps tetapi ingin mengintall litegapps, cara dengan menginstall litegapps remover lalu selanjutnya baru kalian bisa menginstall litegapps.
-
+## Can I install Litegapps where my ROM already includes gapps?
+If your ROM already includes GAPPS but you want to install LiteApps, you can install LiteApps remover and then you can install LiteApps.
 
 
 
