@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
 
+Disallow: /terms-of-service.html
+Disallow: /contact.html
+Disallow: /about.html
+Disallow: /disclaimer.html
+Disallow: /cookie-policy.html
+Disallow: /legal.html
+
 Sitemap: https://litegapps.github.io/sitemap.xml
