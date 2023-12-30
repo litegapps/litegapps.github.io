@@ -194,3 +194,6 @@ Even though this is only [recovery] mode, you can also install it in various pla
 
 4. If you use **[AUTO]** and install magisk or kernelsu, you can force it to **[RECOVERY]** mode by adding an empty file ``/sdcard/force_kopi``.
 
+5. Make sure that your ROM does not have gapps installed, if it is installed there will be a conflict in the system.
+
+
