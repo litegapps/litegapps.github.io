@@ -7,6 +7,4 @@ Disallow: /about.html
 Disallow: /disclaimer.html
 Disallow: /cookie-policy.html
 Disallow: /legal.html
-Disallow: /404.html
 
-Sitemap: https://litegapps.github.io/sitemap.xml
