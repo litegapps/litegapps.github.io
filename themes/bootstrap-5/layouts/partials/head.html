@@ -1,7 +1,6 @@
 {{ partial "meta/html.html" . }}
 <title>{{ .Page.Title | default .Site.Title }}</title>
 {{ partial "google/tagmanager_head.html" . }}
-{{ partial "google/searchconsole.html" . }}
 {{ partial "google/analytics.html" . }}
 {{ partial "meta/opengraph.html" . }}
 {{ partial "meta/seo.html" . }}
@@ -11,6 +10,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}" />
 
 {{ if and .Params.ads "true" }}
+{{ partial "google/searchconsole.html" . }}
 {{ partial "google/adsense.html" . }}
 {{ end }}
 {{ partial "style.html" . }}
