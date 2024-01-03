@@ -1,0 +1,43 @@
+
+    <div class="meta-item p-10 hoverable">
+
+      <strong><a class="meta_link brown-text text-darken-3" 
+        href="{{ .Permalink }}">{{ .Title }}
+      </strong></a>
+
+      <div class="meta">
+        <div class="meta_time is-pulled-left">
+          <i class="fa fa-calendar"></i>
+          <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+          {{ .Date.Format "Jan 2, 2006" }}</time>
+        </div>      
+        <div class="meta_tags is-pulled-right">
+          {{ range .Params.tags }}
+            {{ $path := . | urlize }}
+            <a class="tag is-small is-dark brown
+                      z-depth-1 hoverable hvr-pulse"
+               href="{{ printf "tags/%s" $path | absURL }}"
+              >{{ . }}&nbsp;<span class="fa fa-folder"></span>
+            </a>&nbsp;
+          {{ end }}
+        </div>
+      </div> 
+
+      <div class="is-clearfix"></div>
+
+      <div>
+        {{ if .Params.Excerpt -}}
+          {{ .Params.Excerpt }}
+        {{- else -}}
+          {{ .Summary }}
+        {{- end }}
+      </div>
+
+      <div class="read-more is-light">
+        <a href="{{ .Permalink }}" 
+           class="button is-dark is-small brown
+                  z-depth-1 hoverable hvr-bounce-in"
+          >Read More&nbsp;</a>
+      </div>
+
+    </div>
