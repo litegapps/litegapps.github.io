@@ -3,7 +3,7 @@ description:
 title: Installation | LiteGapps
 lang: en
 ads: true
-url: /install.html
+url: /installation.html
 ---
 
 
