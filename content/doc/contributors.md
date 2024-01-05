@@ -17,9 +17,7 @@ You can join in this open source project [click here](https://t.me/wahyu6070)
 
 3. [OpenGapps](https://opengapps.org/)
 
-4. [ApkPure](https://www.apkpure.com)
+4. [osm0sis](https://github.com/osm0sis/AnyKernel3) for anykernel
 
-5. [osm0sis](https://github.com/osm0sis/AnyKernel3) for anykernel
-
-7. [Android Open Source Project](https://developer.android.com/topic/generic-system-image?hl=id)
+5. [Android Open Source Project](https://developer.android.com/topic/generic-system-image?hl=id)
         
