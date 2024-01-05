@@ -11,7 +11,7 @@ You can join in this open source project [click here](https://t.me/wahyu6070)
 
 ## Contributor
 
-1. [wahyu6070](https://wahyu6070.github.io/) (founder and main developer
+1. [wahyu6070](https://wahyu6070.github.io/) (founder and main developer)
 
 2. Team6070 (supported)
 
