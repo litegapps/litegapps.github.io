@@ -5,15 +5,35 @@ lang: en
 url: /doc/uninstall.html
 ---
 
-<h2> Uninstall [MAGISK]</h2>
-<p> Uninstall in magisk manager </p>
-<h2> Uninstall [RECOVERY]</h2>
-<p>• Install 1X = Install litegapps </p>
-<p>• Install 2X = Uninstall litegapps</p>
-<h2> Uninstall [AUTO] convert [MAGISK]</h2>
-<p> Uninstall in magisk manager </p>
-<h2> Uninstall [AUTO] convert[RECOVERY]</h2>
-<p>• Install 1X = Install litegapps </p>
-<p>• Install 2X = Uninstall litegapps</p>
-<h2> Notes</h2>
-<p>Before uninstalling LiteGapps, it is recommended to uninstall Playstore and Google Play Services (GMS) updates. If this is not done, usually in some ROMs a bootloop will occur and other risks, Google applications such as YouTube, Chrome and others will force close.</p>
+
+All of our products including **LiteGapps**, **LiteGapps++**, **Addon**, **Litegapps remover** and **Litegapps controller** have install and uninstall features in one package, so you don't need to prepare an add-on uninstaller.
+
+This page contains all product uninstall instructions from Litegapps, make sure to follow the steps correctly.
+
+## Uninstall [MAGISK] Mode
+
+To uninstall in **MAGISK** mode, you can directly delete it from the Magisk module.
+
+## Uninstall [RECOVERY] Mode
+
+- Install 1X = Means doing installation mode.
+- Install 2X = Means Perform uninstallation mode.
+
+## Uninstall [AUTO] convert [MAGISK] mode
+
+To uninstall in **AUTO** which is converted to **MAGISK** mode, you can directly delete it from the Magisk module.
+
+## Uninstall [AUTO] convert [KSU] mode
+
+To uninstall in **AUTO** which is converted to **KSU** mode, you can delete it directly from the Magisk module.
+
+## Uninstall [AUTO] convert [RECOVERY] mode
+
+- Install 1X = Means doing installation mode.
+- Install 2X = Means Perform uninstallation mode.
+
+## Notes
+
+- Before uninstalling, we recommend deleting the update application or applications that you installed, which are related to Google such as YouTube, Chrome, Playstore, Google Playstore and others.  If you don't do this, you will risk force closing the Google app and could even cause a bootloop.
+
+
