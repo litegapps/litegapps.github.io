@@ -2,7 +2,6 @@
 type: doc
 title: Uninstall
 lang: en
-tagline: LiteGapps Uninstall
 url: /doc/uninstall.html
 ---
 
