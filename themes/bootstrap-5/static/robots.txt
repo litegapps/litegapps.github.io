@@ -12,4 +12,6 @@ Disallow: /download/
 Disallow: /doc/
 Disallow: /documentation.html
 
+Allow: /doc/installation.html
+
 Sitemap: https://litegapps.github.io/sitemap.xml
