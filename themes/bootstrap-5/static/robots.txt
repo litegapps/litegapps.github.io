@@ -11,6 +11,8 @@ Disallow: /download.html
 Disallow: /download/
 Disallow: /doc/
 Disallow: /documentation.html
+Disallow: /tags
+Disallow: /catagories
 
 Allow: /doc/installation.html
 
