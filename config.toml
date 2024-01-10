@@ -17,11 +17,6 @@ PygmentsStyle      = "monokai"
     [renderer]
       unsafe= true # Allows you to write raw html in your md files
 
-keywords = [
-    "Android", "Custom Rom", "Magisk",
-    "magisk module", "ksu", "kernelsu", "kernel", "android experience", 
-    "Tutorial Android", "android news", "best magisk module"
-  ]
 
  buildFuture = true
 
