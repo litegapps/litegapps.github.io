@@ -1,5 +1,5 @@
 baseurl = "https://litegapps.github.io"
-title = "Android News Update"
+title = "LiteGapps"
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
@@ -40,5 +40,5 @@ keywords = [
   author = ""
   favicon = ""
   site_logo = ""
-  description = "Read the latest news about Android | Custom Rom | Kernel | Tutorial | Magisk Module | kernelsu"
+  description = "LiteGapps is a custom Google Apps on the Android operating system, an open source project that focuses on small, efficient, and comprehensive."
   recent_posts_number = 3
