@@ -21,7 +21,7 @@ PygmentsStyle      = "monokai"
  buildFuture = true
 
 [author]
-     name = "wahyu6070"
+     name = "litegapps"
      
 [sitemap]
   changefreq = "always"
