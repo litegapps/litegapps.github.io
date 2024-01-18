@@ -3,6 +3,7 @@ description:
 title: Installation
 lang: en
 ads: true
+sitemap: true
 url: /doc/installation.html
 ---
 

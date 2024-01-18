@@ -2,6 +2,7 @@
 description:
 title: FAQ | LiteGapps
 ads: true
+sitemap: true
 lang: en
 url: /faq.html
 ---

@@ -1,9 +1,10 @@
 ---
 description:
-title: News | LiteGapps
+title: News
 lang: en
 ads: true
 url: /news.html
+sitemap: true
 ---
 
 

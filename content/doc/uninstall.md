@@ -3,6 +3,7 @@ type: doc
 title: Uninstall
 lang: en
 url: /doc/uninstall.html
+sitemap: true
 ---
 
 
