@@ -12,7 +12,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 
 *``[AUTO]LiteGapps_Pixel_arm64_12.0_v3.0_official.zip  Size = 1.2  GB``*
 
-***Description =** LiteGapps Pixel is a complete variant of google apps ported from google pixel.*
+***Description ** LiteGapps Pixel is a complete variant of google apps ported from google pixel.*
 
 ### Core
 

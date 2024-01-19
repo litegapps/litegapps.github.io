@@ -6,39 +6,40 @@ url: /doc/litegapps_controller.html
 ---
 
 
-<p><strong>LiteGapps Controller</strong> was originally <a href="https://forum.xda-developers.com/t/magisk-module-pingger-stable-for-game.4041289/">Pingger Stable V7</a> which added various features and improvements.
-</p>
+**LiteGapps Controller** is an additional feature of LiteGapps and LiteGapps++ which has many features that can be used by users.  Users can activate features such as **Boost**, **Battery Saver**, **Gms Dose**, **GPU/CPU Tweaks**, **Download/Install Package** and of course many other features that can be used.  use.
 
-
-<h2>Download</h2>
+## Download
 <p><div class="MID"><a href="/download.html">Click Here</a></div></p>
 
-<h2>Install</h2>
-<p>LiteGapps uses the [AUTO] installation method you can see the <a href="/doc/system-installation.html">System Installation documentation here</a></p>
+## Install
+LiteGapps uses the [AUTO] installation method you can see the <a href="/doc/system-installation.html">System Installation documentation here</a></p>
 
-<h2>How To Use</h2>
-<p> Open terminal (termux recomended)</p>
-<div><code> su</code></div>
+## How To Use
+Open terminal (termux recomended)
 
-<div><code> litegapps</code></div>
+``su``
+
+``litegapps``
 
 <img src="/img/lc1.png" class="img-fluid" alt="ss device info hw">
 
 
-<h3>1. Boost</h3>
-<p>this will force stop the applications installed on your device and some of the default application list of Litegapps Controller.  So that it will reduce the use of RAM, battery and speed up your phone.</p>
-<p><strong>Tips</strong></p>
-<p>Use this after booting or use it before playing games</p>
+### 1. Boost
+This will force stop the applications installed on your device and some of the default application list of Litegapps Controller.  So that it will reduce the use of RAM, battery and speed up your phone.</p>
 
-<h3>Gaming Mode</h3>
-<p>before going into gaming mode, it is recommended that you install <code>Device Info HW</code> : 
+#### Tips
+Use this after booting or use it before playing games
+
+### Gaming Mode
+Before going into gaming mode, it is recommended that you install ``Device Info HW`` : 
 <a href="https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw&hl=in&gl=US&auao=false&referrer=utm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_term%3Ddevice+hw+info&pcampaignid=APPU_1_Jey2YYuhO9fXz7sPn7ePmA8">Google Play Store</a>
-</p>
-<p>• then open</p>
-<p>• go to the application menu</p>
-<p>• see in the picture that is circled in red it is the name of the package</p>
+
+- Then open
+- Go to the application menu
+- See in the picture that is circled in red it is the name of the package</p>
 	<img src="/img/device_hw.png" class="img-fluid" alt="ss device info hw">
-<h3>Gaming Mode 1</h3>
+	
+### Gaming Mode 1
 <p>every 60 seconds the installed application will be forced to stop and will continue to be repeated until you stop</p>
 <h4>Stop</h4>
 <pre><code>Vol Down + z</code></pre>
@@ -68,15 +69,3 @@ url: /doc/litegapps_controller.html
 <p>Test ping : whether your connection is stable or not</p>
 <h2>LiteGapps Menu</h2>
 
-<h2>Memory Info</h2>
-<p>Ram and partition usage information</p>
-<h2>Device Info</h2>
-<p>your device information</p>
-<h2>Add-on</h2>
-<p>Additional features</p>
-<h2>Tweaks</h2>
-<h2>Settings</h2>
-<h2>About</h2>
-<p>Information regarding LiteGapps controller version, license and some credits</p>
-<h2>Exit</h2>
-<p>Exit litegapps controller menu</p>
