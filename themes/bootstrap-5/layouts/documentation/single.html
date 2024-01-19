@@ -5,11 +5,16 @@
 <body>
 {{ partial "navbar.html" . }}
 
-<main>
-
-	{{ block "main" . }}
+<main class="container">
+<article>
+	<ol>
+	{{ range .Site.Pages }}
+		{{ if and .Params.type "doc" }}
+			<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+		{{ end }}
 	{{ end }}
-
+	</ol>
+</article>
 </main>
 {{ partial "js.html" . }} 
 {{ partial "footer.html" }}

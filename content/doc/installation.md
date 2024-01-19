@@ -1,5 +1,5 @@
 ---
-description:
+type: doc
 title: Installation
 lang: en
 ads: true
