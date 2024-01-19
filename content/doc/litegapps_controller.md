@@ -1,5 +1,6 @@
 ---
 type: doc
+layout: doc
 title: LiteGapps Controller Documentation
 lang: en
 url: /doc/litegapps_controller.html

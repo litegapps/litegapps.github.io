@@ -1,5 +1,6 @@
 ---
 type: doc
+layout: doc
 title: Installation
 lang: en
 ads: true

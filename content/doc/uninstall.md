@@ -1,5 +1,6 @@
 ---
 type: doc
+layout: doc
 title: Uninstall
 lang: en
 url: /doc/uninstall.html

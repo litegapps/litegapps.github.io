@@ -1,4 +1,5 @@
 ---
+type: doc
 layout: doc
 title: Variant LiteGapps
 lang: en
