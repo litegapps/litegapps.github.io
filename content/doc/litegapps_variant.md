@@ -13,7 +13,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 
 *``[AUTO]LiteGapps_Pixel_arm64_12.0_v3.0_official.zip  Size = 1.2  GB``*
 
-***Description ** LiteGapps Pixel is a complete variant of google apps ported from google pixel.*
+***Description ** LiteGapps Pixel is a complete package of Google apps ported directly from Google Pixel.  You will get Google Apps on Google Pixel and their features, but they are large in size.*
 
 ### Core
 
@@ -22,7 +22,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 - Carrier Setup
 - Common
 - Config Updater
-- Gms Core
+- Google Play Services
 - Google Backup Transport
 - Google Calendar Sync Adapter
 - Google Contacts Sync Adapter
@@ -72,7 +72,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 - Talkback
 - Turbo
 - Tycho
-- Velvet
+- Google Search
 - Videos
 - Wallpaper Picker
 - Wellbeing
@@ -83,7 +83,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 
 *``[AUTO]LiteGapps_Micro_arm64_12.0_v3.0_official.zip Size = 616.0 MB``*
 
-***Description =** LiteGapps Micro is a variant of google apps that contains apps that are frequently used by users.*
+***Description =** LiteGapps Micro is a package containing half of the pixel variants that you consider important and necessary for the user.*
 
 ### Core
 - Android Migrate
@@ -91,7 +91,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 - Carrier Setup
 - Common
 - Config Updater
-- Gms Core
+- Google Play Services
 - Google Backup Transport
 - Google Calendar Sync Adapter
 - Google Contacts Sync Adapter
@@ -130,7 +130,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 - Sound Picker
 - Talkback
 - Turbo
-- Velvet
+- Google Search
 - Wallpaper Picker
 - Wellbeing
 
@@ -138,7 +138,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 
 *``[AUTO]LiteGapps_Nano_arm64_12.0_v3.0_official.zip Size = 353.4  MB``*
 
-***Description =** LiteGapps Nano is a variant of google apps that contains apps that are frequently used by users.*
+***Description =** LiteGapps Nano is a package that has a medium size, so it is not too heavy to install on your device.*
 
 ### Core
 
@@ -147,7 +147,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 - Carrier Setup
 - Common
 - Config Updater
-- Gms Core
+- Google Play Services
 - Google Backup Transport
 - Google Calendar Sync Adapter
 - Google Contacts Sync Adapter
@@ -187,7 +187,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 
 *``[AUTO]LiteGapps_Basic_arm64_12.0_v3.0_official.zip Size = 161.4  MB``*
 
-***Description =** LiteGapps Basic is a variant of google apps that contains apps that are frequently used by users.*
+***Description =** LiteGapps Basic is a light version but still maintains some of the general functions of Google Apps.*
 
 ### Core
 - Android Migrate
@@ -195,7 +195,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 - Carrier Setup
 - Common
 - Config Updater
-- Gms Core
+- Google Play Services
 - Google Backup Transport
 - Google Calendar Sync Adapter
 - Google Contacts Sync Adapter
@@ -232,7 +232,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 - Carrier Setup
 - Common
 - Config Updater
-- Gms Core
+- Google Play Services
 - Google Backup Transport
 - Google Calendar Sync Adapter
 - Google Contacts Sync Adapter
@@ -261,7 +261,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 
 *``[AUTO]LiteGapps_Go_arm64_12.0_v3.0_official.zip Size = 118.3 MB``*
 
-***Description =** LiteGapps Go is a package that contains google apps go (lite).*
+***Description =** LiteGapps Go adalah paket yang berisi google apps go yang di desain untuk perangkat dengan spesifikasi rendah, tetapi tetap bisa menggunakan aplikasi google yang umum di pakai.*
 
 ### Core
 - Android Migrate
@@ -269,7 +269,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 - Carrier Setup
 - Common
 - Config Updater
-- Gms Core
+- Google Play Services
 - Google Backup Transport
 - Google Calendar Sync Adapter
 - Google Contacts Sync Adapter
@@ -289,7 +289,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 - Gmail Go
 - Maps Go
 - Navigation Go
-- Velvet Go
+- Google Search Go
 
 ## Core
 *``LiteGapps_Core_arm64_12.0_v3.0_official.zip Size = 74.0 MB``*
@@ -303,7 +303,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 - Carrier Setup
 - Common
 - Config Updater
-- Gms Core
+- Google Play Services
 - Google Backup Transport
 - Google Calendar Sync Adapter
 - Google Contacts Sync Adapter
@@ -317,14 +317,6 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 - Playstore
 - Setup Wizard
 
-
-### Apps
-
-- Termux
-- Mixplorer
-- Snaptube
-- Greenify
-
 ## Lite
 
 *``[AUTO]LiteGapps_Lite_arm64_12.0_v3.0_official.zip Size = 51.6 MB``*
@@ -335,5 +327,5 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 - Common
 - Google Contacts Sync Adapter
 - Google Services Framework
-- Gms Core
+- Google Play Services
 - PlayStore
