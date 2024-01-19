@@ -40,32 +40,46 @@ Before going into gaming mode, it is recommended that you install ``Device Info 
 	<img src="/img/device_hw.png" class="img-fluid" alt="ss device info hw">
 	
 ### Gaming Mode 1
-<p>every 60 seconds the installed application will be forced to stop and will continue to be repeated until you stop</p>
-<h4>Stop</h4>
-<pre><code>Vol Down + z</code></pre>
-<pre><code>CTRL + z (using termux)</code></pre>
-<h4>Add black list</h4>
-<p>to add an application blacklist, you can edit it using a text editor in <code>/sdcard/android/litegapps/data/black_list_gaming1</code></p>
-<h3>Gaming Mode 2</h3>
-<p>This mode will disable applications installed on your device and some default lists <strong>Litegapps Controller</strong>This will reduce the use of ram, battery, CPU and your ping will be more stable because the internet connection only focuses on your game.  will not be disturbed by app notifications when playing games</p>
-<h4>Enable/Disable</h4>
-<p>Select 1x = enable</p>
-<p>Select 2x = disable</p>
-<h4>Add black list App</h4>
-<p>to add an application blacklist, you can edit it using a text editor in <code>/sdcard/android/litegapps/data/black_list_gaming2</code></p>
-<h3>Gaming Mode 3</h3>
-<p>this mode will disable the apps that are in the list <code>/sdcard/android/litegapps/data/black_list_gaming3</code></p>
-<h4>Enable/Disable</h4>
-<p>Select 1x = enable</p>
-<p>Select 2x = disable</p>
-<h4>Add list App</h4>
-<p>To add an application blacklist, you can edit it using a text editor in <code>/sdcard/android/litegapps/data/black_list_gaming3</code></p>
-<h2>Baterry Saver</h2>
-<p>This will force stop installed apps on your device (same as a booster) and disable some Google Play Services components and also lower CPU and GPU performance.</p>
-<h4>Enable/Disable</h4>
-<p>Select 1x = enable</p>
-<p>Select 2x = disable</p>
-<h2>Check Ping</h2>
-<p>Test ping : whether your connection is stable or not</p>
-<h2>LiteGapps Menu</h2>
+every 60 seconds the installed application will be forced to stop and will continue to be repeated until you stop
+
+#### Stop
+``Vol Down + z``
+
+``CTRL + z (using termux)``
+
+#### Add black list
+Add an application blacklist, you can edit it using a text editor in ``/sdcard/android/litegapps/data/black_list_gaming1``
+
+### Gaming Mode 2
+This mode will disable applications installed on your device and some default lists <strong>Litegapps Controller</strong>This will reduce the use of ram, battery, CPU and your ping will be more stable because the internet connection only focuses on your game.  will not be disturbed by app notifications when playing games.
+
+#### Enable/Disable
+Select 1x = enable
+
+Select 2x = disable
+
+#### Add black list App
+To add an application blacklist, you can edit it using a text editor in ``/sdcard/android/litegapps/data/black_list_gaming2``
+
+### Gaming Mode 3
+This mode will disable the apps that are in the list ``/sdcard/android/litegapps/data/black_list_gaming3``
+
+#### Enable/Disable</h4>
+Select 1x = enable
+
+Select 2x = disable
+
+#### Add list App
+To add an application blacklist, you can edit it using a text editor in ``/sdcard/android/litegapps/data/black_list_gaming3``
+
+## Baterry Saver
+This will force stop installed apps on your device (same as a booster) and disable some Google Play Services components and also lower CPU and GPU performance.
+
+### Enable/Disable
+Select 1x = enable
+
+Select 2x = disable
+
+## Check Ping
+Test ping : whether your connection is stable or not
 
