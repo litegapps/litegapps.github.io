@@ -3,7 +3,8 @@ type: doc
 layout: doc
 title: Installation
 lang: en
-ads: true
+adstera: true
+monetag: false
 sitemap: true
 url: /doc/installation.html
 ---

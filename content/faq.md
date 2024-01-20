@@ -1,7 +1,8 @@
 ---
 description:
 title: FAQ | LiteGapps
-ads: true
+adstera: true
+monetag: false
 sitemap: true
 lang: en
 url: /faq.html

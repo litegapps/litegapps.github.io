@@ -2,7 +2,8 @@
 description:
 title: News
 lang: en
-ads: true
+adstera: true
+monetag: false
 url: /news.html
 sitemap: true
 ---

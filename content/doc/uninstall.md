@@ -3,6 +3,8 @@ type: doc
 layout: doc
 title: Uninstall
 lang: en
+adstera: true
+monetag: true
 url: /doc/uninstall.html
 sitemap: true
 ---

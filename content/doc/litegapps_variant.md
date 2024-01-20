@@ -3,6 +3,8 @@ type: doc
 layout: doc
 title: Variant LiteGapps
 lang: en
+adstera: true
+monetag: true
 url: /doc/litegapps_variant.html
 ---
 
