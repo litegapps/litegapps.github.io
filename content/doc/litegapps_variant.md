@@ -13,7 +13,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 
 *``[AUTO]LiteGapps_Pixel_arm64_12.0_v3.0_official.zip  Size = 1.2  GB``*
 
-***Description ** LiteGapps Pixel is a complete package of Google apps ported directly from Google Pixel.  You will get Google Apps on Google Pixel and their features, but they are large in size.*
+***Description** : LiteGapps Pixel is a complete package of Google apps ported directly from Google Pixel.  You will get Google Apps on Google Pixel and their features, but they are large in size.*
 
 ### Core
 
@@ -83,7 +83,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 
 *``[AUTO]LiteGapps_Micro_arm64_12.0_v3.0_official.zip Size = 616.0 MB``*
 
-***Description =** LiteGapps Micro is a package containing half of the pixel variants that you consider important and necessary for the user.*
+***Description** : LiteGapps Micro is a package containing half of the pixel variants that you consider important and necessary for the user.*
 
 ### Core
 - Android Migrate
@@ -138,7 +138,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 
 *``[AUTO]LiteGapps_Nano_arm64_12.0_v3.0_official.zip Size = 353.4  MB``*
 
-***Description =** LiteGapps Nano is a package that has a medium size, so it is not too heavy to install on your device.*
+***Description** : LiteGapps Nano is a package that has a medium size, so it is not too heavy to install on your device.*
 
 ### Core
 
@@ -187,7 +187,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 
 *``[AUTO]LiteGapps_Basic_arm64_12.0_v3.0_official.zip Size = 161.4  MB``*
 
-***Description =** LiteGapps Basic is a light version but still maintains some of the general functions of Google Apps.*
+***Description** : LiteGapps Basic is a light version but still maintains some of the general functions of Google Apps.*
 
 ### Core
 - Android Migrate
@@ -224,7 +224,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 ## User
 *``[AUTO]LiteGapps_User_arm64_12.0_v3.0_official.zip Size = 338.7  MB``*
 
-***Description =**LiteGapps User is a variant of google apps that contains apps that are frequently used by users.*
+***Description** : LiteGapps User is a variant of google apps that contains apps that are frequently used by users.*
 
 ### Core
 - Android Migrate
@@ -261,7 +261,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 
 *``[AUTO]LiteGapps_Go_arm64_12.0_v3.0_official.zip Size = 118.3 MB``*
 
-***Description =** LiteGapps Go adalah paket yang berisi google apps go yang di desain untuk perangkat dengan spesifikasi rendah, tetapi tetap bisa menggunakan aplikasi google yang umum di pakai.*
+***Description** : LiteGapps Go adalah paket yang berisi google apps go yang di desain untuk perangkat dengan spesifikasi rendah, tetapi tetap bisa menggunakan aplikasi google yang umum di pakai.*
 
 ### Core
 - Android Migrate
@@ -294,7 +294,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 ## Core
 *``LiteGapps_Core_arm64_12.0_v3.0_official.zip Size = 74.0 MB``*
 
-***Description =** LiteGapps Core is a package that contains the core package of google apps.*
+***Description** : LiteGapps Core is a package that contains the core package of google apps.*
 
 ### Core
 
@@ -321,7 +321,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 
 *``[AUTO]LiteGapps_Lite_arm64_12.0_v3.0_official.zip Size = 51.6 MB``*
 
-***Description =** LiteGapps Lite is a small and light version of google apps.*
+***Description** : LiteGapps Lite is a small and light version of google apps.*
 
 ### Core
 - Common
