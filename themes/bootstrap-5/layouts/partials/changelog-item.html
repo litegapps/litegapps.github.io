@@ -1,19 +1,19 @@
 <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
         <div class="col p-4 d-flex flex-column position-static">
         	
-          <strong class="d-inline-block mb-2 text-primary-emphasis">{{ .Title }}</strong>
+          <strong class="d-inline-block mb-2 text-primary-emphasis">{{ .Params.categories }}</strong>
           <h3 class="mb-0"> <a class="post-link" href="{{ .Permalink }}">{{ .Title }}</a></h3>
           <div class="mb-1 text-body-secondary">
           		
           	<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
-          {{ .Date.Format "Jan 2, 2006" }}<</time>
+          {{ .Date.Format "Jan 2, 2006" }}</time>
           	
           </div>
           
           <p class="card-text mb-auto">
           	{{ if .Description }}
           	{{ .Description }}
-          	{% else %}
+          	{{ else }}
           	{{ .Summary }}
           	{{ end }}
           	</p>
