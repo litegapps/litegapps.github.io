@@ -6,7 +6,7 @@ publishdir    = "public"
 languageCode = "en"
 resourceDir = "../resources"
 DefaultContentLanguage = "en"
-Paginate     = false
+Paginate     = 10
 theme        = "bootstrap-5"
 
 PygmentsCodeFences = true
@@ -27,8 +27,8 @@ PygmentsStyle      = "monokai"
   changefreq = "always"
   priority = 0.8
   filename = "sitemap.xml"
-#[permalinks]
-#  news     = ":section/:year/:month/:day/:slug"
+[permalinks]
+   changelog     = ":section/:year/:month/:day/:slug"
   
 [params]
   text_color = ""
