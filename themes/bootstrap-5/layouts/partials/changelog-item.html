@@ -13,8 +13,7 @@
           <p class="card-text mb-auto">
           	{{ if .Description }}
           	{{ .Description }}
-          	{% ifelse %}
-          	
+          	{% else %}
           	{{ .Summary }}
           	{{ end }}
           	</p>
