@@ -4,7 +4,7 @@ layout: doc
 title: Installation
 lang: en
 adstera: true
-monetag: false
+monetag: true
 sitemap: true
 url: /doc/installation.html
 ---

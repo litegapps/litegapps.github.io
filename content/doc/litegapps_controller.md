@@ -3,6 +3,8 @@ type: doc
 layout: doc
 title: LiteGapps Controller Documentation
 lang: en
+adstera: true
+monetag: true
 url: /doc/litegapps_controller.html
 ---
 
