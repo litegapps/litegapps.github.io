@@ -1,0 +1,18 @@
+{{ partial "meta/main.html" . }}
+<head>
+{{ partial "head.html" . }}
+</head>
+<body>
+{{ partial "navbar.html" . }}
+
+<main class="container">
+<article>
+	{{ block "blog" . }}
+	{{ end }}
+</article>
+</main>
+{{ partial "js.html" . }} 
+{{ partial "footer.html" }}
+</body>
+</html>
+
