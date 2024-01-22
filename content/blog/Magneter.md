@@ -33,7 +33,7 @@ Once the system has been verified to meet Magnetar requirements, it can be flash
 
 ## Downloads
 
-The official Magnetar files can only be obtained from [Github](^1^).
+The official Magnetar files can only be obtained from [Github](https://download60.github.io/202401/magneter/).
 
 ## Wiki
 
