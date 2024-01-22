@@ -29,7 +29,7 @@ PygmentsStyle      = "monokai"
   filename = "sitemap.xml"
 [permalinks]
    changelog     = ":section/:year/:month/:day/:slug"
-   changelog     = ":section/:year:month/:slug"
+   blog          = "blog/:section/:year:month/:slug"
   
 [params]
   text_color = ""
