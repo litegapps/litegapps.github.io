@@ -37,4 +37,4 @@ The official Magnetar files can only be obtained from [Github](https://download6
 
 ## Wiki
 
-Official Magnetar information can be found on [MAGNEPEDIA](https://github.com/Kyliekyler/MAGNETAR/blob/master/README.md).
+Official Magnetar information can be found on [MAGNEPEDIA](https://github.com/Kyliekyler/MAGNETAR/wiki).
