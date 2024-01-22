@@ -10,10 +10,9 @@
 
 <link rel="shortcut icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}" />
 
-{{ if and .Params.ads "true" }}
 {{ partial "google/searchconsole.html" . }}
 {{ partial "google/adsense.html" . }}
-{{ end }}
+
 
 {{ partial "style.html" . }}
 {{ partial "ads/head.html" . }}
