@@ -17,9 +17,7 @@ PygmentsStyle      = "monokai"
     [renderer]
       unsafe= true # Allows you to write raw html in your md files
 
-
- buildFuture = true
-
+buildFuture = true
 [author]
      name = "litegapps"
      
@@ -28,7 +26,7 @@ PygmentsStyle      = "monokai"
   priority = 0.8
   filename = "sitemap.xml"
 [permalinks]
-   changelog     = ":section/:year/:month/:day/:slug"
+   changelog     = ":section/:year/:slug"
    blog          = ":section/:year:month/:slug"
   
 [params]
