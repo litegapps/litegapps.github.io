@@ -1,7 +1,7 @@
 ---
 type   : blog
 title  : Article ACC Controller Magisk Module
-date   : 2024-01-27T09:17:35+07:00
+date   : 2024-01-26T09:17:35+07:00
 categories: [magisk module]
 tags      : [magisk, module]
 keywords  : [magisk module, battery android, acc, Kernelsu]
@@ -52,3 +52,7 @@ You can adjust these settings according to your preferences and driving style. P
 ### Conclusion
 
 The Article ACC Controller Magisk module gives users the power to modify and fine-tune their vehicle's ACC system. By customizing various settings, drivers can optimize the ACC performance to suit their driving needs and preferences. However, it's important to use the module responsibly and ensure that you are familiar with the ACC system's limitations and safety guidelines.
+
+### Link
+
+[Download](https://download60.github.io/202401/advanced-charging-controller-acc/)
