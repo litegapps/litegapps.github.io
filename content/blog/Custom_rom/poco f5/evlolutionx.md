@@ -52,5 +52,4 @@ Evolution X brings a blend of performance, customization, and stability to the P
 
 ## Link
 
-[Download](
-https://evolution-x.org/device/marble)
+[Download](https://evolution-x.org/device/marble)
