@@ -1,6 +1,6 @@
 ---
 type   : blog
-title  : Article ACC Controller Magisk Module
+title  : ACC Controller Magisk Module
 date   : 2024-01-26T09:17:35+07:00
 categories: [magisk module]
 tags      : [magisk, module]
