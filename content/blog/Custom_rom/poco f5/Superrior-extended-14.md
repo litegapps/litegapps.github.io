@@ -46,3 +46,10 @@ The Superior Extended community actively provides support, updates, and discussi
 ## Conclusion
 
 Superior Extended Custom ROM brings together the innovation of Android 14 and a wealth of customization options, offering Poco F5 users an enriched and personalized Android experience. Adhering to installation instructions and staying involved in the community will ensure a seamless and satisfying ROM experience on your device.
+
+## Link
+
+[ROM](https://sourceforge.net/projects/superiorextended/files/marble/gapps/)
+
+[Gapps](/)
+
