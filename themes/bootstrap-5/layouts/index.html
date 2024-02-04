@@ -1,3 +1,17 @@
-{{ define "main" }}
+{{ partial "meta/main.html" . }}
+<head>
+{{ partial "head.html" . }}
+
+<!-- popunder adstera -->
+<script type='text/javascript' src='//payoffyes.com/25/58/69/255869281380cc7b5ad9829f18ae98c8.js'></script>
+
+</head>
+<body>
+{{ partial "navbar.html" . }}
+<main>
 {{ .Content }}
-{{ end }}
+</main>
+{{ partial "js.html" . }} 
+{{ partial "footer.html" }}
+</body>
+</html>
