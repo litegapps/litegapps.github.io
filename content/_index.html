@@ -202,20 +202,17 @@ sitemap: true
 
 <h3>RECOVERY</h3>
 <p>You can install via custom recovery such as TWRP, OrangeFox Recovery, Lineage Recovery or others.  This will be installed in the Android partition, we call it <b>non systemless</b></p>
-<p>Name prefix <i><code>RECOVERY_litegapps_xxxxx.zip</code></i></p>
-<h3>MAGISK</h3>
-<p>Litegapps also supports installation via Magisk which means it will install as a Magisk module (systemless), make sure you use Magisk 20.4+</p>
-<p>Name prefix <i><code>MAGISK_litegapps_xxxxx.zip</code></i></p>
-<h3>KernelSU</h3>
-<i><p>not to be left behind with the latest Android root application, we also added support for installing kernelsu, this will be installed as a kernelsu module (systemless)</p></i>
+<p>Name prefix <i><code>RECOVERY-litegapps-xxxxx.zip</code></i></p>
+<h3>MAKSU</h3>
+<p>Dukungan installasi melalui magisk atau kernelsu
 
-<p>Name prefix <i><code>KSU_litegapps_xxxxx.zip</code></i></p>
+<p>Name prefix <i><code>MAKSU-litegapps-xxxxx.zip</code></i></p>
 
 
 <h3>AUTO</h3>
 <p>with a copy of the <i>AUTO</i> version of the installer, you can install in various places such as <b>RECOVERY</b>,<b>MAGISK</b>,<b>KSU</b> which can be converted to  systemless or non-systemless automatically/manually.  For further instructions, you can read the documentation</p>
 
-<p>Name prefix <i><code>AUTO_litegapps_xxxxxx.zip</code></i></p>
+<p>Name prefix <i><code>AUTO-litegapps-xxxxx.zip</code></i></p>
 
 <h3>SIDELOAD</h3>
 
@@ -236,6 +233,10 @@ sitemap: true
 <img class="responsive-img MID" style="width: 60%;" src="/img/s1.webp" alt="litegapps 1">
 
 <p>litegapps is our first product that supports <b>lite</b> to <b>pixel</b> variants and also has fairly complete device support </p>
+
+<h3>Config</h3>
+<p>Kami juga menyediakan config untuk mengatur paket mana yang akan di install sesuai kebutuhan penguna <a href="/doc/config.html">read more</a>.
+
 <h3>Architecture Support</h3>
 <p><i><b>arm64  = single/cross arm 64 bit support</b></i></p>
 
@@ -369,19 +370,19 @@ sitemap: true
 
 <div class="container px-4 py-5">
 
-<h2>LiteGapps++</h2>
+<h2>LiteGappsX</h2>
 
 <img class="responsive-img MID" style="width: 60%;" src="/img/s2.webp" alt="litegapps 2">
 
-<p>LiteGapps double plus is a development of regular Litegapps which is able to support various versions of Android and multiple architectures with just one <b>flashable.zip</b> while still maintaining a small size.  but we do not provide variants in Litegapps++.</p>
+<p>LiteGappsX is a development of regular Litegapps which is able to support various versions of Android and multiple architectures with just one <b>flashable.zip</b> while still maintaining a small size.  but we do not provide variants in LitegappsX.</p>
+<p>Ini kami tujukan untuk mereka yang sering bergonta ganti ROM dengan versi android yang berbeda dan hanya membutuhkan satu ZIP flashable.
 
-<p>LiteGapps++ only has the same core Google Apps components as <b>litegapps variant lite</b>, so it focuses on minimalism. Litegapps++ is divided into three types, namely:</p>
-<h3>reguler</h3>
-<p>LiteGapps++ Regular is updated regularly using the latest version of Playstore and Google Play Services, but it only supports Android 9 (Pie) to Android 14.</p>
-<h3>LTS</h3>
-<p>LiteGapps LTS is intended for users who rarely like to update regularly, so it is designed for the long term without having to update regularly. It has extensive support, namely Android 5.0 (Lollipop) up to Android 14, but has the disadvantage of using the Playstore and Google Play versions.  long service.</p>
+<p>LiteGappsX only has the same core Google Apps components as <b>litegapps variant lite</b>, so it focuses on minimalism. Litegapps++ is divided into three types, namely:</p>
+<h3>Reguler</h3>
+<p>LiteGappsX
+Regular is updated regularly using the latest version of Playstore and Google Play Services, but it only supports Android 9 (Pie) to Android 14.</p>
 <h3>MicroG</h3>
-<p>LiteGapps++ MicroG uses MicroG as the default gms, it has extensive support for Android 5.0 (lollipop) up to the latest Android 14 and is very light.  But many of the main functionalities don't work, such as: payments, connecting accounts to games and many others.</p>
+<p>LiteGappsX MicroG uses MicroG as the default gms, it has extensive support for Android 5.0 (lollipop) up to the latest Android 14 and is very light.  But many of the main functionalities don't work, such as: payments, connecting accounts to games and many others.</p>
 </div> <!-- container -->
 
 <div class="b-example-divider"></div>
@@ -401,7 +402,7 @@ sitemap: true
 <div class="container px-4 py-5">
 
 <h2>LiteGapps Remover</h2>
-<p>Litegapps Remover is a tool for debloating Google Apps on Android Roms, to overcome Google Apps that are too many and heavy on the default Rom./p>
+<p>Litegapps Remover is a tool for debloating Google Apps on Android Roms, to overcome Google Apps that are too many and heavy on the default Rom.</p>
 
 </p>Supports systemless and non-systemless installations, it is recommended to install LiteGapps Remover before installing Litegapps for ROMs that already include Google Apps</p>
 
@@ -423,6 +424,14 @@ sitemap: true
 <p>LiteGapps controller is an additional feature of LiteGapps and LiteGapps++, which has many features and tweaks for the user experience in using LiteGapps on Android devices.</p>
 
 <p>For complete instructions on how to use it, you can read the documentation and below are some of the LiteGapps controller features:</p>
+
+<b>Usage</b>
+<p>Open Terminal Emulator or termux</p>
+
+<code>su</code>
+
+<code>litegapps</code>
+
 
 <h3>Boost</h3>
 <p>This boosts your device, by forcing applications to stop in the background, this will also make CPU and GPU performance lighter due to the load from applications that are not in use.</p>
