@@ -1,4 +1,4 @@
-- - - 
+---
 type   : blog
 title  : Performance Root Perf
 date   : 2024- 02- 07T09:17:35+07:00
@@ -6,7 +6,7 @@ categories: [magisk module]
 tags      : [magisk, module]
 keywords  : [magisk module, performance, module gaming, Kernelsu]
 author : reljawa
-- - - 
+----
 
 enchant and boost your performance, almost all in one modules.
 
