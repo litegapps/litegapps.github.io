@@ -8,16 +8,17 @@ monetag: true
 url: /doc/config.html
 ---
 
-kami menyediakan configurasi untuk mengatur paket mana yang akan di install pengguna dan bisa untuk mengaktifkan atau menonaktifkan fitur di litegapps.
 
+
+We provide configuration to regulate which packages the user will install and can activate or deactivate features in LiteGApps.
 ## Download 
 
 [Click here](/download.html)
 
 ## Path
-pindahkan file konfigurasi **litegapps.config** ke **/sdcard/litegapps.config**
+move the configuration file **litegapps.config** to **/sdcard/litegapps.config**
 
-atau jika partisi anda tidak bisa di baca, anda juga bisa menempatkanya di :
+or if your partition cannot be read, you can also place it in:
 
 **/data/litegapps.config**
 
@@ -28,7 +29,7 @@ atau jika partisi anda tidak bisa di baca, anda juga bisa menempatkanya di :
 **/system/litegapps.config**
 
 ## How To use
-Edit file konfigurasi menggunakan text editor
+Edit the configuration file using a text editor.
 
 ### Enable
 name package=true
