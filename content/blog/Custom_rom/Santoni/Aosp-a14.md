@@ -55,8 +55,11 @@ With Android 14, AOSP continues to push the boundaries of innovation, delivering
 ## Download Link
 
 [ROM](https://t.me/wahyu6070group/29850?single)
+
 [RECOVERY](https://t.me/wahyu6070group/29851?single)
+
 [Retrofit](https://t.me/wahyu6070group/29852)
+
 [Gapps](https://litegapps.github.io)
 
 
