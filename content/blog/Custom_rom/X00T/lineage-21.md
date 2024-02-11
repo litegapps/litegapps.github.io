@@ -9,7 +9,6 @@ author : wahyu6070
 ---
 
 
-## Introduction
 LineageOS 21, the latest iteration of the popular custom ROM, has been released for the Asus Zenfone Max Pro M1. This brings a host of new features and improvements to the device, offering users an enhanced Android experience.
 
 ## Features
