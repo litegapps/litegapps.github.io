@@ -52,6 +52,7 @@ Revert back to standard partition ROM:
 ## Download Link
 
 [ROM](https://1np2mh-my.sharepoint.com/:u:/g/personal/redmi7a_1np2mh_onmicrosoft_com/ESlFo9ITDt1Ck-epmvD_jvUBgZIVQ8KdN_XFQYi1bo1epg?download=1)
+
 [Gapps](https://litegapps.github.io)
 
 
