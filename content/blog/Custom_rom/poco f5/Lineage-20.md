@@ -9,8 +9,6 @@ author : wahyu6070
 ---
 
 
-To install LineageOS 20 on POCO F5, you will need to have an unlocked bootloader, a custom recovery such as TWRP, and the LineageOS 20 zip file. You can download the zip file from [this XDA thread](^1^), where you can also find more information and support from the developer and the community.
-
 The installation process is fairly simple and straightforward, but make sure to backup your data before proceeding. Here are the steps to follow:
 
 - Boot into TWRP recovery by holding the power and volume up buttons.
@@ -97,7 +95,7 @@ As you can see, LineageOS 20 for POCO F5 provides a satisfactory battery life, w
 
 LineageOS 20 for POCO F5 is a great custom ROM that enhances the device's performance, features, and battery life. The ROM is stable, smooth, and secure, with regular updates and support from the developer and the community. The ROM also gives you more freedom and flexibility to customize and tweak the system to your liking.
 
-If you are looking for a way to upgrade your POCO F5 to Android 13, or simply want to try a different ROM, we highly recommend LineageOS 20 for POCO F5. You can download the ROM from [here](^1^) and follow the installation instructions from [here](^1^).
+If you are looking for a way to upgrade your POCO F5 to Android 13, or simply want to try a different ROM, we highly recommend LineageOS 20 for POCO F5. You can download the ROM from and follow the installation instructions.
 
 ## Download Link
 
