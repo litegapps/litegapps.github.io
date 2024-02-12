@@ -1,8 +1,8 @@
 ---
 type   : blog
 title  : Download Crdroid Android 14 Asus Zenfone max pro m1
-date   : 2024-02-12T09:17:35+07:00
-categories: [crdroid]
+date   : 2024-02-12T09:01:35+07:00
+categories: [customrom]
 tags      : [lineage]
 keywords  : [Custom Rom]
 author : wahyu6070

@@ -1,7 +1,7 @@
 ---
 type   : blog
 title  : Download LineAgeOS 21 Android 14 Asus Zenfone max pro m1
-date   : 2024-02-12T09:17:35+07:00
+date   : 2024-02-12T09:01:35+07:00
 categories: [Custom Rom]
 tags      : [lineage]
 keywords  : [Custom Rom]
