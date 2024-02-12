@@ -9,7 +9,7 @@ author : wahyu6070
 ---
 
 
-##;Device changelog:
+## Device changelog
 - Improved QS (turn off the blurs in display for more smooth)
 - Based on January 2024 security patch
 - Increased SF durations even more
