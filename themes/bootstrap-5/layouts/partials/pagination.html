@@ -136,8 +136,9 @@
         <li class="page-item active">
         <a href="{{ .URL }}" class="page-link" 
            aria-label="Goto page {{ .PageNumber }}">
-          <span class="sr-only">Goto page </span>{{ .PageNumber }}
+          {{ .PageNumber }}
         </a>
+        </li>
         {{ else }}
         <li class="page-item">
         <a class="page-link" 
