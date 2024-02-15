@@ -1,6 +1,6 @@
 ---
 type   : blog
-title  : Download Pixel Experience Android 13 Poco F4 Android 13 Official
+title  : Download Pixel Experience Android 13 Poco F4 Official
 date   : 2024-02-07T09:17:35+07:00
 categories: [Custom Rom]
 tags      : [pixel-experience]
