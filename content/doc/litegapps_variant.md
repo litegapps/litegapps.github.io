@@ -111,29 +111,29 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 
 - AndroidAuto
 - Arcore
-- Desk Clock Google
-- Device Policy
-- Dream Liner
-- Files
+- DeskClockGoogle
+- DevicePolicy
+- Chrome
 - Gmail
-- Google Assistant
-- Google Calculator
-- Google Calendar
-- Google Contacts
-- Google Dialer
-- Google Keyboard
-- Google Vr Core
-- Location History
-- Markup Google
+- Files
+- GoogleAssistant
+- GoogleCalculator
+- GoogleCalendar
+- GoogleContacts
+- GoogleDialer
+- GoogleKeyboard
+- GoogleTTS
+- LocationHistory
+- MarkupGoogle
 - Messaging
-- Pixel Launcher
-- Pixel Live Wallpaper
-- Play Games
-- Sound Picker
+- PixelLauncher
+- PixelLiveWallpaper
+- SoundPicker
 - Talkback
 - Turbo
-- Google Search
-- Wallpaper Picker
+- Velvet
+- GoogleSearch
+- WallpaperPicker
 - Wellbeing
 
 ## Nano
