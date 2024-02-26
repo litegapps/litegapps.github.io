@@ -19,8 +19,6 @@ Horizondroid is customrom android os base AOSP, this rom is customize experience
 
 - **Quick Settings Customization:** Tailor the Quick Settings panel to your liking by adding, removing, or rearranging tiles. crDroid provides a user-friendly interface for quick and easy customization.
 
-- **Advanced Theming:** Delve into theming options to give your Poco F5 a fresh and unique look. crDroid supports Substratum for in-depth theming possibilities.
-
 ## Device Changelog
 - Fix Pinch zoom in pictures
 - Fix zoom YouTube and others
@@ -58,6 +56,5 @@ Horizondroid is customrom android os base AOSP, this rom is customize experience
 
 ## Link
 
-[Sourceforge](https://sourceforge.net/projects/crdroid/files/marble/9.x/)
+[Sourceforge](https://sourceforge.net/projects/horizondroid/files/marble/HorizonDroid-v2.2-Elysium-marble-14.0-OFFICIAL-20240224-1616.zip/download)
 
-[Gapps](/)
