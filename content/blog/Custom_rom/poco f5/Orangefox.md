@@ -8,44 +8,41 @@ keywords  : [orangefox]
 ---
 
 
-OrangeFox is a custom recovery project that aims to provide a fast, stable, and feature-rich experience for Android users. OrangeFox supports a wide range of devices, including the Poco F5, a mid-range smartphone with a 6.67-inch AMOLED display, a Snapdragon 778G processor, and a 64MP quad-camera setup.
+## Changelog since R11.1_4 Beta
 
-## Features of OrangeFox for Poco F5
+- Now MTP available after /data format (but all files will be removed after first boot)
+- Fix NTFS mounting
+- Fix OFRP splash preview on changed splash
+- Some changes for decryption
+- Some changes for /data format
 
-Some of the features of OrangeFox recovery for Poco F5 are:
+## Full changelog:
 
-- Based on TWRP 12.1
-- Supports Android 12 and MIUI 13
-- Supports decryption of data partition
-- Supports backup and restore of vendor partition
-- Supports OTA updates and incremental updates
-- Supports Magisk, SuperSU, and addonsu
-- Supports ADB sideload and MTP
-- Supports gesture navigation and theme customization
-- Supports screen lock and fingerprint authentication
-- Supports MIUI OTA survival and disable DM-verity
-- Supports built-in file manager and terminal
-- Supports many languages and fonts
+- Attempt to fix format data issues
+- Add system image flash/backup/restore support (see notes)
+- Add more Russian translations to terminal
+- Move Bluetooth and DSP partition backup to separate items
+- Now MTP available after /data format (but all files will be removed after first boot)
+- Fix NTFS mounting
+- Fix OFRP splash preview on changed splash
+- Update Magisk to 27.0
+- Some changes for decryption
 
-## How to install OrangeFox on Poco F5
+## Notes
 
-To install OrangeFox recovery on Poco F5, you need to have an unlocked bootloader and a PC with adb and fastboot tools. You also need to download the latest OrangeFox zip file from [here](^3^) and copy it to your device's internal storage. Then, follow these steps:
+- With this version, OFRP got system image flashing support (for GSI flashing in particular) and new auxiliary features. Check more info here
+- Supports Android 13 and 14
+- Still beta, so not all functions have been tested
+- MTP works strangely, rarely files transferred from PC aren't saved after reboot
 
-- Boot your device into fastboot mode by holding the power and volume down buttons together.
-- Connect your device to your PC via a USB cable.
-- Open a command prompt or terminal window on your PC and navigate to the folder where you have the adb and fastboot tools.
-- Type the following command to flash the OrangeFox recovery image:
+## Flashing Steps
+Flash as a normal zip file in custom recovery or flash image in recovery (select Recovery image) or in fastboot:
 
-`fastboot flash recovery orangefox.img`
+``fastboot flash recovery_ab OrangeFox-R11.1_5-Beta-marble.img``
 
-- Once the flashing is done, type the following command to reboot your device into recovery mode:
+Image md5: be02b4411bdd2fb988a39adf149a876b
 
-`fastboot reboot recovery`
-
-- Swipe to allow modifications and enter your lock screen password or PIN if prompted.
-- Tap on the Install button and navigate to the folder where you copied the OrangeFox zip file.
-- Select the OrangeFox zip file and swipe to confirm the installation.
-- Once the installation is done, tap on the Reboot System button.
+Zip md5: 6a07c4f0047002cbb9a40a6926814a91
 
 ## Download Link
 
