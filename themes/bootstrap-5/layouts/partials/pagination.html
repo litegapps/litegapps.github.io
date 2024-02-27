@@ -29,7 +29,7 @@
         <a class="page-link"
            href="{{ $p.First.URL }}"
            rel="first">
-          <span class="fas fa-step-backward"></span>&nbsp;
+          <span class="fas fa-step-backward"></span>
           <span class="sr-only">First</span>
         </a>
       </li>  
@@ -49,7 +49,7 @@
         <a class="page-link"
            href="{{ $p.Prev.URL }}" 
            rel="prev">
-          <span class="fas fa-backward"></span>&nbsp;
+          <span class="fas fa-backward"></span>
           <span class="sr-only">Prev</span>
         </a>
         </li>
@@ -153,14 +153,14 @@
     {{ if gt $p.TotalPages $max_links }}
       <!-- Late (More Pages) Indicator. -->
       {{ if lt (add $p.PageNumber $adjacent_links) (sub $p.TotalPages 1) }}
-      <li class="page-item">
+      <li class="page-item active">
         <span class="pagination-ellipsis">&hellip;</span>
       </li>
       {{ end }}
 
       <!-- Last Page. -->
       {{ if lt (add $p.PageNumber $adjacent_links) $p.TotalPages }}
-      <li class="last">
+      <li class="page-item">
         <a href="{{ $p.Last.URL }}" class="pagination-link" 
            aria-label="Goto page {{ $p.TotalPages }}">
            <span class="sr-only">Goto page </span>{{ $p.TotalPages }}</a>
@@ -171,29 +171,12 @@
       <!-- Next Page. -->
       
       {{ if .p.HasNext }}
-      <li class="page-item">
-        <a class="page-link"
-           href="{{ $p.Next.URL }}"
-           rel="next">&nbsp;
-          <span class="fas fa-forward"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      {{ else }}
-        <a class="pagination-next"
-           title="This is the last page"
-           disabled>&nbsp;
-          <span class="fas fa-forward"></span></a>
-      {{ end }}
-      </li>
-
-      <!-- Last Page. -->
-      {{ if not (eq $p.PageNumber $p.TotalPages) }}
       <li class="page-item active">
         <a class="page-link"
-           href="{{ $p.Last.URL }}"
-           rel="last">&nbsp;
-          <span class="fas fa-step-forward"></span>
-          <span class="sr-only">Last</span>
+           href="{{ $p.Next.URL }}"
+           rel="next">
+          <span class="fas fa-forward"></span>
+          <span class="sr-only">Next</span>
         </a>
         </li>
       {{ else }}
@@ -201,9 +184,30 @@
         <a class="page-link"
            title="This is the last page"
            disabled>&nbsp;
-          <span class="fas fa-step-forward"></span></a>
-      {{ end }}
+          <span class="fas fa-forward"></span></a>
       </li>
+      {{ end }}
+      
+
+      <!-- Last Page. -->
+      {{ if not (eq $p.PageNumber $p.TotalPages) }}
+      <li class="page-item active">
+        <a class="page-link"
+           href="{{ $p.Last.URL }}"
+           rel="last">
+          <span class="fas fa-step-forward"></span>
+          <span class="sr-only">Last</span>
+        </a>
+        </li>
+      {{ else }}
+      <li class="page-item">
+        <a class="page-link"
+           title="This is the first page"
+           disabled>
+          <span class="fas fa-step-backward"></span>&nbsp;</a>
+      </li>
+      {{ end }}
+      
     </ul>
   {{ end }}
 </nav>
