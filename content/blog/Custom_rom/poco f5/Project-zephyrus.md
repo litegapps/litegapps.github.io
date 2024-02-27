@@ -1,6 +1,7 @@
 ---
 type   : blog
 title  : Custom ROM Project Zephyrus Poco F5 Android 14 Official
+slug   : zephyrus-marble
 date   : 2024-02-18T09:17:35+07:00
 categories: [Custom Rom]
 tags      : [aosp]

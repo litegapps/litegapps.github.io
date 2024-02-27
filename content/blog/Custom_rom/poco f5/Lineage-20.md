@@ -1,7 +1,8 @@
 ---
 type   : blog
 title  : Download Lineage 20 Poco F5 Android 13 Unofficial
-date   : 2024-02-11T09:17:35+07:00
+date   : 2024-02-27T09:17:35+07:00
+slug   : lineage-20
 categories: [Custom Rom]
 tags      : [lineage]
 keywords  : [Custom Rom]
