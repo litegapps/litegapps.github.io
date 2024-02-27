@@ -18,9 +18,9 @@ In this article, we will review the Pixel Experience 13 ROM for the Poco F4, and
 
 ## Installation
 
-To install Pixel Experience 13 on the Poco F4, you will need to unlock the bootloader, install a custom recovery, and flash the ROM zip file. You can follow the detailed guide [here](^1^) or watch the video tutorial [here](^3^). Make sure to backup your data before proceeding, as this will wipe your internal storage.
+To install Pixel Experience 13 on the Poco F4, you will need to unlock the bootloader, install a custom recovery, and flash the ROM zip file. You can follow the detailed guide [here](^1^) or watch the video tutorial. Make sure to backup your data before proceeding, as this will wipe your internal storage.
 
-The latest build of Pixel Experience 13 for the Poco F4 is dated November 26, 2023, and has a size of 1.6GB. It is maintained by Jayanth Kandula, who also provides updates and bug fixes regularly. You can download the ROM from the official Pixel Experience website [here](^1^).
+The latest build of Pixel Experience 13 for the Poco F4 is dated November 26, 2023, and has a size of 1.6GB. It is maintained by Jayanth Kandula, who also provides updates and bug fixes regularly. You can download the ROM from the official Pixel Experience website.
 
 ## Features
 
