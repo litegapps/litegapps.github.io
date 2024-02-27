@@ -1,6 +1,7 @@
 ---
 type   : blog
-title  : Download Custom ROM HorizonDroid Poco F5 Android 14 Official
+title  : Download ROM HorizonDroid Poco F5 Android 14 Official
+slug   : horizon-pocof5
 date   : 2024-02-26T09:17:35+07:00
 categories: [Custom Rom]
 tags      : [aosp]

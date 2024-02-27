@@ -1,6 +1,7 @@
 ---
 type   : blog
 title  : Download Orangefox Poco F5 marble
+slug   : orangefox-marble
 date   : 2024-02-11T09:17:35+07:00
 categories: [recovery]
 tags      : [orangefox]

@@ -27,7 +27,7 @@ buildFuture = true
   filename = "sitemap.xml"
 [permalinks]
    changelog     = ":section/:year/:slug"
-   blog          = ":section/:year:month/:slug"
+   blog          = ":section/:year:month:slug"
   
 [params]
   text_color = ""
