@@ -263,7 +263,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 
 *``[AUTO]LiteGapps_Go_arm64_12.0_v3.0_official.zip Size = 118.3 MB``*
 
-***Description** : LiteGapps Go adalah paket yang berisi google apps go yang di desain untuk perangkat dengan spesifikasi rendah, tetapi tetap bisa menggunakan aplikasi google yang umum di pakai.*
+***Description** : LiteGapps Go is a package containing Google Apps Go which is designed for devices with low specifications, but can still use commonly used Google applications.
 
 ### Core
 - Android Migrate

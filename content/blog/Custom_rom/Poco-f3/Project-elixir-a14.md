@@ -12,17 +12,30 @@ author : wahyu6070
 
 Project Elixir is a custom ROM based on AOSP that aims to provide a smooth, stable, and feature-packed experience for Android users. Project Elixir 4.0 is the latest version of the ROM that supports Android 14, the newest operating system from Google. In this article, we will review the features, performance, and installation process of Project Elixir 4.0 on Poco F3, a flagship smartphone from Xiaomi.
 
-## Features of Project Elixir 4.0
-
-Project Elixir 4.0 offers a lot of customization options and enhancements over the stock Android 14. Some of the notable features are:
-
-- **Elixir Center**: You can access a dedicated settings panel where you can customize various aspects of the ROM, such as status bar, lock screen, navigation, gestures, themes, and more.
-- **Face Unlock**: You can unlock your device with face recognition, which is fast and secure. You can also choose from different unlock animations, such as firework, ripple, or star wars.
-- **Gaming Mode**: You can enable a special mode that optimizes your device for gaming, by blocking notifications, boosting performance, and adding a floating toolbar with useful shortcuts.
-- **Ambient Display**: You can see important information on your screen when it is off, such as time, date, battery, notifications, and music. You can also customize the ambient display with different clock styles, colors, and fonts.
-- **Screen Recorder**: You can record your screen with audio and video, and save it as a file or share it with others. You can also adjust the resolution, bitrate, and frame rate of the recording.
-- **Smart Charging**: You can limit the charging speed and level of your device to extend its battery life and health.
-
+## Source Changelog
+- Merged latest February Security patch
+- CTS and play integrity passes and banking apps are working fine
+- Re-Designed About Phone Settings UI
+- Exclusive : Add a preview for Depth iOS style clocks
+- Exclusive : Add a preview for Custom LS clocks
+- Essence: runtime configurable audio panel location
+- Essence: QS Header Image & extended settings
+- Essence: Bring back UDFPS animation
+- Essence: Introduce Island notification feature
+- Essence: Import Wi-Fi standard icon
+- Essence: Add toggle for unlock high fps
+- Essence : Statusbar Clock background chip
+- Settings: Add toggle for Smart 5G
+- Settings: Add charging control preferences
+- Settings: Remove IME space under keyboard feature
+- SystemUI: Redesign Volume Panel the 404 way
+- SystemUI: Implement bouncer face unlock animation
+- SystemUI: Redesign lockscreen bottom buttons
+- SystemUI: Introduce dynamic VoLTE & VoWiFi icons
+- Firewall: Transport-based toggle support
+- Added a hell lot of stuff checkout full changelog
+- Much More, Try by yourself
+ 
 ## Performance of Project Elixir 4.0
 
 Project Elixir 4.0 is a fast and smooth ROM that does not compromise on performance or battery life. The ROM is optimized for gaming and multitasking, and it supports various kernel tweaks and mods. The ROM also includes the latest security patches and bug fixes from Google and the device manufacturer.
