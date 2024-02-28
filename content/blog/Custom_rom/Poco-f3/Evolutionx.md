@@ -1,7 +1,8 @@
 ---
 type   : blog
 title  : Download Evolution X Poco F3 Android 14 Official
-date   : 2024-02-12T09:01:35+07:00
+slug   : evolution-x
+date   : 2024-02-28T09:01:35+07:00
 categories: [Custom Rom]
 tags      : [evolutionx]
 keywords  : [Custom Rom]

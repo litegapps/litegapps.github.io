@@ -1,7 +1,8 @@
 ---
 type   : blog
 title  : Custom ROM Crdroid Poco F3 Android 14 Official
-date   : 2024-02-12T09:01:35+07:00
+slug   : crdroid-14
+date   : 2024-02-28T09:01:35+07:00
 categories: [Custom Rom]
 tags      : [crdroid]
 keywords  : [Custom Rom]
@@ -35,4 +36,4 @@ crDroid is a great ROM for the Poco F3, that offers a fast, smooth, and stable e
 
 [ROM](https://crdroid.net/alioth/10)
 
-[Gapps](/)
+[Gapps](https://litegapps.github.io)
