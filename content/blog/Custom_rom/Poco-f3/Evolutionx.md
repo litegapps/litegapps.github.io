@@ -56,14 +56,6 @@ Evolution X 8.0 is a fast and smooth ROM that does not compromise on performance
 
 According to some users who have tested the ROM on their Poco F3 devices, the ROM delivers a fluid and lag-free experience, with no major issues or bugs. The battery life is also impressive, with an average screen-on time of around 7 hours. The ROM also supports fast charging and wireless charging.
 
-## Installation of Evolution X 8.0
-
-To install Evolution X 8.0 on your Poco F3 device, you need to have an unlocked bootloader and a custom recovery, such as Orange Fox. You also need to download the ROM file, the firmware file, and the Magisk file (optional) from the links below:
-
-- [Evolution X 8.0 Official For Mi 11X, POCO F3, K40](^1^) (GApps Included)
-- [POCO F3 FW 14.0.9.0] or [Mi 11X FW 14.0.5.0]
-- [Magisk 23.0]
-
 After downloading the files, follow these steps to flash the ROM:
 
 1. Boot your device into recovery mode by holding the power and volume up buttons.
