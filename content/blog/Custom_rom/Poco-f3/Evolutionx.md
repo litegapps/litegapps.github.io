@@ -9,18 +9,46 @@ keywords  : [Custom Rom]
 author : wahyu6070
 ---
 
-Evolution X is a custom ROM based on AOSP that aims to provide a smooth, stable, and feature-rich experience for Android users. Evolution X 8.0 is the latest version of the ROM that supports Android 14, the newest operating system from Google. In this article, we will review the features, performance, and installation process of Evolution X 8.0 on Poco F3, a flagship smartphone from Xiaomi.
+Evolution X is a custom ROM based on AOSP that aims to provide a smooth, stable, and feature-rich experience for Android users. Evolution X 8.0 is the latest version of the ROM that supports Android 14.
+## Changelog
+- Fix issue with zram not being created
+- Adjust mi_thermald
+- Properly disable phantom process killing
+- Use QCOM implementation for audio effects
+- The default volume level is set to 16
+- Increase SSI_PARTITIONS_RESERVED_SIZE
+- Improve Ultrasound Proximity Sensor
+- Import HBM
+- Switch to Xiaomi Vibrator AIDL
+- Switch to minigapps
+- Upgrade kernel to Twilight V4
+- Get optimized frequency table from N0 kernel
+- Move some tasks to powerefficient workqueues
+- Remove CPUFreq times driver
+- Remove idle prediction feature
+- Upgrade ksu to 11510
+- Import dolby
+- Optimize powerhint
+- Update KernelSU to 0.7.6
+- Merge the latest CLO Tags
+- Upstream to 4.19.304
+- Updated to January security patch
+- Migrate to restructured sepolicy_vndr
+- Use speed tuning for performance critical applications
+- Disable AAudio MMAP
+- Optimize power consumption
+- Updated to Twilight V3
+- Merge latest CLO
+- Upstream to 4.19.300
+- Add HBM support
+- Updated to KernelSU v11413
+- Enable zram dedup by default
+- Switch to 300Hz
+- Optimized dimming
+- Specify sync probe for some drive
+- Some Memory optimization
+- More.....
 
-## Features of Evolution X 8.0
-
-Evolution X 8.0 offers a lot of customization options and enhancements over the stock Android 14. Some of the notable features are:
-
-- **Evolver**: You can access a dedicated settings panel where you can customize various aspects of the ROM, such as status bar, lock screen, navigation, gestures, themes, and more.
-- **FOD**: You can use the fingerprint on display feature to unlock your device with a fast and secure biometric authentication. You can also choose from different FOD animations and icons.
-- **Gaming Mode**: You can enable a special mode that optimizes your device for gaming, by blocking notifications, boosting performance, and adding a floating toolbar with useful shortcuts.
-- **Ambient Display**: You can see important information on your screen when it is off, such as time, date, battery, notifications, and music. You can also customize the ambient display with different clock styles, colors, and fonts.
-- **Screen Recorder**: You can record your screen with audio and video, and save it as a file or share it with others. You can also adjust the resolution, bitrate, and frame rate of the recording.
-- **Smart Charging**: You can limit the charging speed and level of your device to extend its battery life and health.
 
 ## Performance of Evolution X 8.0
 
