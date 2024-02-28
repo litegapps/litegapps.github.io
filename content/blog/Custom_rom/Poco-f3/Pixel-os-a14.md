@@ -14,7 +14,7 @@ Pixel OS is a custom ROM based on AOSP that aims to bring the Pixel experience t
 
 ## Installation
 
-To install Pixel OS Android 14 on Poco F3, you will need to have an unlocked bootloader, a custom recovery like TWRP, and the Pixel OS zip file. You can download the zip file from the [official XDA thread](^4^). Before flashing, make sure to backup your data, as this process will wipe your internal storage. Follow these steps to install Pixel OS Android 14 on Poco F3:
+To install Pixel OS Android 14 on Poco F3, you will need to have an unlocked bootloader, a custom recovery like TWRP, and the Pixel OS zip file. You can download the zip file. Before flashing, make sure to backup your data, as this process will wipe your internal storage. Follow these steps to install Pixel OS Android 14 on Poco F3:
 
 - Boot into TWRP recovery by holding the power and volume up buttons.
 - Wipe the system, data, cache, and dalvik partitions.
@@ -39,14 +39,6 @@ Pixel OS Android 14 also has some exclusive features that are not available on s
 - Pixel Icons: A set of icons that are inspired by the Pixel devices. They have a round shape and a minimal design. You can also apply them to any app using the Pixel Launcher or a third-party launcher.
 - Pixel Fonts: A set of fonts that are used on the Pixel devices. They have a clean and modern look. You can also change the font size and display size from the settings.
 - Pixel Sounds: A set of sounds that are used on the Pixel devices. They include ringtones, notifications, alarms, and UI sounds. You can also choose from different sound profiles, such as basic, calm, or dynamic.
-
-## Performance
-
-Pixel OS Android 14 runs smoothly and fast on Poco F3. It has no major bugs or issues that affect the daily usage. The ROM is also optimized for battery life and memory management. The Poco F3 has a Snapdragon 870 processor, 6 GB or 8 GB of RAM, and 128 GB or 256 GB of storage. It can handle any task or game with ease. The Poco F3 also has a 6.67 inch AMOLED display with a 120 Hz refresh rate, which makes the UI animations and transitions fluid and responsive. The display also supports HDR10+ and has a peak brightness of 1300 nits. The Poco F3 also has a 4520 mAh battery that can last for a full day of moderate usage. It also supports 33W fast charging, which can charge the battery from 0 to 100% in about an hour.
-
-## Camera
-
-Pixel OS Android 14 does not include the stock MIUI camera app, which has many features and modes. Instead, it includes the Google Camera app, which has a simpler interface and better image processing. The Google Camera app has modes such as Portrait, Night Sight, Astrophotography, and Video. It also supports HDR+, Motion Photos, and Playground. The Google Camera app can take stunning photos and videos with the Poco F3's camera hardware. The Poco F3 has a triple camera setup at the back, which consists of a 48 MP main sensor, an 8 MP ultrawide sensor, and a 5 MP macro sensor. The main sensor can capture detailed and sharp photos with accurate colors and dynamic range. The ultrawide sensor can capture more of the scene with minimal distortion. The macro sensor can capture close-up shots with good focus and clarity. The Poco F3 also has a 20 MP selfie camera, which can take flattering selfies with good skin tones and bokeh effect.
 
 ## Conclusion
 
