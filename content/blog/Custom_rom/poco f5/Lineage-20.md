@@ -2,7 +2,7 @@
 type   : blog
 title  : Download Lineage 20 Poco F5 Android 13 Unofficial
 date   : 2024-02-27T09:17:35+07:00
-slug   : lineage-20
+slug   : los-20
 categories: [Custom Rom]
 tags      : [lineage]
 keywords  : [Custom Rom]
@@ -42,29 +42,6 @@ LineageOS 20 also comes with some extra features that are not available in the s
 - LineageOS apps, which include some useful applications such as Recorder, Music, Gallery, Trebuchet, and Snap
 - LineageOS extras, which include some additional features such as LiveDisplay, Styles, Profiles, and Screen-off gestures
 
-## Performance
-
-LineageOS 20 for POCO F5 delivers a fast and fluid performance, with no noticeable lags or stutters. The ROM is optimized for the device's hardware, which includes:
-
-- Qualcomm Snapdragon 888 processor, a powerful octa-core chipset with a 5 nm process and a 2.84 GHz clock speed
-- Adreno 660 GPU, a high-performance graphics processor that supports Vulkan 1.1 and HDR10+
-- 8 GB of LPDDR5 RAM, a large and fast memory that allows for smooth multitasking and gaming
-- 256 GB of UFS 3.1 storage, a spacious and speedy storage that enables fast data transfer and app loading
-- 6.67-inch AMOLED display, a stunning and vibrant screen that supports 120 Hz refresh rate and 240 Hz touch sampling rate
-- 5000 mAh battery, a massive and durable battery that supports 67 W fast charging and 10 W reverse charging
-
-The ROM also handles thermals well, with no excessive heating or throttling issues. The device remains cool and comfortable to use even under heavy load.
-
-To test the performance of the ROM, we ran some benchmarks and compared the results with the stock ROM. Here are the scores:
-
-| Benchmark | Stock ROM | LineageOS 20 |
-| --- | --- | --- |
-| AnTuTu | 698,321 | 712,456 |
-| Geekbench 5 | 1,123 (single-core), 3,456 (multi-core) | 1,145 (single-core), 3,489 (multi-core) |
-| PCMark | 12,345 | 12,567 |
-| 3DMark | 8,765 | 8,901 |
-
-As you can see, LineageOS 20 slightly outperforms the stock ROM in most of the benchmarks, showing that the ROM is well-optimized and tweaked for the device.
 
 ## Battery Life
 
