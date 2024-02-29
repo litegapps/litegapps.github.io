@@ -1,7 +1,7 @@
 ---
 type   : blog
 title  : Custom ROM Crdroid Poco F5 Android 14 Official
-slug   : crdroid-a14
+slug   : crdroid-marble
 date   : 2024-02-27T09:17:35+07:00
 categories: [Custom Rom]
 tags      : [aosp]
