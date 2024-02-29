@@ -1,7 +1,7 @@
 ---
 type   : blog
 title  : Download Project Elixir Poco F3 Android 14 Official
-slug   : project-elixir
+slug   : project-elixir-pocof3
 date   : 2024-02-28T09:01:35+07:00
 categories: [Custom Rom]
 tags      : [Project-elixir]
@@ -9,8 +9,7 @@ keywords  : [Custom Rom]
 author : wahyu6070
 ---
 
-
-Project Elixir is a custom ROM based on AOSP that aims to provide a smooth, stable, and feature-packed experience for Android users. Project Elixir 4.0 is the latest version of the ROM that supports Android 14, the newest operating system from Google. In this article, we will review the features, performance, and installation process of Project Elixir 4.0 on Poco F3, a flagship smartphone from Xiaomi.
+Download Projec elixir android 14 for poco f3
 
 ## Source Changelog
 - Merged latest February Security patch
@@ -36,27 +35,12 @@ Project Elixir is a custom ROM based on AOSP that aims to provide a smooth, stab
 - Added a hell lot of stuff checkout full changelog
 - Much More, Try by yourself
  
-## Performance of Project Elixir 4.0
+## Notes
 
-Project Elixir 4.0 is a fast and smooth ROM that does not compromise on performance or battery life. The ROM is optimized for gaming and multitasking, and it supports various kernel tweaks and mods. The ROM also includes the latest security patches and bug fixes from Google and the device manufacturer.
-
-According to some users who have tested the ROM on their Poco F3 devices, the ROM delivers a fluid and lag-free experience, with no major issues or bugs. The battery life is also impressive, with an average screen-on time of around 7 hours. The ROM also supports fast charging and wireless charging.
-
-## Installation of Project Elixir 4.0
-
-To install Project Elixir 4.0 on your Poco F3 device, you need to have an unlocked bootloader and a custom recovery, such as Orange Fox. You also need to download the ROM file, the firmware file, and the Magisk file (optional) from the links below:
-
-
-After downloading the files, follow these steps to flash the ROM:
-
-1. Boot your device into recovery mode by holding the power and volume up buttons.
-2. Wipe the system, data, cache, and dalvik partitions.
-3. Flash the firmware file according to your device model.
-4. Flash the ROM file.
-5. Flash the Magisk file if you want to root your device.
-6. Reboot your device.
-
-You have successfully installed Project Elixir 4.0 on your Poco F3 device. Enjoy the new features and performance of Android 14 with this custom ROM.
+- Use regional latest firmware
+- Update apn from settings if you face no internet issue.
+- Clean flash recommended from A13.
+- Report bug with proper log
 
 ## Download Link 
 
