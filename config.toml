@@ -6,7 +6,7 @@ publishdir    = "public"
 languageCode = "en"
 resourceDir = "../resources"
 DefaultContentLanguage = "en"
-Paginate     = 10
+Paginate     = 6
 theme        = "bootstrap-5"
 
 PygmentsCodeFences = true
