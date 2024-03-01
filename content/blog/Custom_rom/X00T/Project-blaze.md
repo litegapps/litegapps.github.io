@@ -1,6 +1,7 @@
 ---
 type   : blog
 title  : Download ROM Project blaze android 14 Asus Zenfone max pro m1
+slug   : project-blaze-14
 date   : 2024-02-12T09:01:35+07:00
 categories: [custom rom]
 tags      : [X00T]

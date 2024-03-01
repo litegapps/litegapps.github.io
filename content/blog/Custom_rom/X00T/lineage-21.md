@@ -1,6 +1,7 @@
 ---
 type   : blog
 title  : Download LineAgeOS 21 Android 14 Asus Zenfone max pro m1
+slug   : los-21-x00t
 date   : 2024-02-12T09:01:35+07:00
 categories: [Custom Rom]
 tags      : [lineage]
@@ -8,29 +9,25 @@ keywords  : [Custom Rom]
 author : wahyu6070
 ---
 
+Download lineage 21 android 14 for asus zenfone max pro m1
 
-LineageOS 21, the latest iteration of the popular custom ROM, has been released for the Asus Zenfone Max Pro M1. This brings a host of new features and improvements to the device, offering users an enhanced Android experience.
+## Changelog
+- Fixed bluetooth not turning on
 
-## Features
-- **Android 12**: LineageOS 21 is based on the latest version of Android, providing users with all the new features and optimizations introduced in Android 12.
-- **Customization**: LineageOS has always been known for its extensive customization options, allowing users to personalize their device to their liking with various themes, fonts, and icons.
-- **Performance**: With LineageOS 21, users can expect improved performance and smoother operation, thanks to optimizations and tweaks made to the ROM.
-- **Privacy and Security**: LineageOS prioritizes user privacy and security, offering features like Privacy Guard and Security patches to keep users' data safe.
-- **Updates**: LineageOS provides regular updates to keep the ROM secure and up-to-date with the latest Android features and security patches.
+## Notes
+- This is 4.19 build. So dont be oversmart by flashing 4.4 kernels
+- F2FS is enabled by default for both /data and /cache
+- Use the given lineage recovery to avoid any issues
+- Format /data and /cache to f2fs before flashing if u wanna use f2fs as default
+- If using los recovery, when u format /data and /cache, it will automatically format to f2fs
+- Gapps included by default
+- Clean flash mandatory if coming from my 4.4 based rom
+- Build is forceencrypted using fbe ice
+- Charging control hal might send a notification which cant be cleared by swiping. If happens so, just long press on the notification and turn off notifications for charging hal.
+- Encryption enabled by default
+- 4.19 kernel based build
+- Gapps aren't included
 
-## Installation
-Installing LineageOS 21 on the Asus Zenfone Max Pro M1 is relatively straightforward for users familiar with custom ROMs. However, it's essential to follow the installation instructions carefully to avoid any issues or data loss.
-
-1. **Backup**: Before proceeding with the installation, it's crucial to back up your device's data to prevent any loss during the process.
-2. **Unlock Bootloader**: Ensure that the bootloader of your device is unlocked, as this is necessary for flashing custom ROMs.
-3. **Install Custom Recovery**: Install a custom recovery like TWRP on your device, which will be used to flash LineageOS 21.
-4. **Download ROM**: Download the LineageOS 21 ROM file for the Asus Zenfone Max Pro M1 and transfer it to your device.
-5. **Flash ROM**: Boot into recovery mode, wipe data, cache, and dalvik cache, then flash the LineageOS 21 ROM zip file.
-6. **Flash GApps**: If desired, flash Google Apps (GApps) package to get access to Google services and apps.
-7. **Reboot**: Once the installation is complete, reboot your device, and you should boot into LineageOS 21.
-
-## Conclusion
-LineageOS 21 brings the latest Android features and improvements to the Asus Zenfone Max Pro M1, offering users a customizable and secure Android experience. With regular updates and a vibrant community, LineageOS continues to be one of the best custom ROMs available for Android devices.
 
 # Download Link
 [ROM](https://vivekachooz.github.io/los_X00TD.html)

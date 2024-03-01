@@ -1,6 +1,7 @@
 ---
 type   : blog
 title  : Download Project Elixir 4.0 Android 14 Asus Zenfone max pro m1
+slug   : Project-elixir-14
 date   : 2024-02-12T09:17:35+07:00
 categories: [customrom]
 tags      : [project-elixir]
