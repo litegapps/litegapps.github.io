@@ -1,6 +1,7 @@
 ---
 type   : blog
-title  : Download Nexus kernel alioth | Poco F3
+title  : Download Nexus kernel alioth Poco F3
+slug   : Nexus-alioth
 date   : 2024-02-15T09:17:35+07:00
 categories: [kernel]
 tags      : [Nexus]

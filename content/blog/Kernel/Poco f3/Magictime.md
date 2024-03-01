@@ -1,6 +1,7 @@
 ---
 type   : blog
-title  : Download MagicTime kernel alioth | Poco F3
+title  : Download MagicTime kernel alioth Poco F3
+slug   : magictime-kenel-alioth
 date   : 2024-02-15T09:17:35+07:00
 categories: [kernel]
 tags      : [magictime]
