@@ -1,7 +1,7 @@
 ---
 type   : blog
 title  : Download Cherish os Poco F3 Android 14 Official
-slug   :cherish-alioth-14
+slug   : cherish-alioth-14
 date   : 2024-02-12T09:01:35+07:00
 categories: [Custom Rom]
 tags      : [pixelos]

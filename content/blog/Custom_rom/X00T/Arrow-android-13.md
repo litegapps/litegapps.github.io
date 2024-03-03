@@ -1,6 +1,6 @@
 ---
 type   : blog
-title  : Download Arrrow Android 13 Official Asus Zenfone max pro m1
+title  : Download Arrow Android 13 Official Asus Zenfone max pro m1
 slug   : arrow-13-x00t
 date   : 2024-02-12T09:01:35+07:00
 categories: [custom rom]
