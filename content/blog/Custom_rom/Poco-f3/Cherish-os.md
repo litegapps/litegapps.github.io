@@ -29,6 +29,9 @@ Download Custom rom Cherish os Poco F3 Android 14 Official
 ## Download Link 
 
 [ROM](https://www.pling.com/p/1551871)
+
 [Firmware](https://t.me/cherishos_alioth/75318)
+
 [Recovery](https://de-dl.orangefox.download/6532c743f55656ab2d86336a)
+
 [Gapps](/)
