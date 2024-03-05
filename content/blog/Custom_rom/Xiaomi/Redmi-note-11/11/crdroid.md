@@ -31,6 +31,8 @@ Download custom rom crdroid android 11 xiaomi redmi 11 pro (spes)
 
 ## Link
 [RECOVERY](https://t.me/guidixbuilds/35)
+
 [ROM](https://sourceforge.net/projects/guidixproject/files/crdroid/stable/crDroidAndroid-11.0-20240229-spes-vanilla-v7.39.zip/download)
+
 [Gapps](https://litegapps.github.io)
 

@@ -28,6 +28,8 @@ Device: Redmi Note 11 (Spes/Spesn)
 
 ## Link
 [RECOVERY](https://t.me/guidixbuilds/35)
+
 [ROM](https://sourceforge.net/projects/guidixproject/files/HavocOS/stable/Havoc-OS-v4.24-20240229-spes-Official-Vanilla.zip/download)
+
 [Gapps](https://litegapps.github.io)
 

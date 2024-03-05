@@ -29,6 +29,8 @@ Added #BombROMGang to the Banner.
 
 ## Link
 [RECOVERY](https://t.me/guidixbuilds/35)
+
 [ROM](https://master.dl.sourceforge.net/project/customromspes/AfterLife-Project/AfterLife-V6.0-Greedy-BOMB-spes-20240228-Gapps.zip?viasf=1)
+
 [Gapps](https://litegapps.github.io)
 
