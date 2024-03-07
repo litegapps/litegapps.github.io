@@ -1,7 +1,7 @@
 ---
 type   : blog
-title  : Download Evolution X Poco F3 Android 14 Official
-slug   : evolution-x
+title  : Download EvolutionX Poco F3 Android 14 Official
+slug   : evolutionx-alioth
 date   : 2024-02-28T09:01:35+07:00
 categories: [Custom Rom]
 tags      : [evolutionx]
@@ -10,6 +10,7 @@ author : wahyu6070
 ---
 
 Evolution X is a custom ROM based on AOSP that aims to provide a smooth, stable, and feature-rich experience for Android users. Evolution X 8.0 is the latest version of the ROM that supports Android 14.
+
 ## Changelog
 - Fix issue with zram not being created
 - Adjust mi_thermald
