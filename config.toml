@@ -1,5 +1,5 @@
 baseurl = "https://litegapps.github.io"
-title = "LiteGapps"
+title = "LiteGapps | Custom Google Apps Android"
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
