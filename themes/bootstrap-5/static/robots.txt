@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /tags/
+Disallow: /categories/
+
+
+Sitemap: https://litegapps.github.io/sitemap.xml
