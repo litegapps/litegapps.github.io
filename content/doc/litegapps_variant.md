@@ -321,7 +321,7 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 
 ## Lite
 
-*``[AUTO]LiteGapps_Lite_arm64_12.0_v3.0_official.zip Size = 51.6 MB``*
+*``[AUTO]LiteGapps_Lite_arm64_12.0_v3.0_official.zip Size = 60.6 MB``*
 
 ***Description** : LiteGapps Lite is a small and light version of google apps.*
 
@@ -331,3 +331,17 @@ You provide 8 variants to suit user needs, so please choose a variant according 
 - Google Services Framework
 - Google Play Services
 - PlayStore
+
+## SuperLite
+
+*``[AUTO]LiteGapps_Lite_arm64_12.0_v3.0_official-SuperLite.zip Size = 50.6 MB``*
+
+***Description** : same as the lite variant but the difference is that it uses gmscore and the old playstore, so it is smaller. suitable for mobile phones with 1/2 gb RAM.*
+
+### Core
+- Common
+- Google Contacts Sync Adapter
+- Google Services Framework
+- Google Play Services
+- PlayStore
+
