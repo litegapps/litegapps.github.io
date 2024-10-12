@@ -12,11 +12,9 @@ theme        = "bootstrap-5"
 PygmentsCodeFences = true
 PygmentsStyle      = "monokai"
 
-[markup]
-  [goldmark]
-    [renderer]
-      unsafe= true # Allows you to write raw html in your md files
-
+[markup.goldmark.renderer]
+  unsafe = true # agar bisa menulis html di markdown
+  
 buildFuture = true
 [author]
      name = "litegapps"
