@@ -35,3 +35,7 @@ buildFuture = true
   site_logo = ""
   description = "LiteGapps is a custom Google Apps on the Android operating system, an open source project that focuses on small, efficient, and comprehensive."
   recent_posts_number = 3
+
+[outputs.taxonomy.removePath]
+  tags = ["/tags"] 
+  
