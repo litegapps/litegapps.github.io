@@ -9,7 +9,7 @@
 <meta property="twitter:title" content="{{ .Title | default .Site.Title }}" />
 
 
-<meta name="author"  content="{{ .Site.Author.name | default .Page.Params.Author }}">
+<meta name="author"  content="{{ .Site.Params.author | default .Page.Params.Author }}">
 
   {{- if .Page.Params.Excerpt }}
   <meta name="description"
@@ -54,6 +54,6 @@
   {{- end -}}
   
   <!-- json -->
-<script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"{{ .Site.Author.name | default .Page.Params.Author }}"},"description":"{{ .Description | default (.Summary | default .Site.Params.description ) }}","headline":"{{ .Title | default .Site.Title }}","name":"{{ .Title | default .Site.Title }}","url":"{{ .Permalink }}"}</script>
+<script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"{{ .Site.Params.Author | default .Page.Params.Author }}"},"description":"{{ .Description | default (.Summary | default .Site.Params.description ) }}","headline":"{{ .Title | default .Site.Title }}","name":"{{ .Title | default .Site.Title }}","url":"{{ .Permalink }}"}</script>
 
 

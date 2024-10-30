@@ -6,8 +6,6 @@ publishdir    = "public"
 languageCode = "en"
 resourceDir = "../resources"
 DefaultContentLanguage = "en"
-Paginate     = 10
-theme        = "bootstrap-5"
 
 PygmentsCodeFences = true
 PygmentsStyle      = "monokai"
@@ -16,8 +14,10 @@ PygmentsStyle      = "monokai"
   unsafe = true # agar bisa menulis html di markdown
   
 buildFuture = true
-[author]
-     name = "litegapps"
+
+[pagination]
+  disableAliases = false
+  pagerSize = 20
      
 [sitemap]
   changefreq = "always"
@@ -28,6 +28,7 @@ buildFuture = true
    blog          = ":section/:year:month/:slug"
   
 [params]
+  authot = "The LiteGapps Project"
   text_color = ""
   author = ""
   favicon = ""
