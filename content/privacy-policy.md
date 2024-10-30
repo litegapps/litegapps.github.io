@@ -2,8 +2,6 @@
 type: doc
 title: Privacy And Policy
 lang: en
-ads: true
-monetag: true
 tagline: Privacy And Policy
 url: privacy-policy.html
 ---
