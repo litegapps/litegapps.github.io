@@ -1,0 +1,16 @@
+{{ define "main" }}
+  {{ $posts := where .Site.Pages "Type" "changelog" }}
+  {{ $paginator := .Paginate .Pages }}
+  {{ partial "pagination.html" (dict "p" $paginator "s" .Scratch) }}
+  
+    {{ range $paginator.Pages }}
+      {{ partial "list-item.html" . }}
+    {{ end }}
+  
+  {{ partial "pagination.html" (dict "p" $paginator "s" .Scratch) }}
+{{ end }}
+
+
+
+
+
