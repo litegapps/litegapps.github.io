@@ -28,14 +28,10 @@ buildFuture = true
    blog          = ":section/:year:month/:slug"
   
 [params]
-  authot = "The LiteGapps Project"
-  text_color = ""
-  author = ""
-  favicon = ""
-  site_logo = ""
+  author = "The LiteGapps Project"
   description = "LiteGapps is a custom Google Apps on the Android operating system, an open source project that focuses on small, efficient, and comprehensive."
   recent_posts_number = 3
 
 [outputs.taxonomy.removePath]
   tags = ["/tags"] 
-  
+  categories = ["/categories"]
