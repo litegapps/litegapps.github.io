@@ -15,7 +15,7 @@ url: /doc/litegapps_controller.html
 <p><div class="MID"><a href="/download.html">Click Here</a></div></p>
 
 ## Install
-LiteGapps uses the [AUTO] installation method you can see the <a href="/doc/system-installation.html">System Installation documentation here</a></p>
+You Can Install LiteGapps Controller in Recovery or magisk,apatch, and kernelsu app.
 
 ## How To Use
 Open terminal (termux recomended)

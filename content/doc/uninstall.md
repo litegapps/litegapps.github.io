@@ -3,38 +3,15 @@ type: doc
 layout: doc
 title: Uninstall
 lang: en
-adstera: true
-monetag: true
 url: /doc/uninstall.html
-sitemap: true
 ---
 
+## Systemless
 
-All of our products including **LiteGapps**, **LiteGapps++**, **Addon**, **Litegapps remover** and **Litegapps controller** have install and uninstall features in one package, so you don't need to prepare an add-on uninstaller.
+You can do the removal via the module in the magisk, kernelsu, and apatch applications, and don't forget to remove the google application updates before uninstalling the litegapps module.
 
-This page contains all product uninstall instructions from Litegapps, make sure to follow the steps correctly.
-
-## Uninstall [MAGISK] Mode
-
-To uninstall in **MAGISK** mode, you can directly delete it from the Magisk module.
-
-## Uninstall [RECOVERY] Mode
-
-- Install 1X = Means doing installation mode.
-- Install 2X = Means Perform uninstallation mode.
-
-## Uninstall [AUTO] convert [MAGISK] mode
-
-To uninstall in **AUTO** which is converted to **MAGISK** mode, you can directly delete it from the Magisk module.
-
-## Uninstall [AUTO] convert [KSU] mode
-
-To uninstall in **AUTO** which is converted to **KSU** mode, you can delete it directly from the Magisk module.
-
-## Uninstall [AUTO] convert [RECOVERY] mode
-
-- Install 1X = Means doing installation mode.
-- Install 2X = Means Perform uninstallation mode.
+## Non Systemless
+To remove Litegapps, you can reinstall the ROM or use Litegapps Remover.
 
 ## Notes
 
