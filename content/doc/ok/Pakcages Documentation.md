@@ -1,6 +1,6 @@
 ---
 type : doc
-title : Packages Documemtation
+title : Packages Documentation
 lang : en
 url : /doc/packages
 ---
