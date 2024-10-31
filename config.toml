@@ -25,10 +25,11 @@ buildFuture = true
   filename = "sitemap.xml"
 [permalinks]
    changelog     = ":section/:year/:slug"
-   blog          = ":section/:year:month/:slug"
+   doc         = ":section/:year:month/:slug"
   
 [params]
   author = "The LiteGapps Project"
   description = "LiteGapps is a custom Google Apps on the Android operating system, an open source project that focuses on small, efficient, and comprehensive."
   recent_posts_number = 3
 
+disableKinds = ["taxonomy", "taxonomyTerm"]
