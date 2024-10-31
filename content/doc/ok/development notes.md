@@ -1,8 +1,8 @@
 ---
 type : doc
-title : development notes
+title : Packages Doc
 lang : en
-url : /doc/development_notes
+url : /doc/packages
 ---
 
 
