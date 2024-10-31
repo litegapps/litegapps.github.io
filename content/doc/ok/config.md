@@ -1,10 +1,7 @@
 ---
-type: doc
-layout: doc
-title: Config
-lang: en
-adstera: true
-monetag: true
+type : doc
+title : Config
+lang : en
 url: /doc/config.html
 ---
 

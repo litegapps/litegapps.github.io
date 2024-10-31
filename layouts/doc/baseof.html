@@ -1,16 +1,15 @@
 {{ partial "meta/main.html" . }}
 <head>
 {{ partial "head.html" . }}
-
 </head>
 <body>
 {{ partial "navbar.html" . }}
 
-<main>
-
-{{ block "main" . }}
-{{ end }}
-
+<main class="container">
+<article>
+	{{ block "doc" . }}
+	{{ end }}
+</article>
 </main>
 {{ partial "js.html" . }} 
 {{ partial "footer.html" }}

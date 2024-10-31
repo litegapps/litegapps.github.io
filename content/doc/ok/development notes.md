@@ -1,9 +1,8 @@
 ---
-type: doc
-layout: doc
-title: development notes
-lang: en
-url: /doc/development_notes
+type : doc
+title : development notes
+lang : en
+url : /doc/development_notes
 ---
 
 

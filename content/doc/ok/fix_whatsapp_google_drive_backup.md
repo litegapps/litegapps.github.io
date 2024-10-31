@@ -1,6 +1,5 @@
 ---
 type: doc
-layout: doc
 title: Fix Google Acount Not Sign In (WhatsApps)
 lang: en
 url: /doc/fix_whatsapp_google_drive_backup.html
