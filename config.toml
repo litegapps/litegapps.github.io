@@ -32,4 +32,7 @@ buildFuture = true
   description = "LiteGapps is a custom Google Apps on the Android operating system, an open source project that focuses on small, efficient, and comprehensive."
   recent_posts_number = 3
 
-disableKinds = ["taxonomy", "taxonomyTerm"]
+[outputs.taxonomy.removePath]
+  tags = ["/tags"]
+  categories = ["/categories"]
+  
