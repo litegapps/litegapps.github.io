@@ -1,6 +1,6 @@
 ---
 type : doc
-title : Packages Doc
+title : Packages Documemtation
 lang : en
 url : /doc/packages
 ---
@@ -11,7 +11,7 @@ url : /doc/packages
 ### Common (Main components)
 set google apps permissions
 
-### Gms Core (Google Play Services)
+### Gms Core (Google Play Services) (Main Components)
 GMS Core, or Google Mobile Services Core, is a collection of libraries and services developed by Google that forms the foundation for many apps and functionalities on Android devices. Though it works behind the scenes, GMS Core plays a crucial role in the overall Android experience.
 
 #### Main Functions
