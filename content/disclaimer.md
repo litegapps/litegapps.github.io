@@ -1,10 +1,9 @@
 ---
-title  : Disclaimet
-date   : 2024-10-01
+title  : Disclaimer
 ---
 
 
-The information provided by magiskmodule.gitlab.io (“we,” “us,” or “our”) on [ https://magiskmodule.gitlab.io ](https://magiskmodule.gitlab.io ) (the “Site”) is for general informational purposes only. All information on the Site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the Site.
+The information provided by litegapps.github.io (“we,” “us,” or “our”) on [ https://litegapps.github.io ](https://litegapps.github.io ) (the “Site”) is for general informational purposes only. All information on the Site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the Site.
 
 By accessing or using the Site, you agree to this disclaimer in full. If you do not agree with the terms of this disclaimer, you should not access or use the Site.
 
@@ -52,4 +51,4 @@ We may update this Disclaimer from time to time. When we do, we will revise the 
 
 If you have any questions regarding this disclaimer, please contact us:
 
-- Email: `androidroot@gmail.com
+- Email: `litegapps@gmail.com

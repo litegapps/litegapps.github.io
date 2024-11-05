@@ -4,11 +4,11 @@ title : Terms and Conditions
 
 ---
 
-## Terms and Conditions for magiskmodule.gitlab.io
+## Terms and Conditions for litegapps.github.io
 
-**Effective Date:** October 1, 2024
+**Effective Date:** October 4, 2024
 
-Welcome to **Magisk Module**! These Terms and Conditions ("Terms", "Terms and Conditions") govern your use of our website located at [ https://magiskmodule.gitlab.io ](https://magiskmodule.gitlab.io ) (the "Site") operated by **Magisk Module** (“we,” “us,” or “our”). By accessing or using the Site, you agree to comply with and be bound by these Terms. If you do not agree with these Terms, you must not access or use the Site.
+Welcome to **Magisk Module**! These Terms and Conditions ("Terms", "Terms and Conditions") govern your use of our website located at [ https://litegapps.github.io ](litegapps.github.io ) (the "Site") operated by **Magisk Module** (“we,” “us,” or “our”). By accessing or using the Site, you agree to comply with and be bound by these Terms. If you do not agree with these Terms, you must not access or use the Site.
 
 ## 1. **Acceptance of Terms**
 
@@ -56,7 +56,7 @@ We reserve the right to remove any content that violates these Terms or is other
 
 ## 8. **Privacy**
 
-Your use of the Site is also governed by our [Privacy Policy]( https://magiskmodule.gitlab.io/privacy-policy ). By using the Site, you consent to the collection and use of information as outlined in our Privacy Policy.
+Your use of the Site is also governed by our [Privacy Policy]( https://litegapps.github.io/privacy-policy ). By using the Site, you consent to the collection and use of information as outlined in our Privacy Policy.
 
 ## 9. **Governing Law**
 
@@ -76,6 +76,6 @@ If you have any questions about these Terms, please contact us at:
 
 - **Email:** [ rahmanen619@gmail.com ](mailto: rahmanen619@gmail.com )
 
-- **Website:** [ https://magiskmodule.gitlab.io ](https://magiskmodule.gitlab.io )
+- **Website:** [ https://litegapps.github.io ](https://litegapps.github.io )
 
 

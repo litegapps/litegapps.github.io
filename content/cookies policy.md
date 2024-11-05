@@ -4,9 +4,9 @@ title : Cookies Policy
 
 ---
 
-## Cookies Policy for magiskmodule.gitlab.io
+## Cookies Policy for litegapps.github.io
 
-This Cookies Policy explains how Magiskmodule.gitlab.io("we," "us," or "our") uses cookies and similar tracking technologies on our website [ https://magiskmodule.gitlab.io ](https://magiskmodule.gitlab.io ) (the "Site"). By using the Site, you agree to the use of cookies as described in this policy.
+This Cookies Policy explains how litegapps.github.io("we," "us," or "our") uses cookies and similar tracking technologies on our website [ https://litegapps.github.io ](https://litegapps.github.io ) (the "Site"). By using the Site, you agree to the use of cookies as described in this policy.
 
 ## What Are Cookies?
 
