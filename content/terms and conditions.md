@@ -74,7 +74,7 @@ We may update these Terms and Conditions from time to time. When we do, we will 
 
 If you have any questions about these Terms, please contact us at:
 
-- **Email:** [ rahmanen619@gmail.com ](mailto: rahmanen619@gmail.com )
+- **Email:** [ litegapps@gmail.com ](mailto: litegapps@gmail.com )
 
 - **Website:** [ https://litegapps.github.io ](https://litegapps.github.io )
 
