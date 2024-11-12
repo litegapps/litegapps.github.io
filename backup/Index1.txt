@@ -330,3 +330,13 @@ Regular is updated regularly using the latest version of Playstore and Google Pl
 <h3>Device Info</h3>
 <p>information on your device's software and hardware.</p>
 </div> <!-- container -->
+
+
+<h2>Contributor</h2>
+<ul>
+	<li><a href="https://wahyu6070.github.io">Wahyu6070</a> Founder</li>
+	<li><a href="https://github.com/osm0sis/AnyKernel3">osm0sis</a> Any Kernel Script</li>
+	<li><a href="https://opengapps.org/">OpenGapps</a></li>
+	<li><a href="https://developer.android.com/topic/generic-system-image/releases">Android GSI</a></li>
+</ul>
+
