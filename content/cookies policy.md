@@ -86,4 +86,4 @@ We may update this Cookies Policy from time to time to reflect changes in techno
 
 If you have any questions about our use of cookies, please contact us:
 
-- Email: rahmanen619@gmail.com
+- Email: litegapps@gmail.com
