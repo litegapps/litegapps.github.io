@@ -1,0 +1,8 @@
+<h2>Article</h2>
+{{ $Name := where site.RegularPages "Type" "changelog" }}
+  {{ range (sort $Name) }}
+ 	<p syle="padding : 5px"> <a href="{{ .Permalink }}">{{ .Title }}</a></p>
+   {{ end }}
+  
+
+
