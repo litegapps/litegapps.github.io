@@ -1,5 +1,5 @@
 baseurl = "https://litegapps.github.io"
-title = "The LiteGapps Open Source Project"
+title = "LiteGapps - Custom Google Apps Android"
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
@@ -27,6 +27,11 @@ buildFuture = true
    changelog     = ":section/:year/:slug"
    doc         = ":section/:year:month/:slug"
   
+[params]
+  author = "The LiteGapps Project"
+  description = "LiteGapps is a custom Google Apps on the Android operating system, an open source project that focuses on small, efficient, and comprehensive."
+  recent_posts_number = 3
+
 [outputs.taxonomy.removePath]
   tags = ["/tags"]
   categories = ["/categories"]
