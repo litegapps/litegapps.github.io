@@ -1,10 +1,19 @@
 # LiteGapps website
 [Link](https://litegapps.github.io)
 
+## Requestment
+- ``Hugo v0.130 +``
+
+## How To Use
+- Install hugo in your device
+- open terminal ``hugo --noBuildLock server``
+
 ## How to contribute
 1. [Fork this repository](https://github.com/litegapps/litegapps.github.io/fork).
 
 2. Clone forked repository.
+
+
 ```
 git clone https://github.com/<username>/litegapps.github.io
 ```
