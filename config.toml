@@ -25,7 +25,6 @@ buildFuture = true
   filename = "sitemap.xml"
 [permalinks]
    changelog     = ":section/:year/:slug"
-   doc         = ":section/:year:month/:slug"
   
 [params]
   author = "The LiteGapps Project"
