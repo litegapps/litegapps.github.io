@@ -17,7 +17,7 @@ buildFuture = true
 
 [pagination]
   disableAliases = false
-  pagerSize = 20
+  pagerSize = 19
      
 [sitemap]
   changefreq = "always"
