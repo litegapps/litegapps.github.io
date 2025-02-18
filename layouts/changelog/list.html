@@ -1,4 +1,5 @@
 {{ define "changelog" }}
+<h1>Changelog</h1>
   {{ $posts := where .Site.Pages "Type" "changelog" }}
   {{ $paginator := .Paginate .Pages }}
   {{ partial "pagination.html" (dict "p" $paginator "s" .Scratch) }}
