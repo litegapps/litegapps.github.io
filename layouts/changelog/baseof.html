@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{ $.Site.LanguageCode | default "en" }}"  data-bs-theme="auto">
-
+<html lang="en"  data-bs-theme="auto">
 <head>
 {{ partial "meta/html.html" . }}
 <title>{{ .Page.Title | default .Site.Title }}</title>
 <!-- <title>LiteGapps</title> -->
 {{ partial "google/analytics.html" . }}
-{{ partial "meta/opengraph.html" . }}
 {{ partial "meta/seo.html" . }}
 {{ partial "framework.html" . }}
 <link rel="shortcut icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}" />
 {{ partial "google/searchconsole.html" . }}
-{{ partial "style.html" . }}
 {{ partial "ads/head.html" . }}
-
 </head>
 <body>
 {{ partial "navbar.html" . }}

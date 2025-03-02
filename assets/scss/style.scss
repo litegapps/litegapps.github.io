@@ -1,12 +1,9 @@
-<style>
-	body {
+body {
 		font-family: Poppins, Arial, sans-serif;
 		min-height: 75rem;
 		padding-top: 4.5rem;
 	}
-
-	}
-
+	
 	img {
 		margin: auto;
 		display: block;
@@ -146,13 +143,7 @@
 		max-width: 400px;
 		height: auto;
 	}
-
-	.ICON {
-		width: 23px;
-		height: 23px;
-		vertical-align: middle;
-		margin-right: 8px;
-	}
+	
 	
 	.feature-icon {
 		width: 4rem;
@@ -219,15 +210,40 @@ select {
     border-radius: 3px;
 }
 
-#download-button {
-    padding: 10px 20px;
-    background-color: #4CAF50; /* Green */
+#download-button,
+.DOWNLOAD-BOTTON
+{
+    padding: 13px 40px;
+    background-color: #7F8CFF;
     color: white;
     border: none;
     border-radius: 20px;
     cursor: pointer;
     display: block;
-    margin: 20px auto; /* Jarak atas dan bawah, auto untuk pusatkan horizontal */
+    margin: 50px auto;
+    font-weight: 500;
 }
 
-</style>
+
+
+.MID-FOOTER {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.MID-FOOTER a {
+    text-decoration: none;
+}
+
+.ICON-FOOTER {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+    padding: 3px;
+}
+
+.ICON-FOOTER:hover {
+    transform: scale(1.2);
+}
