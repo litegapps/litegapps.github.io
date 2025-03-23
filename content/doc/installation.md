@@ -11,9 +11,20 @@ This page contains all the instructions for installing LiteGapps in various mode
 
 # Install
 
-## Magisk, kernelsu, Apatch (Systemless Mode) Installation
+## Magisk (systemless mode)
+You can install it directly in magisk manager.
 
-You can install it directly in magisk manager, kernelsu manager or apatch manager.
+## Kernelsu 
+- Install addon GmsCore, Playstore, googleframeworkservices, Common.
+
+## Apatch (systemless mode)
+- Enable Magisk Mount
+- Install LiteGapps
+
+## Kernelsu Next (systemless mode)
+- Enable Magisk Mount
+- Install LiteGapps
+
 
 ## RECOVERY Mode (Non Systemless)
 
