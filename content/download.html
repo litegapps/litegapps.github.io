@@ -1,5 +1,4 @@
 ---
-style: download
 title: Download LiteGapps
 description: Official download page of all LiteGapps products.
 lang: en
@@ -9,193 +8,320 @@ monetagg: true
 url: /download.html
 ---
 
-<p>Difference lite, core, user, go, basic, nano, micro, pixel : <a href="/doc/litegapps_variant.html">here</a></p>
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+      <defs>
+        <linearGradient id="gradDefIcon" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3BAEF8"/>
+          <stop offset="100%" stop-color="#5F5DFF"/>
+        </linearGradient>
+        <symbol id="icon-download-grad" viewBox="0 0 512 512">
+            <circle cx="256" cy="256" r="256" fill="url(#gradDefIcon)"/>
+            <path fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"
+                  d="M128 320v48c0 17.7 14.3 32 32 32h192c17.7 0 32-14.3 32-32v-48M176 256l80 80 80-80M256 80v176"/>
+        </symbol>
+      </defs>
+    </svg>
 
-<h2>LiteGapps & Addon</h2>
-<div class="menu">
-<label for="type">Product :</label>
-<select id="type"></select>
+    <div class="container bg-white shadow-lg rounded-3 p-4 p-md-5" style="max-width: 900px;">
+    
+        <p class="text-center text-muted mb-5">
+            Differences between lite, core, user, go, basic, nano, micro, pixel variants:
+            <a href="/doc/litegapps_variant.html" class="text-decoration-none">Click Here</a>
+        </p>
 
-<label for="platform">architecture :</label>
-<select id="platform"></select>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body p-4">
+                <h2 class="card-title h4 text-center mb-4">LiteGapps & Addon</h2>
+                <div class="row g-3 mb-4">
+                    <div class="col-md-4">
+                        <label for="type" class="form-label">Produk:</label>
+                        <select id="type" class="form-select"></select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="platform" class="form-label">Arsitektur:</label>
+                        <select id="platform" class="form-select"></select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="android" class="form-label">Android:</label>
+                        <select id="android" class="form-select"></select>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button id="download-button" class="main-button">
+                        Download LiteGapps/Addon
+                    </button>
+                </div>
+            </div>
+        </div>
 
-<label for="android">Android :</label>
-<select id="android"></select>
-</div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body p-4">
+                <h2 class="card-title h4 text-center mb-3">LiteGapps Config Props</h2>
+                <div class="d-flex justify-content-center">
+                    <a href="/download/config">
+                        <button class="config-button">
+                            Download Config
+                        </button>					
+                    </a>		
+                </div>
+            </div>
+        </div>
 
-<button id="download-button">Download</button>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body p-4">
+                <h2 class="card-title h4 text-center mb-4">LiteGappsX</h2>
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">Variant</th>
+                                <th scope="col">Link</th>
+                                <th scope="col">Architecture</th>
+                                <th scope="col">Android</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="fw-normal">Reguler</th>
+                                <td>
+                                    <a href="/download/litegappsx/reguler" title="Unduh Reguler" class="icon-button">
+                                        <svg aria-hidden="true"> <use xlink:href="#icon-download-grad"></use> </svg>
+                                        <span class="visually-hidden">Unduh Reguler</span>
+                                    </a>
+                                </td>
+                                <td><small class="text-muted">arm32, arm64</small></td>
+                                <td><small class="text-muted">10.0 - 14.0</small></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">
+                                    <a href="https://microg.org/" target="_blank" rel="noopener noreferrer" class="text-decoration-none">MicroG</a>
+                                </th>
+                                <td>
+                                    <a href="/download/litegappsx/microg" title="Unduh MicroG" class="icon-button">
+                                        <svg aria-hidden="true"> <use xlink:href="#icon-download-grad"></use> </svg>
+                                        <span class="visually-hidden">Unduh MicroG</span>
+                                    </a>
+                                </td>
+                                <td><small class="text-muted">arm, arm64, x86_64, x86</small></td>
+                                <td><small class="text-muted">5.0 - 14.0</small></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const typeOptions = ["litegapps", "addon"];
-        const platformOptions = ["arm", "arm64", "x86", "x86_64"];
-        const androidOptions = {
-            "default": [
-                { value: "36", text: "16.0" },
-                { value: "35", text: "15.0" },
-                { value: "34", text: "14.0" },
-                { value: "33", text: "13.0" },
-                { value: "32", text: "12.1" },
-                { value: "31", text: "12.0" },
-                { value: "30", text: "11.0" },
-                { value: "29", text: "10.0" },
-                { value: "28", text: "9.0" },
-                { value: "27", text: "8.1" },
-                { value: "26", text: "8.0" },
-                { value: "25", text: "7.1" },
-                { value: "24", text: "7.0" },
-                { value: "23", text: "6.0" },
-                { value: "22", text: "5.1" },
-                { value: "21", text: "5.0" }
-            ]
-        };
+        <div class="card mb-4 shadow-sm">
+             <div class="card-body p-4">
+                <h2 class="card-title h4 text-center mb-4">LiteGapps Remover (arm64)</h2>
+                <div class="table-responsive">
+                     <table class="table table-hover align-middle text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">Android Ver.</th>
+                                <th scope="col">Link</th>
+                                <th scope="col">API</th>
+                                <th scope="col">Version</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="fw-normal">10.0</th>
+                                <td>
+                                    <a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/29/" title="Unduh Remover Android 10.0" class="icon-button">
+                                         <svg aria-hidden="true"> <use xlink:href="#icon-download-grad"></use> </svg>
+                                         <span class="visually-hidden">Unduh Remover Android 10.0</span>
+                                    </a>
+                                </td>
+                                <td><small class="text-muted">29</small></td>
+                                <td><small class="text-muted">v1</small></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="fw-normal">11.0</th>
+                                <td>
+                                    <a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/30/" title="Unduh Remover Android 11.0" class="icon-button">
+                                         <svg aria-hidden="true"> <use xlink:href="#icon-download-grad"></use> </svg>
+                                         <span class="visually-hidden">Unduh Remover Android 11.0</span>
+                                    </a>
+                                </td>
+                                <td><small class="text-muted">30</small></td>
+                                <td><small class="text-muted">v1</small></td>
+                            </tr>
+                             <tr>
+                                <th scope="row" class="fw-normal">12.0</th>
+                                <td>
+                                    <a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/31/" title="Unduh Remover Android 12.0" class="icon-button">
+                                         <svg aria-hidden="true"> <use xlink:href="#icon-download-grad"></use> </svg>
+                                         <span class="visually-hidden">Unduh Remover Android 12.0</span>
+                                    </a>
+                                </td>
+                                <td><small class="text-muted">31</small></td>
+                                <td><small class="text-muted">v1</small></td>
+                            </tr>
+                             <tr>
+                                <th scope="row" class="fw-normal">12.1</th>
+                                <td>
+                                    <a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/32/" title="Unduh Remover Android 12.1" class="icon-button">
+                                         <svg aria-hidden="true"> <use xlink:href="#icon-download-grad"></use> </svg>
+                                         <span class="visually-hidden">Unduh Remover Android 12.1</span>
+                                    </a>
+                                </td>
+                                <td><small class="text-muted">32</small></td>
+                                <td><small class="text-muted">v1</small></td>
+                            </tr>
+                             <tr>
+                                <th scope="row" class="fw-normal">13.0</th>
+                                <td>
+                                    <a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/33/" title="Unduh Remover Android 13.0" class="icon-button">
+                                         <svg aria-hidden="true"> <use xlink:href="#icon-download-grad"></use> </svg>
+                                         <span class="visually-hidden">Unduh Remover Android 13.0</span>
+                                    </a>
+                                </td>
+                                <td><small class="text-muted">33</small></td>
+                                <td><small class="text-muted">v1</small></td>
+                            </tr>
+                             <tr>
+                                <th scope="row" class="fw-normal">14.0</th>
+                                <td>
+                                    <a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/34/" title="Unduh Remover Android 14.0" class="icon-button">
+                                         <svg aria-hidden="true"> <use xlink:href="#icon-download-grad"></use> </svg>
+                                         <span class="visually-hidden">Unduh Remover Android 14.0</span>
+                                    </a>
+                                </td>
+                                <td><small class="text-muted">34</small></td>
+                                <td><small class="text-muted">v1</small></td>
+                            </tr>
+                             <tr>
+                                <th scope="row" class="fw-normal">15.0</th>
+                                <td>
+                                    <a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/35/" title="Unduh Remover Android 15.0" class="icon-button">
+                                         <svg aria-hidden="true"> <use xlink:href="#icon-download-grad"></use> </svg>
+                                         <span class="visually-hidden">Unduh Remover Android 15.0</span>
+                                    </a>
+                                </td>
+                                <td><small class="text-muted">35</small></td>
+                                <td><small class="text-muted">v1</small></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
 
-        function populateSelect(id, options, isObject = false, defaultValue = null) {
-            const select = document.getElementById(id);
-            select.innerHTML = "";
-            options.forEach(option => {
-                const opt = document.createElement("option");
-                opt.value = isObject ? option.value : option;
-                opt.textContent = isObject ? option.text : option;
-                if (defaultValue !== null && opt.value == defaultValue) {
-                    opt.selected = true;
-                }
-                select.appendChild(opt);
-            });
-        }
+        <div class="card mb-4 shadow-sm">
+            <div class="card-body p-4">
+                <h2 class="card-title h4 text-center mb-3">LiteGapps Controller</h2>
+                <div class="d-flex justify-content-center">
+                    <a href="/download/litegapps-controller">
+                        <button class="controller-button">
+                            Download LiteGapps Controller
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+		
+        <div class="card shadow-sm">
+            <div class="card-body p-1">
+                <h2 class="card-title h4 text-center mb-4">Download Analystic</h2>
+                <!-- <div class="d-flex flex-wrap justify-content-center align-items-center gap-2">-->
+                    <a href="https://sourceforge.net/projects/litegapps/files/latest/download" target="_blank" rel="noopener noreferrer">
+                        <img alt="Total Unduhan LiteGapps" src="https://img.shields.io/sourceforge/dt/litegapps.svg?style=for-the-badge&logo=sourceforge&color=blue">
+                    </a>
+                    <a href="https://sourceforge.net/projects/litegapps/files/latest/download" target="_blank" rel="noopener noreferrer">
+                        <img alt="Unduhan Bulanan LiteGapps" src="https://img.shields.io/sourceforge/dm/litegapps.svg?style=for-the-badge&logo=sourceforge&color=green">
+                    </a>
+                    <a href="https://sourceforge.net/projects/litegapps/files/latest/download" target="_blank" rel="noopener noreferrer">
+                        <img alt="Unduhan Mingguan LiteGapps" src="https://img.shields.io/sourceforge/dw/litegapps.svg?style=for-the-badge&logo=sourceforge&color=orange">
+                    </a>
+                    <a href="https://sourceforge.net/projects/litegapps/files/latest/download" target="_blank" rel="noopener noreferrer">
+                        <img alt="Unduhan Harian LiteGapps" src="https://img.shields.io/sourceforge/dd/litegapps.svg?style=for-the-badge&logo=sourceforge&color=red">
+                    </a>
+                <!-- </div> -->
+            </div>
+        </div>
 
-        // Set default platform ke arm64 dan Android versi terbaru (API 36)
-        populateSelect("type", typeOptions);
-        populateSelect("platform", platformOptions, false, "arm64");
-        populateSelect("android", androidOptions["default"], true, "36");
+    </div>
 
-        document.getElementById("platform").addEventListener("change", function() {
-            const selectedPlatform = this.value;
-            populateSelect("android", androidOptions[selectedPlatform] || androidOptions["default"], true, "36");
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const typeOptions = ["litegapps", "addon"];
+            const platformOptions = ["arm", "arm64", "x86", "x86_64"];
+            const androidOptions = {
+                "default": [
+                    { value: "36", text: "16.0" }, { value: "35", text: "15.0" },
+                    { value: "34", text: "14.0" }, { value: "33", text: "13.0" },
+                    { value: "32", text: "12.1" }, { value: "31", text: "12.0" },
+                    { value: "30", text: "11.0" }, { value: "29", text: "10.0" },
+                    { value: "28", text: "9.0" },  { value: "27", text: "8.1" },
+                    { value: "26", text: "8.0" },  { value: "25", text: "7.1" },
+                    { value: "24", text: "7.0" },  { value: "23", text: "6.0" },
+                    { value: "22", text: "5.1" },  { value: "21", text: "5.0" }
+                ]
+            };
+
+            function populateSelect(id, options, isObject = false, defaultValue = null) {
+                const select = document.getElementById(id);
+                if (!select) return;
+                select.innerHTML = "";
+                options.forEach(option => {
+                    const opt = document.createElement("option");
+                    opt.value = isObject ? option.value : option;
+                    opt.textContent = isObject ? option.text : option;
+                    if (defaultValue !== null && opt.value == defaultValue) {
+                        opt.selected = true;
+                    }
+                    select.appendChild(opt);
+                });
+            }
+
+            populateSelect("type", typeOptions);
+            populateSelect("platform", platformOptions, false, "arm64");
+            populateSelect("android", androidOptions["default"], true, "36");
+
+            const platformSelect = document.getElementById("platform");
+            if (platformSelect) {
+                platformSelect.addEventListener("change", function() {
+                    const selectedPlatform = this.value;
+                    populateSelect("android", androidOptions[selectedPlatform] || androidOptions["default"], true, "36");
+                });
+            }
+
+            const downloadButton = document.getElementById('download-button');
+            if (downloadButton) {
+                downloadButton.addEventListener('click', function() {
+                    const typeSelect = document.getElementById('type');
+                    const platformSelect = document.getElementById('platform');
+                    const androidSelect = document.getElementById('android');
+
+                    if (!typeSelect || !platformSelect || !androidSelect) {
+                        console.error("Elemen select tidak ditemukan!");
+                        alert("Terjadi kesalahan: Elemen pilihan tidak ditemukan.");
+                        return;
+                    }
+
+                    const type = typeSelect.value;
+                    const platform = platformSelect.value;
+                    const android = parseInt(androidSelect.value);
+
+                    let baseUrl = "https://sourceforge.net/projects/litegapps/files/";
+
+                    if (type === "litegapps" && platform === "arm" && android >= 29 && android <= 36) {
+                        baseUrl = "https://litegapps.github.io/download";
+                    } else if (type === "litegapps" && platform === "arm64" && android >= 28 && android <= 36) {
+                        baseUrl = "https://litegapps.github.io/download";
+                    } else if (type === "addon" && platform === "arm64" && android >= 29 && android <= 36) {
+                        baseUrl = "https://litegapps.github.io/download";
+                    }
+
+                    const downloadUrl = `${baseUrl}/${type}/${platform}/${android}`;
+                    console.log("Mengarahkan ke:", downloadUrl);
+                    window.location.href = downloadUrl;
+                });
+            } else {
+                console.error("Tombol unduh tidak ditemukan!");
+            }
         });
-    });
-
-    document.getElementById('download-button').addEventListener('click', function() {
-        const type = document.getElementById('type').value;
-        const platform = document.getElementById('platform').value;
-        const android = parseInt(document.getElementById('android').value);
-        
-        let baseUrl = "https://sourceforge.net/projects/litegapps/files/";
-
-        if ( type === "litegapps" && platform === "arm" && android >= 29 && android <= 36) {
-        	baseUrl = "https://litegapps.github.io/download";
-        } else if (type === "litegapps" && platform === "arm64" && android >= 28 && android <= 36) {
-        	baseUrl = "https://litegapps.github.io/download";
-        } else if (type === "addon" && platform === "arm64" && android >= 29 && android <= 36) {
-        	baseUrl = "https://litegapps.github.io/download";
-        }
-        
-        const downloadUrl = `${baseUrl}/${type}/${platform}/${android}`;
-        window.location.href = downloadUrl;
-    });
-</script>
-
-<h2>Configuration</h2>
-<a href="/download/config">
-<button class="DOWNLOAD-BOTTON">Download</button>
-</a>
-  
-<h2> LiteGappsX</h2>
-  <div class="table-responsive">
-  <table class="table">
-    <thead>
-    <tr>
-      <th scope="col">Variant</th>
-      <th scope="col">Link</th>
-      <th scope="col">Architeture</th>
-      <th scope="col">Android</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Reguler</th>
-      <td><a href="/download/litegappsx/reguler"><img src="/img/d.png" alt="Download" class="DOWNLOAD_ICON"></a></td>
-      <td><p>arm32,arm64</p></td>
-      <td><p>10.0 - 14.0</td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="https://microg.org/">MicroG</a></th>
-      <td><a href="/download/litegappsx/microg"><img src="/img/d.png" alt="Download" class="DOWNLOAD_ICON"></a></td>
-      <td><p>arm,arm64,x86_x64,x86</p></td>
-      <td><p>5.0 - 14.0</td>
-    </tr>
-    </tbody>
-    </table>
-	</div>
-
-<h2> LiteGapps Remover (arm64)</h2>
-  <div class="table-responsive">
-  <table class="table">
-    <thead>
-    <tr>
-      <th scope="col">AV</th>
-      <th scope="col">Link</th>
-      <th scope="col">Api</th>
-      <th scope="col">Version</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">10.0</th>
-      <td><a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/29/"><img src="/img/d.png" alt="Download" class="DOWNLOAD_ICON"></a></td>
-      <td><p>29</p></td>
-      <td><p>v1</td>
-    </tr>
-    <tr>
-      <th scope="row">11.0</th>
-      <td><a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/30/"><img src="/img/d.png" alt="Download" class="DOWNLOAD_ICON"></a></td>
-      <td><p>30</p></td>
-      <td><p>v1</td>
-    </tr>
-    <tr>
-      <th scope="row">12.0</th>
-      <td><a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/31/"><img src="/img/d.png" alt="Download" class="DOWNLOAD_ICON"></a></td>
-      <td><p>31</p></td>
-      <td><p>v1</td>
-    </tr>
-    <tr>
-      <th scope="row">12.1</th>
-      <td><a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/32/"><img src="/img/d.png" alt="Download" class="DOWNLOAD_ICON"></a></td>
-      <td><p>32</p></td>
-      <td><p>v1</td>
-    </tr>
-    <tr>
-      <th scope="row">13.0</th>
-      <td><a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/33/"><img src="/img/d.png" alt="Download" class="DOWNLOAD_ICON"></a></td>
-      <td><p>33</p></td>
-      <td><p>v1</td>
-    </tr>
-    <tr>
-      <th scope="row">14.0</th>
-      <td><a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/34/"><img src="/img/d.png" alt="Download" class="DOWNLOAD_ICON"></a></td>
-      <td><p>34</p></td>
-      <td><p>v1</td>
-    </tr>
-    <tr>
-      <th scope="row">15.0</th>
-      <td><a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/35/"><img src="/img/d.png" alt="Download" class="DOWNLOAD_ICON"></a></td>
-      <td><p>35</p></td>
-      <td><p>v1</td>
-    </tr>
-    </tbody>
-    </table>
-	</div>
-
-<h2>LiteGapps Controller</h2>
-<a href="/download/litegapps-controller">
-<button class="DOWNLOAD-BOTTON">Download</button>
-</a>
-
-<h2>Download Analytics</h2>
-<div class="MID"><a href="https://sourceforge.net/projects/litegapps/files/latest/download"><img alt="Download LiteGapps" src="https://img.shields.io/sourceforge/dt/litegapps.svg" ></a></div>
-<div class="MID"><a href="https://sourceforge.net/projects/litegapps/files/latest/download"><img alt="Download LiteGapps" src="https://img.shields.io/sourceforge/dm/litegapps.svg" ></a></div>
-<div class="MID"><a href="https://sourceforge.net/projects/litegapps/files/latest/download"><img alt="Download LiteGapps" src="https://img.shields.io/sourceforge/dw/litegapps.svg" ></a></div>
-<div class="MID"><a href="https://sourceforge.net/projects/litegapps/files/latest/download"><img alt="Download LiteGapps" src="https://img.shields.io/sourceforge/dd/litegapps.svg" ></a></div>
-
-</body>
-</html>
+    </script>
