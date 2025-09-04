@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="{{ .Site.Language.Lang | default "en" }}" data-bs-theme="auto">
+{{ partial "meta/main.html" . }}
 <head>
     {{ partial "meta/html.html" . }}
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Page.Title }} | {{ .Site.Title }}{{ end }}</title>
