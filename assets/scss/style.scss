@@ -4,11 +4,7 @@ body {
 		padding-top: 4.5rem;
 	}
 	
-	a {
-		color: white;
-
-	}
-
+	
 	a:link,
 	a:visited,
 	a:hover,
@@ -19,52 +15,69 @@ body {
 h1, h2 {
 	text-align: center;
 	}
-	.section-bg {
-            background-color: #f8f9fa;
-        }
-        .hero-section {
-            background: linear-gradient(135deg, rgba(66, 133, 244, 0.1), rgba(219, 68, 55, 0.05));
-        }
-        .feature-card, .contributor-card {
-            border: 0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .feature-card:hover, .contributor-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-        }
-        .code-block {
-            background-color: #282c34;
-            color: #abb2bf;
-            padding: 1rem 1.5rem;
-            border-radius: 0.5rem;
-            font-family: 'Courier New', Courier, monospace;
-            white-space: pre-wrap;
-            word-break: break-all;
-        }
-        .responsive-img {
-            border-radius: 0.75rem;
-        }
-        .btn-lg {
-            padding: 0.75rem 1.5rem;
-            font-size: 1.1rem;
-        }
-        .table {
-            border-radius: 0.5rem;
-            overflow: hidden;
-        }
-        .table thead {
-            background-color: #4285F4;
-            color: white;
-        }
-    .icon-button {
-        display: inline-block;
-        transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
-    }
-    .icon-button:hover {
-        transform: scale(1.1);
-        opacity: 0.9;
-    }
+	/* Latar belakang section yang otomatis beradaptasi dengan dark mode */
+.section-bg {
+  background-color: var(--bs-tertiary-bg);
+}
+
+/* Gradient yang juga menggunakan variabel warna */
+.hero-section {
+  background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.08), rgba(219, 68, 55, 0.05));
+}
+
+/* Kartu dengan border dan efek hover yang lebih baik */
+.feature-card, .contributor-card {
+  border: 1px solid var(--bs-border-color-translucent);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover, .contributor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1) !important;
+  border-color: var(--bs-primary);
+}
+
+/* Blok kode, gaya sudah bagus dan tidak perlu diubah */
+.code-block {
+  background-color: #282c34;
+  color: #abb2bf;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.responsive-img {
+  border-radius: 0.75rem;
+}
+
+.btn-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Tabel dengan header yang konsisten */
+.table {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.table thead {
+  background-color: var(--bs-primary); /* Menggunakan warna primary dari tema */
+  color: white;
+}
+
+/* Tombol ikon, gaya sudah bagus */
+.icon-button {
+  display: inline-block;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.icon-button:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
     .table thead {
         background-color: #f8f9fa;
     }
