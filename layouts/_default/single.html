@@ -1,3 +1,25 @@
-{{ define "main" }}
+{{ partial "meta/main.html" . }}
+<head>
+{{ partial "meta/html.html" . }}
+<title>{{ .Page.Title | default .Site.Title }}</title>
+<!-- <title>LiteGapps</title> -->
+{{ partial "google/analytics.html" . }}
+{{ partial "meta/seo.html" . }}
+{{ partial "framework.html" . }}
+<link rel="shortcut icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}" />
+{{ partial "google/searchconsole.html" . }}
+{{ partial "ads/head.html" . }}
+{{ partial "adspop.html" . }}
+</head>
+<body>
+{{ partial "navbar.html" . }}
+<main class="py-4 py-md-5">
+	<article>
 {{ partial "single.html" . }}
-{{ end }}
+</article>
+</main>
+{{ partial "js.html" . }} 
+{{ partial "footer.html" }}
+</body>
+</html>
+
