@@ -4,53 +4,6 @@ body {
 		padding-top: 4.5rem;
 	}
 	
-	img {
-		margin: auto;
-		display: block;
-		text-align: center;
-		justify-content: center;
-		align-items: center;
-	}
-	p {
-		padding-bottom: 10px;
-	}
-
-	footer {
-		padding-bottom: 0.8em;
-	}
-
-	.IMG_HOME {
-		width: 200px;
-		height: 280px;
-	}
-
-	h1 {
-		padding: 0px;
-		font-size: 34px;
-		text-align: center;
-		padding-bottom: 15px;
-		padding-top: 6px;
-		margin: 1.25rem 0 1.25rem;
-		font-weight: 600;
-	}
-
-	h2 {
-		padding: 5px;
-		font-size: 25px;
-		text-align: center;
-		padding-bottom: 6px;
-		padding-top: 6px;
-	}
-
-	h3 {
-		padding-left: 3px;
-		padding-right: 3px;
-		font-size: 18px;
-		text-align: left;
-		padding-bottom: 6px;
-		padding-top: 6px;
-	}
-
 	a {
 		color: white;
 
@@ -63,300 +16,68 @@ body {
 		text-decoration: none;
 		color: #007d9c;
 	}
-
-	h4 {
-		font-size: 16px;
-		font-weight: 760;
-		color: #0d6efd;
+h1, h2 {
+	text-align: center;
 	}
-
-	h5 {
-		font-size: 15px;
-		font-weight: 700;
-	}
-
-	h6 {
-		font-size: 14px;
-		padding-top: 0px;
-		padding-bottom: 0px;
-	}
-
-	.img_download {
-		width: 22px;
-		height: 22px;
-		margin-left: 30px;
-		display: block;
-		text-align: center;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.td_linkk {
-		padding-right: 20px;
-		padding-left: 0px;
-		margin: 0px;
-	}
-
-	.MID {
-		text-align: center;
-		justify-content: center;
-		align-items: center;
-		align: center;
-		text-align: center;
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.MID_TEXT {
-		text-align: center;
-	}
-
-	.pfooter {
-		text-align: center;
-		font-weight: 770;
-	}
-
-	.footer_icon {
-		width: 23px;
-		height: 23px;
-		vertical-align: middle;
-		margin-right: 8px;
-	}
-
-	.p_footer {
-		padding: 4px;
-	}
-
-	article img:not([class]) {
-		line-height: 1.3;
-		margin: 0;
-		text-align: center;
-		width: 40%;
-		height: auto;
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
-		padding: 20px;
-		text-align: center;
-		max-width: 400px;
-		height: auto;
-	}
-	
-	
-	.feature-icon {
-		width: 4rem;
-		height: 4rem;
-		border-radius: .75rem;
-	}
-
-	.icon-square {
-		width: 3rem;
-		height: 3rem;
-		border-radius: .75rem;
-	}
-
-	.text-shadow-1 {
-		text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25);
-	}
-
-	.text-shadow-2 {
-		text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25);
-	}
-
-	.text-shadow-3 {
-		text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25);
-	}
-
-	.card-cover {
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: cover;
-	}
-
-	.feature-icon-small {
-		width: 3rem;
-		height: 3rem;
-	}
-
-	.DOWNLOAD_ICON {
-		width: 22px;
-		height: 22px;
-	}
-.menu {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Memberi jarak antar elemen */
-}
-
-.menu label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.menu div {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    margin-bottom: 5px;
-}
-
-select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-#download-button,
-.DOWNLOAD-BOTTON
-{
-    padding: 13px 40px;
-    background-color: #7F8CFF;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    display: block;
-    margin: 50px auto;
-    font-weight: 500;
-}
-
-
-
-.MID-FOOTER {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px;
-}
-
-.MID-FOOTER a {
-    text-decoration: none;
-}
-
-.ICON-FOOTER {
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
-    padding: 3px;
-}
-
-.ICON-FOOTER:hover {
-    transform: scale(1.2);
-}
-
-.nav-btn {
-	background-color: #7F8CFF;
-	}
-.main-button {
-            display: inline-block;
-            background-color: #2563eb; /* blue-600 */
-            color: #ffffff; /* text-white */
-            font-weight: 700; /* font-bold */
-            padding: 0.5rem 1.5rem; /* py-2 px-6 */
-            border-radius: 0.5rem; /* rounded-lg */
-            border: none;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow */
-            transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
-            cursor: pointer;
-            text-decoration: none; /* Hapus garis bawah default */
+	.section-bg {
+            background-color: #f8f9fa;
         }
-       .main-button:hover {
-            background-color: #1d4ed8; /* hover:bg-blue-700 */
-            transform: scale(1.05); /* hover:scale-105 */
-            color: #ffffff; /* Pastikan teks tetap putih */
-            text-decoration: none;
+        .hero-section {
+            background: linear-gradient(135deg, rgba(66, 133, 244, 0.1), rgba(219, 68, 55, 0.05));
         }
-         .main-button:active {
-             transform: scale(0.98);
-         }
-
-        .config-button {
-            display: inline-block;
-            background-color: #16a34a; /* green-600 */
-            color: #ffffff;
-            font-weight: 700;
-            padding: 0.5rem 1.5rem;
+        .feature-card, .contributor-card {
+            border: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover, .contributor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+        }
+        .code-block {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 1rem 1.5rem;
             border-radius: 0.5rem;
-            border: none;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
-            cursor: pointer;
-            text-decoration: none;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: pre-wrap;
+            word-break: break-all;
         }
-        .config-button:hover {
-            background-color: #15803d; /* hover:bg-green-700 */
-            transform: scale(1.05);
-            color: #ffffff;
-            text-decoration: none;
+        .responsive-img {
+            border-radius: 0.75rem;
         }
-        .config-button:active {
-             transform: scale(0.98);
-         }
-
-        .controller-button {
-            display: inline-block;
-            background-color: #9333ea; /* purple-600 */
-            color: #ffffff;
-            font-weight: 700;
-            padding: 0.5rem 1.5rem;
-            border-radius: 0.5rem;
-            border: none;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
-            cursor: pointer;
-            text-decoration: none;
+        .btn-lg {
+            padding: 0.75rem 1.5rem;
+            font-size: 1.1rem;
         }
-        .controller-button:hover {
-            background-color: #7e22ce; /* hover:bg-purple-700 */
-            transform: scale(1.05);
-            color: #ffffff;
-            text-decoration: none;
-        }
-        .controller-button:active {
-             transform: scale(0.98);
-         }
-
-        /* === Tombol Ikon di Tabel (dari versi CSS Murni) === */
-        .icon-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff; /* Warna ini mungkin tidak terlihat karena SVG punya warna sendiri */
-            transition: opacity 0.2s ease-in-out;
-            cursor: pointer;
-            padding: 0; /* Hapus padding default link/button */
-            border: none; /* Hapus border default */
-            background: none; /* Hapus background default */
-            vertical-align: middle; /* Sejajarkan dengan teks lain di sel */
-        }
-        .icon-button:hover {
-            opacity: 0.8;
-            text-decoration: none;
-        }
-        .icon-button svg {
-            width: 1.5rem; /* w-6 */
-            height: 1.5rem; /* h-6 */
-        }
-
-        /* === Accessibility (Pastikan ada jika tidak pakai kelas Bootstrap) === */
-        .visually-hidden {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
-        }
-
-        /* Penyesuaian kecil untuk tabel Bootstrap */
         .table {
-             vertical-align: middle;
+            border-radius: 0.5rem;
+            overflow: hidden;
         }
-
-        
+        .table thead {
+            background-color: #4285F4;
+            color: white;
+        }
+    .icon-button {
+        display: inline-block;
+        transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    }
+    .icon-button:hover {
+        transform: scale(1.1);
+        opacity: 0.9;
+    }
+    .table thead {
+        background-color: #f8f9fa;
+    }
+    .post-card {
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+    .post-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+    .post-card-img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover; /* Memastikan gambar terpotong rapi, tidak gepeng */
+    }
+    

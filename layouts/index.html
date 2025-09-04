@@ -1,26 +1,201 @@
 <!DOCTYPE html>
-<html lang="en"  data-bs-theme="auto">
+<html lang="en" data-bs-theme="auto">
 <head>
-{{ partial "meta/html.html" . }}
-<title>{{ .Page.Title | default .Site.Title }}</title>
-<!-- <title>LiteGapps</title> -->
-{{ partial "google/analytics.html" . }}
-{{ partial "meta/seo.html" . }}
-{{ partial "framework.html" . }}
-<link rel="shortcut icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}" />
-{{ partial "google/searchconsole.html" . }}
-{{ partial "ads/head.html" . }}
+    {{ partial "meta/html.html" . }}
+    <title>{{ .Page.Title | default .Site.Title }}</title>
+    {{ partial "google/analytics.html" . }}
+    {{ partial "meta/seo.html" . }}
+    {{ partial "framework.html" . }}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}" />
+    {{ partial "google/searchconsole.html" . }}
+    {{ partial "ads/head.html" . }}
+    {{ partial "adspop.html" . }}
 
-<!-- popunder adstera -->
-{{ partial "adspop.html" . }}
-
+    
 </head>
+
 <body>
-{{ partial "navbar.html" . }}
-<main>
-{{ .Content }}
-</main>
-{{ partial "js.html" . }} 
-{{ partial "footer.html" }}
+    {{ partial "navbar.html" . }}
+
+    <main>
+        <!-- Hero Section -->
+        <div class="px-4 py-5 text-center hero-section">
+            <h1 class="display-4 fw-bold text-body-emphasis">LiteGapps</h1>
+            <div class="col-lg-7 mx-auto">
+                <p class="lead mb-4">A custom package of Google Apps for the Android OS. An open-source project focused on being small, efficient, and comprehensive.</p>
+                <p class="lead mb-4">Supports Android 5.0 Lollipop up to the latest version, compatible with a wide range of devices.</p>
+                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center mb-3">
+                    <a href="/download.html" class="btn btn-primary text-white btn-lg fw-bold">Download</a>
+                    <a href="/doc" class="btn btn-outline-secondary btn-lg fw-bold">Documentation</a>
+                </div>
+                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                    <a href="/doc/installation.html" class="btn btn-outline-secondary btn-lg fw-bold">Installation Guide</a>
+                    <a href="/changelog" class="btn btn-outline-secondary btn-lg fw-bold">Changelog</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Changelog Preview Section -->
+        <div class="container py-5">
+            <p class="text-center lead">We offer versatile GAPPS solutions for the Android community, addressing various user needs and resolving common complaints with innovative products.</p>
+             {{ partial "changelog.html" . }}
+        </div>
+
+        <!-- Features Section -->
+        <div class="section-bg">
+            <div class="container px-4 py-5">
+                <h2 class="pb-2 border-bottom text-center fw-bold">Why Choose LiteGapps?</h2>
+                <div class="row g-4 py-5 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                    <div class="col d-flex"><div class="card flex-fill shadow-sm feature-card text-center p-3"><div class="card-body"><i class="bi bi-sliders2 fs-1 text-primary"></i><h3 class="fs-4 mt-3">Unique</h3><p>Handling various user cases with the multiple products we offer.</p></div></div></div>
+                    <div class="col d-flex"><div class="card flex-fill shadow-sm feature-card text-center p-3"><div class="card-body"><i class="bi bi-cpu-fill fs-1 text-primary"></i><h3 class="fs-4 mt-3">Broad Support</h3><p>Supports various devices: AOSP, GSI, Raspberry, LineageOS, MIUI/HyperOS, Stock ROMs, and more.</p></div></div></div>
+                    <div class="col d-flex"><div class="card flex-fill shadow-sm feature-card text-center p-3"><div class="card-body"><i class="bi bi-tools fs-1 text-primary"></i><h3 class="fs-4 mt-3">Continuous Improvement</h3><p>Quickly addresses user-reported issues with direct responses to developers.</p></div></div></div>
+                    <div class="col d-flex"><div class="card flex-fill shadow-sm feature-card text-center p-3"><div class="card-body"><i class="bi bi-speedometer2 fs-1 text-primary"></i><h3 class="fs-4 mt-3">Efficient</h3><p>Optimizes memory usage according to device specifications and user needs.</p></div></div></div>
+                    <div class="col d-flex"><div class="card flex-fill shadow-sm feature-card text-center p-3"><div class="card-body"><i class="bi bi-people-fill fs-1 text-primary"></i><h3 class="fs-4 mt-3">Active Community</h3><p>A friendly community where users and developers discuss future updates.</p></div></div></div>
+                    <div class="col d-flex"><div class="card flex-fill shadow-sm feature-card text-center p-3"><div class="card-body"><i class="bi bi-calendar-week-fill fs-1 text-primary"></i><h3 class="fs-4 mt-3">Up-To-Date</h3><p>Updated daily using the latest versions of Google Apps.</p></div></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Installer Section -->
+        <div class="container px-4 py-5">
+            <h2 class="text-center fw-bold">Installation Methods</h2>
+            <p class="text-center lead mb-5">LiteGapps offers two installation modes: <b>systemless</b> and <b>non-systemless</b>.</p>
+            <div class="row g-4">
+                <div class="col-md-4"><h3>Systemless</h3><p>Install as a module via Magisk, KernelSU, or APatch for easy management and removal.</p></div>
+                <div class="col-md-4"><h3>Non-Systemless</h3><p>Supports traditional installation through recovery for permanent integration into the system.</p></div>
+                <div class="col-md-4"><h3>Sideload</h3><p>Install via <code>adb sideload</code>. Here is an example command:</p><p class="code-block">adb sideload litegapps-filename.zip</p></div>
+            </div>
+        </div>
+
+        <!-- LiteGapps Details Section -->
+        <div class="section-bg">
+            <div class="container px-4 py-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5">
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold">LiteGapps</h2>
+                        <p class="lead">Our primary product, supporting variants from <b>lite</b> to <b>pixel</b> with comprehensive device compatibility.</p>
+                        <h3>Configuration</h3>
+                        <p>We provide configuration files to control which packages are installed, tailoring the experience to user needs. <a href="/doc/config.html">Learn more</a>.</p>
+                        <h3>Architecture Support</h3>
+                        <p><i><b>arm64, arm, x86_64, x86</b></i></p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid responsive-img shadow-lg" src="/img/s1.webp" alt="LiteGapps Screenshot 1" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Android Support Table -->
+        <div class="container px-4 py-5">
+            <h2 class="text-center fw-bold mb-4">Android Version Support</h2>
+            <div class="table-responsive shadow-sm">
+                <table class="table table-striped table-hover mb-0">
+                    <thead><tr><th>Version</th><th>Codename</th><th>SDK</th><th>DPI</th></tr></thead>
+                    <tbody>
+                        <tr><td>5.0 - 5.1</td><td>Lollipop</td><td>21 - 22</td><td>all</td></tr>
+                        <tr><td>6.0</td><td>Marshmallow</td><td>23</td><td>all</td></tr>
+                        <tr><td>7.0 - 7.1</td><td>Nougat</td><td>24 - 25</td><td>all</td></tr>
+                        <tr><td>8.0 - 8.1</td><td>Oreo</td><td>26 - 27</td><td>all</td></tr>
+                        <tr><td>9.0</td><td>Pie</td><td>28</td><td>all</td></tr>
+                        <tr><td>10.0</td><td>Quince Tart</td><td>29</td><td>all</td></tr>
+                        <tr><td>11.0</td><td>Red Velvet Cake</td><td>30</td><td>all</td></tr>
+                        <tr><td>12.0 - 12.1</td><td>Snow Cone</td><td>31 - 32</td><td>all</td></tr>
+                        <tr><td>13.0</td><td>Tiramisu</td><td>33</td><td>all</td></tr>
+                        <tr><td>14.0</td><td>Upside Down Cake</td><td>34</td><td>all</td></tr>
+                        <tr><td>15.0</td><td>Vanilla Ice Cream</td><td>35</td><td>all</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Variants Section -->
+        <div class="section-bg">
+            <div class="container px-4 py-5">
+                <h2 class="text-center fw-bold mb-5">Available Variants</h2>
+                <div class="row g-4">
+                    <div class="col-md-6"><h3>Pixel</h3><p>Includes all Google Apps from the latest Pixel devices. Large size (600MB - 1GB). Not recommended for devices with limited storage/RAM.</p></div>
+                    <div class="col-md-6"><h3>Micro</h3><p>A smaller subset of the Pixel variant (300MB - 600MB). Still may be heavy for low-spec devices.</p></div>
+                    <div class="col-md-6"><h3>Nano</h3><p>A lighter version with fewer components (150MB - 300MB). Recommended for devices with average memory.</p></div>
+                    <div class="col-md-6"><h3>Basic</h3><p>Contains only essential components while maintaining core functionality (150MB - 200MB). Ideal for low-spec devices.</p></div>
+                    <div class="col-md-6"><h3>User</h3><p>A community-driven package where app selection is based on user votes from our Telegram group.</p></div>
+                    <div class="col-md-6"><h3>Go</h3><p>Designed for low-memory devices, featuring Google's "Go" edition apps (e.g., Maps Go, Gmail Go).</p></div>
+                    <div class="col-md-6"><h3>Core</h3><p>A minimal package with only the most crucial components (60MB - 80MB). One of our most popular variants.</p></div>
+                    <div class="col-md-6"><h3>Lite</h3><p>The smallest, most minimalist variant. Contains only Google Play Services, Play Store, and GSF. Perfect for users who want maximum control.</p></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Other Products Section -->
+        <div class="container px-4 py-5">
+            <div class="row align-items-center g-5 py-4">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold">LiteGappsX</h2>
+                    <p>An evolution of LiteGapps, supporting multiple Android versions and architectures in a single, small flashable zip. Ideal for users who frequently switch ROMs. Three types available:</p>
+                    <ul class="list-unstyled">
+                        <li><strong>Regular:</strong> Updated with the latest Play Services, supporting Android 9-14.</li>
+                        <li><strong>MicroG:</strong> Uses MicroG as the GMS core for extensive Android 5.0+ support, though some functionalities like payments might not work.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid responsive-img shadow-lg" src="/img/s2.webp" alt="LiteGapps Screenshot 2" loading="lazy">
+                </div>
+            </div>
+            <hr class="my-5">
+            <div class="row align-items-center g-5 py-4">
+                <div class="col-lg-6 order-lg-2">
+                    <h2 class="fw-bold">LiteGapps Controller</h2>
+                    <p>An companion app for managing LiteGapps features. It provides numerous tweaks to enhance your user experience. Check the documentation for a full feature list.</p>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <img class="img-fluid responsive-img shadow-lg" src="/img/s3.webp" alt="LiteGapps Screenshot 3" loading="lazy">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Addons & Remover Section -->
+        <div class="section-bg">
+            <div class="container px-4 py-5">
+                <div class="row g-5">
+                    <div class="col-lg-6">
+                        <h2 class="fw-bold">Addons</h2>
+                        <p>Optional packages to supplement your LiteGapps installation. Install what you need via Magisk, recovery, or the Controller app, even without the main LiteGapps package.</p>
+                    </div>
+                    <div id="litegapps_remover" class="col-lg-6">
+                        <h2 class="fw-bold">LiteGapps Remover</h2>
+                        <p>A tool for debloating pre-installed Google Apps from your ROM. Recommended for use before installing LiteGapps on ROMs that already include GApps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tips & Tricks -->
+        <div class="container px-4 py-5">
+            <h2 class="fw-bold">Tips And Tricks</h2>
+            <ul>
+                <li>For low-spec devices, we recommend the <b>Core</b> or <b>Lite</b> variants.</li>
+                <li>Before installing, it's a good practice to uninstall updates for existing Google apps.</li>
+                <li>LiteGapps includes a GMS Doze feature to automatically save battery when the device is idle.</li>
+                <li>Use the terminal to activate performance boosts before gaming or enable battery saver when power is low. See docs for commands.</li>
+            </ul>
+        </div>
+        
+        <!-- Contributors Section -->
+        <div class="section-bg">
+            <div class="container px-4 py-5">
+                <h2 class="text-center fw-bold mb-5">Contributors & Credits</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-3 col-md-6 d-flex"><div class="card flex-fill shadow-sm contributor-card text-center p-3"><div class="card-body"><img src="https://wahyu6070.github.io/assets/img/my.webp" alt="Wahyu6070" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px; object-fit: cover;" loading="lazy"><h4 class="mt-3"><a href="https://wahyu6070.github.io" class="text-decoration-none stretched-link">Wahyu6070</a></h4><p class="text-muted">CEO & Founder</p></div></div></div>
+                    <div class="col-lg-3 col-md-6 d-flex"><div class="card flex-fill shadow-sm contributor-card text-center p-3"><div class="card-body"><img src="https://avatars.githubusercontent.com/u/2858716?v=4" alt="osm0sis" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px; object-fit: cover;" loading="lazy"><h4 class="mt-3"><a href="https://github.com/osm0sis/AnyKernel3" class="text-decoration-none stretched-link">osm0sis</a></h4><p class="text-muted">AnyKernel Script</p></div></div></div>
+                    <div class="col-lg-3 col-md-6 d-flex"><div class="card flex-fill shadow-sm contributor-card text-center p-3"><div class="card-body"><img src="https://opengapps.org/images/logo.svg" alt="OpenGapps" class="img-fluid rounded-circle mb-3 p-2" style="width: 100px; height: 100px; object-fit: contain;" loading="lazy"><h4 class="mt-3"><a href="https://opengapps.org/" class="text-decoration-none stretched-link">OpenGapps</a></h4><p class="text-muted">Inspiration</p></div></div></div>
+                    <div class="col-lg-3 col-md-6 d-flex"><div class="card flex-fill shadow-sm contributor-card text-center p-3"><div class="card-body"><img src="https://www.gstatic.com/devrel-devsite/prod/v8a38e499423b6e64664446c6bb8c3f06d3bbb8c3153ec81b5cfa22b086049d9c/android/images/lockup.png" alt="Android GSI" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px; object-fit: cover;" loading="lazy"><h4 class="mt-3"><a href="https://developer.android.com/topic/generic-system-image/releases" class="text-decoration-none stretched-link">Android GSI</a></h4><p class="text-muted">Resources</p></div></div></div>
+                    <div class="col-lg-3 col-md-6 d-flex"><div class="card flex-fill shadow-sm contributor-card text-center p-3"><div class="card-body"><img src="https://avatars.githubusercontent.com/u/116472903?v=4" alt="Hyeonho Kang" class="img-fluid rounded-circle mb-3" style="width: 100px; height: 100px; object-fit: cover;" loading="lazy"><h4 class="mt-3"><a href="https://github.com/corydalis10" class="text-decoration-none stretched-link">Hyeonho Kang</a></h4><p class="text-muted">Contributor</p></div></div></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    {{ partial "js.html" . }}
+    {{ partial "footer.html" }}
 </body>
 </html>

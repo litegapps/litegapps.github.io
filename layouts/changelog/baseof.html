@@ -1,27 +1,39 @@
 <!DOCTYPE html>
-<html lang="en"  data-bs-theme="auto">
+<html lang="{{ .Site.Language.Lang | default "en" }}" data-bs-theme="auto">
 <head>
-{{ partial "meta/html.html" . }}
-<title>{{ .Page.Title | default .Site.Title }}</title>
-<!-- <title>LiteGapps</title> -->
-{{ partial "google/analytics.html" . }}
-{{ partial "meta/seo.html" . }}
-{{ partial "framework.html" . }}
-<link rel="shortcut icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}" />
-{{ partial "google/searchconsole.html" . }}
-{{ partial "ads/head.html" . }}
+    {{ partial "meta/html.html" . }}
+    
+    <!-- Judul Halaman yang lebih SEO-friendly -->
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Page.Title }} | {{ .Site.Title }}{{ end }}</title>
+
+    {{ partial "google/analytics.html" . }}
+    {{ partial "meta/seo.html" . }}
+    {{ partial "framework.html" . }}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}" />
+    {{ partial "google/searchconsole.html" . }}
+    {{ partial "ads/head.html" . }}
 </head>
 <body>
-{{ partial "navbar.html" . }}
+    <!-- Navigasi akan dimuat di sini -->
+    {{ partial "navbar.html" . }}
 
-<main class="py-4 py-md-5">
-<article>
-	{{ block "changelog" . }}
-	{{ end }}
-</article>
-</main>
-{{ partial "js.html" . }} 
-{{ partial "footer.html" }}
+    <!-- Area Konten Utama -->
+    <main class="py-4 py-md-5">
+        <!-- Container Bootstrap untuk memberi padding dan memusatkan konten -->
+        <div class="container">
+            {{/* Blok "changelog" Anda tetap sama persis. 
+                Konten dari file seperti index.html atau list.html akan dimasukkan di sini.
+            */}}
+            {{ block "changelog" . }}
+            {{ end }}
+
+        </div>
+    </main>
+
+    <!-- Footer akan dimuat di sini -->
+    {{ partial "footer.html" . }}
+
+    <!-- JavaScript akan dimuat di sini -->
+    {{ partial "js.html" . }}
 </body>
 </html>
-

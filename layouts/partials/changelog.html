@@ -1,0 +1,11 @@
+{{ $Name := where site.RegularPages "Type" "changelog" }}
+{{ range (sort $Name) | first 1 }}
+<div class="container">
+  <div class="card">
+    <p class="card-header"><strong>Changelog</strong></p>
+    <div class="card-body">
+      <p class="card-title"><strong>Version v{{ .Params.version }}</strong></p>
+      {{ .Content }}
+    </div>
+  </div>
+{{ end }}

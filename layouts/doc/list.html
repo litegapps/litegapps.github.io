@@ -1,31 +1,40 @@
 {{ define "doc" }}
-<article>
-<header>
-<h1>{{ .Title }}</h1>
-</header>
-{{ .Content }}
-</article>
-<section class="blog">
+
+<!-- Bagian Header: Menampilkan Judul dan Konten dari _index.md -->
+<div class="mb-5">
+    <!-- Judul utama, dibuat lebih menonjol -->
+    <h1 class="display-5 fw-bold border-bottom pb-3 mb-4">{{ .Title }}</h1>
+
+    <!-- Konten/deskripsi pengantar untuk section ini -->
+    <div class="fs-5 text-body-secondary">
+        {{ .Content }}
+    </div>
+</div>
+
+<!-- Daftar Halaman (Menggunakan List Group Bootstrap) -->
+<div class="list-group">
     {{ range .Pages }}
-    <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h3 class="mb-0"> <a class="post-link" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
-          <p class="card-text mb-auto">
-          {{ if .Params.Excerpt -}}
-           {{ .Params.Excerpt }}
-          {{- else -}}
-           {{ .Summary | plainify | truncate 100 }}
-           {{ end }}
-          
-          </p>
-          
-           
-          </a>
-        </div>
-        
-      </div>
-      {{ end }}
-</section>
+        <!-- Setiap item adalah tautan yang rapi dengan efek hover bawaan -->
+        <a href="{{ .RelPermalink }}" class="list-group-item list-group-item-action p-4">
+            <div class="d-flex w-100 justify-content-between align-items-center">
+                
+                <!-- Judul dan ringkasan di sebelah kiri -->
+                <div>
+                    <h5 class="mb-1 fw-bold">{{ .LinkTitle }}</h5>
+                    <p class="mb-1 text-body-secondary">
+                        {{ if .Params.Excerpt -}}
+                            {{ .Params.Excerpt | plainify | truncate 120 }}
+                        {{- else -}}
+                            {{ .Summary | plainify | truncate 120 }}
+                        {{ end }}
+                    </p>
+                </div>
+
+                <!-- Ikon panah di sebelah kanan sebagai petunjuk visual -->
+                <i class="bi bi-chevron-right fs-4 text-secondary d-none d-sm-block"></i>
+
+            </div>
+        </a>
+    {{ end }}
+</div>
 {{ end }}
-
-

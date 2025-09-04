@@ -1,17 +1,23 @@
 {{ define "changelog" }}
-<h1>Changelog</h1>
-  {{ $posts := where .Site.Pages "Type" "changelog" }}
-  {{ $paginator := .Paginate .Pages }}
-  {{ partial "pagination.html" (dict "p" $paginator "s" .Scratch) }}
-  
-    {{ range $paginator.Pages }}
-      {{ partial "list-item.html" . }}
-    {{ end }}
-  
-  {{ partial "pagination.html" (dict "p" $paginator "s" .Scratch) }}
+<div class="col-lg-9 col-xl-8 mx-auto"><!-- Judul Halaman yang Ditingkatkan -->
+    <h1 class="display-5 fw-bold text-center border-bottom pb-3 mb-5">Changelog</h1>
+
+    <!-- Paginasi di Bagian Atas -->
+    {{ $paginator := .Paginate .Pages }}
+    {{ partial "pagination.html" (dict "p" $paginator "s" .Scratch) }}
+
+    <!-- Daftar Postingan Changelog -->
+    <div class="list-group list-group-flush">
+        {{ range $paginator.Pages }}
+            {{/* Setiap item akan dirender menggunakan partial yang sudah kita perbaiki sebelumnya */}}
+            {{ partial "list-item.html" . }}
+        {{ end }}
+    </div>
+
+    <!-- Paginasi di Bagian Bawah -->
+    <div class="mt-5">
+      {{ partial "pagination.html" (dict "p" $paginator "s" .Scratch) }}
+    </div>
+    
+</div>
 {{ end }}
-
-
-
-
-
