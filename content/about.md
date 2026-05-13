@@ -1,7 +1,7 @@
 ---
 description : About Us
 title: About
-lang: en
+language: en
 url: /about.html
 ---
 

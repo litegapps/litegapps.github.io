@@ -1,7 +1,7 @@
 ---
 type : doc
 title : Config
-lang : en
+language : en
 url: /doc/config.html
 ---
 

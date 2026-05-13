@@ -1,96 +1,208 @@
+/* =========================================
+   SISTEM VARIABEL MATERIAL DESIGN 3
+========================================= */
+:root, [data-bs-theme="light"] {
+  /* Palet Warna Terang (Light Mode) */
+  --md-sys-color-primary: #0b57d0;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #d3e3fd;
+  --md-sys-color-on-primary-container: #041e49;
+  --md-sys-color-secondary-container: #c2e7ff;
+  --md-sys-color-on-secondary-container: #001d35;
+  --md-sys-color-surface: #fbfdfe;
+  --md-sys-color-on-surface: #1f1f1f;
+  --md-sys-color-surface-container: #f0f4f8;
+  --md-sys-color-surface-container-high: #e1e9f1;
+  --md-sys-color-outline: #74777f;
+  --md-sys-card-border: rgba(0,0,0,0.05);
+  
+  /* Elevasi & Bentuk */
+  --md-sys-shape-corner-extra-large: 28px;
+  --md-sys-shape-corner-large: 16px;
+  --md-sys-elevation-1: 0px 1px 2px 0px rgba(0,0,0,0.3), 0px 1px 3px 1px rgba(0,0,0,0.15);
+  --md-sys-elevation-2: 0px 1px 2px 0px rgba(0,0,0,0.3), 0px 2px 6px 2px rgba(0,0,0,0.15);
+}
+
+/* =========================================
+   BASE STYLES
+========================================= */
 body {
-		font-family: Poppins, Arial, sans-serif;
-		min-height: 75rem;
-		padding-top: 4.5rem;
-	}
-	
-	
-	a:link,
-	a:visited,
-	a:hover,
-	a:active {
-		text-decoration: none;
-		color: #007d9c;
-	}
-h1, h2 {
-	text-align: center;
-	}
-	/* Latar belakang section yang otomatis beradaptasi dengan dark mode */
-.section-bg {
-  background-color: var(--bs-tertiary-bg);
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  min-height: 75rem;
+  padding-top: 5.5rem; /* Disesuaikan untuk navbar */
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Gradient yang juga menggunakan variabel warna */
+a:not(.btn) {
+  color: var(--md-sys-color-primary);
+  text-decoration: none;
+}
+
+h1, h2 { text-align: center; }
+
+/* =========================================
+   COMPONENTS (Hero, Cards, Code)
+========================================= */
 .hero-section {
-  background: linear-gradient(135deg, rgba(var(--bs-primary-rgb), 0.08), rgba(219, 68, 55, 0.05));
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  border-radius: var(--md-sys-shape-corner-extra-large);
+  margin: 2rem 1rem;
+  box-shadow: var(--md-sys-elevation-1);
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease-in-out;
 }
+.hero-section:hover { box-shadow: var(--md-sys-elevation-2); }
+.hero-section h1, .hero-section p { color: inherit !important; }
 
-/* Kartu dengan border dan efek hover yang lebih baik */
-.feature-card, .contributor-card {
-  border: 1px solid var(--bs-border-color-translucent);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.feature-card:hover, .contributor-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1) !important;
-  border-color: var(--bs-primary);
-}
-
-/* Blok kode, gaya sudah bagus dan tidak perlu diubah */
-.code-block {
-  background-color: #282c34;
-  color: #abb2bf;
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
-  font-family: 'Courier New', Courier, monospace;
-  white-space: pre-wrap;
-  word-break: break-all;
-}
-
-.responsive-img {
-  border-radius: 0.75rem;
-}
-
-.btn-lg {
-  padding: 0.75rem 1.5rem;
-  font-size: 1.1rem;
-}
-
-/* Tabel dengan header yang konsisten */
-.table {
-  border-radius: 0.5rem;
+.md3-card, .contributor-card {
+  background-color: var(--md-sys-color-surface-container);
+  border-radius: var(--md-sys-shape-corner-large);
+  border: 1px solid var(--md-sys-card-border);
+  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s cubic-bezier(0.2, 0, 0, 1), background-color 0.3s ease;
   overflow: hidden;
 }
+.md3-card:hover, .contributor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--md-sys-elevation-2);
+  background-color: var(--md-sys-color-surface-container-high);
+}
+.contributor-card { background-color: var(--md-sys-color-surface); }
 
-.table thead {
-  background-color: var(--bs-primary); /* Menggunakan warna primary dari tema */
-  color: white;
+.md3-icon-container {
+  display: inline-flex; align-items: center; justify-content: center;
+  background-color: var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Tombol ikon, gaya sudah bagus */
-.icon-button {
-  display: inline-block;
-  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+.section-bg-tonal {
+  background-color: var(--md-sys-color-surface-container);
+  border-radius: var(--md-sys-shape-corner-extra-large);
+  margin: 2rem 1rem; padding: 2rem 0;
+  transition: background-color 0.3s ease;
 }
 
-.icon-button:hover {
-  transform: scale(1.1);
-  opacity: 0.9;
+.md3-image {
+  border-radius: var(--md-sys-shape-corner-large);
+  box-shadow: var(--md-sys-elevation-2);
+  transition: transform 0.3s ease;
 }
-    .table thead {
-        background-color: #f8f9fa;
-    }
-    .post-card {
-        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-    }
-    .post-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-    }
-    .post-card-img {
-        width: 100%;
-        height: 250px;
-        object-fit: cover; /* Memastikan gambar terpotong rapi, tidak gepeng */
-    }
-    
+.md3-image:hover { transform: scale(1.02); }
+
+.code-block {
+  background-color: #1e1e1e; color: #d4d4d4;
+  padding: 1rem; border-radius: 12px;
+  font-family: "Fira Code", "Courier New", Courier, monospace;
+  overflow-x: auto;
+}
+.list-group-item { background-color: transparent; color: var(--md-sys-color-on-surface); }
+
+/* =========================================
+   BUTTONS
+========================================= */
+.btn-md3-primary {
+  background-color: var(--md-sys-color-primary) !important;
+  color: var(--md-sys-color-on-primary) !important;
+  border-radius: 100px; padding: 0.75rem 2rem; border: none;
+  box-shadow: var(--md-sys-elevation-1); transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+.btn-md3-primary:hover { filter: brightness(0.9); box-shadow: var(--md-sys-elevation-2); transform: translateY(-1px); }
+
+.btn-md3-tonal {
+  background-color: var(--md-sys-color-secondary-container) !important;
+  color: var(--md-sys-color-on-secondary-container) !important;
+  border-radius: 100px; padding: 0.75rem 2rem; border: none;
+  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+.btn-md3-tonal:hover { filter: brightness(0.95); box-shadow: var(--md-sys-elevation-1); transform: translateY(-1px); }
+
+.icon-button { display: inline-block; transition: transform 0.2s, opacity 0.2s; }
+.icon-button:hover { transform: scale(1.1); opacity: 0.9; }
+
+/* =========================================
+   NAVBAR MD3
+========================================= */
+.md3-navbar {
+  background-color: var(--md-sys-color-surface) !important;
+  border-bottom: 1px solid var(--md-sys-card-border);
+  box-shadow: var(--md-sys-elevation-1);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  padding-top: 0.75rem; padding-bottom: 0.75rem;
+}
+.md3-navbar .navbar-brand img { max-height: 40px; object-fit: contain; }
+.md3-navbar .nav-link {
+  color: var(--md-sys-color-on-surface); font-weight: 500;
+  padding: 0.5rem 1.25rem !important; margin: 0 0.25rem;
+  border-radius: 100px; transition: all 0.2s cubic-bezier(0.2, 0, 0, 1); opacity: 0.85;
+}
+.md3-navbar .nav-link:hover, .md3-navbar .nav-link.active {
+  color: var(--md-sys-color-on-secondary-container) !important;
+  background-color: var(--md-sys-color-secondary-container); opacity: 1;
+}
+.md3-navbar .dropdown-menu {
+  background-color: var(--md-sys-color-surface-container-high);
+  border: 1px solid var(--md-sys-card-border); border-radius: var(--md-sys-shape-corner-large);
+  box-shadow: var(--md-sys-elevation-2); padding: 0.5rem; margin-top: 0.5rem;
+}
+.md3-navbar .dropdown-item {
+  color: var(--md-sys-color-on-surface); border-radius: 8px;
+  padding: 0.5rem 1rem; margin-bottom: 0.15rem; font-weight: 500;
+}
+.md3-navbar .dropdown-item:hover {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+}
+.md3-navbar .dropdown-item.active {
+  background-color: var(--md-sys-color-primary) !important;
+  color: var(--md-sys-color-on-primary) !important;
+}
+.md3-navbar .navbar-toggler {
+  border: none; color: var(--md-sys-color-on-surface); border-radius: 12px; padding: 0.5rem;
+}
+.md3-navbar .navbar-toggler:focus { box-shadow: none; background-color: var(--md-sys-color-surface-container-high); }
+
+/* =========================================
+   FOOTER MD3
+========================================= */
+.md3-footer {
+  background-color: var(--md-sys-color-surface-container);
+  color: var(--md-sys-color-on-surface);
+  border-top: 1px solid var(--md-sys-card-border);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.md3-icon-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 50%;
+  color: var(--md-sys-color-on-surface); border: 1px solid var(--md-sys-color-outline);
+  opacity: 0.85; transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+.md3-icon-btn:hover {
+  background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);
+  border-color: transparent; opacity: 1; transform: translateY(-3px); box-shadow: var(--md-sys-elevation-1);
+}
+.md3-footer-link {
+  color: var(--md-sys-color-on-surface); opacity: 0.75; font-weight: 500; transition: color 0.2s, opacity 0.2s;
+}
+.md3-footer-link:hover { color: var(--md-sys-color-primary); opacity: 1; }
+.md3-footer-divider { border-color: var(--md-sys-color-outline); opacity: 0.25; }
+
+/* =========================================
+   VARIANTS ACCORDION MD3
+========================================= */
+.md3-accordion { gap: 1.25rem; display: flex; flex-direction: column; --bs-accordion-bg: transparent; --bs-accordion-border-width: 0; }
+.md3-accordion-item {
+  background-color: var(--md-sys-color-surface-container); border: 1px solid var(--md-sys-card-border);
+  border-radius: var(--md-sys-shape-corner-large) !important; overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+}
+.md3-accordion-item:hover { box-shadow: var(--md-sys-elevation-1); background-color: var(--md-sys-color-surface-container-high); }
+.md3-accordion-button { background-color: transparent !important; color: var(--md-sys-color-on-surface); box-shadow: none !important; padding: 1.25rem 1.5rem; }
+.md3-accordion-button:not(.collapsed) { color: var(--md-sys-color-primary); background-color: var(--md-sys-color-surface-container-high) !important; }
+.md3-chip { background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); padding: 0.35rem 1rem; border-radius: 100px; font-size: 0.85rem; font-weight: 600; }
+.md3-desc-box { background-color: var(--md-sys-color-surface); border-radius: 12px; padding: 1rem 1.25rem; border-left: 4px solid var(--md-sys-color-primary); color: var(--md-sys-color-on-surface); }
+.md3-app-list { list-style: none; padding-left: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.6rem 1rem; margin-bottom: 0; }
+.md3-app-list li { position: relative; padding-left: 1.25rem; color: var(--md-sys-color-on-surface); opacity: 0.85; font-size: 0.95rem; }
+.md3-app-list li::before { content: ""; position: absolute; left: 0; top: 0.5rem; width: 6px; height: 6px; border-radius: 50%; background-color: var(--md-sys-color-primary); }
+

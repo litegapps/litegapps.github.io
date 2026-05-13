@@ -1,23 +1,33 @@
 {{ define "changelog" }}
-<div class="col-lg-9 col-xl-8 mx-auto"><!-- Judul Halaman yang Ditingkatkan -->
-    <h1 class="display-5 fw-bold text-center border-bottom pb-3 mb-5">Changelog</h1>
+<div class="row justify-content-center">
+    <div class="col-lg-10 col-xl-9">
+        
+        <div class="text-center mb-5">
+            <div class="md3-icon-container shadow-sm mx-auto mb-3" style="width: 56px; height: 56px; border-radius: 14px;">
+                <i class="bi bi-clock-history fs-3"></i>
+            </div>
+            <h1 class="display-5 fw-bold" style="color: var(--md-sys-color-primary);">Changelog</h1>
+            <p class="opacity-75">Track all updates, improvements, and fixes for LiteGapps.</p>
+        </div>
 
-    <!-- Paginasi di Bagian Atas -->
-    {{ $paginator := .Paginate .Pages }}
-    {{ partial "pagination.html" (dict "p" $paginator "s" .Scratch) }}
+        {{ $paginator := .Paginate .Pages }}
+        <div class="mb-4 d-flex justify-content-center">
+            {{ partial "pagination.html" (dict "p" $paginator "s" .Scratch) }}
+        </div>
 
-    <!-- Daftar Postingan Changelog -->
-    <div class="list-group list-group-flush">
-        {{ range $paginator.Pages }}
-            {{/* Setiap item akan dirender menggunakan partial yang sudah kita perbaiki sebelumnya */}}
-            {{ partial "list-item.html" . }}
-        {{ end }}
+        <div class="md3-card border-0 shadow-sm mb-4">
+            <div class="list-group list-group-flush">
+                {{ range $paginator.Pages }}
+                    {{/* Setiap item akan dirender menggunakan partial */}}
+                    {{ partial "list-item.html" . }}
+                {{ end }}
+            </div>
+        </div>
+
+        <div class="mt-4 d-flex justify-content-center">
+            {{ partial "pagination.html" (dict "p" $paginator "s" .Scratch) }}
+        </div>
+        
     </div>
-
-    <!-- Paginasi di Bagian Bawah -->
-    <div class="mt-5">
-      {{ partial "pagination.html" (dict "p" $paginator "s" .Scratch) }}
-    </div>
-    
 </div>
 {{ end }}

@@ -1,40 +1,42 @@
 {{ define "doc" }}
-
-<!-- Bagian Header: Menampilkan Judul dan Konten dari _index.md -->
-<div class="mb-5">
-    <!-- Judul utama, dibuat lebih menonjol -->
-    <h1 class="display-5 fw-bold border-bottom pb-3 mb-4">{{ .Title }}</h1>
-
-    <!-- Konten/deskripsi pengantar untuk section ini -->
-    <div class="fs-5 text-body-secondary">
-        {{ .Content }}
-    </div>
-</div>
-
-<!-- Daftar Halaman (Menggunakan List Group Bootstrap) -->
-<div class="list-group">
-    {{ range .Pages }}
-        <!-- Setiap item adalah tautan yang rapi dengan efek hover bawaan -->
-        <a href="{{ .RelPermalink }}" class="list-group-item list-group-item-action p-4">
-            <div class="d-flex w-100 justify-content-between align-items-center">
-                
-                <!-- Judul dan ringkasan di sebelah kiri -->
-                <div>
-                    <h5 class="mb-1 fw-bold">{{ .LinkTitle }}</h5>
-                    <p class="mb-1 text-body-secondary">
-                        {{ if .Params.Excerpt -}}
-                            {{ .Params.Excerpt | plainify | truncate 120 }}
-                        {{- else -}}
-                            {{ .Summary | plainify | truncate 120 }}
-                        {{ end }}
-                    </p>
-                </div>
-
-                <!-- Ikon panah di sebelah kanan sebagai petunjuk visual -->
-                <i class="bi bi-chevron-right fs-4 text-secondary d-none d-sm-block"></i>
-
+<div class="row justify-content-center">
+    <div class="col-lg-10 col-xl-9">
+        
+        <div class="text-center mb-5">
+            <div class="md3-icon-container shadow-sm mx-auto mb-3" style="width: 56px; height: 56px; border-radius: 14px;">
+                <i class="bi bi-book-half fs-3"></i>
             </div>
-        </a>
-    {{ end }}
+            <h1 class="display-5 fw-bold" style="color: var(--md-sys-color-primary);">{{ .Title }}</h1>
+            <div class="fs-5 opacity-75 mt-2">
+                {{ .Content }}
+            </div>
+        </div>
+
+        <div class="md3-card border-0 shadow-sm mb-5">
+            <div class="list-group list-group-flush">
+                {{ range .Pages }}
+                    <a href="{{ .RelPermalink }}" class="list-group-item list-group-item-action p-4" style="background-color: transparent; border-color: var(--md-sys-card-border);">
+                        <div class="d-flex w-100 justify-content-between align-items-center">
+                            
+                            <div>
+                                <h5 class="mb-2 fw-bold" style="color: var(--md-sys-color-on-surface);">{{ .LinkTitle }}</h5>
+                                <p class="mb-0 opacity-75 small" style="line-height: 1.6; color: var(--md-sys-color-on-surface);">
+                                    {{ if .Params.Excerpt -}}
+                                        {{ .Params.Excerpt | plainify | truncate 120 }}
+                                    {{- else -}}
+                                        {{ .Summary | plainify | truncate 120 }}
+                                    {{ end }}
+                                </p>
+                            </div>
+
+                            <i class="bi bi-chevron-right fs-4 ms-3 opacity-50 d-none d-sm-block" style="color: var(--md-sys-color-primary);"></i>
+
+                        </div>
+                    </a>
+                {{ end }}
+            </div>
+        </div>
+
+    </div>
 </div>
 {{ end }}

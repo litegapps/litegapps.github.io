@@ -2,7 +2,7 @@
 type: doc
 layout: doc
 title: Uninstall
-lang: en
+language : en
 url: /doc/uninstall.html
 ---
 

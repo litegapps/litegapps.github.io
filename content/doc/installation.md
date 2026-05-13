@@ -2,7 +2,7 @@
 type: doc
 layout: doc
 title: Installation
-lang: en
+language: en
 url: /doc/installation.html
 ---
 

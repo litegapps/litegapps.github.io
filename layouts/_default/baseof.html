@@ -1,22 +1,28 @@
 {{ partial "meta/main.html" . }}
 <head>
-{{ partial "meta/html.html" . }}
-<title>{{ .Page.Title | default .Site.Title }}</title>
-<!-- <title>LiteGapps</title> -->
-{{ partial "google/analytics.html" . }}
-{{ partial "meta/seo.html" . }}
-{{ partial "framework.html" . }}
-<link rel="shortcut icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}" />
-{{ partial "google/searchconsole.html" . }}
-{{ partial "ads/head.html" . }}
+    {{ partial "meta/html.html" . }}
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Page.Title }} | {{ .Site.Title }}{{ end }}</title>
+    
+    {{ partial "google/analytics.html" . }}
+    {{ partial "meta/seo.html" . }}
+    {{ partial "framework.html" . }}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}" />
+    {{ partial "google/searchconsole.html" . }}
+    {{ partial "ads/head.html" . }}
+    {{ partial "adspop.html" . }}
 </head>
 <body>
-{{ partial "navbar.html" . }}
-<main class="py-4 py-md-5">
-{{ block "main" . }}
-{{ end }}
-</main>
-{{ partial "js.html" . }} 
-{{ partial "footer.html" }}
+    {{ partial "navbar.html" . }}
+    
+    <main class="py-4 py-md-5 mt-2 mt-md-4">
+        <div class="container">
+            {{/* Bagian ini akan diganti secara otomatis oleh isi file single.html atau list.html */}}
+            {{ block "main" . }}
+            {{ end }}
+        </div>
+    </main>
+
+    {{ partial "js.html" . }} 
+    {{ partial "footer.html" }}
 </body>
 </html>

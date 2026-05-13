@@ -14,16 +14,11 @@
 <body>
     {{ partial "navbar.html" . }}
 
-    <!-- Konten utama dengan padding vertikal dan struktur kolom terpusat -->
-    <main class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-9">
-                <article>
-                    {{/* Logika Hugo Anda tetap sama persis, tidak ada yang diubah */}}
-                    {{ block "doc" . }}
-                    {{ end }}
-                </article>
-            </div>
+    <main class="py-4 py-md-5 mt-2 mt-md-4">
+        <div class="container">
+            {{/* Logika Hugo untuk memanggil list.html atau single.html */}}
+            {{ block "doc" . }}
+            {{ end }}
         </div>
     </main>
 

@@ -1,55 +1,109 @@
-<footer class="bg-body-tertiary text-center py-4">
+<style>
+    .md3-footer {
+        background-color: var(--md-sys-color-surface-container);
+        color: var(--md-sys-color-on-surface);
+        border-top: 1px solid var(--md-sys-card-border);
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    /* MD3 Standard Icon Button */
+    .md3-icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        color: var(--md-sys-color-on-surface);
+        background-color: transparent;
+        border: 1px solid var(--md-sys-color-outline);
+        opacity: 0.85;
+        transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+        text-decoration: none;
+        font-size: 1.25rem;
+    }
+    
+    .md3-icon-btn:hover, .md3-icon-btn:focus {
+        background-color: var(--md-sys-color-secondary-container);
+        color: var(--md-sys-color-on-secondary-container);
+        border-color: transparent;
+        opacity: 1;
+        transform: translateY(-3px);
+        box-shadow: var(--md-sys-elevation-1);
+    }
+
+    /* MD3 Footer Links */
+    .md3-footer-link {
+        color: var(--md-sys-color-on-surface);
+        opacity: 0.75;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s ease, opacity 0.2s ease;
+    }
+
+    .md3-footer-link:hover {
+        color: var(--md-sys-color-primary);
+        opacity: 1;
+    }
+
+    .md3-footer-divider {
+        border-color: var(--md-sys-color-outline);
+        opacity: 0.25;
+    }
+</style>
+
+<footer class="md3-footer text-center py-5 mt-5">
   <div class="container">
 
     <section class="mb-4">
       <div class="visually-hidden">Social Media</div>
-      <a class="btn btn-outline-secondary btn-floating m-1" href="https://youtube.com/channel/UCoqHuQ6CssiZCk3q4haOLUQ" role="button" aria-label="YouTube">
-        <i class="bi bi-youtube"></i>
-      </a>
-      <a class="btn btn-outline-secondary btn-floating m-1" href="https://fb.me/litegapps" role="button" aria-label="Facebook">
-        <i class="bi bi-facebook"></i>
-      </a>
-      <a class="btn btn-outline-secondary btn-floating m-1" href="https://t.me/litegapps" role="button" aria-label="Telegram">
-        <i class="bi bi-telegram"></i>
-      </a>
-      <a class="btn btn-outline-secondary btn-floating m-1" href="https://twitter.com/litegapps" role="button" aria-label="X social media">
-        <i class="bi bi-twitter-x"></i>
-      </a>
-      <a class="btn btn-outline-secondary btn-floating m-1" href="https://www.tiktok.com/@litegapps" role="button" aria-label="TikTok">
-        <i class="bi bi-tiktok"></i>
-      </a>
-      <a class="btn btn-outline-secondary btn-floating m-1" href="https://xdaforums.com/t/litegapps-systemless-custom-gapps.4146013/" role="button" aria-label="XDA Forums">
-        <i class="bi bi-patch-question-fill"></i>
-      </a>
-      <a class="btn btn-outline-secondary btn-floating m-1" href="https://github.com/litegapps" role="button" aria-label="GitHub">
-        <i class="bi bi-github"></i>
-      </a>
-      <a class="btn btn-outline-secondary btn-floating m-1" href="https://paypal.me/wahyu6071" role="button" aria-label="PayPal">
-        <i class="bi bi-paypal"></i>
-      </a>
-      <a class="btn btn-outline-secondary btn-floating m-1" href="mailto:litegapps@gmail.com" role="button" aria-label="Email">
-        <i class="bi bi-envelope-fill"></i>
-      </a>
+      <div class="d-flex flex-wrap justify-content-center gap-2">
+          <a class="md3-icon-btn" href="https://youtube.com/channel/UCoqHuQ6CssiZCk3q4haOLUQ" role="button" aria-label="YouTube">
+            <i class="bi bi-youtube"></i>
+          </a>
+          <a class="md3-icon-btn" href="https://fb.me/litegapps" role="button" aria-label="Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a class="md3-icon-btn" href="https://t.me/litegapps" role="button" aria-label="Telegram">
+            <i class="bi bi-telegram"></i>
+          </a>
+          <a class="md3-icon-btn" href="https://twitter.com/litegapps" role="button" aria-label="X social media">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a class="md3-icon-btn" href="https://www.tiktok.com/@litegapps" role="button" aria-label="TikTok">
+            <i class="bi bi-tiktok"></i>
+          </a>
+          <a class="md3-icon-btn" href="https://xdaforums.com/t/litegapps-systemless-custom-gapps.4146013/" role="button" aria-label="XDA Forums">
+            <i class="bi bi-patch-question-fill"></i>
+          </a>
+          <a class="md3-icon-btn" href="https://github.com/litegapps" role="button" aria-label="GitHub">
+            <i class="bi bi-github"></i>
+          </a>
+          <a class="md3-icon-btn" href="https://paypal.me/wahyu6071" role="button" aria-label="PayPal">
+            <i class="bi bi-paypal"></i>
+          </a>
+          <a class="md3-icon-btn" href="mailto:litegapps@gmail.com" role="button" aria-label="Email">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+      </div>
     </section>
     
-    <hr>
+    <hr class="md3-footer-divider my-4">
 
-    <section class="mb-3">
+    <section class="mb-4">
         <div class="visually-hidden fw-bold">Related Links</div>
-        <ul class="list-inline">
-            <li class="list-inline-item"><a href="https://magisk.dev" class="text-body-secondary">Magisk</a></li>
-            <li class="list-inline-item"><a href="https://aethersx2.me" class="text-body-secondary">AetherSX2</a></li>
-            <li class="list-inline-item"><a href="https://pcsx2.app" class="text-body-secondary">PCSX2</a></li>
-            <li class="list-inline-item"><a href="https://winlator.me" class="text-body-secondary">Winlator</a></li>
-            <li class="list-inline-item"><a href="https://ppsspp.app" class="text-body-secondary">PPSSPP</a></li>
-            <li class="list-inline-item"><a href="https://aethersx2-emu.com" class="text-body-secondary">aethersx2.gitlab.io</a></li>
-            <li class="list-inline-item"><a href="https://ps2bios.dev/" class="text-body-secondary">PS2 BIOS</a></li>
+        <ul class="list-inline mb-0">
+            <li class="list-inline-item mx-2 mb-2"><a href="https://magisk.dev" class="md3-footer-link">Magisk</a></li>
+            <li class="list-inline-item mx-2 mb-2"><a href="https://aethersx2.me" class="md3-footer-link">AetherSX2</a></li>
+            <li class="list-inline-item mx-2 mb-2"><a href="https://winlator.me" class="md3-footer-link">Winlator</a></li>
+            <li class="list-inline-item mx-2 mb-2"><a href="https://aethersx2-emu.com" class="md3-footer-link">aethersx2.gitlab.io</a></li>
+            <li class="list-inline-item mx-2 mb-2"><a href="https://ps2bios.dev/" class="md3-footer-link">PS2 BIOS</a></li>
         </ul>
     </section>
 
-    <div class="text-center text-body-secondary">
+    <div class="opacity-75 small">
       Copyright &#169; {{ now.Year }} 
-      <a class="text-body-secondary" href="/">The LiteGapps Open Source Project</a>
+      <a class="md3-footer-link fw-bold" href="/">The LiteGapps Open Source Project</a>
     </div>
     
   </div>

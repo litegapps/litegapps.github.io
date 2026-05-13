@@ -1,7 +1,7 @@
 ---
 type : doc
 title : Disable Secure
-lang: en
+language: en
 url: /doc/disable_secure.html
 ---
 

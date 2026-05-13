@@ -2,7 +2,7 @@
 type: doc
 layout: doc
 title: LiteGapps Controller Documentation
-lang: en
+language : en
 adstera: true
 monetag: true
 url: /doc/litegapps_controller.html

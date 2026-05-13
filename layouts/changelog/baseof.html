@@ -2,7 +2,6 @@
 <head>
     {{ partial "meta/html.html" . }}
     
-    <!-- Judul Halaman yang lebih SEO-friendly -->
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Page.Title }} | {{ .Site.Title }}{{ end }}</title>
 
     {{ partial "google/analytics.html" . }}
@@ -13,26 +12,18 @@
     {{ partial "ads/head.html" . }}
 </head>
 <body>
-    <!-- Navigasi akan dimuat di sini -->
     {{ partial "navbar.html" . }}
 
-    <!-- Area Konten Utama -->
-    <main class="py-4 py-md-5">
-        <!-- Container Bootstrap untuk memberi padding dan memusatkan konten -->
+    <main class="py-4 py-md-5 mt-2 mt-md-4">
         <div class="container">
-            {{/* Blok "changelog" Anda tetap sama persis. 
-                Konten dari file seperti index.html atau list.html akan dimasukkan di sini.
-            */}}
+            {{/* Blok "changelog" akan dimasukkan di sini */}}
             {{ block "changelog" . }}
             {{ end }}
-
         </div>
     </main>
 
-    <!-- Footer akan dimuat di sini -->
     {{ partial "footer.html" . }}
 
-    <!-- JavaScript akan dimuat di sini -->
     {{ partial "js.html" . }}
 </body>
 </html>
