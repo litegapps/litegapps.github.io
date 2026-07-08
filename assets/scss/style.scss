@@ -1,154 +1,393 @@
-/* =========================================
-   SISTEM VARIABEL MATERIAL DESIGN 3
-========================================= */
-:root, [data-bs-theme="light"] {
-  /* Palet Warna Terang (Light Mode) */
+/* =====================================================================
+   LITEGAPPS · MATERIAL 3 DESIGN SYSTEM
+   A modern Material You (M3) theme built on top of Bootstrap 5.
+   Light-mode tokens live here; dark-mode overrides live in dark.scss.
+   ===================================================================== */
+
+/* ---------------------------------------------------------------------
+   1. DESIGN TOKENS (LIGHT)
+   --------------------------------------------------------------------- */
+:root,
+[data-bs-theme="light"] {
+  /* Primary */
   --md-sys-color-primary: #0b57d0;
   --md-sys-color-on-primary: #ffffff;
   --md-sys-color-primary-container: #d3e3fd;
-  --md-sys-color-on-primary-container: #041e49;
+  --md-sys-color-on-primary-container: #001b3f;
+
+  /* Secondary */
+  --md-sys-color-secondary: #565f71;
+  --md-sys-color-on-secondary: #ffffff;
   --md-sys-color-secondary-container: #c2e7ff;
   --md-sys-color-on-secondary-container: #001d35;
-  --md-sys-color-surface: #fbfdfe;
-  --md-sys-color-on-surface: #1f1f1f;
-  --md-sys-color-surface-container: #f0f4f8;
-  --md-sys-color-surface-container-high: #e1e9f1;
-  --md-sys-color-outline: #74777f;
-  --md-sys-card-border: rgba(0,0,0,0.05);
-  
-  /* Elevasi & Bentuk */
-  --md-sys-shape-corner-extra-large: 28px;
+
+  /* Tertiary */
+  --md-sys-color-tertiary: #6b5778;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #f3daff;
+  --md-sys-color-on-tertiary-container: #251431;
+
+  /* Error */
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #410002;
+
+  /* Surfaces (tonal elevation ladder) */
+  --md-sys-color-surface: #f9f9ff;
+  --md-sys-color-on-surface: #1a1c1e;
+  --md-sys-color-surface-variant: #dfe2eb;
+  --md-sys-color-on-surface-variant: #43474e;
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f3f3fa;
+  --md-sys-color-surface-container: #edeef4;
+  --md-sys-color-surface-container-high: #e7e8ee;
+  --md-sys-color-surface-container-highest: #e1e2e9;
+
+  /* Outline & misc */
+  --md-sys-color-outline: #73777f;
+  --md-sys-color-outline-variant: #c3c7cf;
+  --md-sys-color-inverse-surface: #2f3033;
+  --md-sys-color-inverse-on-surface: #f1f0f7;
+  --md-sys-color-inverse-primary: #a6c8ff;
+  --md-sys-color-scrim: rgba(0, 0, 0, 0.4);
+  --md-sys-card-border: rgba(0, 0, 0, 0.06);
+
+  /* Shape scale */
+  --md-sys-shape-corner-small: 8px;
+  --md-sys-shape-corner-medium: 12px;
   --md-sys-shape-corner-large: 16px;
-  --md-sys-elevation-1: 0px 1px 2px 0px rgba(0,0,0,0.3), 0px 1px 3px 1px rgba(0,0,0,0.15);
-  --md-sys-elevation-2: 0px 1px 2px 0px rgba(0,0,0,0.3), 0px 2px 6px 2px rgba(0,0,0,0.15);
+  --md-sys-shape-corner-extra-large: 28px;
+  --md-sys-shape-corner-full: 100px;
+
+  /* Elevation (Material 3 tonal + key shadows) */
+  --md-sys-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
+  --md-sys-elevation-2: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 2px rgba(0, 0, 0, 0.12);
+  --md-sys-elevation-3: 0 4px 8px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --md-sys-elevation-4: 0 6px 10px 4px rgba(0, 0, 0, 0.12), 0 2px 3px rgba(0, 0, 0, 0.3);
+
+  /* Motion */
+  --md-sys-motion-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --md-sys-motion-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Bootstrap bridging */
+  --bs-body-bg: var(--md-sys-color-surface);
+  --bs-body-color: var(--md-sys-color-on-surface);
+  --bs-link-color-rgb: 11, 87, 208;
+  --bs-border-color: var(--md-sys-color-outline-variant);
+  --bs-emphasis-color: var(--md-sys-color-on-surface);
 }
 
-/* =========================================
-   BASE STYLES
-========================================= */
+/* ---------------------------------------------------------------------
+   2. BASE
+   --------------------------------------------------------------------- */
+* {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
-  min-height: 75rem;
-  padding-top: 5.5rem; /* Disesuaikan untuk navbar */
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
+  min-height: 100vh;
+  padding-top: 5.25rem;
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  letter-spacing: 0.15px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.35s var(--md-sys-motion-standard),
+    color 0.35s var(--md-sys-motion-standard);
 }
+
+/* Material-flavoured display typography */
+h1, h2, h3, h4, h5, h6,
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  font-family: "Roboto Flex", "Roboto", system-ui, sans-serif;
+  letter-spacing: -0.25px;
+  color: var(--md-sys-color-on-surface);
+}
+h1, h2 { text-align: center; font-weight: 700; }
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 { font-weight: 800; }
+
+.lead { color: var(--md-sys-color-on-surface-variant); font-weight: 400; }
 
 a:not(.btn) {
   color: var(--md-sys-color-primary);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
+a:not(.btn):hover { text-decoration: underline; text-underline-offset: 3px; }
 
-h1, h2 { text-align: center; }
-
-/* =========================================
-   COMPONENTS (Hero, Cards, Code)
-========================================= */
-.hero-section {
+::selection {
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--md-sys-color-outline-variant);
+  border-radius: 100px;
+  border: 3px solid var(--md-sys-color-surface);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--md-sys-color-outline); }
+
+/* ---------------------------------------------------------------------
+   3. GOOGLE MATERIAL SYMBOLS (icons)
+   --------------------------------------------------------------------- */
+.material-symbols-rounded {
+  font-family: "Material Symbols Rounded";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-flex;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+.material-symbols-rounded.fill { font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24; }
+.material-symbols-rounded.w-500 { font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24; }
+.msym-sm { font-size: 1.1rem; }
+.msym-md { font-size: 1.5rem; }
+.msym-lg { font-size: 2rem; }
+.msym-xl { font-size: 2.5rem; }
+
+/* ---------------------------------------------------------------------
+   4. HERO
+   --------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 15% 15%, var(--md-sys-color-tertiary-container) 0%, transparent 45%),
+    radial-gradient(circle at 85% 90%, var(--md-sys-color-secondary-container) 0%, transparent 45%),
+    var(--md-sys-color-primary-container);
+  color: var(--md-sys-color-on-primary-container);
+  border-radius: var(--md-sys-shape-corner-extra-large);
+  margin: 1.5rem 1rem 2rem;
+  box-shadow: var(--md-sys-elevation-1);
+  transition: box-shadow 0.35s var(--md-sys-motion-standard),
+    background 0.35s ease;
+}
+.hero-section:hover { box-shadow: var(--md-sys-elevation-3); }
+.hero-section h1,
+.hero-section p { color: inherit !important; }
+.hero-section h1 { letter-spacing: -1px; }
+
+/* ---------------------------------------------------------------------
+   5. SECTIONS & SURFACES
+   --------------------------------------------------------------------- */
+.section-bg-tonal {
+  background-color: var(--md-sys-color-surface-container-low);
   border-radius: var(--md-sys-shape-corner-extra-large);
   margin: 2rem 1rem;
-  box-shadow: var(--md-sys-elevation-1);
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease-in-out;
+  padding: 2rem 0;
+  transition: background-color 0.35s ease;
 }
-.hero-section:hover { box-shadow: var(--md-sys-elevation-2); }
-.hero-section h1, .hero-section p { color: inherit !important; }
 
-.md3-card, .contributor-card {
+/* ---------------------------------------------------------------------
+   6. CARDS
+   --------------------------------------------------------------------- */
+.md3-card,
+.contributor-card {
+  position: relative;
   background-color: var(--md-sys-color-surface-container);
+  color: var(--md-sys-color-on-surface);
   border-radius: var(--md-sys-shape-corner-large);
   border: 1px solid var(--md-sys-card-border);
-  transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s cubic-bezier(0.2, 0, 0, 1), background-color 0.3s ease;
   overflow: hidden;
+  transition: transform 0.3s var(--md-sys-motion-emphasized),
+    box-shadow 0.3s var(--md-sys-motion-emphasized),
+    background-color 0.35s ease;
 }
-.md3-card:hover, .contributor-card:hover {
+.md3-card:hover,
+.contributor-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--md-sys-elevation-2);
   background-color: var(--md-sys-color-surface-container-high);
 }
-.contributor-card { background-color: var(--md-sys-color-surface); }
+.contributor-card { background-color: var(--md-sys-color-surface-container-low); }
 
+/* Elevated card variant used on the download page etc. */
+.md3-card.border-0 { border-color: transparent; }
+
+/* ---------------------------------------------------------------------
+   7. ICON CONTAINER (feature tiles)
+   --------------------------------------------------------------------- */
 .md3-icon-container {
-  display: inline-flex; align-items: center; justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--md-sys-shape-corner-large);
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 0.5rem;
+  transition: background-color 0.35s ease, color 0.35s ease, transform 0.3s var(--md-sys-motion-emphasized);
+}
+.md3-card:hover .md3-icon-container { transform: scale(1.06); }
+.md3-icon-container .material-symbols-rounded { font-size: 2rem; }
+
+/* ---------------------------------------------------------------------
+   8. BUTTONS (Material 3 button family)
+   --------------------------------------------------------------------- */
+%md3-btn-base {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: var(--md-sys-shape-corner-full);
+  padding: 0.7rem 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  border: none;
+  overflow: hidden;
+  transition: box-shadow 0.25s var(--md-sys-motion-emphasized),
+    transform 0.25s var(--md-sys-motion-emphasized),
+    filter 0.25s ease, background-color 0.25s ease;
+}
+%md3-btn-state::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+%md3-btn-state:hover::after { opacity: 0.08; }
+%md3-btn-state:active::after { opacity: 0.12; }
+
+.btn-md3-primary {
+  @extend %md3-btn-base;
+  @extend %md3-btn-state;
+  background-color: var(--md-sys-color-primary) !important;
+  color: var(--md-sys-color-on-primary) !important;
+  box-shadow: var(--md-sys-elevation-1);
+}
+.btn-md3-primary:hover {
+  color: var(--md-sys-color-on-primary) !important;
+  box-shadow: var(--md-sys-elevation-2);
+  transform: translateY(-1px);
 }
 
-.section-bg-tonal {
-  background-color: var(--md-sys-color-surface-container);
-  border-radius: var(--md-sys-shape-corner-extra-large);
-  margin: 2rem 1rem; padding: 2rem 0;
-  transition: background-color 0.3s ease;
+.btn-md3-tonal {
+  @extend %md3-btn-base;
+  @extend %md3-btn-state;
+  background-color: var(--md-sys-color-secondary-container) !important;
+  color: var(--md-sys-color-on-secondary-container) !important;
+}
+.btn-md3-tonal:hover {
+  color: var(--md-sys-color-on-secondary-container) !important;
+  box-shadow: var(--md-sys-elevation-1);
+  transform: translateY(-1px);
 }
 
+.btn-md3-outlined {
+  @extend %md3-btn-base;
+  @extend %md3-btn-state;
+  background-color: transparent !important;
+  color: var(--md-sys-color-primary) !important;
+  border: 1px solid var(--md-sys-color-outline) !important;
+}
+.btn-md3-outlined:hover {
+  color: var(--md-sys-color-primary) !important;
+  border-color: var(--md-sys-color-primary) !important;
+}
+
+.btn-md3-text {
+  @extend %md3-btn-base;
+  @extend %md3-btn-state;
+  background-color: transparent !important;
+  color: var(--md-sys-color-primary) !important;
+  padding: 0.6rem 1rem;
+}
+
+/* ---------------------------------------------------------------------
+   9. CODE BLOCKS
+   --------------------------------------------------------------------- */
+.code-block,
+pre {
+  background-color: #1e2022;
+  color: #e6e6e6;
+  padding: 1rem 1.25rem;
+  border-radius: var(--md-sys-shape-corner-medium);
+  font-family: "Roboto Mono", "Fira Code", "Courier New", monospace;
+  overflow-x: auto;
+}
+code:not(pre code) {
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-primary);
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+  font-size: 0.9em;
+}
+
+/* ---------------------------------------------------------------------
+   10. IMAGES
+   --------------------------------------------------------------------- */
 .md3-image {
   border-radius: var(--md-sys-shape-corner-large);
   box-shadow: var(--md-sys-elevation-2);
-  transition: transform 0.3s ease;
+  transition: transform 0.35s var(--md-sys-motion-emphasized);
 }
 .md3-image:hover { transform: scale(1.02); }
 
-.code-block {
-  background-color: #1e1e1e; color: #d4d4d4;
-  padding: 1rem; border-radius: 12px;
-  font-family: "Fira Code", "Courier New", Courier, monospace;
-  overflow-x: auto;
-}
-.list-group-item { background-color: transparent; color: var(--md-sys-color-on-surface); }
-
-/* =========================================
-   BUTTONS
-========================================= */
-.btn-md3-primary {
-  background-color: var(--md-sys-color-primary) !important;
-  color: var(--md-sys-color-on-primary) !important;
-  border-radius: 100px; padding: 0.75rem 2rem; border: none;
-  box-shadow: var(--md-sys-elevation-1); transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
-}
-.btn-md3-primary:hover { filter: brightness(0.9); box-shadow: var(--md-sys-elevation-2); transform: translateY(-1px); }
-
-.btn-md3-tonal {
-  background-color: var(--md-sys-color-secondary-container) !important;
-  color: var(--md-sys-color-on-secondary-container) !important;
-  border-radius: 100px; padding: 0.75rem 2rem; border: none;
-  transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
-}
-.btn-md3-tonal:hover { filter: brightness(0.95); box-shadow: var(--md-sys-elevation-1); transform: translateY(-1px); }
-
-.icon-button { display: inline-block; transition: transform 0.2s, opacity 0.2s; }
-.icon-button:hover { transform: scale(1.1); opacity: 0.9; }
-
-/* =========================================
-   NAVBAR MD3
-========================================= */
+/* ---------------------------------------------------------------------
+   11. NAVBAR
+   --------------------------------------------------------------------- */
 .md3-navbar {
-  background-color: var(--md-sys-color-surface) !important;
+  background-color: color-mix(in srgb, var(--md-sys-color-surface) 82%, transparent) !important;
+  backdrop-filter: saturate(180%) blur(16px);
+  -webkit-backdrop-filter: saturate(180%) blur(16px);
   border-bottom: 1px solid var(--md-sys-card-border);
-  box-shadow: var(--md-sys-elevation-1);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-  padding-top: 0.75rem; padding-bottom: 0.75rem;
+  transition: background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.3s ease;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
 }
-.md3-navbar .navbar-brand img { max-height: 40px; object-fit: contain; }
+.md3-navbar.scrolled { box-shadow: var(--md-sys-elevation-2); }
+.md3-navbar .navbar-brand img,
+.nav-brand-icon { max-height: 38px; object-fit: contain; }
 .md3-navbar .nav-link {
-  color: var(--md-sys-color-on-surface); font-weight: 500;
-  padding: 0.5rem 1.25rem !important; margin: 0 0.25rem;
-  border-radius: 100px; transition: all 0.2s cubic-bezier(0.2, 0, 0, 1); opacity: 0.85;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--md-sys-color-on-surface);
+  font-weight: 500;
+  padding: 0.5rem 1.15rem !important;
+  margin: 0 0.15rem;
+  border-radius: var(--md-sys-shape-corner-full);
+  opacity: 0.9;
+  transition: all 0.2s var(--md-sys-motion-emphasized);
 }
-.md3-navbar .nav-link:hover, .md3-navbar .nav-link.active {
+.md3-navbar .nav-link:hover,
+.md3-navbar .nav-link.active {
   color: var(--md-sys-color-on-secondary-container) !important;
-  background-color: var(--md-sys-color-secondary-container); opacity: 1;
+  background-color: var(--md-sys-color-secondary-container);
+  opacity: 1;
 }
 .md3-navbar .dropdown-menu {
   background-color: var(--md-sys-color-surface-container-high);
-  border: 1px solid var(--md-sys-card-border); border-radius: var(--md-sys-shape-corner-large);
-  box-shadow: var(--md-sys-elevation-2); padding: 0.5rem; margin-top: 0.5rem;
+  border: 1px solid var(--md-sys-card-border);
+  border-radius: var(--md-sys-shape-corner-large);
+  box-shadow: var(--md-sys-elevation-2);
+  padding: 0.5rem;
+  margin-top: 0.6rem;
 }
 .md3-navbar .dropdown-item {
-  color: var(--md-sys-color-on-surface); border-radius: 8px;
-  padding: 0.5rem 1rem; margin-bottom: 0.15rem; font-weight: 500;
+  display: flex;
+  align-items: center;
+  color: var(--md-sys-color-on-surface);
+  border-radius: var(--md-sys-shape-corner-full);
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.15rem;
+  font-weight: 500;
 }
 .md3-navbar .dropdown-item:hover {
   background-color: var(--md-sys-color-secondary-container);
@@ -159,50 +398,299 @@ h1, h2 { text-align: center; }
   color: var(--md-sys-color-on-primary) !important;
 }
 .md3-navbar .navbar-toggler {
-  border: none; color: var(--md-sys-color-on-surface); border-radius: 12px; padding: 0.5rem;
+  border: none;
+  color: var(--md-sys-color-on-surface);
+  border-radius: var(--md-sys-shape-corner-medium);
+  padding: 0.4rem 0.6rem;
 }
-.md3-navbar .navbar-toggler:focus { box-shadow: none; background-color: var(--md-sys-color-surface-container-high); }
+.md3-navbar .navbar-toggler:focus {
+  box-shadow: none;
+  background-color: var(--md-sys-color-surface-container-high);
+}
 
-/* =========================================
-   FOOTER MD3
-========================================= */
+/* Theme toggle button (Material icon button) */
+#bd-theme {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--md-sys-color-on-surface-variant);
+  background-color: transparent;
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  transition: all 0.2s var(--md-sys-motion-emphasized);
+}
+#bd-theme:hover,
+#bd-theme:focus {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  border-color: transparent;
+}
+#bd-theme::after { display: none !important; }
+.bd-mode-toggle { z-index: 1500; }
+
+/* ---------------------------------------------------------------------
+   12. FOOTER
+   --------------------------------------------------------------------- */
 .md3-footer {
-  background-color: var(--md-sys-color-surface-container);
+  background-color: var(--md-sys-color-surface-container-low);
   color: var(--md-sys-color-on-surface);
   border-top: 1px solid var(--md-sys-card-border);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.35s ease, color 0.35s ease;
 }
 .md3-icon-btn {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 48px; height: 48px; border-radius: 50%;
-  color: var(--md-sys-color-on-surface); border: 1px solid var(--md-sys-color-outline);
-  opacity: 0.85; transition: all 0.2s cubic-bezier(0.2, 0, 0, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: var(--md-sys-color-on-surface-variant);
+  background-color: transparent;
+  border: 1px solid var(--md-sys-color-outline-variant);
+  opacity: 0.9;
+  transition: all 0.2s var(--md-sys-motion-emphasized);
+  text-decoration: none;
+  font-size: 1.25rem;
 }
-.md3-icon-btn:hover {
-  background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container);
-  border-color: transparent; opacity: 1; transform: translateY(-3px); box-shadow: var(--md-sys-elevation-1);
+.md3-icon-btn:hover,
+.md3-icon-btn:focus {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  border-color: transparent;
+  opacity: 1;
+  transform: translateY(-3px);
+  box-shadow: var(--md-sys-elevation-1);
 }
 .md3-footer-link {
-  color: var(--md-sys-color-on-surface); opacity: 0.75; font-weight: 500; transition: color 0.2s, opacity 0.2s;
+  color: var(--md-sys-color-on-surface-variant);
+  opacity: 0.85;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, opacity 0.2s ease;
 }
-.md3-footer-link:hover { color: var(--md-sys-color-primary); opacity: 1; }
-.md3-footer-divider { border-color: var(--md-sys-color-outline); opacity: 0.25; }
+.md3-footer-link:hover {
+  color: var(--md-sys-color-primary);
+  opacity: 1;
+  text-decoration: none;
+}
+.md3-footer-divider {
+  border-color: var(--md-sys-color-outline-variant);
+  opacity: 0.4;
+}
 
-/* =========================================
-   VARIANTS ACCORDION MD3
-========================================= */
-.md3-accordion { gap: 1.25rem; display: flex; flex-direction: column; --bs-accordion-bg: transparent; --bs-accordion-border-width: 0; }
+/* ---------------------------------------------------------------------
+   13. CHIPS & BADGES
+   --------------------------------------------------------------------- */
+.md3-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--md-sys-shape-corner-small);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: filter 0.2s ease;
+}
+.md3-chip:hover { filter: brightness(0.96); }
+
+.badge.rounded-pill {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* ---------------------------------------------------------------------
+   14. TABLES
+   --------------------------------------------------------------------- */
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--md-sys-color-on-surface);
+  --bs-table-hover-bg: var(--md-sys-color-surface-container-high);
+  --bs-table-hover-color: var(--md-sys-color-on-surface);
+  --bs-table-border-color: var(--md-sys-color-outline-variant);
+  color: var(--md-sys-color-on-surface);
+}
+.table thead th {
+  color: var(--md-sys-color-on-surface-variant);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.4px;
+}
+
+/* ---------------------------------------------------------------------
+   15. FORMS
+   --------------------------------------------------------------------- */
+.form-select,
+.form-control {
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-sys-shape-corner-medium);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-select:focus,
+.form-control:focus {
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface);
+  border-color: var(--md-sys-color-primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--md-sys-color-primary) 22%, transparent);
+}
+.form-label { color: var(--md-sys-color-on-surface-variant); }
+
+/* ---------------------------------------------------------------------
+   16. LIST GROUPS
+   --------------------------------------------------------------------- */
+.list-group-item {
+  background-color: transparent;
+  color: var(--md-sys-color-on-surface);
+  border-color: var(--md-sys-card-border);
+}
+.list-group-item-action:hover,
+.list-group-item-action:focus {
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface);
+}
+
+/* ---------------------------------------------------------------------
+   17. VARIANTS ACCORDION
+   --------------------------------------------------------------------- */
+.md3-accordion {
+  gap: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  --bs-accordion-bg: transparent;
+  --bs-accordion-border-width: 0;
+}
 .md3-accordion-item {
-  background-color: var(--md-sys-color-surface-container); border: 1px solid var(--md-sys-card-border);
-  border-radius: var(--md-sys-shape-corner-large) !important; overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+  background-color: var(--md-sys-color-surface-container);
+  border: 1px solid var(--md-sys-card-border);
+  border-radius: var(--md-sys-shape-corner-large) !important;
+  overflow: hidden;
+  transition: box-shadow 0.2s, background-color 0.3s;
 }
-.md3-accordion-item:hover { box-shadow: var(--md-sys-elevation-1); background-color: var(--md-sys-color-surface-container-high); }
-.md3-accordion-button { background-color: transparent !important; color: var(--md-sys-color-on-surface); box-shadow: none !important; padding: 1.25rem 1.5rem; }
-.md3-accordion-button:not(.collapsed) { color: var(--md-sys-color-primary); background-color: var(--md-sys-color-surface-container-high) !important; }
-.md3-chip { background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); padding: 0.35rem 1rem; border-radius: 100px; font-size: 0.85rem; font-weight: 600; }
-.md3-desc-box { background-color: var(--md-sys-color-surface); border-radius: 12px; padding: 1rem 1.25rem; border-left: 4px solid var(--md-sys-color-primary); color: var(--md-sys-color-on-surface); }
-.md3-app-list { list-style: none; padding-left: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.6rem 1rem; margin-bottom: 0; }
-.md3-app-list li { position: relative; padding-left: 1.25rem; color: var(--md-sys-color-on-surface); opacity: 0.85; font-size: 0.95rem; }
-.md3-app-list li::before { content: ""; position: absolute; left: 0; top: 0.5rem; width: 6px; height: 6px; border-radius: 50%; background-color: var(--md-sys-color-primary); }
+.md3-accordion-item:hover {
+  box-shadow: var(--md-sys-elevation-1);
+  background-color: var(--md-sys-color-surface-container-high);
+}
+.md3-accordion-button {
+  background-color: transparent !important;
+  color: var(--md-sys-color-on-surface);
+  box-shadow: none !important;
+  padding: 1.25rem 1.5rem;
+  font-weight: 600;
+}
+.md3-accordion-button:not(.collapsed) {
+  color: var(--md-sys-color-primary);
+  background-color: var(--md-sys-color-surface-container-high) !important;
+}
+.md3-desc-box {
+  background-color: var(--md-sys-color-surface-container-low);
+  border-radius: var(--md-sys-shape-corner-medium);
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-surface);
+}
+.md3-app-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.6rem 1rem;
+  margin-bottom: 0;
+}
+.md3-app-list li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: var(--md-sys-color-on-surface);
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+.md3-app-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--md-sys-color-primary);
+}
 
+/* Feature list (tips / feature ticks) */
+.md3-feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+.md3-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--md-sys-card-border);
+  line-height: 1.6;
+}
+.md3-feature-list li:last-child { border-bottom: none; }
+.md3-feature-list .material-symbols-rounded {
+  color: var(--md-sys-color-primary);
+  font-size: 1.4rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* ---------------------------------------------------------------------
+   18. PAGINATION
+   --------------------------------------------------------------------- */
+.pagination {
+  gap: 0.35rem;
+  --bs-pagination-bg: transparent;
+  --bs-pagination-border-color: transparent;
+  --bs-pagination-color: var(--md-sys-color-on-surface);
+  --bs-pagination-hover-bg: var(--md-sys-color-secondary-container);
+  --bs-pagination-hover-color: var(--md-sys-color-on-secondary-container);
+  --bs-pagination-hover-border-color: transparent;
+  --bs-pagination-focus-bg: var(--md-sys-color-secondary-container);
+  --bs-pagination-focus-box-shadow: none;
+  --bs-pagination-active-bg: var(--md-sys-color-primary);
+  --bs-pagination-active-border-color: var(--md-sys-color-primary);
+  --bs-pagination-disabled-bg: transparent;
+  --bs-pagination-disabled-color: var(--md-sys-color-outline);
+}
+.pagination .page-link {
+  min-width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50% !important;
+  font-weight: 500;
+}
+
+/* ---------------------------------------------------------------------
+   19. UTILITIES
+   --------------------------------------------------------------------- */
+.transition-hover { transition: transform 0.2s var(--md-sys-motion-emphasized), opacity 0.2s ease; }
+.transition-hover:hover { transform: translateY(-2px); opacity: 0.92; }
+.icon-button { display: inline-block; transition: transform 0.2s, opacity 0.2s; }
+.icon-button:hover { transform: scale(1.12); opacity: 0.9; }
+
+hr { color: var(--md-sys-color-outline-variant); }
+
+/* Reveal-on-scroll animation */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s var(--md-sys-motion-emphasized),
+      transform 0.6s var(--md-sys-motion-emphasized);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}

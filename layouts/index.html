@@ -15,18 +15,27 @@
     {{ partial "navbar.html" . }}
 
     <main>
-        <div class="px-4 py-5 text-center hero-section" aria-label="Welcome to LiteGapps">
-            <h1 class="display-3 text-body-emphasis mb-4">LiteGapps</h1>
+        <!-- HERO -->
+        <div class="px-4 py-5 py-md-6 text-center hero-section" aria-label="Welcome to LiteGapps">
+            <h1 class="display-2 fw-bolder mb-4">LiteGapps</h1>
             <div class="col-lg-8 mx-auto">
-                <p class="lead mb-4">A custom package of Google Apps for the Android OS. An open-source project focused on being small, efficient, and comprehensive.</p>
+                <p class="lead mb-3">A custom package of Google Apps for the Android OS. An open-source project focused on being small, efficient, and comprehensive.</p>
                 <p class="lead mb-5">Supports Android 5.0 Lollipop up to the latest version, compatible with a wide range of devices.</p>
                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center mb-4">
-                    <a href="/download.html" class="btn btn-md3-primary btn-lg" aria-label="Download LiteGapps"><em>Download</em></a>
-                    <a href="/doc" class="btn btn-md3-tonal btn-lg" aria-label="Read Documentation"><em>Documentation</em></a>
+                    <a href="/download.html" class="btn btn-md3-primary btn-lg" aria-label="Download LiteGapps">
+                        <span class="material-symbols-rounded">download</span> Download
+                    </a>
+                    <a href="/doc" class="btn btn-md3-tonal btn-lg" aria-label="Read Documentation">
+                        <span class="material-symbols-rounded">menu_book</span> Documentation
+                    </a>
                 </div>
                 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-                    <a href="/doc/installation.html" class="btn btn-md3-tonal px-4" style="background-color: var(--md-sys-color-surface) !important; color: var(--md-sys-color-primary) !important; border: 1px solid var(--md-sys-color-outline);" aria-label="Installation Guide">Installation Guide</a>
-                    <a href="/changelog" class="btn btn-md3-tonal px-4" style="background-color: var(--md-sys-color-surface) !important; color: var(--md-sys-color-primary) !important; border: 1px solid var(--md-sys-color-outline);" aria-label="View Changelog">Changelog</a>
+                    <a href="/doc/installation.html" class="btn btn-md3-outlined px-4" aria-label="Installation Guide">
+                        <span class="material-symbols-rounded msym-sm">rocket_launch</span> Installation Guide
+                    </a>
+                    <a href="/changelog" class="btn btn-md3-outlined px-4" aria-label="View Changelog">
+                        <span class="material-symbols-rounded msym-sm">history</span> Changelog
+                    </a>
                 </div>
             </div>
         </div>
@@ -38,71 +47,60 @@
             </div>
         </div>
 
+        <!-- WHY CHOOSE -->
         <div class="section-bg-tonal shadow-sm">
             <div class="container px-4 py-5">
                 <h2 class="pb-3 text-center mb-5">Why Choose LiteGapps?</h2>
                 <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
-                    <div class="col d-flex">
+                    <div class="col d-flex reveal">
                         <div class="card flex-fill md3-card text-center p-4">
                             <div class="card-body">
-                                <div class="md3-icon-container shadow-sm">
-                                    <i class="bi bi-sliders2 fs-2" style="color: var(--md-sys-color-on-primary-container);"></i>
-                                </div>
+                                <div class="md3-icon-container mx-auto"><span class="material-symbols-rounded">tune</span></div>
                                 <h3 class="fs-4 mt-2"><strong>Unique</strong></h3>
                                 <p class="mt-3 opacity-75">Handling various user cases with the multiple products we offer in our ecosystem.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col d-flex">
+                    <div class="col d-flex reveal">
                         <div class="card flex-fill md3-card text-center p-4">
                             <div class="card-body">
-                                <div class="md3-icon-container shadow-sm">
-                                    <i class="bi bi-cpu-fill fs-2" style="color: var(--md-sys-color-on-primary-container);"></i>
-                                </div>
+                                <div class="md3-icon-container mx-auto"><span class="material-symbols-rounded">memory</span></div>
                                 <h3 class="fs-4 mt-2"><strong>Broad Support</strong></h3>
                                 <p class="mt-3 opacity-75">Supports various devices: AOSP, GSI, Raspberry, LineageOS, MIUI/HyperOS, Stock ROMs, and more.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col d-flex">
+                    <div class="col d-flex reveal">
                         <div class="card flex-fill md3-card text-center p-4">
                             <div class="card-body">
-                                <div class="md3-icon-container shadow-sm">
-                                    <i class="bi bi-tools fs-2" style="color: var(--md-sys-color-on-primary-container);"></i>
-                                </div>
+                                <div class="md3-icon-container mx-auto"><span class="material-symbols-rounded">build</span></div>
                                 <h3 class="fs-4 mt-2"><strong>Continuous Improvement</strong></h3>
                                 <p class="mt-3 opacity-75">Quickly addresses user-reported issues with direct responses and dedicated feedback to developers.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col d-flex">
+                    <div class="col d-flex reveal">
                         <div class="card flex-fill md3-card text-center p-4">
                             <div class="card-body">
-                                <div class="md3-icon-container shadow-sm">
-                                    <i class="bi bi-speedometer2 fs-2" style="color: var(--md-sys-color-on-primary-container);"></i>
-                                </div>
+                                <div class="md3-icon-container mx-auto"><span class="material-symbols-rounded">speed</span></div>
                                 <h3 class="fs-4 mt-2"><strong>Efficient</strong></h3>
                                 <p class="mt-3 opacity-75">Optimizes memory usage strictly according to device specifications and individual user needs.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col d-flex">
+                    <div class="col d-flex reveal">
                         <div class="card flex-fill md3-card text-center p-4">
                             <div class="card-body">
-                                <div class="md3-icon-container shadow-sm">
-                                    <i class="bi bi-people-fill fs-2" style="color: var(--md-sys-color-on-primary-container);"></i>
-                                </div>
+                                <div class="md3-icon-container mx-auto"><span class="material-symbols-rounded">groups</span></div>
                                 <h3 class="fs-4 mt-2"><strong>Active Community</strong></h3>
                                 <p class="mt-3 opacity-75">A friendly and engaging community where users and developers discuss future updates collaboratively.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col d-flex">
+                    <div class="col d-flex reveal">
                         <div class="card flex-fill md3-card text-center p-4">
                             <div class="card-body">
-                                <div class="md3-icon-container shadow-sm">
-                                    <i class="bi bi-calendar-week-fill fs-2" style="color: var(--md-sys-color-on-primary-container);"></i>
-                                </div>
+                                <div class="md3-icon-container mx-auto"><span class="material-symbols-rounded">update</span></div>
                                 <h3 class="fs-4 mt-2"><strong>Up-To-Date</strong></h3>
                                 <p class="mt-3 opacity-75">Updated consistently on a daily basis using the absolute latest versions of Google Apps.</p>
                             </div>
@@ -112,34 +110,39 @@
             </div>
         </div>
 
+        <!-- INSTALLATION METHODS -->
         <div class="container px-4 py-5 my-5">
             <div class="text-center mb-5">
                 <h2 class="display-6 mb-3">Installation Methods</h2>
                 <p class="lead opacity-75">LiteGapps offers two installation modes: <em>systemless</em> and <em>non-systemless</em>.</p>
             </div>
-            <div class="row g-5">
+            <div class="row g-4">
                 <div class="col-md-4">
                     <div class="p-4 h-100 md3-card">
+                        <div class="md3-icon-container mb-3"><span class="material-symbols-rounded">extension</span></div>
                         <h3 class="fs-4 mb-3" style="color: var(--md-sys-color-primary);"><strong>Systemless</strong></h3>
-                        <p>Install securely as a module via Magisk, KernelSU, or APatch for easy, conflict-free management and removal.</p>
+                        <p class="mb-0 opacity-75">Install securely as a module via Magisk, KernelSU, or APatch for easy, conflict-free management and removal.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="p-4 h-100 md3-card">
+                        <div class="md3-icon-container mb-3"><span class="material-symbols-rounded">settings_backup_restore</span></div>
                         <h3 class="fs-4 mb-3" style="color: var(--md-sys-color-primary);"><strong>Non-Systemless</strong></h3>
-                        <p>Supports traditional installation through custom recovery for permanent, deeply rooted integration into the system partition.</p>
+                        <p class="mb-0 opacity-75">Supports traditional installation through custom recovery for permanent, deeply rooted integration into the system partition.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="p-4 h-100 md3-card">
+                        <div class="md3-icon-container mb-3"><span class="material-symbols-rounded">terminal</span></div>
                         <h3 class="fs-4 mb-3" style="color: var(--md-sys-color-primary);"><strong>Sideload</strong></h3>
-                        <p>Install effortlessly via <code>adb sideload</code>. Here is an example command for your terminal:</p>
-                        <p class="code-block shadow-sm">adb sideload litegapps-filename.zip</p>
+                        <p class="opacity-75">Install effortlessly via <code>adb sideload</code>. Here is an example command for your terminal:</p>
+                        <p class="code-block shadow-sm mb-0">adb sideload litegapps-filename.zip</p>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- LITEGAPPS SHOWCASE -->
         <div class="section-bg-tonal">
             <div class="container px-4 py-5">
                 <div class="row flex-lg-row-reverse align-items-center g-5">
@@ -147,28 +150,29 @@
                         <img class="img-fluid md3-image" src="/img/s1.webp" alt="Visual representation of LiteGapps interface" loading="lazy">
                     </div>
                     <div class="col-lg-6">
-                        <h2 class="display-5 mb-4">LiteGapps</h2>
+                        <h2 class="display-5 mb-4 text-lg-start">LiteGapps</h2>
                         <p class="lead mb-4">Our primary flagship product, supporting variants from <em>lite</em> to <em>pixel</em> with comprehensive and tested device compatibility.</p>
-                        
+
                         <div class="mb-4">
                             <h3 class="h4" style="color: var(--md-sys-color-primary);"><strong>Configuration</strong></h3>
-                            <p class="opacity-75">We provide detailed configuration files to deeply control which specific packages are installed, tailoring the entire experience exactly to user needs. <a href="/doc/config.html" class="text-decoration-none fw-medium">Learn more <i class="bi bi-arrow-right"></i></a></p>
+                            <p class="opacity-75">We provide detailed configuration files to deeply control which specific packages are installed, tailoring the entire experience exactly to user needs. <a href="/doc/config.html" class="text-decoration-none fw-medium d-inline-flex align-items-center gap-1">Learn more <span class="material-symbols-rounded msym-sm">arrow_forward</span></a></p>
                         </div>
-                        
+
                         <div>
                             <h3 class="h4" style="color: var(--md-sys-color-primary);"><strong>Architecture Support</strong></h3>
                             <div class="d-flex flex-wrap gap-2 mt-2">
-                                <span class="badge rounded-pill border px-3 py-2" style="background-color: var(--md-sys-color-surface-container-high); color: var(--md-sys-color-on-surface);"><em>arm64</em></span>
-                                <span class="badge rounded-pill border px-3 py-2" style="background-color: var(--md-sys-color-surface-container-high); color: var(--md-sys-color-on-surface);"><em>arm</em></span>
-                                <span class="badge rounded-pill border px-3 py-2" style="background-color: var(--md-sys-color-surface-container-high); color: var(--md-sys-color-on-surface);"><em>x86_64</em></span>
-                                <span class="badge rounded-pill border px-3 py-2" style="background-color: var(--md-sys-color-surface-container-high); color: var(--md-sys-color-on-surface);"><em>x86</em></span>
+                                <span class="md3-chip"><em>arm64</em></span>
+                                <span class="md3-chip"><em>arm</em></span>
+                                <span class="md3-chip"><em>x86_64</em></span>
+                                <span class="md3-chip"><em>x86</em></span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
+        <!-- VARIANTS -->
         <div class="container px-4 py-5 my-5">
             <h2 class="text-center display-6 mb-5">Available Variants</h2>
             <div class="row g-4">
@@ -222,17 +226,18 @@
                 </div>
             </div>
         </div>
-        
+
+        <!-- LITEGAPPSX + CONTROLLER -->
         <div class="section-bg-tonal">
             <div class="container px-4 py-5">
                 <div class="row align-items-center g-5 py-4">
                     <div class="col-lg-6">
-                        <h2 class="display-5 mb-4">LiteGappsX</h2>
+                        <h2 class="display-5 mb-4 text-lg-start">LiteGappsX</h2>
                         <p class="lead opacity-75">An advanced evolution of LiteGapps, supporting multiple Android versions and architectures directly in a single, small flashable zip. Ideal for power users who frequently switch ROMs. Three distinct types available:</p>
                         <div class="md3-card p-4 mt-4">
-                            <ul class="list-unstyled mb-0 gap-3 d-flex flex-column">
-                                <li><i class="bi bi-check-circle-fill me-2" style="color: var(--md-sys-color-primary);"></i> <strong>Regular:</strong> Updated with the latest Play Services, thoroughly supporting Android 9-14.</li>
-                                <li><i class="bi bi-check-circle-fill me-2" style="color: var(--md-sys-color-primary);"></i> <strong>MicroG:</strong> Uses MicroG as the GMS core for extensive Android 5.0+ support, though note that some functionalities like advanced payments might not work natively.</li>
+                            <ul class="md3-feature-list">
+                                <li><span class="material-symbols-rounded fill">check_circle</span><span><strong>Regular:</strong> Updated with the latest Play Services, thoroughly supporting Android 9-14.</span></li>
+                                <li><span class="material-symbols-rounded fill">check_circle</span><span><strong>MicroG:</strong> Uses MicroG as the GMS core for extensive Android 5.0+ support, though note that some functionalities like advanced payments might not work natively.</span></li>
                             </ul>
                         </div>
                     </div>
@@ -240,14 +245,16 @@
                         <img class="img-fluid md3-image" src="/img/s2.webp" alt="LiteGappsX interface demonstration" loading="lazy">
                     </div>
                 </div>
-                
-                <hr class="my-5 border-secondary opacity-25">
-                
+
+                <hr class="my-5 md3-footer-divider">
+
                 <div class="row align-items-center g-5 py-4">
                     <div class="col-lg-6 order-lg-2">
-                        <h2 class="display-5 mb-4">LiteGapps Controller</h2>
+                        <h2 class="display-5 mb-4 text-lg-start">LiteGapps Controller</h2>
                         <p class="lead opacity-75">An incredibly powerful companion app designed for managing LiteGapps features dynamically. It provides numerous under-the-hood tweaks to enhance your overall user experience seamlessly. Please check the detailed documentation for a full, comprehensive feature list.</p>
-                        <a href="/doc/controller.html" class="btn btn-md3-tonal mt-3"><em>Explore Controller Features</em></a>
+                        <a href="/doc/controller.html" class="btn btn-md3-tonal mt-3">
+                            <span class="material-symbols-rounded msym-sm">settings</span> Explore Controller Features
+                        </a>
                     </div>
                     <div class="col-lg-6 order-lg-1">
                         <img class="img-fluid md3-image" src="/img/s3.webp" alt="LiteGapps Controller application preview" loading="lazy">
@@ -255,52 +262,61 @@
                 </div>
             </div>
         </div>
-        
+
+        <!-- ADDONS + REMOVER -->
         <div class="container px-4 py-5 my-5">
             <div class="row g-5">
                 <div class="col-lg-6">
                     <div class="md3-card h-100 p-5 border-top border-4" style="border-top-color: var(--md-sys-color-primary) !important;">
-                        <h2 class="mb-4">Addons</h2>
+                        <div class="md3-icon-container mb-3"><span class="material-symbols-rounded">widgets</span></div>
+                        <h2 class="mb-4 text-lg-start">Addons</h2>
                         <p class="opacity-75">Highly optional, modular packages to strictly supplement your LiteGapps installation. You can intuitively install exactly what you need via Magisk, recovery, or the integrated Controller app, even without having the main LiteGapps package installed beforehand.</p>
-                        <a href="#" class="btn btn-md3-tonal mt-3" style="background-color: var(--md-sys-color-surface) !important; color: var(--md-sys-color-primary) !important; border: 1px solid var(--md-sys-color-primary);">Browse Addons</a>
+                        <a href="/download.html" class="btn btn-md3-outlined mt-3">
+                            <span class="material-symbols-rounded msym-sm">apps</span> Browse Addons
+                        </a>
                     </div>
                 </div>
                 <div id="litegapps_remover" class="col-lg-6">
-                    <div class="md3-card h-100 p-5 border-top border-4 border-danger">
-                        <h2 class="mb-4">LiteGapps Remover</h2>
+                    <div class="md3-card h-100 p-5 border-top border-4" style="border-top-color: var(--md-sys-color-error) !important;">
+                        <div class="md3-icon-container mb-3" style="background-color: var(--md-sys-color-error-container); color: var(--md-sys-color-on-error-container);"><span class="material-symbols-rounded">delete_sweep</span></div>
+                        <h2 class="mb-4 text-lg-start">LiteGapps Remover</h2>
                         <p class="opacity-75">A highly effective technical tool specifically built for safely debloating pre-installed Google Apps directly from your ROM partition. Highly recommended for use precisely before installing LiteGapps on ROMs that already include persistent GApps.</p>
-                        <a href="#" class="btn btn-md3-tonal mt-3" style="background-color: var(--md-sys-color-surface) !important; color: #dc3545 !important; border: 1px solid #dc3545;">Get Remover</a>
+                        <a href="/download.html" class="btn btn-md3-outlined mt-3" style="color: var(--md-sys-color-error) !important; border-color: var(--md-sys-color-error) !important;">
+                            <span class="material-symbols-rounded msym-sm">cleaning_services</span> Get Remover
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-        
+
+        <!-- TIPS -->
         <div class="section-bg-tonal">
             <div class="container px-4 py-5">
-                <div class="d-flex align-items-center mb-4">
-                    <div class="md3-icon-container shadow-sm me-3 mb-0" style="width: 48px; height: 48px; border-radius: 12px; background-color: #fff3cd; color: #856404;">
-                        <i class="bi bi-lightbulb-fill fs-4 text-warning"></i>
+                <div class="d-flex align-items-center justify-content-center mb-4 gap-3">
+                    <div class="md3-icon-container mb-0" style="width: 48px; height: 48px; background-color: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container);">
+                        <span class="material-symbols-rounded fill">lightbulb</span>
                     </div>
                     <h2 class="mb-0">Tips And Tricks</h2>
                 </div>
                 <div class="md3-card p-4 p-md-5">
-                    <ul class="list-group list-group-flush fs-5">
-                        <li class="list-group-item py-3 border-0"><i class="bi bi-dot fs-3" style="color: var(--md-sys-color-primary);"></i> For low-spec hardware devices, we strongly recommend using the <em>Core</em> or <em>Lite</em> variants.</li>
-                        <li class="list-group-item py-3 border-0"><i class="bi bi-dot fs-3" style="color: var(--md-sys-color-primary);"></i> Before initiating any installation, it is considered a very good technical practice to manually uninstall all updates for existing Google apps.</li>
-                        <li class="list-group-item py-3 border-0"><i class="bi bi-dot fs-3" style="color: var(--md-sys-color-primary);"></i> LiteGapps inherently includes a sophisticated GMS Doze feature to automatically and efficiently save battery life whenever the device is completely idle.</li>
-                        <li class="list-group-item py-3 border-0"><i class="bi bi-dot fs-3" style="color: var(--md-sys-color-primary);"></i> Utilize the command terminal to manually activate deep performance boosts immediately before gaming sessions, or rapidly enable the extreme battery saver when battery power is critically low. See the official docs for exact commands.</li>
+                    <ul class="md3-feature-list fs-6">
+                        <li><span class="material-symbols-rounded">bolt</span><span>For low-spec hardware devices, we strongly recommend using the <em>Core</em> or <em>Lite</em> variants.</span></li>
+                        <li><span class="material-symbols-rounded">bolt</span><span>Before initiating any installation, it is considered a very good technical practice to manually uninstall all updates for existing Google apps.</span></li>
+                        <li><span class="material-symbols-rounded">bolt</span><span>LiteGapps inherently includes a sophisticated GMS Doze feature to automatically and efficiently save battery life whenever the device is completely idle.</span></li>
+                        <li><span class="material-symbols-rounded">bolt</span><span>Utilize the command terminal to manually activate deep performance boosts immediately before gaming sessions, or rapidly enable the extreme battery saver when battery power is critically low. See the official docs for exact commands.</span></li>
                     </ul>
                 </div>
             </div>
         </div>
-        
+
+        <!-- CONTRIBUTORS -->
         <div class="container px-4 py-5 my-5">
             <h2 class="text-center display-6 mb-5">Contributors & Credits</h2>
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-3 col-md-6 d-flex">
-                    <div class="card flex-fill contributor-card text-center p-4 transition-hover">
+                    <div class="card flex-fill contributor-card text-center p-4">
                         <div class="card-body">
-                            <img src="https://wahyu6070.github.io/assets/img/my.webp" alt="Profile picture of Wahyu6070" class="img-fluid rounded-circle mb-3 shadow-sm border border-2 border-white" style="width: 110px; height: 110px; object-fit: cover;" loading="lazy">
+                            <img src="https://wahyu6070.github.io/assets/img/my.webp" alt="Profile picture of Wahyu6070" class="img-fluid rounded-circle mb-3 shadow-sm" style="width: 110px; height: 110px; object-fit: cover;" loading="lazy">
                             <h4 class="mt-3 h5"><a href="https://wahyu6070.github.io" class="text-decoration-none stretched-link" style="color: inherit;">Wahyu6070</a></h4>
                             <span class="badge text-bg-primary rounded-pill mb-2">CEO & Founder</span>
                             <p class="opacity-75 small mt-2">Lead Developer and Core Maintainer.</p>
@@ -308,9 +324,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 d-flex">
-                    <div class="card flex-fill contributor-card text-center p-4 transition-hover">
+                    <div class="card flex-fill contributor-card text-center p-4">
                         <div class="card-body">
-                            <img src="https://avatars.githubusercontent.com/u/2858716?v=4" alt="Profile picture of osm0sis" class="img-fluid rounded-circle mb-3 shadow-sm border border-2 border-white" style="width: 110px; height: 110px; object-fit: cover;" loading="lazy">
+                            <img src="https://avatars.githubusercontent.com/u/2858716?v=4" alt="Profile picture of osm0sis" class="img-fluid rounded-circle mb-3 shadow-sm" style="width: 110px; height: 110px; object-fit: cover;" loading="lazy">
                             <h4 class="mt-3 h5"><a href="https://github.com/osm0sis/AnyKernel3" class="text-decoration-none stretched-link" style="color: inherit;">osm0sis</a></h4>
                             <span class="badge text-bg-secondary rounded-pill mb-2">AnyKernel Script</span>
                             <p class="opacity-75 small mt-2">Providing the robust base flashing scripts.</p>
@@ -318,9 +334,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 d-flex">
-                    <div class="card flex-fill contributor-card text-center p-4 transition-hover">
+                    <div class="card flex-fill contributor-card text-center p-4">
                         <div class="card-body">
-                            <img src="https://opengapps.org/images/opengapps.png" alt="OpenGapps Logo" class="img-fluid rounded-circle mb-3 p-2 shadow-sm border border-2 border-white bg-light" style="width: 110px; height: 110px; object-fit: contain;" loading="lazy">
+                            <img src="https://opengapps.org/images/opengapps.png" alt="OpenGapps Logo" class="img-fluid rounded-circle mb-3 p-2 shadow-sm bg-light" style="width: 110px; height: 110px; object-fit: contain;" loading="lazy">
                             <h4 class="mt-3 h5"><a href="https://opengapps.org/" class="text-decoration-none stretched-link" style="color: inherit;">OpenGapps</a></h4>
                             <span class="badge text-bg-info rounded-pill mb-2 text-white">Inspiration</span>
                             <p class="opacity-75 small mt-2">The original pioneers of custom GApps.</p>
@@ -328,9 +344,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 d-flex">
-                    <div class="card flex-fill contributor-card text-center p-4 transition-hover">
+                    <div class="card flex-fill contributor-card text-center p-4">
                         <div class="card-body">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5FPhPUxm3XRTK82w1KtUZXI2G85JZlGfucw&s" alt="Android GSI representation" class="img-fluid rounded-circle mb-3 shadow-sm border border-2 border-white" style="width: 110px; height: 110px; object-fit: cover;" loading="lazy">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5FPhPUxm3XRTK82w1KtUZXI2G85JZlGfucw&s" alt="Android GSI representation" class="img-fluid rounded-circle mb-3 shadow-sm" style="width: 110px; height: 110px; object-fit: cover;" loading="lazy">
                             <h4 class="mt-3 h5"><a href="https://developer.android.com/topic/generic-system-image/releases" class="text-decoration-none stretched-link" style="color: inherit;">Android GSI</a></h4>
                             <span class="badge text-bg-success rounded-pill mb-2">Resources</span>
                             <p class="opacity-75 small mt-2">Crucial generic system image references.</p>
@@ -338,9 +354,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 d-flex">
-                    <div class="card flex-fill contributor-card text-center p-4 transition-hover">
+                    <div class="card flex-fill contributor-card text-center p-4">
                         <div class="card-body">
-                            <img src="https://avatars.githubusercontent.com/u/116472903?v=4" alt="Profile picture of Hyeonho Kang" class="img-fluid rounded-circle mb-3 shadow-sm border border-2 border-white" style="width: 110px; height: 110px; object-fit: cover;" loading="lazy">
+                            <img src="https://avatars.githubusercontent.com/u/116472903?v=4" alt="Profile picture of Hyeonho Kang" class="img-fluid rounded-circle mb-3 shadow-sm" style="width: 110px; height: 110px; object-fit: cover;" loading="lazy">
                             <h4 class="mt-3 h5"><a href="https://github.com/corydalis10" class="text-decoration-none stretched-link" style="color: inherit;">Hyeonho Kang</a></h4>
                             <span class="badge text-bg-dark rounded-pill mb-2">Contributor</span>
                             <p class="opacity-75 small mt-2">Active code and feature contributor.</p>
@@ -348,9 +364,9 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 d-flex">
-                    <div class="card flex-fill contributor-card text-center p-4 transition-hover">
+                    <div class="card flex-fill contributor-card text-center p-4">
                         <div class="card-body">
-                            <img src="https://avatars.githubusercontent.com/u/116599295?v=4" alt="Profile picture of MySelly" class="img-fluid rounded-circle mb-3 shadow-sm border border-2 border-white" style="width: 110px; height: 110px; object-fit: cover;" loading="lazy">
+                            <img src="https://avatars.githubusercontent.com/u/116599295?v=4" alt="Profile picture of MySelly" class="img-fluid rounded-circle mb-3 shadow-sm" style="width: 110px; height: 110px; object-fit: cover;" loading="lazy">
                             <h4 class="mt-3 h5"><a href="https://github.com/MySelly" class="text-decoration-none stretched-link" style="color: inherit;">MySelly</a></h4>
                             <span class="badge text-bg-secondary rounded-pill mb-2">Manager</span>
                             <p class="opacity-75 small mt-2">Dedicated Telegram Group Manager.</p>

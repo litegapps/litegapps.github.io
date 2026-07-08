@@ -25,13 +25,13 @@ url: /download.html
         <div class="md3-card mb-5 border-0">
             <div class="card-body p-4 p-md-5">
                 <div class="text-center mb-4">
-                    <div class="md3-icon-container shadow-sm mx-auto mb-3" style="width: 56px; height: 56px; border-radius: 14px;">
-                        <i class="bi bi-cloud-arrow-down-fill fs-3"></i>
+                    <div class="md3-icon-container mx-auto mb-3">
+                        <span class="material-symbols-rounded">cloud_download</span>
                     </div>
                     <p class="mb-2 opacity-75">
                         Confused about the differences between Lite, Core, Nano, or Pixel variants?
                     </p>
-                    <a href="/doc/litegapps_variant.html" class="text-decoration-none fw-semibold">Click Here to Learn More <i class="bi bi-arrow-right"></i></a>
+                    <a href="/doc/litegapps_variant.html" class="text-decoration-none fw-semibold d-inline-flex align-items-center gap-1 justify-content-center">Click Here to Learn More <span class="material-symbols-rounded msym-sm">arrow_forward</span></a>
                 </div>
                 <hr class="my-4 border-secondary opacity-25">
                 <h2 class="h4 text-center mb-4"><strong>LiteGapps & Addons Downloader</strong></h2>
@@ -195,7 +195,7 @@ url: /download.html
         function updateDownloadButtonText() {
             if (!typeSelect || !downloadButton) return;
             const selectedType = typeSelect.options[typeSelect.selectedIndex].text;
-            downloadButton.innerHTML = `<i class="bi bi-download me-2"></i> Download ${selectedType}`;
+            downloadButton.innerHTML = `<span class="material-symbols-rounded me-2">download</span> Download ${selectedType}`;
         }
 
         populateSelect(typeSelect, typeOptions);

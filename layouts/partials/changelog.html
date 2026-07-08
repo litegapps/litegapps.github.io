@@ -1,11 +1,20 @@
 {{ $Name := where site.RegularPages "Type" "changelog" }}
 {{ range (sort $Name) | first 1 }}
 <div class="container">
-  <div class="card">
-    <p class="card-header"><strong>Changelog</strong></p>
-    <div class="card-body">
-      <p class="card-title"><strong>Version v{{ .Params.version }}</strong></p>
+  <div class="md3-card p-4 p-md-5 col-lg-10 mx-auto">
+    <div class="d-flex align-items-center gap-3 mb-3">
+      <div class="md3-icon-container mb-0" style="width: 48px; height: 48px;">
+        <span class="material-symbols-rounded">new_releases</span>
+      </div>
+      <div class="text-start">
+        <p class="mb-0 opacity-75 small text-uppercase" style="letter-spacing: 0.5px;">Latest Changelog</p>
+        <p class="mb-0 h5 fw-bold">Version v{{ .Params.version }}</p>
+      </div>
+    </div>
+    <hr class="md3-footer-divider">
+    <div class="changelog-content text-start">
       {{ .Content }}
     </div>
   </div>
+</div>
 {{ end }}
