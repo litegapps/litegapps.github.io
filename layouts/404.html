@@ -1,5 +1,16 @@
 {{ define "main" }}
-
-<p class="text-center fw-bold">Page not found  ! :(</p>
-
+<div class="container py-5 my-5 text-center">
+    <div class="col-lg-7 mx-auto">
+        <div class="md3-icon-container mx-auto mb-4" style="width: 88px; height: 88px;">
+            <span class="material-symbols-rounded" style="font-size: 3rem;">travel_explore</span>
+        </div>
+        <h1 class="display-1 fw-bolder" style="color: var(--md-sys-color-primary);">404</h1>
+        <h2 class="mb-3">Page not found</h2>
+        <p class="lead opacity-75 mb-4">The page you are looking for might have been removed, renamed, or is temporarily unavailable.</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+            <a href="/" class="btn btn-md3-primary"><span class="material-symbols-rounded">home</span> Back to Home</a>
+            <a href="/download.html" class="btn btn-md3-tonal"><span class="material-symbols-rounded">download</span> Download</a>
+        </div>
+    </div>
+</div>
 {{ end }}
