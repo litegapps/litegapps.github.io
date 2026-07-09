@@ -9,348 +9,236 @@ url: /doc/litegapps_variant.html
 ---
 
 <style>
-    .md3-accordion {
-        gap: 1.25rem;
-        display: flex;
-        flex-direction: column;
+    /* Self-contained variant accordion — native <details>, no JS, no shared base */
+    .variants-intro { text-align: center; max-width: 720px; margin: 0.5rem auto 2.5rem; }
+    .variants-intro .icon {
+        width: 72px; height: 72px; margin: 0 auto 1rem;
+        display: grid; place-items: center; border-radius: 20px;
+        background: var(--md-sys-color-primary-container);
+        color: var(--md-sys-color-on-primary-container);
     }
-    .md3-accordion-item {
-        background-color: var(--md-sys-color-surface-container);
-        border: 1px solid var(--md-sys-card-border);
-        border-radius: var(--md-sys-shape-corner-large) !important;
+    .variants-intro .icon .material-symbols-rounded { font-size: 2.1rem; }
+
+    .variants { display: flex; flex-direction: column; gap: 1rem; }
+
+    details.variant {
+        background: var(--md-sys-color-surface-container-low);
+        border: 1px solid var(--md-sys-color-outline-variant);
+        border-radius: 20px;
         overflow: hidden;
-        transition: transform 0.2s cubic-bezier(0.2, 0, 0, 1), box-shadow 0.2s cubic-bezier(0.2, 0, 0, 1), background-color 0.3s ease;
+        transition: background-color .25s ease, box-shadow .25s ease;
     }
-    .md3-accordion-item:hover {
+    details.variant[open] {
+        background: var(--md-sys-color-surface-container);
         box-shadow: var(--md-sys-elevation-1);
-        background-color: var(--md-sys-color-surface-container-high);
     }
-    .md3-accordion-button {
-        background-color: transparent !important;
-        color: var(--md-sys-color-on-surface);
-        box-shadow: none !important;
-        padding: 1.25rem 1.5rem;
-    }
-    .md3-accordion-button:not(.collapsed) {
-        color: var(--md-sys-color-primary);
-        background-color: var(--md-sys-color-surface-container-high) !important;
-    }
-    .md3-chip {
-        background-color: var(--md-sys-color-secondary-container);
-        color: var(--md-sys-color-on-secondary-container);
-        padding: 0.35rem 1rem;
-        border-radius: 100px;
-        font-size: 0.85rem;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        white-space: nowrap;
-    }
-    .md3-desc-box {
-        background-color: var(--md-sys-color-surface);
-        border-radius: 12px;
-        padding: 1rem 1.25rem;
-        border-left: 4px solid var(--md-sys-color-primary);
-        color: var(--md-sys-color-on-surface);
-    }
-    .md3-app-list {
+
+    .variant__head {
         list-style: none;
-        padding-left: 0;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 0.6rem 1rem;
-        margin-bottom: 0;
+        cursor: pointer;
+        display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+        padding: 1.15rem 1.4rem;
+        user-select: none;
     }
-    .md3-app-list li {
-        position: relative;
-        padding-left: 1.25rem;
-        color: var(--md-sys-color-on-surface);
-        opacity: 0.85;
-        font-size: 0.95rem;
-        line-height: 1.4;
+    .variant__head::-webkit-details-marker { display: none; }
+    .variant__name { font-size: 1.15rem; font-weight: 700; }
+    details.variant[open] .variant__name { color: var(--md-sys-color-primary); }
+    .variant__meta { display: flex; align-items: center; gap: .8rem; }
+    .variant__size {
+        background: var(--md-sys-color-secondary-container);
+        color: var(--md-sys-color-on-secondary-container);
+        padding: .3rem .9rem; border-radius: 999px;
+        font-size: .8rem; font-weight: 600; white-space: nowrap;
     }
-    .md3-app-list li::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0.5rem;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background-color: var(--md-sys-color-primary);
+    .variant__chevron { color: var(--md-sys-color-on-surface-variant); transition: transform .25s ease; }
+    details.variant[open] .variant__chevron { transform: rotate(180deg); color: var(--md-sys-color-primary); }
+
+    .variant__body { padding: 0 1.4rem 1.4rem; }
+    .variant__desc {
+        background: var(--md-sys-color-surface);
+        border-left: 4px solid var(--md-sys-color-primary);
+        border-radius: 12px;
+        padding: .9rem 1.1rem; margin: 0 0 1.4rem;
+        color: var(--md-sys-color-on-surface); font-size: .95rem; line-height: 1.5;
+    }
+    .var-cols { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+    @media (min-width: 768px) { .var-cols { grid-template-columns: 1fr 1fr; } }
+    .var-cat { font-size: .95rem; font-weight: 700; color: var(--md-sys-color-primary); margin: 0 0 .8rem; }
+    .var-apps {
+        list-style: none; padding: 0; margin: 0 0 .5rem;
+        display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .4rem .9rem;
+    }
+    .var-apps + .var-cat { margin-top: 1.2rem; }
+    .var-apps li { position: relative; padding-left: 1.1rem; font-size: .9rem; opacity: .85; line-height: 1.4; }
+    .var-apps li::before {
+        content: ""; position: absolute; left: 0; top: .55rem;
+        width: 6px; height: 6px; border-radius: 50%; background: var(--md-sys-color-primary);
     }
 </style>
 
-<div class="text-center mb-5 mt-4">
-    <div class="md3-icon-container mx-auto mb-3">
-        <span class="material-symbols-rounded">apps</span>
-    </div>
-    <p class="fs-5 opacity-75 px-md-4">
-        We provide <strong>9 variants</strong> to suit user needs. Please choose a variant carefully according to your specific requirements and device specifications.
-    </p>
+<div class="variants-intro">
+    <div class="icon"><span class="material-symbols-rounded">apps</span></div>
+    <p class="fs-5 opacity-75">We provide <strong>9 variants</strong> to suit user needs. Please choose a variant carefully according to your specific requirements and device specifications.</p>
 </div>
 
-<div class="accordion md3-accordion" id="variantsAccordion">
+<div class="variants">
 
-    <div class="accordion-item md3-accordion-item">
-        <h2 class="accordion-header" id="headingPixel">
-            <button class="accordion-button md3-accordion-button" type="button" data-toggle="collapse" data-target="#collapsePixel" aria-expanded="true" aria-controls="collapsePixel">
-                <div class="d-flex justify-content-between w-100 align-items-center pe-3">
-                    <span class="fw-bold fs-5">Pixel</span>
-                    <span class="md3-chip">1.2 GB</span>
+    <details class="variant" open>
+        <summary class="variant__head">
+            <span class="variant__name">Pixel</span>
+            <span class="variant__meta"><span class="variant__size">1.2 GB</span><span class="variant__chevron material-symbols-rounded">expand_more</span></span>
+        </summary>
+        <div class="variant__body">
+            <p class="variant__desc"><strong>Description:</strong> LiteGapps Pixel is a complete package of Google apps ported directly from Google Pixel. You will get Google Apps on Google Pixel and their features, but they are large in size.</p>
+            <div class="var-cols">
+                <div>
+                    <h3 class="var-cat">Core Packages</h3>
+                    <ul class="var-apps"><li>Android Migrate</li><li>Carrier Services</li><li>Carrier Setup</li><li>Common</li><li>Config Updater</li><li>Google Play Services</li><li>Google Backup Transport</li><li>Google Calendar Sync Adapter</li><li>Google Contacts Sync Adapter</li><li>Google ExtServices</li><li>Google ExtShared</li><li>Google Feedback</li><li>Google One Time Initializer</li><li>Google Partner Setup</li><li>Google Restore</li><li>Google Services Framework</li><li>Google Play Store</li><li>Setup Wizard</li></ul>
                 </div>
-            </button>
-        </h2>
-        <div id="collapsePixel" class="accordion-collapse collapse show" aria-labelledby="headingPixel" data-parent="#variantsAccordion">
-            <div class="accordion-body">
-                <div class="md3-desc-box mb-4">
-                    <p class="mb-0 opacity-75"><em><strong>Description</strong> : LiteGapps Pixel is a complete package of Google apps ported directly from Google Pixel. You will get Google Apps on Google Pixel and their features, but they are large in size.</em></p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-6">
-                        <h3 class="fs-6 fw-bold mb-3" style="color: var(--md-sys-color-primary);">Core Packages</h3>
-                        <ul class="md3-app-list">
-                            <li>Android Migrate</li><li>Carrier Services</li><li>Carrier Setup</li><li>Common</li><li>Config Updater</li><li>Google Play Services</li><li>Google Backup Transport</li><li>Google Calendar Sync Adapter</li><li>Google Contacts Sync Adapter</li><li>Google ExtServices</li><li>Google ExtShared</li><li>Google Feedback</li><li>Google One Time Initializer</li><li>Google Partner Setup</li><li>Google Restore</li><li>Google Services Framework</li><li>Google Play Store</li><li>Setup Wizard</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6">
-                        <h3 class="fs-6 fw-bold mb-3" style="color: var(--md-sys-color-primary);">Gapps Packages</h3>
-                        <ul class="md3-app-list">
-                            <li>Android Auto</li><li>Arcore</li><li>Chrome</li><li>Desk Clock Google</li><li>Device Policy</li><li>Dream Liner</li><li>Drive</li><li>Files</li><li>Gmail</li><li>Google Assistant</li><li>Google Calculator</li><li>Google Calendar</li><li>Google Contacts</li><li>Google Dialer</li><li>Google Keyboard</li><li>Google Pixel Wallpaper</li><li>Google TTS</li><li>Google Vr Core</li><li>Google Web View</li><li>Keep</li><li>Location History</li><li>Maps</li><li>Markup Google</li><li>Messaging</li><li>Photos</li><li>Pixel Launcher</li><li>Pixel Live Wallpaper</li><li>Play Games</li><li>Recorder</li><li>Sound Picker</li><li>Sribe</li><li>Talkback</li><li>Turbo</li><li>Tycho</li><li>Google Search</li><li>Videos</li><li>Wallpaper Picker</li><li>Wellbeing</li><li>Youtube</li><li>Youtube Music</li>
-                        </ul>
-                    </div>
+                <div>
+                    <h3 class="var-cat">Gapps Packages</h3>
+                    <ul class="var-apps"><li>Android Auto</li><li>Arcore</li><li>Chrome</li><li>Desk Clock Google</li><li>Device Policy</li><li>Dream Liner</li><li>Drive</li><li>Files</li><li>Gmail</li><li>Google Assistant</li><li>Google Calculator</li><li>Google Calendar</li><li>Google Contacts</li><li>Google Dialer</li><li>Google Keyboard</li><li>Google Pixel Wallpaper</li><li>Google TTS</li><li>Google Vr Core</li><li>Google Web View</li><li>Keep</li><li>Location History</li><li>Maps</li><li>Markup Google</li><li>Messaging</li><li>Photos</li><li>Pixel Launcher</li><li>Pixel Live Wallpaper</li><li>Play Games</li><li>Recorder</li><li>Sound Picker</li><li>Sribe</li><li>Talkback</li><li>Turbo</li><li>Tycho</li><li>Google Search</li><li>Videos</li><li>Wallpaper Picker</li><li>Wellbeing</li><li>Youtube</li><li>Youtube Music</li></ul>
                 </div>
             </div>
         </div>
-    </div>
+    </details>
 
-    <div class="accordion-item md3-accordion-item">
-        <h2 class="accordion-header" id="headingMicro">
-            <button class="accordion-button md3-accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseMicro" aria-expanded="false" aria-controls="collapseMicro">
-                <div class="d-flex justify-content-between w-100 align-items-center pe-3">
-                    <span class="fw-bold fs-5">Micro</span>
-                    <span class="md3-chip">616.0 MB</span>
+    <details class="variant">
+        <summary class="variant__head">
+            <span class="variant__name">Micro</span>
+            <span class="variant__meta"><span class="variant__size">616.0 MB</span><span class="variant__chevron material-symbols-rounded">expand_more</span></span>
+        </summary>
+        <div class="variant__body">
+            <p class="variant__desc"><strong>Description:</strong> LiteGapps Micro is a package containing half of the pixel variants that you consider important and necessary for the user.</p>
+            <div class="var-cols">
+                <div>
+                    <h3 class="var-cat">Core Packages</h3>
+                    <ul class="var-apps"><li>Android Migrate</li><li>Carrier Services</li><li>Carrier Setup</li><li>Common</li><li>Config Updater</li><li>Google Play Services</li><li>Google Backup Transport</li><li>Google Calendar Sync Adapter</li><li>Google Contacts Sync Adapter</li><li>Google ExtServices</li><li>Google ExtShared</li><li>Google Feedback</li><li>Google One Time Initializer</li><li>Google Partner Setup</li><li>Google Restore</li><li>Google Services Framework</li><li>Playstore</li><li>Setup Wizard</li></ul>
                 </div>
-            </button>
-        </h2>
-        <div id="collapseMicro" class="accordion-collapse collapse" aria-labelledby="headingMicro" data-parent="#variantsAccordion">
-            <div class="accordion-body">
-                <div class="md3-desc-box mb-4">
-                    <p class="mb-0 opacity-75"><em><strong>Description</strong> : LiteGapps Micro is a package containing half of the pixel variants that you consider important and necessary for the user.</em></p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-6">
-                        <h3 class="fs-6 fw-bold mb-3" style="color: var(--md-sys-color-primary);">Core Packages</h3>
-                        <ul class="md3-app-list">
-                            <li>Android Migrate</li><li>Carrier Services</li><li>Carrier Setup</li><li>Common</li><li>Config Updater</li><li>Google Play Services</li><li>Google Backup Transport</li><li>Google Calendar Sync Adapter</li><li>Google Contacts Sync Adapter</li><li>Google ExtServices</li><li>Google ExtShared</li><li>Google Feedback</li><li>Google One Time Initializer</li><li>Google Partner Setup</li><li>Google Restore</li><li>Google Services Framework</li><li>Playstore</li><li>Setup Wizard</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6">
-                        <h3 class="fs-6 fw-bold mb-3" style="color: var(--md-sys-color-primary);">Gapps Packages</h3>
-                        <ul class="md3-app-list">
-                            <li>AndroidAuto</li><li>Arcore</li><li>DeskClockGoogle</li><li>DevicePolicy</li><li>Chrome</li><li>Gmail</li><li>Files</li><li>GoogleAssistant</li><li>GoogleCalculator</li><li>GoogleCalendar</li><li>GoogleContacts</li><li>GoogleDialer</li><li>GoogleKeyboard</li><li>GoogleTTS</li><li>LocationHistory</li><li>MarkupGoogle</li><li>Messaging</li><li>PixelLauncher</li><li>PixelLiveWallpaper</li><li>SoundPicker</li><li>Talkback</li><li>Turbo</li><li>Velvet</li><li>GoogleSearch</li><li>WallpaperPicker</li><li>Wellbeing</li>
-                        </ul>
-                    </div>
+                <div>
+                    <h3 class="var-cat">Gapps Packages</h3>
+                    <ul class="var-apps"><li>AndroidAuto</li><li>Arcore</li><li>DeskClockGoogle</li><li>DevicePolicy</li><li>Chrome</li><li>Gmail</li><li>Files</li><li>GoogleAssistant</li><li>GoogleCalculator</li><li>GoogleCalendar</li><li>GoogleContacts</li><li>GoogleDialer</li><li>GoogleKeyboard</li><li>GoogleTTS</li><li>LocationHistory</li><li>MarkupGoogle</li><li>Messaging</li><li>PixelLauncher</li><li>PixelLiveWallpaper</li><li>SoundPicker</li><li>Talkback</li><li>Turbo</li><li>Velvet</li><li>GoogleSearch</li><li>WallpaperPicker</li><li>Wellbeing</li></ul>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <div class="accordion-item md3-accordion-item">
-        <h2 class="accordion-header" id="headingNano">
-            <button class="accordion-button md3-accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseNano" aria-expanded="false" aria-controls="collapseNano">
-                <div class="d-flex justify-content-between w-100 align-items-center pe-3">
-                    <span class="fw-bold fs-5">Nano</span>
-                    <span class="md3-chip">353.4 MB</span>
-                </div>
-            </button>
-        </h2>
-        <div id="collapseNano" class="accordion-collapse collapse" aria-labelledby="headingNano" data-parent="#variantsAccordion">
-            <div class="accordion-body">
-                <div class="md3-desc-box mb-4">
-                    <p class="mb-0 opacity-75"><em><strong>Description</strong> : LiteGapps Nano is a package that has a medium size, so it is not too heavy to install on your device.</em></p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-6">
-                        <h3 class="fs-6 fw-bold mb-3" style="color: var(--md-sys-color-primary);">Core Packages</h3>
-                        <ul class="md3-app-list">
-                            <li>Android Migrate</li><li>Carrier Services</li><li>Carrier Setup</li><li>Common</li><li>Config Updater</li><li>Google Play Services</li><li>Google Backup Transport</li><li>Google Calendar Sync Adapter</li><li>Google Contacts Sync Adapter</li><li>Google ExtServices</li><li>Google ExtShared</li><li>Google Feedback</li><li>Google One Time Initializer</li><li>Google Partner Setup</li><li>Google Restore</li><li>Google Services Framework</li><li>Playstore</li><li>Setup Wizard</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6">
-                        <h3 class="fs-6 fw-bold mb-3" style="color: var(--md-sys-color-primary);">Gapps Packages</h3>
-                        <ul class="md3-app-list">
-                            <li>Android Auto</li><li>Arcore</li><li>Desk Clock Google</li><li>Device Policy</li><li>Dream Liner</li><li>Gmail</li><li>Google Assistant</li><li>Google Calculator</li><li>Google Calendar</li><li>Google Contacts</li><li>Google Dialer</li><li>Google Keyboard</li><li>Google Vr Core</li><li>Location History</li><li>Markup Google</li><li>Messaging</li><li>Play Games</li><li>Sound Picker</li><li>Wallpaper Picker</li><li>Wellbeing</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </details>
 
-    <div class="accordion-item md3-accordion-item">
-        <h2 class="accordion-header" id="headingBasic">
-            <button class="accordion-button md3-accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseBasic" aria-expanded="false" aria-controls="collapseBasic">
-                <div class="d-flex justify-content-between w-100 align-items-center pe-3">
-                    <span class="fw-bold fs-5">Basic</span>
-                    <span class="md3-chip">161.4 MB</span>
+    <details class="variant">
+        <summary class="variant__head">
+            <span class="variant__name">Nano</span>
+            <span class="variant__meta"><span class="variant__size">353.4 MB</span><span class="variant__chevron material-symbols-rounded">expand_more</span></span>
+        </summary>
+        <div class="variant__body">
+            <p class="variant__desc"><strong>Description:</strong> LiteGapps Nano is a package that has a medium size, so it is not too heavy to install on your device.</p>
+            <div class="var-cols">
+                <div>
+                    <h3 class="var-cat">Core Packages</h3>
+                    <ul class="var-apps"><li>Android Migrate</li><li>Carrier Services</li><li>Carrier Setup</li><li>Common</li><li>Config Updater</li><li>Google Play Services</li><li>Google Backup Transport</li><li>Google Calendar Sync Adapter</li><li>Google Contacts Sync Adapter</li><li>Google ExtServices</li><li>Google ExtShared</li><li>Google Feedback</li><li>Google One Time Initializer</li><li>Google Partner Setup</li><li>Google Restore</li><li>Google Services Framework</li><li>Playstore</li><li>Setup Wizard</li></ul>
                 </div>
-            </button>
-        </h2>
-        <div id="collapseBasic" class="accordion-collapse collapse" aria-labelledby="headingBasic" data-parent="#variantsAccordion">
-            <div class="accordion-body">
-                <div class="md3-desc-box mb-4">
-                    <p class="mb-0 opacity-75"><em><strong>Description</strong> : LiteGapps Basic is a light version but still maintains some of the general functions of Google Apps.</em></p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-6">
-                        <h3 class="fs-6 fw-bold mb-3" style="color: var(--md-sys-color-primary);">Core Packages</h3>
-                        <ul class="md3-app-list">
-                            <li>Android Migrate</li><li>Carrier Services</li><li>Carrier Setup</li><li>Common</li><li>Config Updater</li><li>Google Play Services</li><li>Google Backup Transport</li><li>Google Calendar Sync Adapter</li><li>Google Contacts Sync Adapter</li><li>Google ExtServices</li><li>Google ExtShared</li><li>Google Feedback</li><li>Google One Time Initializer</li><li>Google Partner Setup</li><li>Google Restore</li><li>Google Services Framework</li><li>Playstore</li><li>Setup Wizard</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6">
-                        <h3 class="fs-6 fw-bold mb-3" style="color: var(--md-sys-color-primary);">Gapps Packages</h3>
-                        <ul class="md3-app-list">
-                            <li>Android Auto</li><li>Arcore</li><li>Device Policy</li><li>Gmail</li><li>Google Vr Core</li><li>Location History</li><li>Markup Google</li><li>Play Games</li><li>Sound Picker</li><li>Wellbeing</li>
-                        </ul>
-                    </div>
+                <div>
+                    <h3 class="var-cat">Gapps Packages</h3>
+                    <ul class="var-apps"><li>Android Auto</li><li>Arcore</li><li>Desk Clock Google</li><li>Device Policy</li><li>Dream Liner</li><li>Gmail</li><li>Google Assistant</li><li>Google Calculator</li><li>Google Calendar</li><li>Google Contacts</li><li>Google Dialer</li><li>Google Keyboard</li><li>Google Vr Core</li><li>Location History</li><li>Markup Google</li><li>Messaging</li><li>Play Games</li><li>Sound Picker</li><li>Wallpaper Picker</li><li>Wellbeing</li></ul>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <div class="accordion-item md3-accordion-item">
-        <h2 class="accordion-header" id="headingUser">
-            <button class="accordion-button md3-accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseUser" aria-expanded="false" aria-controls="collapseUser">
-                <div class="d-flex justify-content-between w-100 align-items-center pe-3">
-                    <span class="fw-bold fs-5">User</span>
-                    <span class="md3-chip">338.7 MB</span>
-                </div>
-            </button>
-        </h2>
-        <div id="collapseUser" class="accordion-collapse collapse" aria-labelledby="headingUser" data-parent="#variantsAccordion">
-            <div class="accordion-body">
-                <div class="md3-desc-box mb-4">
-                    <p class="mb-0 opacity-75"><em><strong>Description</strong> : LiteGapps User is a variant of google apps that contains apps that are frequently used by users.</em></p>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-6">
-                        <h3 class="fs-6 fw-bold mb-3" style="color: var(--md-sys-color-primary);">Core Packages</h3>
-                        <ul class="md3-app-list">
-                            <li>Android Migrate</li><li>Carrier Services</li><li>Carrier Setup</li><li>Common</li><li>Config Updater</li><li>Google Play Services</li><li>Google Backup Transport</li><li>Google Calendar Sync Adapter</li><li>Google Contacts Sync Adapter</li><li>Google ExtServices</li><li>Google ExtShared</li><li>Google Feedback</li><li>Google One Time Initializer</li><li>Google Partner Setup</li><li>Google Restore</li><li>Google Services Framework</li><li>Playstore</li><li>Setup Wizard</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6">
-                        <h3 class="fs-6 fw-bold mb-3" style="color: var(--md-sys-color-primary);">Gapps Packages</h3>
-                        <ul class="md3-app-list mb-4">
-                            <li>Chrome</li><li>Google Keyboard</li><li>Pixel Launcher</li><li>Pixel Live Wallpaper</li><li>Play Games</li>
-                        </ul>
-                        <h3 class="fs-6 fw-bold mb-3" style="color: var(--md-sys-color-primary);">Go Packages</h3>
-                        <ul class="md3-app-list">
-                            <li>Gallery Go</li><li>Gmail Go</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </details>
 
-    <div class="accordion-item md3-accordion-item">
-        <h2 class="accordion-header" id="headingGo">
-            <button class="accordion-button md3-accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseGo" aria-expanded="false" aria-controls="collapseGo">
-                <div class="d-flex justify-content-between w-100 align-items-center pe-3">
-                    <span class="fw-bold fs-5">Go</span>
-                    <span class="md3-chip">118.3 MB</span>
+    <details class="variant">
+        <summary class="variant__head">
+            <span class="variant__name">Basic</span>
+            <span class="variant__meta"><span class="variant__size">161.4 MB</span><span class="variant__chevron material-symbols-rounded">expand_more</span></span>
+        </summary>
+        <div class="variant__body">
+            <p class="variant__desc"><strong>Description:</strong> LiteGapps Basic is a light version but still maintains some of the general functions of Google Apps.</p>
+            <div class="var-cols">
+                <div>
+                    <h3 class="var-cat">Core Packages</h3>
+                    <ul class="var-apps"><li>Android Migrate</li><li>Carrier Services</li><li>Carrier Setup</li><li>Common</li><li>Config Updater</li><li>Google Play Services</li><li>Google Backup Transport</li><li>Google Calendar Sync Adapter</li><li>Google Contacts Sync Adapter</li><li>Google ExtServices</li><li>Google ExtShared</li><li>Google Feedback</li><li>Google One Time Initializer</li><li>Google Partner Setup</li><li>Google Restore</li><li>Google Services Framework</li><li>Playstore</li><li>Setup Wizard</li></ul>
                 </div>
-            </button>
-        </h2>
-        <div id="collapseGo" class="accordion-collapse collapse" aria-labelledby="headingGo" data-parent="#variantsAccordion">
-            <div class="accordion-body">
-                <div class="md3-desc-box mb-4">
-                    <p class="mb-0 opacity-75"><em><strong>Description</strong> : LiteGapps Go is a package containing Google Apps Go which is designed for devices with low specifications, but can still use commonly used Google applications.</em></p>
-                </div>
-                 <div class="row g-4">
-                    <div class="col-lg-6">
-                        <h3 class="fs-6 fw-bold mb-3" style="color: var(--md-sys-color-primary);">Core Packages</h3>
-                        <ul class="md3-app-list">
-                            <li>Android Migrate</li><li>Carrier Services</li><li>Carrier Setup</li><li>Common</li><li>Config Updater</li><li>Google Play Services</li><li>Google Backup Transport</li><li>Google Calendar Sync Adapter</li><li>Google Contacts Sync Adapter</li><li>Google ExtServices</li><li>Google ExtShared</li><li>Google Feedback</li><li>Google One Time Initializer</li><li>Google Partner Setup</li><li>Google Restore</li><li>Google Services Framework</li><li>Playstore</li><li>Setup Wizard</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6">
-                        <h3 class="fs-6 fw-bold mb-3" style="color: var(--md-sys-color-primary);">Gapps Packages</h3>
-                        <ul class="md3-app-list">
-                            <li>Assistant Go</li><li>Gallery Go</li><li>Gmail Go</li><li>Maps Go</li><li>Navigation Go</li><li>Google Search Go</li>
-                        </ul>
-                    </div>
+                <div>
+                    <h3 class="var-cat">Gapps Packages</h3>
+                    <ul class="var-apps"><li>Android Auto</li><li>Arcore</li><li>Device Policy</li><li>Gmail</li><li>Google Vr Core</li><li>Location History</li><li>Markup Google</li><li>Play Games</li><li>Sound Picker</li><li>Wellbeing</li></ul>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <div class="accordion-item md3-accordion-item">
-        <h2 class="accordion-header" id="headingCore">
-            <button class="accordion-button md3-accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseCore" aria-expanded="false" aria-controls="collapseCore">
-                <div class="d-flex justify-content-between w-100 align-items-center pe-3">
-                    <span class="fw-bold fs-5">Core</span>
-                    <span class="md3-chip">74.0 MB</span>
-                </div>
-            </button>
-        </h2>
-        <div id="collapseCore" class="accordion-collapse collapse" aria-labelledby="headingCore" data-parent="#variantsAccordion">
-            <div class="accordion-body">
-                <div class="md3-desc-box mb-4">
-                    <p class="mb-0 opacity-75"><em><strong>Description</strong> : LiteGapps Core is a package that contains the core package of google apps.</em></p>
-                </div>
-                <h3 class="fs-6 fw-bold mb-3" style="color: var(--md-sys-color-primary);">Core Packages</h3>
-                <ul class="md3-app-list">
-                    <li>Android Migrate</li><li>Carrier Services</li><li>Carrier Setup</li><li>Common</li><li>Config Updater</li><li>Google Play Services</li><li>Google Backup Transport</li><li>Google Calendar Sync Adapter</li><li>Google Contacts Sync Adapter</li><li>Google ExtServices</li><li>Google ExtShared</li><li>Google Feedback</li><li>Google One Time Initializer</li><li>Google Partner Setup</li><li>Google Restore</li><li>Google Services Framework</li><li>Playstore</li><li>Setup Wizard</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    </details>
 
-    <div class="accordion-item md3-accordion-item">
-        <h2 class="accordion-header" id="headingLite">
-            <button class="accordion-button md3-accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseLite" aria-expanded="false" aria-controls="collapseLite">
-                <div class="d-flex justify-content-between w-100 align-items-center pe-3">
-                    <span class="fw-bold fs-5">Lite</span>
-                    <span class="md3-chip">60.6 MB</span>
+    <details class="variant">
+        <summary class="variant__head">
+            <span class="variant__name">User</span>
+            <span class="variant__meta"><span class="variant__size">338.7 MB</span><span class="variant__chevron material-symbols-rounded">expand_more</span></span>
+        </summary>
+        <div class="variant__body">
+            <p class="variant__desc"><strong>Description:</strong> LiteGapps User is a variant of google apps that contains apps that are frequently used by users.</p>
+            <div class="var-cols">
+                <div>
+                    <h3 class="var-cat">Core Packages</h3>
+                    <ul class="var-apps"><li>Android Migrate</li><li>Carrier Services</li><li>Carrier Setup</li><li>Common</li><li>Config Updater</li><li>Google Play Services</li><li>Google Backup Transport</li><li>Google Calendar Sync Adapter</li><li>Google Contacts Sync Adapter</li><li>Google ExtServices</li><li>Google ExtShared</li><li>Google Feedback</li><li>Google One Time Initializer</li><li>Google Partner Setup</li><li>Google Restore</li><li>Google Services Framework</li><li>Playstore</li><li>Setup Wizard</li></ul>
                 </div>
-            </button>
-        </h2>
-        <div id="collapseLite" class="accordion-collapse collapse" aria-labelledby="headingLite" data-parent="#variantsAccordion">
-            <div class="accordion-body">
-                <div class="md3-desc-box mb-4">
-                    <p class="mb-0 opacity-75"><em><strong>Description</strong> : LiteGapps Lite is a small and light version of google apps.</em></p>
+                <div>
+                    <h3 class="var-cat">Gapps Packages</h3>
+                    <ul class="var-apps"><li>Chrome</li><li>Google Keyboard</li><li>Pixel Launcher</li><li>Pixel Live Wallpaper</li><li>Play Games</li></ul>
+                    <h3 class="var-cat">Go Packages</h3>
+                    <ul class="var-apps"><li>Gallery Go</li><li>Gmail Go</li></ul>
                 </div>
-                <h3 class="fs-6 fw-bold mb-3" style="color: var(--md-sys-color-primary);">Core Packages</h3>
-                <ul class="md3-app-list">
-                    <li>Common</li><li>Google Contacts Sync Adapter</li><li>Google Services Framework</li><li>Google Play Services</li><li>PlayStore</li>
-                </ul>
             </div>
         </div>
-    </div>
-    
-    <div class="accordion-item md3-accordion-item">
-        <h2 class="accordion-header" id="headingSuperLite">
-            <button class="accordion-button md3-accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseSuperLite" aria-expanded="false" aria-controls="collapseSuperLite">
-                <div class="d-flex justify-content-between w-100 align-items-center pe-3">
-                    <span class="fw-bold fs-5">SuperLite</span>
-                    <span class="md3-chip">50.6 MB</span>
+    </details>
+
+    <details class="variant">
+        <summary class="variant__head">
+            <span class="variant__name">Go</span>
+            <span class="variant__meta"><span class="variant__size">118.3 MB</span><span class="variant__chevron material-symbols-rounded">expand_more</span></span>
+        </summary>
+        <div class="variant__body">
+            <p class="variant__desc"><strong>Description:</strong> LiteGapps Go is a package containing Google Apps Go which is designed for devices with low specifications, but can still use commonly used Google applications.</p>
+            <div class="var-cols">
+                <div>
+                    <h3 class="var-cat">Core Packages</h3>
+                    <ul class="var-apps"><li>Android Migrate</li><li>Carrier Services</li><li>Carrier Setup</li><li>Common</li><li>Config Updater</li><li>Google Play Services</li><li>Google Backup Transport</li><li>Google Calendar Sync Adapter</li><li>Google Contacts Sync Adapter</li><li>Google ExtServices</li><li>Google ExtShared</li><li>Google Feedback</li><li>Google One Time Initializer</li><li>Google Partner Setup</li><li>Google Restore</li><li>Google Services Framework</li><li>Playstore</li><li>Setup Wizard</li></ul>
                 </div>
-            </button>
-        </h2>
-        <div id="collapseSuperLite" class="accordion-collapse collapse" aria-labelledby="headingSuperLite" data-parent="#variantsAccordion">
-            <div class="accordion-body">
-                <div class="md3-desc-box mb-4">
-                    <p class="mb-0 opacity-75"><em><strong>Description</strong> : Same as the lite variant but the difference is that it uses gmscore and the old playstore, so it is smaller. Suitable for mobile phones with 1/2 GB RAM.</em></p>
+                <div>
+                    <h3 class="var-cat">Gapps Packages</h3>
+                    <ul class="var-apps"><li>Assistant Go</li><li>Gallery Go</li><li>Gmail Go</li><li>Maps Go</li><li>Navigation Go</li><li>Google Search Go</li></ul>
                 </div>
-                <h3 class="fs-6 fw-bold mb-3" style="color: var(--md-sys-color-primary);">Core Packages</h3>
-                <ul class="md3-app-list">
-                    <li>Common</li><li>Google Services Framework</li><li>Google Play Services</li><li>PlayStore</li>
-                </ul>
             </div>
         </div>
-    </div>
+    </details>
+
+    <details class="variant">
+        <summary class="variant__head">
+            <span class="variant__name">Core</span>
+            <span class="variant__meta"><span class="variant__size">74.0 MB</span><span class="variant__chevron material-symbols-rounded">expand_more</span></span>
+        </summary>
+        <div class="variant__body">
+            <p class="variant__desc"><strong>Description:</strong> LiteGapps Core is a package that contains the core package of google apps.</p>
+            <h3 class="var-cat">Core Packages</h3>
+            <ul class="var-apps"><li>Android Migrate</li><li>Carrier Services</li><li>Carrier Setup</li><li>Common</li><li>Config Updater</li><li>Google Play Services</li><li>Google Backup Transport</li><li>Google Calendar Sync Adapter</li><li>Google Contacts Sync Adapter</li><li>Google ExtServices</li><li>Google ExtShared</li><li>Google Feedback</li><li>Google One Time Initializer</li><li>Google Partner Setup</li><li>Google Restore</li><li>Google Services Framework</li><li>Playstore</li><li>Setup Wizard</li></ul>
+        </div>
+    </details>
+
+    <details class="variant">
+        <summary class="variant__head">
+            <span class="variant__name">Lite</span>
+            <span class="variant__meta"><span class="variant__size">60.6 MB</span><span class="variant__chevron material-symbols-rounded">expand_more</span></span>
+        </summary>
+        <div class="variant__body">
+            <p class="variant__desc"><strong>Description:</strong> LiteGapps Lite is a small and light version of google apps.</p>
+            <h3 class="var-cat">Core Packages</h3>
+            <ul class="var-apps"><li>Common</li><li>Google Contacts Sync Adapter</li><li>Google Services Framework</li><li>Google Play Services</li><li>PlayStore</li></ul>
+        </div>
+    </details>
+
+    <details class="variant">
+        <summary class="variant__head">
+            <span class="variant__name">SuperLite</span>
+            <span class="variant__meta"><span class="variant__size">50.6 MB</span><span class="variant__chevron material-symbols-rounded">expand_more</span></span>
+        </summary>
+        <div class="variant__body">
+            <p class="variant__desc"><strong>Description:</strong> Same as the lite variant but the difference is that it uses gmscore and the old playstore, so it is smaller. Suitable for mobile phones with 1/2 GB RAM.</p>
+            <h3 class="var-cat">Core Packages</h3>
+            <ul class="var-apps"><li>Common</li><li>Google Services Framework</li><li>Google Play Services</li><li>PlayStore</li></ul>
+        </div>
+    </details>
 
 </div>

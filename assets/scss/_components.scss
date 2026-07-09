@@ -179,44 +179,87 @@ code:not(pre code) {
   color: var(--md-sys-color-on-surface);
 }
 
+/* Floating pill navbar — detached rounded bar with a blurred glass look */
 .md3-navbar {
-  background-color: color-mix(in srgb, var(--md-sys-color-surface) 82%, transparent);
-  backdrop-filter: saturate(180%) blur(16px);
-  -webkit-backdrop-filter: saturate(180%) blur(16px);
-  border-bottom: 1px solid var(--md-sys-card-border);
-  transition: background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.3s ease;
-  padding-top: 0.6rem;
+  top: 0.75rem;
+  left: 0;
+  right: 0;
+  width: unquote("min(1180px, calc(100% - 1.5rem))");
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.4rem 0.5rem 0.4rem 0.9rem;
+  background-color: color-mix(in srgb, var(--md-sys-color-surface) 78%, transparent);
+  backdrop-filter: saturate(180%) blur(18px);
+  -webkit-backdrop-filter: saturate(180%) blur(18px);
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-sys-shape-corner-full);
+  box-shadow: var(--md-sys-elevation-1);
+  transition: background-color 0.35s ease, border-color 0.35s ease,
+    box-shadow 0.3s ease, top 0.3s var(--md-sys-motion-emphasized);
+}
+.md3-navbar.scrolled {
+  box-shadow: var(--md-sys-elevation-3);
+  background-color: color-mix(in srgb, var(--md-sys-color-surface) 90%, transparent);
+}
+/* When the mobile menu is open, soften the pill so the tall panel looks right */
+.md3-navbar:has(.navbar-collapse.show) {
+  border-radius: var(--md-sys-shape-corner-extra-large);
   padding-bottom: 0.6rem;
 }
-.md3-navbar.scrolled { box-shadow: var(--md-sys-elevation-2); }
+
 .md3-navbar .navbar-brand img,
-.nav-brand-icon { max-height: 38px; object-fit: contain; }
+.nav-brand-icon { max-height: 34px; object-fit: contain; transition: transform 0.25s var(--md-sys-motion-emphasized); }
+.md3-navbar .navbar-brand:hover img { transform: rotate(-8deg) scale(1.05); }
+.nav-brand-text {
+  font-family: "Sora", "Inter", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  letter-spacing: -0.5px;
+  color: var(--md-sys-color-on-surface);
+}
+
 .md3-navbar .nav-link {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  color: var(--md-sys-color-on-surface);
+  color: var(--md-sys-color-on-surface-variant);
   font-weight: 500;
+  font-size: 0.95rem;
   text-decoration: none;
-  padding: 0.5rem 1.15rem;
+  padding: 0.55rem 1.05rem;
   margin: 0.1rem 0.15rem;
   border-radius: var(--md-sys-shape-corner-full);
-  opacity: 0.9;
-  transition: all 0.2s var(--md-sys-motion-emphasized);
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
-.md3-navbar .nav-link:hover,
+.md3-navbar .nav-link .material-symbols-rounded {
+  font-size: 1.15rem;
+  transition: transform 0.2s var(--md-sys-motion-emphasized);
+}
+.md3-navbar .nav-link:hover {
+  color: var(--md-sys-color-on-surface);
+  background-color: var(--md-sys-color-surface-container-high);
+}
+.md3-navbar .nav-link:hover .material-symbols-rounded { transform: translateY(-1px); }
 .md3-navbar .nav-link.active {
   color: var(--md-sys-color-on-secondary-container);
   background-color: var(--md-sys-color-secondary-container);
-  opacity: 1;
-  text-decoration: none;
 }
+
 .md3-navbar .navbar-toggler {
   color: var(--md-sys-color-on-surface);
-  border-radius: var(--md-sys-shape-corner-medium);
-  padding: 0.4rem 0.6rem;
+  border-radius: var(--md-sys-shape-corner-full);
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  padding: 0;
+  transition: background-color 0.2s ease;
 }
+.md3-navbar .navbar-toggler:hover,
 .md3-navbar .navbar-toggler:focus { background-color: var(--md-sys-color-surface-container-high); }
+
+/* Mobile expanded menu — sits inside the pill, stacked and roomy */
+.md3-navbar .navbar-collapse .navbar-nav { width: 100%; }
+.md3-navbar .navbar-collapse .nav-link { justify-content: flex-start; padding: 0.7rem 1rem; }
 
 @media (min-width: 768px) {
   .navbar-expand-md .navbar-collapse { display: flex !important; flex-basis: auto; }
@@ -402,13 +445,13 @@ a.md3-chip:hover { filter: brightness(0.96); text-decoration: none; }
 
 /* Documentation sidebar */
 .sidebar {
-  top: 5.25rem;
+  top: 5.75rem;
   z-index: 1000;
   padding: 0 0.75rem;
   overflow-y: auto;
   border-right: 1px solid var(--md-sys-color-outline-variant);
 }
-.sidebar .position-sticky { max-height: calc(100vh - 5.25rem); overflow-y: auto; }
+.sidebar .position-sticky { max-height: calc(100vh - 5.75rem); overflow-y: auto; }
 
 /* ---------------------------------------------------------------------
    LIST GROUPS
