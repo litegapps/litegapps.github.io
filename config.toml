@@ -34,5 +34,10 @@ buildFuture = true
 [outputs.taxonomy.removePath]
   tags = ["/tags"]
   categories = ["/categories"]
+
+# Hugo >= 0.163 blocks text/html content files by default; this site
+# authors pages as .html in content/, so allow all content media types.
+[security]
+  allowContent = ['.*']
   
   
