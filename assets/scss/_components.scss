@@ -507,7 +507,40 @@ a.md3-chip:hover { filter: brightness(0.96); text-decoration: none; }
   border-color: var(--md-sys-color-primary);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--md-sys-color-primary) 22%, transparent);
 }
+.form-select-lg,
+.form-control-lg { padding: 0.85rem 1.1rem; font-size: 1.15rem; border-radius: var(--md-sys-shape-corner-large); }
+.form-select-lg { padding-right: 2.75rem; }
 .form-label { display: inline-block; margin-bottom: 0.4rem; color: var(--md-sys-color-on-surface-variant); font-weight: 500; }
+
+/* ---------------------------------------------------------------------
+   NAV (generic vertical/horizontal link lists — e.g. doc sidebar)
+   --------------------------------------------------------------------- */
+.nav { display: flex; flex-wrap: wrap; list-style: none; padding-left: 0; margin: 0; }
+.nav .nav-item { list-style: none; }
+.nav .nav-link {
+  display: block;
+  padding: 0.5rem 0.9rem;
+  color: var(--md-sys-color-on-surface-variant);
+  text-decoration: none;
+  border-radius: var(--md-sys-shape-corner-full);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.nav .nav-link:hover,
+.nav .nav-link.active {
+  color: var(--md-sys-color-on-secondary-container);
+  background-color: var(--md-sys-color-secondary-container);
+  text-decoration: none;
+}
+
+/* Documentation sidebar */
+.sidebar {
+  top: 5.25rem;
+  z-index: 1000;
+  padding: 0 0.75rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--md-sys-color-outline-variant);
+}
+.sidebar .position-sticky { max-height: calc(100vh - 5.25rem); overflow-y: auto; }
 
 /* ---------------------------------------------------------------------
    LIST GROUPS
@@ -651,7 +684,8 @@ a.md3-chip:hover { filter: brightness(0.96); text-decoration: none; }
    --------------------------------------------------------------------- */
 .pagination { display: flex; flex-wrap: wrap; gap: 0.35rem; list-style: none; padding-left: 0; margin: 0; }
 .page-item { display: inline-flex; }
-.page-link {
+.page-link,
+.pagination-link {
   min-width: 42px;
   height: 42px;
   display: inline-flex;
@@ -665,7 +699,8 @@ a.md3-chip:hover { filter: brightness(0.96); text-decoration: none; }
   font-weight: 500;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
-.page-link:hover {
+.page-link:hover,
+.pagination-link:hover {
   background-color: var(--md-sys-color-secondary-container);
   color: var(--md-sys-color-on-secondary-container);
   text-decoration: none;

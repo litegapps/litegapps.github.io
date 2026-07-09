@@ -68,6 +68,14 @@ $sides: ("": "", "t": "-top", "b": "-bottom", "s": "-left", "e": "-right");
     }
     .m#{$sk}#{$suffix}-auto { margin#{$prop}: auto !important; }
   }
+  /* Axis helpers: x = left+right, y = top+bottom */
+  @each $i, $val in $spacers {
+    .mx#{$suffix}-#{$i} { margin-left: #{$val} !important; margin-right: #{$val} !important; }
+    .my#{$suffix}-#{$i} { margin-top: #{$val} !important; margin-bottom: #{$val} !important; }
+    .px#{$suffix}-#{$i} { padding-left: #{$val} !important; padding-right: #{$val} !important; }
+    .py#{$suffix}-#{$i} { padding-top: #{$val} !important; padding-bottom: #{$val} !important; }
+  }
+  .mx#{$suffix}-auto { margin-left: auto !important; margin-right: auto !important; }
 }
 @include spacing-utils("");
 @each $bp, $min in $breakpoints {
@@ -127,6 +135,8 @@ $sides: ("": "", "t": "-top", "b": "-bottom", "s": "-left", "e": "-right");
 .position-relative { position: relative; }
 .position-absolute { position: absolute; }
 .position-static   { position: static; }
+.position-fixed    { position: fixed; }
+.position-sticky   { position: sticky; top: 0; }
 
 .stretched-link::after {
   content: "";
@@ -142,8 +152,14 @@ $sides: ("": "", "t": "-top", "b": "-bottom", "s": "-left", "e": "-right");
 .border-bottom { border-bottom: 1px solid var(--md-sys-color-outline-variant) !important; }
 .border-end    { border-right: 1px solid var(--md-sys-color-outline-variant) !important; }
 .border-start  { border-left: 1px solid var(--md-sys-color-outline-variant) !important; }
+.border-top-0    { border-top: 0 !important; }
+.border-bottom-0 { border-bottom: 0 !important; }
+.border-start-0  { border-left: 0 !important; }
+.border-end-0    { border-right: 0 !important; }
 .border-2 { border-width: 2px !important; }
 .border-4 { border-width: 4px !important; }
+.border-primary   { border-color: var(--md-sys-color-primary) !important; }
+.border-secondary { border-color: var(--md-sys-color-outline) !important; }
 
 .rounded         { border-radius: var(--md-sys-shape-corner-medium) !important; }
 .rounded-0       { border-radius: 0 !important; }
@@ -164,6 +180,9 @@ $sides: ("": "", "t": "-top", "b": "-bottom", "s": "-left", "e": "-right");
 
 /* ---- Misc backgrounds ---- */
 .bg-light { background-color: var(--md-sys-color-surface-container-lowest) !important; }
+.bg-body-tertiary { background-color: var(--md-sys-color-surface-container) !important; }
+.bg-body { background-color: var(--md-sys-color-surface) !important; }
+.bg-transparent { background-color: transparent !important; }
 
 /* ---- Lists ---- */
 .list-unstyled { list-style: none; padding-left: 0; }

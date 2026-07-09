@@ -62,6 +62,20 @@ h6 { font-size: 1rem; }
 
 h1, h2 { text-align: center; }
 
+/* Heading classes (Bootstrap-style) — size/weight without layout side-effects */
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Roboto Flex", "Roboto", system-ui, sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.25px;
+}
+.h1 { font-size: 2.25rem; }
+.h2 { font-size: 1.9rem; }
+.h3 { font-size: 1.5rem; }
+.h4 { font-size: 1.25rem; }
+.h5 { font-size: 1.1rem; }
+.h6 { font-size: 1rem; }
+
 p { margin-top: 0; margin-bottom: 1rem; }
 
 .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
