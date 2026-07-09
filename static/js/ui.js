@@ -10,7 +10,7 @@
     onScroll();
   }
 
-  // --- Dropdowns (theme switcher etc.) — replaces Bootstrap dropdown JS ---
+  // --- Dropdowns (theme switcher etc.) — vanilla, self-contained ---
   const closeAllDropdowns = except => {
     document.querySelectorAll('[data-toggle="dropdown"]').forEach(t => {
       if (t === except) return;
@@ -36,7 +36,7 @@
   document.addEventListener('click', () => closeAllDropdowns(null));
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAllDropdowns(null); });
 
-  // --- Navbar collapse (hamburger) — replaces Bootstrap collapse JS ---
+  // --- Navbar collapse (hamburger) — vanilla, self-contained ---
   document.querySelectorAll('[data-toggle="collapse"]').forEach(toggle => {
     const sel = toggle.getAttribute('data-target') || toggle.getAttribute('href');
     if (!sel) return;

@@ -62,7 +62,7 @@ h6 { font-size: 1rem; }
 
 h1, h2 { text-align: center; }
 
-/* Heading classes (Bootstrap-style) — size/weight without layout side-effects */
+/* Heading classes — size/weight without layout side-effects */
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Roboto Flex", "Roboto", system-ui, sans-serif;
   font-weight: 700;
@@ -159,8 +159,8 @@ time { color: inherit; }
 .msym-lg { font-size: 2rem; }
 .msym-xl { font-size: 2.5rem; }
 
-/* Brand/social glyphs (Bootstrap Icons font — logos only) */
-.bi { vertical-align: -0.125em; fill: currentColor; }
+/* Brand/social logos — inline SVG (self-contained, no icon font) */
+.social-svg { display: inline-block; vertical-align: -0.125em; fill: currentColor; }
 
 /* Screen-reader-only helper */
 .visually-hidden,

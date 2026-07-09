@@ -9,9 +9,6 @@
 {{/* Google Material Symbols (Rounded) — the modern Google icon set */}}
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet">
 
-{{/* Bootstrap Icons — kept only for brand/social logos Google does not provide */}}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
 {{/* Compiled Material 3 design system */}}
 {{ $sassOptions := (dict "targetPath" "css/style.css" "outputStyle" "compressed" "enableSourceMap" true) }}
 {{ $styles := resources.Get "scss/main.scss" | toCSS $sassOptions | minify | fingerprint }}
