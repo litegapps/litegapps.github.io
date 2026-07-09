@@ -1,2 +1,16 @@
+{{/* Google Material Web — official Material 3 web components (ESM via importmap) */}}
+<script type="importmap">
+{
+  "imports": {
+    "@material/web/": "https://esm.run/@material/web/"
+  }
+}
+</script>
+<script type="module">
+  import '@material/web/all.js';
+  import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
+  document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+</script>
+
 {{/* UI interactions: theme dropdown, navbar collapse, accordion, scroll effects */}}
 <script src="/js/ui.js" defer></script>
