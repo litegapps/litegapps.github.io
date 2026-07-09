@@ -100,92 +100,8 @@
 .md3-card:hover .md3-icon-container { transform: scale(1.06); }
 .md3-icon-container .material-symbols-rounded { font-size: 2rem; }
 
-/* ---------------------------------------------------------------------
-   BUTTONS (Material 3 button family)
-   --------------------------------------------------------------------- */
-.btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  border-radius: var(--md-sys-shape-corner-full);
-  padding: 0.7rem 1.6rem;
-  font-family: inherit;
-  font-size: 0.95rem;
-  font-weight: 500;
-  line-height: 1.4;
-  letter-spacing: 0.1px;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  text-decoration: none;
-  user-select: none;
-  transition: box-shadow 0.25s var(--md-sys-motion-emphasized),
-    transform 0.25s var(--md-sys-motion-emphasized),
-    filter 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
-}
-.btn:focus-visible {
-  outline: 2px solid var(--md-sys-color-primary);
-  outline-offset: 2px;
-}
-.btn-lg { padding: 0.85rem 2rem; font-size: 1.05rem; }
-.btn-sm { padding: 0.5rem 1.1rem; font-size: 0.85rem; }
-
-/* state layer */
-.btn-md3-primary,
-.btn-md3-tonal,
-.btn-md3-outlined,
-.btn-md3-text {
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: currentColor;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    pointer-events: none;
-  }
-  &:hover::after { opacity: 0.08; }
-  &:active::after { opacity: 0.12; }
-}
-
-.btn-md3-primary {
-  background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
-  box-shadow: var(--md-sys-elevation-1);
-}
-.btn-md3-primary:hover {
-  color: var(--md-sys-color-on-primary);
-  box-shadow: var(--md-sys-elevation-2);
-  transform: translateY(-1px);
-}
-
-.btn-md3-tonal {
-  background-color: var(--md-sys-color-secondary-container);
-  color: var(--md-sys-color-on-secondary-container);
-}
-.btn-md3-tonal:hover {
-  color: var(--md-sys-color-on-secondary-container);
-  box-shadow: var(--md-sys-elevation-1);
-  transform: translateY(-1px);
-}
-
-.btn-md3-outlined {
-  background-color: transparent;
-  color: var(--md-sys-color-primary);
-  border: 1px solid var(--md-sys-color-outline);
-}
-.btn-md3-outlined:hover {
-  color: var(--md-sys-color-primary);
-  border-color: var(--md-sys-color-primary);
-}
-
-.btn-md3-text {
-  background-color: transparent;
-  color: var(--md-sys-color-primary);
-  padding: 0.6rem 1rem;
-}
+/* Buttons are now Google Material Web components (md-*-button); see
+   _material-web.scss. The theme toggle (#bd-theme) is styled below. */
 
 /* ---------------------------------------------------------------------
    CODE
@@ -390,31 +306,6 @@ code:not(pre code) {
   border-top: 1px solid var(--md-sys-card-border);
   transition: background-color 0.35s ease, color 0.35s ease;
 }
-.md3-icon-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  color: var(--md-sys-color-on-surface-variant);
-  background-color: transparent;
-  border: 1px solid var(--md-sys-color-outline-variant);
-  opacity: 0.9;
-  transition: all 0.2s var(--md-sys-motion-emphasized);
-  text-decoration: none;
-  font-size: 1.25rem;
-}
-.md3-icon-btn:hover,
-.md3-icon-btn:focus {
-  background-color: var(--md-sys-color-secondary-container);
-  color: var(--md-sys-color-on-secondary-container);
-  border-color: transparent;
-  opacity: 1;
-  transform: translateY(-3px);
-  box-shadow: var(--md-sys-elevation-1);
-  text-decoration: none;
-}
 .md3-footer-link {
   color: var(--md-sys-color-on-surface-variant);
   opacity: 0.85;
@@ -487,40 +378,7 @@ a.md3-chip:hover { filter: brightness(0.96); text-decoration: none; }
 }
 .table-hover tbody tr:hover { background-color: var(--md-sys-color-surface-container-high); }
 
-/* ---------------------------------------------------------------------
-   FORMS
-   --------------------------------------------------------------------- */
-.form-select,
-.form-control {
-  display: block;
-  width: 100%;
-  padding: 0.6rem 0.9rem;
-  font-family: inherit;
-  font-size: 1rem;
-  background-color: var(--md-sys-color-surface-container-high);
-  color: var(--md-sys-color-on-surface);
-  border: 1px solid var(--md-sys-color-outline-variant);
-  border-radius: var(--md-sys-shape-corner-medium);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-.form-select {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23767680' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 0.9rem center;
-  background-size: 14px;
-  padding-right: 2.5rem;
-}
-.form-select:focus,
-.form-control:focus {
-  outline: none;
-  border-color: var(--md-sys-color-primary);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--md-sys-color-primary) 22%, transparent);
-}
-.form-select-lg,
-.form-control-lg { padding: 0.85rem 1.1rem; font-size: 1.15rem; border-radius: var(--md-sys-shape-corner-large); }
-.form-select-lg { padding-right: 2.75rem; }
-.form-label { display: inline-block; margin-bottom: 0.4rem; color: var(--md-sys-color-on-surface-variant); font-weight: 500; }
+/* Form selects are now md-outlined-select (Google Material Web). */
 
 /* ---------------------------------------------------------------------
    NAV (generic vertical/horizontal link lists — e.g. doc sidebar)
