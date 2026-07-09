@@ -1,0 +1,138 @@
+/* =====================================================================
+   LITEGAPPS · MATERIAL 3 DESIGN TOKENS
+   A fresh Material You (M3 Expressive) scheme built on an indigo source
+   colour. Light tokens live in :root; dark tokens override on [data-theme].
+   No Bootstrap — this is a self-contained design system.
+   ===================================================================== */
+
+:root,
+[data-theme="light"] {
+  /* Primary — vivid indigo */
+  --md-sys-color-primary: #4355db;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #dde1ff;
+  --md-sys-color-on-primary-container: #00104d;
+
+  /* Secondary */
+  --md-sys-color-secondary: #5a5d72;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #dfe1f9;
+  --md-sys-color-on-secondary-container: #171b2c;
+
+  /* Tertiary — warm magenta accent */
+  --md-sys-color-tertiary: #76546e;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #ffd7f2;
+  --md-sys-color-on-tertiary-container: #2d1228;
+
+  /* Error */
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #410002;
+
+  /* Success (custom role) */
+  --md-sys-color-success: #146c2e;
+  --md-sys-color-on-success: #ffffff;
+  --md-sys-color-success-container: #a6f2b0;
+  --md-sys-color-on-success-container: #002108;
+
+  /* Surfaces — warm neutral with a faint violet tint */
+  --md-sys-color-surface: #fbf8ff;
+  --md-sys-color-on-surface: #1b1b21;
+  --md-sys-color-surface-variant: #e3e1ec;
+  --md-sys-color-on-surface-variant: #45464f;
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f5f2fb;
+  --md-sys-color-surface-container: #efedf5;
+  --md-sys-color-surface-container-high: #e9e7ef;
+  --md-sys-color-surface-container-highest: #e4e1e9;
+
+  /* Outline & misc */
+  --md-sys-color-outline: #767680;
+  --md-sys-color-outline-variant: #c7c5d0;
+  --md-sys-color-inverse-surface: #303036;
+  --md-sys-color-inverse-on-surface: #f2eff7;
+  --md-sys-color-inverse-primary: #bcc2ff;
+  --md-sys-color-scrim: rgba(0, 0, 0, 0.4);
+  --md-sys-card-border: rgba(0, 0, 0, 0.06);
+
+  /* Shape scale (M3 Expressive — a touch rounder) */
+  --md-sys-shape-corner-small: 8px;
+  --md-sys-shape-corner-medium: 16px;
+  --md-sys-shape-corner-large: 20px;
+  --md-sys-shape-corner-extra-large: 28px;
+  --md-sys-shape-corner-full: 999px;
+
+  /* Elevation (M3 tonal + key shadows) */
+  --md-sys-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.28), 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+  --md-sys-elevation-2: 0 1px 2px rgba(0, 0, 0, 0.28), 0 2px 6px 2px rgba(0, 0, 0, 0.1);
+  --md-sys-elevation-3: 0 4px 8px 3px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.28);
+  --md-sys-elevation-4: 0 6px 10px 4px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.28);
+
+  /* Motion */
+  --md-sys-motion-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --md-sys-motion-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  /* Primary */
+  --md-sys-color-primary: #bcc2ff;
+  --md-sys-color-on-primary: #14257a;
+  --md-sys-color-primary-container: #2d3f8f;
+  --md-sys-color-on-primary-container: #dde1ff;
+
+  /* Secondary */
+  --md-sys-color-secondary: #c3c5dd;
+  --md-sys-color-on-secondary: #2c2f42;
+  --md-sys-color-secondary-container: #424659;
+  --md-sys-color-on-secondary-container: #dfe1f9;
+
+  /* Tertiary */
+  --md-sys-color-tertiary: #e5bad8;
+  --md-sys-color-on-tertiary: #44273e;
+  --md-sys-color-tertiary-container: #5d3f55;
+  --md-sys-color-on-tertiary-container: #ffd7f2;
+
+  /* Error */
+  --md-sys-color-error: #ffb4ab;
+  --md-sys-color-on-error: #690005;
+  --md-sys-color-error-container: #93000a;
+  --md-sys-color-on-error-container: #ffdad6;
+
+  /* Success */
+  --md-sys-color-success: #8bd89a;
+  --md-sys-color-on-success: #003914;
+  --md-sys-color-success-container: #00531f;
+  --md-sys-color-on-success-container: #a6f2b0;
+
+  /* Surfaces */
+  --md-sys-color-surface: #131318;
+  --md-sys-color-on-surface: #e4e1e9;
+  --md-sys-color-surface-variant: #45464f;
+  --md-sys-color-on-surface-variant: #c7c5d0;
+  --md-sys-color-surface-container-lowest: #0e0e13;
+  --md-sys-color-surface-container-low: #1b1b21;
+  --md-sys-color-surface-container: #1f1f25;
+  --md-sys-color-surface-container-high: #2a2930;
+  --md-sys-color-surface-container-highest: #34333b;
+
+  /* Outline & misc */
+  --md-sys-color-outline: #90909a;
+  --md-sys-color-outline-variant: #45464f;
+  --md-sys-color-inverse-surface: #e4e1e9;
+  --md-sys-color-inverse-on-surface: #303036;
+  --md-sys-color-inverse-primary: #4355db;
+  --md-sys-color-scrim: rgba(0, 0, 0, 0.6);
+  --md-sys-card-border: rgba(255, 255, 255, 0.08);
+
+  /* Stronger shadows on dark surfaces */
+  --md-sys-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.6), 0 1px 3px 1px rgba(0, 0, 0, 0.35);
+  --md-sys-elevation-2: 0 1px 2px rgba(0, 0, 0, 0.6), 0 2px 6px 2px rgba(0, 0, 0, 0.35);
+  --md-sys-elevation-3: 0 4px 8px 3px rgba(0, 0, 0, 0.35), 0 1px 3px rgba(0, 0, 0, 0.6);
+  --md-sys-elevation-4: 0 6px 10px 4px rgba(0, 0, 0, 0.35), 0 2px 3px rgba(0, 0, 0, 0.6);
+
+  color-scheme: dark;
+}

@@ -1,164 +1,9 @@
 /* =====================================================================
-   LITEGAPPS · MATERIAL 3 DESIGN SYSTEM
-   A modern Material You (M3) theme built on top of Bootstrap 5.
-   Light-mode tokens live here; dark-mode overrides live in dark.scss.
+   COMPONENTS · Material 3 building blocks (no Bootstrap)
    ===================================================================== */
 
 /* ---------------------------------------------------------------------
-   1. DESIGN TOKENS (LIGHT)
-   --------------------------------------------------------------------- */
-:root,
-[data-bs-theme="light"] {
-  /* Primary */
-  --md-sys-color-primary: #0b57d0;
-  --md-sys-color-on-primary: #ffffff;
-  --md-sys-color-primary-container: #d3e3fd;
-  --md-sys-color-on-primary-container: #001b3f;
-
-  /* Secondary */
-  --md-sys-color-secondary: #565f71;
-  --md-sys-color-on-secondary: #ffffff;
-  --md-sys-color-secondary-container: #c2e7ff;
-  --md-sys-color-on-secondary-container: #001d35;
-
-  /* Tertiary */
-  --md-sys-color-tertiary: #6b5778;
-  --md-sys-color-on-tertiary: #ffffff;
-  --md-sys-color-tertiary-container: #f3daff;
-  --md-sys-color-on-tertiary-container: #251431;
-
-  /* Error */
-  --md-sys-color-error: #ba1a1a;
-  --md-sys-color-on-error: #ffffff;
-  --md-sys-color-error-container: #ffdad6;
-  --md-sys-color-on-error-container: #410002;
-
-  /* Surfaces (tonal elevation ladder) */
-  --md-sys-color-surface: #f9f9ff;
-  --md-sys-color-on-surface: #1a1c1e;
-  --md-sys-color-surface-variant: #dfe2eb;
-  --md-sys-color-on-surface-variant: #43474e;
-  --md-sys-color-surface-container-lowest: #ffffff;
-  --md-sys-color-surface-container-low: #f3f3fa;
-  --md-sys-color-surface-container: #edeef4;
-  --md-sys-color-surface-container-high: #e7e8ee;
-  --md-sys-color-surface-container-highest: #e1e2e9;
-
-  /* Outline & misc */
-  --md-sys-color-outline: #73777f;
-  --md-sys-color-outline-variant: #c3c7cf;
-  --md-sys-color-inverse-surface: #2f3033;
-  --md-sys-color-inverse-on-surface: #f1f0f7;
-  --md-sys-color-inverse-primary: #a6c8ff;
-  --md-sys-color-scrim: rgba(0, 0, 0, 0.4);
-  --md-sys-card-border: rgba(0, 0, 0, 0.06);
-
-  /* Shape scale */
-  --md-sys-shape-corner-small: 8px;
-  --md-sys-shape-corner-medium: 12px;
-  --md-sys-shape-corner-large: 16px;
-  --md-sys-shape-corner-extra-large: 28px;
-  --md-sys-shape-corner-full: 100px;
-
-  /* Elevation (Material 3 tonal + key shadows) */
-  --md-sys-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.12);
-  --md-sys-elevation-2: 0 1px 2px rgba(0, 0, 0, 0.3), 0 2px 6px 2px rgba(0, 0, 0, 0.12);
-  --md-sys-elevation-3: 0 4px 8px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.3);
-  --md-sys-elevation-4: 0 6px 10px 4px rgba(0, 0, 0, 0.12), 0 2px 3px rgba(0, 0, 0, 0.3);
-
-  /* Motion */
-  --md-sys-motion-emphasized: cubic-bezier(0.2, 0, 0, 1);
-  --md-sys-motion-standard: cubic-bezier(0.2, 0, 0, 1);
-
-  /* Bootstrap bridging */
-  --bs-body-bg: var(--md-sys-color-surface);
-  --bs-body-color: var(--md-sys-color-on-surface);
-  --bs-link-color-rgb: 11, 87, 208;
-  --bs-border-color: var(--md-sys-color-outline-variant);
-  --bs-emphasis-color: var(--md-sys-color-on-surface);
-}
-
-/* ---------------------------------------------------------------------
-   2. BASE
-   --------------------------------------------------------------------- */
-* {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", sans-serif;
-  min-height: 100vh;
-  padding-top: 5.25rem;
-  background-color: var(--md-sys-color-surface);
-  color: var(--md-sys-color-on-surface);
-  letter-spacing: 0.15px;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  transition: background-color 0.35s var(--md-sys-motion-standard),
-    color 0.35s var(--md-sys-motion-standard);
-}
-
-/* Material-flavoured display typography */
-h1, h2, h3, h4, h5, h6,
-.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
-  font-family: "Roboto Flex", "Roboto", system-ui, sans-serif;
-  letter-spacing: -0.25px;
-  color: var(--md-sys-color-on-surface);
-}
-h1, h2 { text-align: center; font-weight: 700; }
-.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 { font-weight: 800; }
-
-.lead { color: var(--md-sys-color-on-surface-variant); font-weight: 400; }
-
-a:not(.btn) {
-  color: var(--md-sys-color-primary);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-a:not(.btn):hover { text-decoration: underline; text-underline-offset: 3px; }
-
-::selection {
-  background-color: var(--md-sys-color-primary-container);
-  color: var(--md-sys-color-on-primary-container);
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar { width: 12px; height: 12px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb {
-  background: var(--md-sys-color-outline-variant);
-  border-radius: 100px;
-  border: 3px solid var(--md-sys-color-surface);
-}
-::-webkit-scrollbar-thumb:hover { background: var(--md-sys-color-outline); }
-
-/* ---------------------------------------------------------------------
-   3. GOOGLE MATERIAL SYMBOLS (icons)
-   --------------------------------------------------------------------- */
-.material-symbols-rounded {
-  font-family: "Material Symbols Rounded";
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-flex;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  vertical-align: middle;
-  -webkit-font-smoothing: antialiased;
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-}
-.material-symbols-rounded.fill { font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24; }
-.material-symbols-rounded.w-500 { font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24; }
-.msym-sm { font-size: 1.1rem; }
-.msym-md { font-size: 1.5rem; }
-.msym-lg { font-size: 2rem; }
-.msym-xl { font-size: 2.5rem; }
-
-/* ---------------------------------------------------------------------
-   4. HERO
+   HERO
    --------------------------------------------------------------------- */
 .hero-section {
   position: relative;
@@ -171,8 +16,7 @@ a:not(.btn):hover { text-decoration: underline; text-underline-offset: 3px; }
   border-radius: var(--md-sys-shape-corner-extra-large);
   margin: 1.5rem 1rem 2rem;
   box-shadow: var(--md-sys-elevation-1);
-  transition: box-shadow 0.35s var(--md-sys-motion-standard),
-    background 0.35s ease;
+  transition: box-shadow 0.35s var(--md-sys-motion-standard), background 0.35s ease;
 }
 .hero-section:hover { box-shadow: var(--md-sys-elevation-3); }
 .hero-section h1,
@@ -180,7 +24,7 @@ a:not(.btn):hover { text-decoration: underline; text-underline-offset: 3px; }
 .hero-section h1 { letter-spacing: -1px; }
 
 /* ---------------------------------------------------------------------
-   5. SECTIONS & SURFACES
+   TONAL SECTION
    --------------------------------------------------------------------- */
 .section-bg-tonal {
   background-color: var(--md-sys-color-surface-container-low);
@@ -191,11 +35,14 @@ a:not(.btn):hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 
 /* ---------------------------------------------------------------------
-   6. CARDS
+   CARDS
    --------------------------------------------------------------------- */
+.card,
 .md3-card,
 .contributor-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background-color: var(--md-sys-color-surface-container);
   color: var(--md-sys-color-on-surface);
   border-radius: var(--md-sys-shape-corner-large);
@@ -212,12 +59,21 @@ a:not(.btn):hover { text-decoration: underline; text-underline-offset: 3px; }
   background-color: var(--md-sys-color-surface-container-high);
 }
 .contributor-card { background-color: var(--md-sys-color-surface-container-low); }
+.md3-card.border-0,
+.card.border-0 { border-color: transparent; }
 
-/* Elevated card variant used on the download page etc. */
-.md3-card.border-0 { border-color: transparent; }
+.card-body { flex: 1 1 auto; padding: 1.25rem; }
+.card-header {
+  padding: 0.9rem 1.25rem;
+  margin-bottom: 0;
+  background-color: var(--md-sys-color-surface-container-high);
+  border-bottom: 1px solid var(--md-sys-card-border);
+  font-weight: 600;
+}
+.card-title { margin-bottom: 0.6rem; }
 
 /* ---------------------------------------------------------------------
-   7. ICON CONTAINER (feature tiles)
+   ICON CONTAINER (feature tiles) — squircle
    --------------------------------------------------------------------- */
 .md3-icon-container {
   display: inline-flex;
@@ -235,9 +91,9 @@ a:not(.btn):hover { text-decoration: underline; text-underline-offset: 3px; }
 .md3-icon-container .material-symbols-rounded { font-size: 2rem; }
 
 /* ---------------------------------------------------------------------
-   8. BUTTONS (Material 3 button family)
+   BUTTONS (Material 3 button family)
    --------------------------------------------------------------------- */
-%md3-btn-base {
+.btn {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -245,76 +101,88 @@ a:not(.btn):hover { text-decoration: underline; text-underline-offset: 3px; }
   gap: 0.5rem;
   border-radius: var(--md-sys-shape-corner-full);
   padding: 0.7rem 1.6rem;
+  font-family: inherit;
+  font-size: 0.95rem;
   font-weight: 500;
+  line-height: 1.4;
   letter-spacing: 0.1px;
   border: none;
+  cursor: pointer;
   overflow: hidden;
+  text-decoration: none;
+  user-select: none;
   transition: box-shadow 0.25s var(--md-sys-motion-emphasized),
     transform 0.25s var(--md-sys-motion-emphasized),
-    filter 0.25s ease, background-color 0.25s ease;
+    filter 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
 }
-%md3-btn-state::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: currentColor;
-  opacity: 0;
-  transition: opacity 0.2s ease;
+.btn:focus-visible {
+  outline: 2px solid var(--md-sys-color-primary);
+  outline-offset: 2px;
 }
-%md3-btn-state:hover::after { opacity: 0.08; }
-%md3-btn-state:active::after { opacity: 0.12; }
+.btn-lg { padding: 0.85rem 2rem; font-size: 1.05rem; }
+.btn-sm { padding: 0.5rem 1.1rem; font-size: 0.85rem; }
+
+/* state layer */
+.btn-md3-primary,
+.btn-md3-tonal,
+.btn-md3-outlined,
+.btn-md3-text {
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: currentColor;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+  }
+  &:hover::after { opacity: 0.08; }
+  &:active::after { opacity: 0.12; }
+}
 
 .btn-md3-primary {
-  @extend %md3-btn-base;
-  @extend %md3-btn-state;
-  background-color: var(--md-sys-color-primary) !important;
-  color: var(--md-sys-color-on-primary) !important;
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
   box-shadow: var(--md-sys-elevation-1);
 }
 .btn-md3-primary:hover {
-  color: var(--md-sys-color-on-primary) !important;
+  color: var(--md-sys-color-on-primary);
   box-shadow: var(--md-sys-elevation-2);
   transform: translateY(-1px);
 }
 
 .btn-md3-tonal {
-  @extend %md3-btn-base;
-  @extend %md3-btn-state;
-  background-color: var(--md-sys-color-secondary-container) !important;
-  color: var(--md-sys-color-on-secondary-container) !important;
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
 }
 .btn-md3-tonal:hover {
-  color: var(--md-sys-color-on-secondary-container) !important;
+  color: var(--md-sys-color-on-secondary-container);
   box-shadow: var(--md-sys-elevation-1);
   transform: translateY(-1px);
 }
 
 .btn-md3-outlined {
-  @extend %md3-btn-base;
-  @extend %md3-btn-state;
-  background-color: transparent !important;
-  color: var(--md-sys-color-primary) !important;
-  border: 1px solid var(--md-sys-color-outline) !important;
+  background-color: transparent;
+  color: var(--md-sys-color-primary);
+  border: 1px solid var(--md-sys-color-outline);
 }
 .btn-md3-outlined:hover {
-  color: var(--md-sys-color-primary) !important;
-  border-color: var(--md-sys-color-primary) !important;
+  color: var(--md-sys-color-primary);
+  border-color: var(--md-sys-color-primary);
 }
 
 .btn-md3-text {
-  @extend %md3-btn-base;
-  @extend %md3-btn-state;
-  background-color: transparent !important;
-  color: var(--md-sys-color-primary) !important;
+  background-color: transparent;
+  color: var(--md-sys-color-primary);
   padding: 0.6rem 1rem;
 }
 
 /* ---------------------------------------------------------------------
-   9. CODE BLOCKS
+   CODE
    --------------------------------------------------------------------- */
 .code-block,
 pre {
-  background-color: #1e2022;
+  background-color: #17181c;
   color: #e6e6e6;
   padding: 1rem 1.25rem;
   border-radius: var(--md-sys-shape-corner-medium);
@@ -327,23 +195,59 @@ code:not(pre code) {
   padding: 0.15rem 0.45rem;
   border-radius: 6px;
   font-size: 0.9em;
+  font-family: "Roboto Mono", "Fira Code", monospace;
 }
 
 /* ---------------------------------------------------------------------
-   10. IMAGES
+   IMAGES
    --------------------------------------------------------------------- */
 .md3-image {
   border-radius: var(--md-sys-shape-corner-large);
   box-shadow: var(--md-sys-elevation-2);
   transition: transform 0.35s var(--md-sys-motion-emphasized);
+  max-width: 100%;
+  height: auto;
 }
 .md3-image:hover { transform: scale(1.02); }
 
 /* ---------------------------------------------------------------------
-   11. NAVBAR
+   NAVBAR
    --------------------------------------------------------------------- */
+.navbar {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.fixed-top { position: fixed; top: 0; right: 0; left: 0; z-index: 1030; }
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+.navbar-brand:hover { text-decoration: none; }
+.navbar-nav {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar-collapse { flex-basis: 100%; flex-grow: 1; align-items: center; }
+.navbar .collapse:not(.show) { display: none; }
+.navbar-toggler {
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--md-sys-color-on-surface);
+}
+
 .md3-navbar {
-  background-color: color-mix(in srgb, var(--md-sys-color-surface) 82%, transparent) !important;
+  background-color: color-mix(in srgb, var(--md-sys-color-surface) 82%, transparent);
   backdrop-filter: saturate(180%) blur(16px);
   -webkit-backdrop-filter: saturate(180%) blur(16px);
   border-bottom: 1px solid var(--md-sys-card-border);
@@ -360,55 +264,85 @@ code:not(pre code) {
   gap: 0.4rem;
   color: var(--md-sys-color-on-surface);
   font-weight: 500;
-  padding: 0.5rem 1.15rem !important;
-  margin: 0 0.15rem;
+  text-decoration: none;
+  padding: 0.5rem 1.15rem;
+  margin: 0.1rem 0.15rem;
   border-radius: var(--md-sys-shape-corner-full);
   opacity: 0.9;
   transition: all 0.2s var(--md-sys-motion-emphasized);
 }
 .md3-navbar .nav-link:hover,
 .md3-navbar .nav-link.active {
-  color: var(--md-sys-color-on-secondary-container) !important;
+  color: var(--md-sys-color-on-secondary-container);
   background-color: var(--md-sys-color-secondary-container);
   opacity: 1;
+  text-decoration: none;
 }
-.md3-navbar .dropdown-menu {
+.md3-navbar .navbar-toggler {
+  color: var(--md-sys-color-on-surface);
+  border-radius: var(--md-sys-shape-corner-medium);
+  padding: 0.4rem 0.6rem;
+}
+.md3-navbar .navbar-toggler:focus { background-color: var(--md-sys-color-surface-container-high); }
+
+@media (min-width: 768px) {
+  .navbar-expand-md .navbar-collapse { display: flex !important; flex-basis: auto; }
+  .navbar-expand-md .navbar-toggler { display: none; }
+  .navbar-expand-md .navbar-nav { flex-direction: row; align-items: center; }
+}
+
+/* ---------------------------------------------------------------------
+   DROPDOWN (theme switcher etc.)
+   --------------------------------------------------------------------- */
+.dropdown, .bd-mode-toggle { position: relative; }
+.bd-mode-toggle { z-index: 1500; }
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  min-width: 11rem;
+  margin-top: 0.6rem;
+  list-style: none;
   background-color: var(--md-sys-color-surface-container-high);
   border: 1px solid var(--md-sys-card-border);
   border-radius: var(--md-sys-shape-corner-large);
   box-shadow: var(--md-sys-elevation-2);
   padding: 0.5rem;
-  margin-top: 0.6rem;
 }
-.md3-navbar .dropdown-item {
+.dropdown-menu.show { display: block; }
+.dropdown-menu-end { right: 0; left: auto; }
+.dropdown-item {
   display: flex;
   align-items: center;
+  width: 100%;
   color: var(--md-sys-color-on-surface);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
   border-radius: var(--md-sys-shape-corner-full);
   padding: 0.6rem 1rem;
   margin-bottom: 0.15rem;
   font-weight: 500;
+  font-size: 0.95rem;
 }
-.md3-navbar .dropdown-item:hover {
+.dropdown-item:hover {
   background-color: var(--md-sys-color-secondary-container);
   color: var(--md-sys-color-on-secondary-container);
+  text-decoration: none;
 }
-.md3-navbar .dropdown-item.active {
-  background-color: var(--md-sys-color-primary) !important;
-  color: var(--md-sys-color-on-primary) !important;
+.dropdown-item.active {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
 }
-.md3-navbar .navbar-toggler {
-  border: none;
-  color: var(--md-sys-color-on-surface);
-  border-radius: var(--md-sys-shape-corner-medium);
-  padding: 0.4rem 0.6rem;
-}
-.md3-navbar .navbar-toggler:focus {
-  box-shadow: none;
-  background-color: var(--md-sys-color-surface-container-high);
+.dropdown-item.active:hover {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
 }
 
-/* Theme toggle button (Material icon button) */
+/* Theme toggle icon button */
 #bd-theme {
   display: inline-flex;
   align-items: center;
@@ -420,6 +354,7 @@ code:not(pre code) {
   width: 44px;
   height: 44px;
   padding: 0;
+  cursor: pointer;
   transition: all 0.2s var(--md-sys-motion-emphasized);
 }
 #bd-theme:hover,
@@ -428,11 +363,9 @@ code:not(pre code) {
   color: var(--md-sys-color-on-secondary-container);
   border-color: transparent;
 }
-#bd-theme::after { display: none !important; }
-.bd-mode-toggle { z-index: 1500; }
 
 /* ---------------------------------------------------------------------
-   12. FOOTER
+   FOOTER
    --------------------------------------------------------------------- */
 .md3-footer {
   background-color: var(--md-sys-color-surface-container-low);
@@ -463,6 +396,7 @@ code:not(pre code) {
   opacity: 1;
   transform: translateY(-3px);
   box-shadow: var(--md-sys-elevation-1);
+  text-decoration: none;
 }
 .md3-footer-link {
   color: var(--md-sys-color-on-surface-variant);
@@ -471,18 +405,11 @@ code:not(pre code) {
   font-weight: 500;
   transition: color 0.2s ease, opacity 0.2s ease;
 }
-.md3-footer-link:hover {
-  color: var(--md-sys-color-primary);
-  opacity: 1;
-  text-decoration: none;
-}
-.md3-footer-divider {
-  border-color: var(--md-sys-color-outline-variant);
-  opacity: 0.4;
-}
+.md3-footer-link:hover { color: var(--md-sys-color-primary); opacity: 1; text-decoration: none; }
+.md3-footer-divider { border-color: var(--md-sys-color-outline-variant); opacity: 0.4; }
 
 /* ---------------------------------------------------------------------
-   13. CHIPS & BADGES
+   CHIPS & BADGES
    --------------------------------------------------------------------- */
 .md3-chip {
   display: inline-flex;
@@ -491,28 +418,48 @@ code:not(pre code) {
   background-color: var(--md-sys-color-secondary-container);
   color: var(--md-sys-color-on-secondary-container);
   padding: 0.4rem 0.9rem;
-  border-radius: var(--md-sys-shape-corner-small);
+  border-radius: var(--md-sys-shape-corner-full);
   font-size: 0.85rem;
   font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
   transition: filter 0.2s ease;
 }
-.md3-chip:hover { filter: brightness(0.96); }
+a.md3-chip:hover { filter: brightness(0.96); text-decoration: none; }
 
-.badge.rounded-pill {
-  font-weight: 500;
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35em 0.7em;
+  font-size: 0.75em;
+  font-weight: 600;
+  line-height: 1;
   letter-spacing: 0.2px;
+  border-radius: var(--md-sys-shape-corner-small);
 }
+.text-bg-primary   { background-color: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); }
+.text-bg-secondary { background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); }
+.text-bg-success   { background-color: var(--md-sys-color-success-container); color: var(--md-sys-color-on-success-container); }
+.text-bg-info      { background-color: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); }
+.text-bg-dark      { background-color: var(--md-sys-color-inverse-surface); color: var(--md-sys-color-inverse-on-surface); }
+.text-bg-light     { background-color: var(--md-sys-color-surface-container-highest); color: var(--md-sys-color-on-surface); }
 
 /* ---------------------------------------------------------------------
-   14. TABLES
+   TABLES
    --------------------------------------------------------------------- */
+.table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .table {
-  --bs-table-bg: transparent;
-  --bs-table-color: var(--md-sys-color-on-surface);
-  --bs-table-hover-bg: var(--md-sys-color-surface-container-high);
-  --bs-table-hover-color: var(--md-sys-color-on-surface);
-  --bs-table-border-color: var(--md-sys-color-outline-variant);
+  width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
   color: var(--md-sys-color-on-surface);
+}
+.table th,
+.table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--md-sys-color-outline-variant);
+  text-align: left;
+  vertical-align: top;
 }
 .table thead th {
   color: var(--md-sys-color-on-surface-variant);
@@ -521,55 +468,75 @@ code:not(pre code) {
   font-size: 0.78rem;
   letter-spacing: 0.4px;
 }
+.table-hover tbody tr:hover { background-color: var(--md-sys-color-surface-container-high); }
 
 /* ---------------------------------------------------------------------
-   15. FORMS
+   FORMS
    --------------------------------------------------------------------- */
 .form-select,
 .form-control {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  font-family: inherit;
+  font-size: 1rem;
   background-color: var(--md-sys-color-surface-container-high);
   color: var(--md-sys-color-on-surface);
   border: 1px solid var(--md-sys-color-outline-variant);
   border-radius: var(--md-sys-shape-corner-medium);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23767680' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  background-size: 14px;
+  padding-right: 2.5rem;
+}
 .form-select:focus,
 .form-control:focus {
-  background-color: var(--md-sys-color-surface-container-high);
-  color: var(--md-sys-color-on-surface);
+  outline: none;
   border-color: var(--md-sys-color-primary);
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--md-sys-color-primary) 22%, transparent);
 }
-.form-label { color: var(--md-sys-color-on-surface-variant); }
+.form-label { display: inline-block; margin-bottom: 0.4rem; color: var(--md-sys-color-on-surface-variant); font-weight: 500; }
 
 /* ---------------------------------------------------------------------
-   16. LIST GROUPS
+   LIST GROUPS
    --------------------------------------------------------------------- */
+.list-group { display: flex; flex-direction: column; padding-left: 0; margin-bottom: 0; list-style: none; }
 .list-group-item {
+  display: block;
   background-color: transparent;
   color: var(--md-sys-color-on-surface);
-  border-color: var(--md-sys-card-border);
+  border: 1px solid var(--md-sys-card-border);
+  text-decoration: none;
 }
+.list-group-flush > .list-group-item { border-width: 0 0 1px; }
+.list-group-flush > .list-group-item:last-child { border-bottom-width: 0; }
+.list-group-item-action { cursor: pointer; transition: background-color 0.2s ease; }
 .list-group-item-action:hover,
 .list-group-item-action:focus {
-  background-color: var(--md-sys-color-surface-container-high);
+  background-color: var(--md-sys-color-surface-container-high) !important;
   color: var(--md-sys-color-on-surface);
+  text-decoration: none;
 }
 
 /* ---------------------------------------------------------------------
-   17. VARIANTS ACCORDION
+   ACCORDION (collapse driven by JS toggling .show / .collapsed)
    --------------------------------------------------------------------- */
-.md3-accordion {
+.md3-accordion,
+.accordion.md3-accordion {
   gap: 1.25rem;
   display: flex;
   flex-direction: column;
-  --bs-accordion-bg: transparent;
-  --bs-accordion-border-width: 0;
 }
+.accordion-item,
 .md3-accordion-item {
   background-color: var(--md-sys-color-surface-container);
   border: 1px solid var(--md-sys-card-border);
-  border-radius: var(--md-sys-shape-corner-large) !important;
+  border-radius: var(--md-sys-shape-corner-large);
   overflow: hidden;
   transition: box-shadow 0.2s, background-color 0.3s;
 }
@@ -577,17 +544,50 @@ code:not(pre code) {
   box-shadow: var(--md-sys-elevation-1);
   background-color: var(--md-sys-color-surface-container-high);
 }
+.accordion-header { margin: 0; }
+.accordion-button,
 .md3-accordion-button {
-  background-color: transparent !important;
-  color: var(--md-sys-color-on-surface);
-  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
   padding: 1.25rem 1.5rem;
+  background-color: transparent;
+  color: var(--md-sys-color-on-surface);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
   font-weight: 600;
+  text-align: left;
 }
-.md3-accordion-button:not(.collapsed) {
+.accordion-button > * { min-width: 0; }
+.accordion-button::after {
+  content: "";
+  flex-shrink: 0;
+  width: 1.4rem;
+  height: 1.4rem;
+  margin-left: auto;
+  background-color: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 15.4 6.6 10 8 8.6l4 4 4-4 1.4 1.4z'/%3E%3C/svg%3E") no-repeat center / contain;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 15.4 6.6 10 8 8.6l4 4 4-4 1.4 1.4z'/%3E%3C/svg%3E") no-repeat center / contain;
+  transition: transform 0.3s var(--md-sys-motion-emphasized);
+}
+.accordion-button:not(.collapsed) {
   color: var(--md-sys-color-primary);
-  background-color: var(--md-sys-color-surface-container-high) !important;
+  background-color: var(--md-sys-color-surface-container-high);
 }
+.accordion-button:not(.collapsed)::after { transform: rotate(180deg); }
+
+.accordion-collapse {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s var(--md-sys-motion-emphasized);
+}
+.accordion-collapse.show { grid-template-rows: 1fr; }
+.accordion-collapse > .accordion-body { overflow: hidden; min-height: 0; }
+.accordion-body { padding: 0 1.5rem 1.5rem; }
+
 .md3-desc-box {
   background-color: var(--md-sys-color-surface-container-low);
   border-radius: var(--md-sys-shape-corner-medium);
@@ -621,12 +621,8 @@ code:not(pre code) {
   background-color: var(--md-sys-color-primary);
 }
 
-/* Feature list (tips / feature ticks) */
-.md3-feature-list {
-  list-style: none;
-  padding-left: 0;
-  margin-bottom: 0;
-}
+/* Feature list (ticks / tips) */
+.md3-feature-list { list-style: none; padding-left: 0; margin-bottom: 0; }
 .md3-feature-list li {
   display: flex;
   align-items: flex-start;
@@ -644,44 +640,43 @@ code:not(pre code) {
 }
 
 /* ---------------------------------------------------------------------
-   18. PAGINATION
+   PAGINATION
    --------------------------------------------------------------------- */
-.pagination {
-  gap: 0.35rem;
-  --bs-pagination-bg: transparent;
-  --bs-pagination-border-color: transparent;
-  --bs-pagination-color: var(--md-sys-color-on-surface);
-  --bs-pagination-hover-bg: var(--md-sys-color-secondary-container);
-  --bs-pagination-hover-color: var(--md-sys-color-on-secondary-container);
-  --bs-pagination-hover-border-color: transparent;
-  --bs-pagination-focus-bg: var(--md-sys-color-secondary-container);
-  --bs-pagination-focus-box-shadow: none;
-  --bs-pagination-active-bg: var(--md-sys-color-primary);
-  --bs-pagination-active-border-color: var(--md-sys-color-primary);
-  --bs-pagination-disabled-bg: transparent;
-  --bs-pagination-disabled-color: var(--md-sys-color-outline);
-}
-.pagination .page-link {
+.pagination { display: flex; flex-wrap: wrap; gap: 0.35rem; list-style: none; padding-left: 0; margin: 0; }
+.page-item { display: inline-flex; }
+.page-link {
   min-width: 42px;
   height: 42px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50% !important;
+  border-radius: 50%;
+  color: var(--md-sys-color-on-surface);
+  background: transparent;
+  border: none;
+  text-decoration: none;
   font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
+.page-link:hover {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+  text-decoration: none;
+}
+.page-item.active .page-link[href],
+.page-link[rel] { color: var(--md-sys-color-on-surface); }
+.pagination-ellipsis { padding: 0 0.5rem; color: var(--md-sys-color-outline); }
 
 /* ---------------------------------------------------------------------
-   19. UTILITIES
+   MISC UTILITIES / ANIMATIONS
    --------------------------------------------------------------------- */
 .transition-hover { transition: transform 0.2s var(--md-sys-motion-emphasized), opacity 0.2s ease; }
 .transition-hover:hover { transform: translateY(-2px); opacity: 0.92; }
 .icon-button { display: inline-block; transition: transform 0.2s, opacity 0.2s; }
 .icon-button:hover { transform: scale(1.12); opacity: 0.9; }
 
-hr { color: var(--md-sys-color-outline-variant); }
+.changelog-content { line-height: 1.7; }
 
-/* Reveal-on-scroll animation */
 @media (prefers-reduced-motion: no-preference) {
   .reveal {
     opacity: 0;
@@ -689,8 +684,5 @@ hr { color: var(--md-sys-color-outline-variant); }
     transition: opacity 0.6s var(--md-sys-motion-emphasized),
       transform 0.6s var(--md-sys-motion-emphasized);
   }
-  .reveal.is-visible {
-    opacity: 1;
-    transform: none;
-  }
+  .reveal.is-visible { opacity: 1; transform: none; }
 }

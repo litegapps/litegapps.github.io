@@ -1,7 +1,6 @@
 /*!
- * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
- * Copyright 2011-2023 The Bootstrap Authors
- * Licensed under the Creative Commons Attribution 3.0 Unported License.
+ * Color mode toggler for LiteGapps (Material 3)
+ * Vanilla JS — no framework dependency.
  */
 
 (() => {
@@ -21,9 +20,9 @@
 
   const setTheme = theme => {
     if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.setAttribute('data-bs-theme', 'dark')
+      document.documentElement.setAttribute('data-theme', 'dark')
     } else {
-      document.documentElement.setAttribute('data-bs-theme', theme)
+      document.documentElement.setAttribute('data-theme', theme)
     }
   }
 
@@ -40,9 +39,9 @@
 
     const themeSwitcherText = document.querySelector('#bd-theme-text')
     const activeThemeIcon = document.querySelector('.theme-icon-active')
-    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+    const btnToActive = document.querySelector(`[data-theme-value="${theme}"]`)
 
-    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+    document.querySelectorAll('[data-theme-value]').forEach(element => {
       element.classList.remove('active')
       element.setAttribute('aria-pressed', 'false')
       const chk = element.querySelector('.check')
@@ -54,8 +53,10 @@
     const activeCheck = btnToActive.querySelector('.check')
     if (activeCheck) activeCheck.classList.remove('d-none')
     if (activeThemeIcon) activeThemeIcon.textContent = themeIcons[theme] || 'brightness_auto'
-    const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
-    themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
+    if (themeSwitcherText) {
+      const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.themeValue})`
+      themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
+    }
 
     if (focus) {
       themeSwitcher.focus()
@@ -72,10 +73,10 @@
   window.addEventListener('DOMContentLoaded', () => {
     showActiveTheme(getPreferredTheme())
 
-    document.querySelectorAll('[data-bs-theme-value]')
+    document.querySelectorAll('[data-theme-value]')
       .forEach(toggle => {
         toggle.addEventListener('click', () => {
-          const theme = toggle.getAttribute('data-bs-theme-value')
+          const theme = toggle.getAttribute('data-theme-value')
           setStoredTheme(theme)
           setTheme(theme)
           showActiveTheme(theme, true)

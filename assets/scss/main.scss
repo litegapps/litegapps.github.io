@@ -1,2 +1,9 @@
-@import "style";
-@import "dark";
+/* =====================================================================
+   LITEGAPPS · Material 3 (Expressive) design system entry point
+   Self-contained — no Bootstrap dependency.
+   ===================================================================== */
+@import "tokens";
+@import "base";
+@import "layout";
+@import "utilities";
+@import "components";

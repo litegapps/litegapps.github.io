@@ -1,0 +1,125 @@
+/* =====================================================================
+   LAYOUT · container + 12-column responsive grid (Bootstrap-compatible
+   class names, re-implemented from scratch — no Bootstrap dependency)
+   ===================================================================== */
+
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$containers: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);
+
+$spacers: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem,
+  6: 4.5rem,
+);
+
+/* ---- Containers ---- */
+.container,
+.container-fluid {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@each $bp, $min in $containers {
+  @media (min-width: map-get($breakpoints, $bp)) {
+    .container { max-width: $min; }
+  }
+}
+
+/* ---- Row ---- */
+.row {
+  --gutter-x: 1.5rem;
+  --gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * var(--gutter-y));
+  margin-right: calc(-0.5 * var(--gutter-x));
+  margin-left: calc(-0.5 * var(--gutter-x));
+}
+.row > * {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(0.5 * var(--gutter-x));
+  padding-left: calc(0.5 * var(--gutter-x));
+  margin-top: var(--gutter-y);
+}
+
+/* ---- Gutters ---- */
+@each $i, $val in $spacers {
+  .g-#{$i}  { --gutter-x: #{$val}; --gutter-y: #{$val}; }
+  .gx-#{$i} { --gutter-x: #{$val}; }
+  .gy-#{$i} { --gutter-y: #{$val}; }
+}
+
+/* ---- Base columns ---- */
+.col {
+  flex: 1 0 0%;
+}
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    flex: 0 0 auto;
+    width: percentage($i / 12);
+  }
+}
+@for $i from 1 through 12 {
+  .row-cols-#{$i} > * {
+    flex: 0 0 auto;
+    width: percentage(1 / $i);
+  }
+}
+
+/* ---- Responsive columns ---- */
+@each $bp, $min in $breakpoints {
+  @media (min-width: $min) {
+    .col-#{$bp} { flex: 1 0 0%; }
+    .col-#{$bp}-auto { flex: 0 0 auto; width: auto; }
+    @for $i from 1 through 12 {
+      .col-#{$bp}-#{$i} {
+        flex: 0 0 auto;
+        width: percentage($i / 12);
+      }
+    }
+    @for $i from 1 through 12 {
+      .row-cols-#{$bp}-#{$i} > * {
+        flex: 0 0 auto;
+        width: percentage(1 / $i);
+      }
+    }
+    .order-#{$bp}-1 { order: 1; }
+    .order-#{$bp}-2 { order: 2; }
+    .order-#{$bp}-first { order: -1; }
+    .order-#{$bp}-last { order: 6; }
+    .flex-#{$bp}-row { flex-direction: row; }
+    .flex-#{$bp}-row-reverse { flex-direction: row-reverse; }
+    .flex-#{$bp}-column { flex-direction: column; }
+  }
+}
+
+.main-content {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}

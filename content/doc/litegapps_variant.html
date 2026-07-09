@@ -37,13 +37,6 @@ url: /doc/litegapps_variant.html
         color: var(--md-sys-color-primary);
         background-color: var(--md-sys-color-surface-container-high) !important;
     }
-    /* Mencegah panah SVG menghilang di dark mode */
-    [data-bs-theme="dark"] .md3-accordion-button::after {
-        filter: invert(1) grayscale(100%) brightness(200%);
-    }
-    [data-bs-theme="dark"] .md3-accordion-button:not(.collapsed)::after {
-        filter: invert(0.7) sepia(1) saturate(3) hue-rotate(190deg); /* Menyesuaikan warna panah ke primary blue saat terbuka */
-    }
     .md3-chip {
         background-color: var(--md-sys-color-secondary-container);
         color: var(--md-sys-color-on-secondary-container);
@@ -102,14 +95,14 @@ url: /doc/litegapps_variant.html
 
     <div class="accordion-item md3-accordion-item">
         <h2 class="accordion-header" id="headingPixel">
-            <button class="accordion-button md3-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePixel" aria-expanded="true" aria-controls="collapsePixel">
+            <button class="accordion-button md3-accordion-button" type="button" data-toggle="collapse" data-target="#collapsePixel" aria-expanded="true" aria-controls="collapsePixel">
                 <div class="d-flex justify-content-between w-100 align-items-center pe-3">
                     <span class="fw-bold fs-5">Pixel</span>
                     <span class="md3-chip">1.2 GB</span>
                 </div>
             </button>
         </h2>
-        <div id="collapsePixel" class="accordion-collapse collapse show" aria-labelledby="headingPixel" data-bs-parent="#variantsAccordion">
+        <div id="collapsePixel" class="accordion-collapse collapse show" aria-labelledby="headingPixel" data-parent="#variantsAccordion">
             <div class="accordion-body">
                 <div class="md3-desc-box mb-4">
                     <p class="mb-0 opacity-75"><em><strong>Description</strong> : LiteGapps Pixel is a complete package of Google apps ported directly from Google Pixel. You will get Google Apps on Google Pixel and their features, but they are large in size.</em></p>
@@ -134,14 +127,14 @@ url: /doc/litegapps_variant.html
 
     <div class="accordion-item md3-accordion-item">
         <h2 class="accordion-header" id="headingMicro">
-            <button class="accordion-button md3-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseMicro" aria-expanded="false" aria-controls="collapseMicro">
+            <button class="accordion-button md3-accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseMicro" aria-expanded="false" aria-controls="collapseMicro">
                 <div class="d-flex justify-content-between w-100 align-items-center pe-3">
                     <span class="fw-bold fs-5">Micro</span>
                     <span class="md3-chip">616.0 MB</span>
                 </div>
             </button>
         </h2>
-        <div id="collapseMicro" class="accordion-collapse collapse" aria-labelledby="headingMicro" data-bs-parent="#variantsAccordion">
+        <div id="collapseMicro" class="accordion-collapse collapse" aria-labelledby="headingMicro" data-parent="#variantsAccordion">
             <div class="accordion-body">
                 <div class="md3-desc-box mb-4">
                     <p class="mb-0 opacity-75"><em><strong>Description</strong> : LiteGapps Micro is a package containing half of the pixel variants that you consider important and necessary for the user.</em></p>
@@ -166,14 +159,14 @@ url: /doc/litegapps_variant.html
     
     <div class="accordion-item md3-accordion-item">
         <h2 class="accordion-header" id="headingNano">
-            <button class="accordion-button md3-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNano" aria-expanded="false" aria-controls="collapseNano">
+            <button class="accordion-button md3-accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseNano" aria-expanded="false" aria-controls="collapseNano">
                 <div class="d-flex justify-content-between w-100 align-items-center pe-3">
                     <span class="fw-bold fs-5">Nano</span>
                     <span class="md3-chip">353.4 MB</span>
                 </div>
             </button>
         </h2>
-        <div id="collapseNano" class="accordion-collapse collapse" aria-labelledby="headingNano" data-bs-parent="#variantsAccordion">
+        <div id="collapseNano" class="accordion-collapse collapse" aria-labelledby="headingNano" data-parent="#variantsAccordion">
             <div class="accordion-body">
                 <div class="md3-desc-box mb-4">
                     <p class="mb-0 opacity-75"><em><strong>Description</strong> : LiteGapps Nano is a package that has a medium size, so it is not too heavy to install on your device.</em></p>
@@ -198,14 +191,14 @@ url: /doc/litegapps_variant.html
 
     <div class="accordion-item md3-accordion-item">
         <h2 class="accordion-header" id="headingBasic">
-            <button class="accordion-button md3-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBasic" aria-expanded="false" aria-controls="collapseBasic">
+            <button class="accordion-button md3-accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseBasic" aria-expanded="false" aria-controls="collapseBasic">
                 <div class="d-flex justify-content-between w-100 align-items-center pe-3">
                     <span class="fw-bold fs-5">Basic</span>
                     <span class="md3-chip">161.4 MB</span>
                 </div>
             </button>
         </h2>
-        <div id="collapseBasic" class="accordion-collapse collapse" aria-labelledby="headingBasic" data-bs-parent="#variantsAccordion">
+        <div id="collapseBasic" class="accordion-collapse collapse" aria-labelledby="headingBasic" data-parent="#variantsAccordion">
             <div class="accordion-body">
                 <div class="md3-desc-box mb-4">
                     <p class="mb-0 opacity-75"><em><strong>Description</strong> : LiteGapps Basic is a light version but still maintains some of the general functions of Google Apps.</em></p>
@@ -230,14 +223,14 @@ url: /doc/litegapps_variant.html
     
     <div class="accordion-item md3-accordion-item">
         <h2 class="accordion-header" id="headingUser">
-            <button class="accordion-button md3-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUser" aria-expanded="false" aria-controls="collapseUser">
+            <button class="accordion-button md3-accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseUser" aria-expanded="false" aria-controls="collapseUser">
                 <div class="d-flex justify-content-between w-100 align-items-center pe-3">
                     <span class="fw-bold fs-5">User</span>
                     <span class="md3-chip">338.7 MB</span>
                 </div>
             </button>
         </h2>
-        <div id="collapseUser" class="accordion-collapse collapse" aria-labelledby="headingUser" data-bs-parent="#variantsAccordion">
+        <div id="collapseUser" class="accordion-collapse collapse" aria-labelledby="headingUser" data-parent="#variantsAccordion">
             <div class="accordion-body">
                 <div class="md3-desc-box mb-4">
                     <p class="mb-0 opacity-75"><em><strong>Description</strong> : LiteGapps User is a variant of google apps that contains apps that are frequently used by users.</em></p>
@@ -266,14 +259,14 @@ url: /doc/litegapps_variant.html
 
     <div class="accordion-item md3-accordion-item">
         <h2 class="accordion-header" id="headingGo">
-            <button class="accordion-button md3-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGo" aria-expanded="false" aria-controls="collapseGo">
+            <button class="accordion-button md3-accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseGo" aria-expanded="false" aria-controls="collapseGo">
                 <div class="d-flex justify-content-between w-100 align-items-center pe-3">
                     <span class="fw-bold fs-5">Go</span>
                     <span class="md3-chip">118.3 MB</span>
                 </div>
             </button>
         </h2>
-        <div id="collapseGo" class="accordion-collapse collapse" aria-labelledby="headingGo" data-bs-parent="#variantsAccordion">
+        <div id="collapseGo" class="accordion-collapse collapse" aria-labelledby="headingGo" data-parent="#variantsAccordion">
             <div class="accordion-body">
                 <div class="md3-desc-box mb-4">
                     <p class="mb-0 opacity-75"><em><strong>Description</strong> : LiteGapps Go is a package containing Google Apps Go which is designed for devices with low specifications, but can still use commonly used Google applications.</em></p>
@@ -298,14 +291,14 @@ url: /doc/litegapps_variant.html
     
     <div class="accordion-item md3-accordion-item">
         <h2 class="accordion-header" id="headingCore">
-            <button class="accordion-button md3-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCore" aria-expanded="false" aria-controls="collapseCore">
+            <button class="accordion-button md3-accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseCore" aria-expanded="false" aria-controls="collapseCore">
                 <div class="d-flex justify-content-between w-100 align-items-center pe-3">
                     <span class="fw-bold fs-5">Core</span>
                     <span class="md3-chip">74.0 MB</span>
                 </div>
             </button>
         </h2>
-        <div id="collapseCore" class="accordion-collapse collapse" aria-labelledby="headingCore" data-bs-parent="#variantsAccordion">
+        <div id="collapseCore" class="accordion-collapse collapse" aria-labelledby="headingCore" data-parent="#variantsAccordion">
             <div class="accordion-body">
                 <div class="md3-desc-box mb-4">
                     <p class="mb-0 opacity-75"><em><strong>Description</strong> : LiteGapps Core is a package that contains the core package of google apps.</em></p>
@@ -320,14 +313,14 @@ url: /doc/litegapps_variant.html
 
     <div class="accordion-item md3-accordion-item">
         <h2 class="accordion-header" id="headingLite">
-            <button class="accordion-button md3-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseLite" aria-expanded="false" aria-controls="collapseLite">
+            <button class="accordion-button md3-accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseLite" aria-expanded="false" aria-controls="collapseLite">
                 <div class="d-flex justify-content-between w-100 align-items-center pe-3">
                     <span class="fw-bold fs-5">Lite</span>
                     <span class="md3-chip">60.6 MB</span>
                 </div>
             </button>
         </h2>
-        <div id="collapseLite" class="accordion-collapse collapse" aria-labelledby="headingLite" data-bs-parent="#variantsAccordion">
+        <div id="collapseLite" class="accordion-collapse collapse" aria-labelledby="headingLite" data-parent="#variantsAccordion">
             <div class="accordion-body">
                 <div class="md3-desc-box mb-4">
                     <p class="mb-0 opacity-75"><em><strong>Description</strong> : LiteGapps Lite is a small and light version of google apps.</em></p>
@@ -342,14 +335,14 @@ url: /doc/litegapps_variant.html
     
     <div class="accordion-item md3-accordion-item">
         <h2 class="accordion-header" id="headingSuperLite">
-            <button class="accordion-button md3-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSuperLite" aria-expanded="false" aria-controls="collapseSuperLite">
+            <button class="accordion-button md3-accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseSuperLite" aria-expanded="false" aria-controls="collapseSuperLite">
                 <div class="d-flex justify-content-between w-100 align-items-center pe-3">
                     <span class="fw-bold fs-5">SuperLite</span>
                     <span class="md3-chip">50.6 MB</span>
                 </div>
             </button>
         </h2>
-        <div id="collapseSuperLite" class="accordion-collapse collapse" aria-labelledby="headingSuperLite" data-bs-parent="#variantsAccordion">
+        <div id="collapseSuperLite" class="accordion-collapse collapse" aria-labelledby="headingSuperLite" data-parent="#variantsAccordion">
             <div class="accordion-body">
                 <div class="md3-desc-box mb-4">
                     <p class="mb-0 opacity-75"><em><strong>Description</strong> : Same as the lite variant but the difference is that it uses gmscore and the old playstore, so it is smaller. Suitable for mobile phones with 1/2 GB RAM.</em></p>
