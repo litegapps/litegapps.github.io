@@ -219,6 +219,13 @@ code:not(pre code) {
   flex-wrap: wrap;
   align-items: center;
 }
+.navbar > .container,
+.navbar > .container-fluid {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+}
 .fixed-top { position: fixed; top: 0; right: 0; left: 0; z-index: 1030; }
 .navbar-brand {
   display: inline-flex;
