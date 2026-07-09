@@ -37,20 +37,17 @@ url: /download.html
                 <h2 class="h4 text-center mb-4"><strong>LiteGapps & Addons Downloader</strong></h2>
                 <div class="row g-4 mb-5">
                     <div class="col-md-4">
-                        <label for="type" class="form-label fw-medium opacity-75 small">Product</label>
-                        <select id="type" class="form-select form-select-lg rounded-3 bg-body-tertiary border-0 shadow-none"></select>
+                        <md-outlined-select id="type" label="Product" class="w-100"></md-outlined-select>
                     </div>
                     <div class="col-md-4">
-                        <label for="platform" class="form-label fw-medium opacity-75 small">Architecture</label>
-                        <select id="platform" class="form-select form-select-lg rounded-3 bg-body-tertiary border-0 shadow-none"></select>
+                        <md-outlined-select id="platform" label="Architecture" class="w-100"></md-outlined-select>
                     </div>
                     <div class="col-md-4">
-                        <label for="android" class="form-label fw-medium opacity-75 small">Android Version</label>
-                        <select id="android" class="form-select form-select-lg rounded-3 bg-body-tertiary border-0 shadow-none"></select>
+                        <md-outlined-select id="android" label="Android Version" class="w-100"></md-outlined-select>
                     </div>
                 </div>
                 <div class="d-grid gap-2">
-                    <button id="download-button" class="btn btn-md3-primary btn-lg fw-semibold py-3"></button>
+                    <md-filled-button id="download-button"></md-filled-button>
                 </div>
             </div>
         </div>
@@ -120,12 +117,12 @@ url: /download.html
             <div class="card-body p-4 p-md-5">
                 <h2 class="h4 text-center mb-4"><strong>Other Tools</strong></h2>
                  <div class="d-grid gap-3 d-md-flex justify-content-md-center">
-                    <a href="https://www.pling.com/p/2128704/" class="btn btn-md3-primary text-decoration-none">
+                    <md-filled-button href="https://www.pling.com/p/2128704/">
                         Download Config File
-                    </a>
-                    <a href="https://www.pling.com/p/2118886/" class="btn btn-md3-tonal text-decoration-none">
+                    </md-filled-button>
+                    <md-filled-tonal-button href="https://www.pling.com/p/2118886/">
                         Download Controller App
-                    </a>
+                    </md-filled-tonal-button>
                  </div>
             </div>
         </div>
@@ -178,27 +175,38 @@ url: /download.html
             { value: "21", text: "5.0" }
         ];
 
+        // Populate an <md-outlined-select> with <md-select-option> children.
         function populateSelect(selectElement, options, defaultValue = null) {
             if (!selectElement) return;
             selectElement.innerHTML = "";
             options.forEach(option => {
-                const opt = document.createElement("option");
-                opt.value = typeof option === 'object' ? option.value : option;
-                opt.textContent = typeof option === 'object' ? option.text : option;
-                if (defaultValue !== null && opt.value === defaultValue) {
-                    opt.selected = true;
+                const value = typeof option === 'object' ? option.value : option;
+                const text = typeof option === 'object' ? option.text : option;
+                const opt = document.createElement("md-select-option");
+                opt.setAttribute("value", value);
+                if (defaultValue !== null && value === defaultValue) {
+                    opt.setAttribute("selected", "");
                 }
+                const headline = document.createElement("div");
+                headline.setAttribute("slot", "headline");
+                headline.textContent = text;
+                opt.appendChild(headline);
                 selectElement.appendChild(opt);
             });
         }
-        
-        function updateDownloadButtonText() {
-            if (!typeSelect || !downloadButton) return;
-            const selectedType = typeSelect.options[typeSelect.selectedIndex].text;
-            downloadButton.innerHTML = `<span class="material-symbols-rounded me-2">download</span> Download ${selectedType}`;
+
+        function labelFor(value) {
+            const found = typeOptions.find(o => o.value === value);
+            return found ? found.text : (value || typeOptions[0].text);
         }
 
-        populateSelect(typeSelect, typeOptions);
+        function updateDownloadButtonText() {
+            if (!downloadButton) return;
+            const selectedType = labelFor(typeSelect ? typeSelect.value : null);
+            downloadButton.innerHTML = `<span slot="icon" class="material-symbols-rounded">download</span> Download ${selectedType}`;
+        }
+
+        populateSelect(typeSelect, typeOptions, "litegapps");
         populateSelect(platformSelect, platformOptions, "arm64");
         populateSelect(androidSelect, androidOptions, "37");
 
@@ -217,12 +225,17 @@ url: /download.html
                 const androidApi = androidSelect.value;
                 const baseUrl = "https://sourceforge.net/projects/litegapps/files";
                 const downloadUrl = `${baseUrl}/${type}/${platform}/${androidApi}/`;
-                
+
                 console.log("Redirecting to:", downloadUrl);
                 window.location.href = downloadUrl;
             });
         }
-        
+
+        // Material Web custom elements upgrade asynchronously (ESM from CDN);
+        // set the initial button label once md-outlined-select is defined.
+        if (window.customElements && customElements.whenDefined) {
+            customElements.whenDefined('md-outlined-select').then(updateDownloadButtonText);
+        }
         updateDownloadButtonText();
     });
 </script>

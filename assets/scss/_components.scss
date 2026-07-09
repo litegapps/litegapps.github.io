@@ -23,6 +23,16 @@
 .hero-section p { color: inherit !important; }
 .hero-section h1 { letter-spacing: -1px; }
 
+/* Dark mode: harmonise the hero with the dark surfaces instead of the
+   bright primary-container, keeping only subtle tonal glows. */
+[data-theme="dark"] .hero-section {
+  background:
+    radial-gradient(circle at 15% 15%, color-mix(in srgb, var(--md-sys-color-primary) 26%, transparent) 0%, transparent 50%),
+    radial-gradient(circle at 85% 90%, color-mix(in srgb, var(--md-sys-color-tertiary) 20%, transparent) 0%, transparent 50%),
+    var(--md-sys-color-surface-container);
+  color: var(--md-sys-color-on-surface);
+}
+
 /* ---------------------------------------------------------------------
    TONAL SECTION
    --------------------------------------------------------------------- */

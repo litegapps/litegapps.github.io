@@ -1,0 +1,30 @@
+/* =====================================================================
+   MATERIAL WEB · integration glue for @material/web components
+   (theming comes from the --md-sys-color-* tokens in _tokens.scss)
+   ===================================================================== */
+
+/* Use the site typeface for component labels */
+md-filled-button,
+md-filled-tonal-button,
+md-outlined-button,
+md-text-button,
+md-icon-button,
+md-outlined-select {
+  --md-sys-typescale-label-large-font: "Roboto", system-ui, sans-serif;
+  --md-sys-typescale-body-large-font: "Roboto", system-ui, sans-serif;
+}
+
+/* Selects span their column */
+md-outlined-select { width: 100%; }
+
+/* When buttons sit in a .d-grid stack, let them fill the row */
+.d-grid > md-filled-button,
+.d-grid > md-filled-tonal-button,
+.d-grid > md-outlined-button,
+.d-grid > md-text-button { width: 100%; }
+
+/* Keep the Material Symbol inside a button optically sized */
+md-filled-button .material-symbols-rounded,
+md-filled-tonal-button .material-symbols-rounded,
+md-outlined-button .material-symbols-rounded,
+md-text-button .material-symbols-rounded { font-size: 1.15rem; }
