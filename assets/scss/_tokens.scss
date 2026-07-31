@@ -1,12 +1,13 @@
 /* =====================================================================
-   LITEGAPPS · MATERIAL 3 DESIGN TOKENS
-   A fresh Material You (M3 Expressive) scheme built on an indigo source
-   colour. Light tokens live in :root; dark tokens override on [data-theme].
-   No Bootstrap — this is a self-contained design system.
+   LITEGAPPS · MATERIAL 3 DESIGN TOKENS  (+ Bootstrap variable mapping)
+   A Material You (M3 Expressive) scheme on an indigo source colour.
+   Light tokens live in :root; dark tokens override on [data-bs-theme].
+   The `--bs-*` block remaps stock Bootstrap components onto the M3 palette
+   so buttons/forms/links/surfaces render in the indigo/rounded M3 style.
    ===================================================================== */
 
 :root,
-[data-theme="light"] {
+[data-bs-theme="light"] {
   /* Primary — vivid indigo */
   --md-sys-color-primary: #4355db;
   --md-sys-color-on-primary: #ffffff;
@@ -74,10 +75,38 @@
   --md-sys-motion-emphasized: cubic-bezier(0.2, 0, 0, 1);
   --md-sys-motion-standard: cubic-bezier(0.2, 0, 0, 1);
 
+  /* --- Bootstrap variable mapping (M3 light) --- */
+  --bs-primary: #4355db;
+  --bs-primary-rgb: 67, 85, 219;
+  --bs-secondary: #5a5d72;
+  --bs-secondary-rgb: 90, 93, 114;
+  --bs-body-bg: #fbf8ff;
+  --bs-body-bg-rgb: 251, 248, 255;
+  --bs-body-color: #1b1b21;
+  --bs-body-color-rgb: 27, 27, 33;
+  --bs-emphasis-color: #1b1b21;
+  --bs-secondary-color: rgba(27, 27, 33, 0.72);
+  --bs-secondary-bg: #efedf5;
+  --bs-tertiary-color: rgba(27, 27, 33, 0.5);
+  --bs-tertiary-bg: #f5f2fb;
+  --bs-border-color: #c7c5d0;
+  --bs-link-color: #4355db;
+  --bs-link-color-rgb: 67, 85, 219;
+  --bs-link-hover-color: #2d3f8f;
+  --bs-link-hover-color-rgb: 45, 63, 143;
+  --bs-heading-color: #1b1b21;
+  --bs-code-color: #4355db;
+  --bs-border-radius: 0.75rem;
+  --bs-border-radius-sm: 0.5rem;
+  --bs-border-radius-lg: 1.25rem;
+  --bs-border-radius-xl: 1.75rem;
+  --bs-border-radius-2xl: 2rem;
+  --bs-border-radius-pill: 999px;
+
   color-scheme: light;
 }
 
-[data-theme="dark"] {
+[data-bs-theme="dark"] {
   /* Primary */
   --md-sys-color-primary: #bcc2ff;
   --md-sys-color-on-primary: #14257a;
@@ -133,6 +162,28 @@
   --md-sys-elevation-2: 0 1px 2px rgba(0, 0, 0, 0.6), 0 2px 6px 2px rgba(0, 0, 0, 0.35);
   --md-sys-elevation-3: 0 4px 8px 3px rgba(0, 0, 0, 0.35), 0 1px 3px rgba(0, 0, 0, 0.6);
   --md-sys-elevation-4: 0 6px 10px 4px rgba(0, 0, 0, 0.35), 0 2px 3px rgba(0, 0, 0, 0.6);
+
+  /* --- Bootstrap variable mapping (M3 dark) --- */
+  --bs-primary: #bcc2ff;
+  --bs-primary-rgb: 188, 194, 255;
+  --bs-secondary: #c3c5dd;
+  --bs-secondary-rgb: 195, 197, 221;
+  --bs-body-bg: #131318;
+  --bs-body-bg-rgb: 19, 19, 24;
+  --bs-body-color: #e4e1e9;
+  --bs-body-color-rgb: 228, 225, 233;
+  --bs-emphasis-color: #ffffff;
+  --bs-secondary-color: rgba(228, 225, 233, 0.75);
+  --bs-secondary-bg: #1f1f25;
+  --bs-tertiary-color: rgba(228, 225, 233, 0.5);
+  --bs-tertiary-bg: #1b1b21;
+  --bs-border-color: #45464f;
+  --bs-link-color: #bcc2ff;
+  --bs-link-color-rgb: 188, 194, 255;
+  --bs-link-hover-color: #dde1ff;
+  --bs-link-hover-color-rgb: 221, 225, 255;
+  --bs-heading-color: #e4e1e9;
+  --bs-code-color: #bcc2ff;
 
   color-scheme: dark;
 }

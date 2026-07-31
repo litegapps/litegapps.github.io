@@ -1,5 +1,8 @@
 /* =====================================================================
-   COMPONENTS · Material 3 building blocks (no Bootstrap)
+   COMPONENTS · Material 3 overlay on top of Bootstrap 5.3
+   Bootstrap owns structure/behaviour (grid, navbar, dropdown, collapse,
+   buttons, forms). These rules re-skin it to the M3 indigo look and add
+   a few genuinely-custom M3 pieces (floating pill navbar, hero, footer).
    ===================================================================== */
 
 /* ---------------------------------------------------------------------
@@ -25,7 +28,7 @@
 
 /* Dark mode: harmonise the hero with the dark surfaces instead of the
    bright primary-container, keeping only subtle tonal glows. */
-[data-theme="dark"] .hero-section {
+[data-bs-theme="dark"] .hero-section {
   background:
     radial-gradient(circle at 15% 15%, color-mix(in srgb, var(--md-sys-color-primary) 26%, transparent) 0%, transparent 50%),
     radial-gradient(circle at 85% 90%, color-mix(in srgb, var(--md-sys-color-tertiary) 20%, transparent) 0%, transparent 50%),
@@ -45,11 +48,16 @@
 }
 
 /* ---------------------------------------------------------------------
-   CARDS
+   CARDS  (re-skin Bootstrap .card + custom .md3-card / .contributor-card)
    --------------------------------------------------------------------- */
 .card,
 .md3-card,
 .contributor-card {
+  --bs-card-bg: var(--md-sys-color-surface-container);
+  --bs-card-color: var(--md-sys-color-on-surface);
+  --bs-card-border-color: var(--md-sys-card-border);
+  --bs-card-border-radius: var(--md-sys-shape-corner-large);
+  --bs-card-inner-border-radius: var(--md-sys-shape-corner-large);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -98,10 +106,105 @@
   transition: background-color 0.35s ease, color 0.35s ease, transform 0.3s var(--md-sys-motion-emphasized);
 }
 .md3-card:hover .md3-icon-container { transform: scale(1.06); }
-.md3-icon-container .material-symbols-rounded { font-size: 2rem; }
+.md3-icon-container .bi { font-size: 2rem; }
 
-/* Buttons are now Google Material Web components (md-*-button); see
-   _material-web.scss. The theme toggle (#bd-theme) is styled below. */
+/* ---------------------------------------------------------------------
+   BUTTONS · Material 3 re-skin of Bootstrap .btn (via --bs-btn-* vars)
+   --------------------------------------------------------------------- */
+.btn {
+  --bs-btn-padding-x: 1.5rem;
+  --bs-btn-padding-y: 0.6rem;
+  --bs-btn-font-weight: 500;
+  --bs-btn-border-radius: var(--md-sys-shape-corner-full);
+  --bs-btn-border-width: 1px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  letter-spacing: 0.15px;
+  line-height: 1.25;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    box-shadow 0.25s var(--md-sys-motion-emphasized), border-color 0.2s ease;
+}
+.btn .bi { font-size: 1.1rem; }
+
+/* Filled (primary) */
+.btn-primary {
+  --bs-btn-color: var(--md-sys-color-on-primary);
+  --bs-btn-bg: var(--md-sys-color-primary);
+  --bs-btn-border-color: var(--md-sys-color-primary);
+  --bs-btn-hover-color: var(--md-sys-color-on-primary);
+  --bs-btn-hover-bg: color-mix(in srgb, var(--md-sys-color-primary) 90%, var(--md-sys-color-on-primary));
+  --bs-btn-hover-border-color: var(--md-sys-color-primary);
+  --bs-btn-active-color: var(--md-sys-color-on-primary);
+  --bs-btn-active-bg: color-mix(in srgb, var(--md-sys-color-primary) 84%, var(--md-sys-color-on-primary));
+  --bs-btn-active-border-color: var(--md-sys-color-primary);
+  --bs-btn-disabled-color: var(--md-sys-color-on-surface);
+  --bs-btn-disabled-bg: color-mix(in srgb, var(--md-sys-color-on-surface) 12%, transparent);
+  --bs-btn-disabled-border-color: transparent;
+  --bs-btn-disabled-opacity: 0.55;
+}
+.btn-primary:hover { box-shadow: var(--md-sys-elevation-1); }
+
+/* Tonal (M3 secondary/tonal button) */
+.btn-tonal {
+  --bs-btn-color: var(--md-sys-color-on-secondary-container);
+  --bs-btn-bg: var(--md-sys-color-secondary-container);
+  --bs-btn-border-color: var(--md-sys-color-secondary-container);
+  --bs-btn-hover-color: var(--md-sys-color-on-secondary-container);
+  --bs-btn-hover-bg: color-mix(in srgb, var(--md-sys-color-secondary-container) 88%, var(--md-sys-color-on-secondary-container));
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-color: var(--md-sys-color-on-secondary-container);
+  --bs-btn-active-bg: color-mix(in srgb, var(--md-sys-color-secondary-container) 80%, var(--md-sys-color-on-secondary-container));
+  --bs-btn-active-border-color: transparent;
+}
+.btn-tonal:hover { box-shadow: var(--md-sys-elevation-1); }
+
+/* Outlined */
+.btn-outline-primary {
+  --bs-btn-color: var(--md-sys-color-primary);
+  --bs-btn-border-color: var(--md-sys-color-outline);
+  --bs-btn-bg: transparent;
+  --bs-btn-hover-color: var(--md-sys-color-on-primary-container);
+  --bs-btn-hover-bg: color-mix(in srgb, var(--md-sys-color-primary) 10%, transparent);
+  --bs-btn-hover-border-color: var(--md-sys-color-primary);
+  --bs-btn-active-color: var(--md-sys-color-on-primary-container);
+  --bs-btn-active-bg: color-mix(in srgb, var(--md-sys-color-primary) 16%, transparent);
+  --bs-btn-active-border-color: var(--md-sys-color-primary);
+}
+
+/* Text button (M3) — also alias .btn-link */
+.btn-text,
+.btn-link {
+  --bs-btn-color: var(--md-sys-color-primary);
+  --bs-btn-border-color: transparent;
+  --bs-btn-bg: transparent;
+  --bs-btn-hover-color: var(--md-sys-color-primary);
+  --bs-btn-hover-bg: color-mix(in srgb, var(--md-sys-color-primary) 10%, transparent);
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-bg: color-mix(in srgb, var(--md-sys-color-primary) 16%, transparent);
+  text-decoration: none;
+}
+.btn-link { --bs-btn-padding-x: 1rem; }
+
+/* Round icon button (footer social, misc) */
+.btn-icon {
+  --bs-btn-padding-x: 0;
+  --bs-btn-padding-y: 0;
+  --bs-btn-border-radius: var(--md-sys-shape-corner-full);
+  --bs-btn-color: var(--md-sys-color-on-surface-variant);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-color: var(--md-sys-color-on-secondary-container);
+  --bs-btn-hover-bg: var(--md-sys-color-secondary-container);
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-bg: var(--md-sys-color-secondary-container);
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+}
+.btn-icon .bi { font-size: 1.25rem; }
+.btn-icon .social-svg { width: 20px; height: 20px; }
 
 /* ---------------------------------------------------------------------
    CODE
@@ -137,49 +240,8 @@ code:not(pre code) {
 .md3-image:hover { transform: scale(1.02); }
 
 /* ---------------------------------------------------------------------
-   NAVBAR
+   NAVBAR · floating pill on top of Bootstrap's .navbar structure
    --------------------------------------------------------------------- */
-.navbar {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-.navbar > .container,
-.navbar > .container-fluid {
-  display: flex;
-  flex-wrap: inherit;
-  align-items: center;
-  justify-content: space-between;
-}
-.fixed-top { position: fixed; top: 0; right: 0; left: 0; z-index: 1030; }
-.navbar-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-right: 1rem;
-  text-decoration: none;
-}
-.navbar-brand:hover { text-decoration: none; }
-.navbar-nav {
-  display: flex;
-  flex-direction: column;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.navbar-collapse { flex-basis: 100%; flex-grow: 1; align-items: center; }
-.navbar .collapse:not(.show) { display: none; }
-.navbar-toggler {
-  display: inline-flex;
-  align-items: center;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: var(--md-sys-color-on-surface);
-}
-
-/* Floating pill navbar — detached rounded bar with a blurred glass look */
 .md3-navbar {
   top: 0.75rem;
   left: 0;
@@ -231,29 +293,34 @@ code:not(pre code) {
   border-radius: var(--md-sys-shape-corner-full);
   transition: color 0.2s ease, background-color 0.2s ease;
 }
-.md3-navbar .nav-link .material-symbols-rounded {
-  font-size: 1.15rem;
+.md3-navbar .nav-link .bi {
+  font-size: 1.05rem;
   transition: transform 0.2s var(--md-sys-motion-emphasized);
 }
 .md3-navbar .nav-link:hover {
   color: var(--md-sys-color-on-surface);
   background-color: var(--md-sys-color-surface-container-high);
 }
-.md3-navbar .nav-link:hover .material-symbols-rounded { transform: translateY(-1px); }
+.md3-navbar .nav-link:hover .bi { transform: translateY(-1px); }
 .md3-navbar .nav-link.active {
   color: var(--md-sys-color-on-secondary-container);
   background-color: var(--md-sys-color-secondary-container);
 }
 
 .md3-navbar .navbar-toggler {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--md-sys-color-on-surface);
+  border: none;
   border-radius: var(--md-sys-shape-corner-full);
   width: 44px;
   height: 44px;
-  justify-content: center;
   padding: 0;
+  font-size: 1.4rem;
   transition: background-color 0.2s ease;
 }
+.md3-navbar .navbar-toggler:focus { box-shadow: none; }
 .md3-navbar .navbar-toggler:hover,
 .md3-navbar .navbar-toggler:focus { background-color: var(--md-sys-color-surface-container-high); }
 
@@ -261,63 +328,37 @@ code:not(pre code) {
 .md3-navbar .navbar-collapse .navbar-nav { width: 100%; }
 .md3-navbar .navbar-collapse .nav-link { justify-content: flex-start; padding: 0.7rem 1rem; }
 
-@media (min-width: 768px) {
-  .navbar-expand-md .navbar-collapse { display: flex !important; flex-basis: auto; }
-  .navbar-expand-md .navbar-toggler { display: none; }
-  .navbar-expand-md .navbar-nav { flex-direction: row; align-items: center; }
-}
-
 /* ---------------------------------------------------------------------
-   DROPDOWN (theme switcher etc.)
+   DROPDOWN (theme switcher etc.) — skin Bootstrap's .dropdown-menu
    --------------------------------------------------------------------- */
-.dropdown, .bd-mode-toggle { position: relative; }
-.bd-mode-toggle { z-index: 1500; }
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  display: none;
+  --bs-dropdown-bg: var(--md-sys-color-surface-container-high);
+  --bs-dropdown-color: var(--md-sys-color-on-surface);
+  --bs-dropdown-border-color: var(--md-sys-card-border);
+  --bs-dropdown-border-radius: var(--md-sys-shape-corner-large);
+  --bs-dropdown-link-color: var(--md-sys-color-on-surface);
+  --bs-dropdown-link-hover-color: var(--md-sys-color-on-secondary-container);
+  --bs-dropdown-link-hover-bg: var(--md-sys-color-secondary-container);
+  --bs-dropdown-link-active-color: var(--md-sys-color-on-primary);
+  --bs-dropdown-link-active-bg: var(--md-sys-color-primary);
+  --bs-dropdown-padding-y: 0.5rem;
+  --bs-dropdown-padding-x: 0.5rem;
   min-width: 11rem;
-  margin-top: 0.6rem;
-  list-style: none;
-  background-color: var(--md-sys-color-surface-container-high);
-  border: 1px solid var(--md-sys-card-border);
-  border-radius: var(--md-sys-shape-corner-large);
+  margin-top: 0.6rem !important;
   box-shadow: var(--md-sys-elevation-2);
-  padding: 0.5rem;
 }
-.dropdown-menu.show { display: block; }
-.dropdown-menu-end { right: 0; left: auto; }
-.dropdown-item .material-symbols-rounded { font-size: 1.25rem; }
 .dropdown-item {
   display: flex;
   align-items: center;
-  width: 100%;
-  color: var(--md-sys-color-on-surface);
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  text-align: left;
+  gap: 0.6rem;
   border-radius: var(--md-sys-shape-corner-full);
   padding: 0.6rem 1rem;
   margin-bottom: 0.15rem;
   font-weight: 500;
   font-size: 0.95rem;
 }
-.dropdown-item:hover {
-  background-color: var(--md-sys-color-secondary-container);
-  color: var(--md-sys-color-on-secondary-container);
-  text-decoration: none;
-}
-.dropdown-item.active {
-  background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
-}
-.dropdown-item.active:hover {
-  background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
-}
+.dropdown-item:last-child { margin-bottom: 0; }
+.dropdown-item .bi { font-size: 1.15rem; }
 
 /* Theme toggle icon button */
 #bd-theme {
@@ -340,7 +381,28 @@ code:not(pre code) {
   color: var(--md-sys-color-on-secondary-container);
   border-color: transparent;
 }
-#bd-theme .material-symbols-rounded { font-size: 1.2rem; }
+#bd-theme .bi { font-size: 1.2rem; }
+
+/* ---------------------------------------------------------------------
+   FORM SELECT / CONTROL — M3 outlined field
+   --------------------------------------------------------------------- */
+.form-select,
+.form-control {
+  background-color: var(--md-sys-color-surface-container-lowest);
+  color: var(--md-sys-color-on-surface);
+  border: 1px solid var(--md-sys-color-outline);
+  border-radius: var(--md-sys-shape-corner-small);
+  padding: 0.7rem 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-select { padding-right: 2.5rem; }
+.form-select:focus,
+.form-control:focus {
+  border-color: var(--md-sys-color-primary);
+  box-shadow: 0 0 0 1px var(--md-sys-color-primary);
+  background-color: var(--md-sys-color-surface-container-lowest);
+  color: var(--md-sys-color-on-surface);
+}
 
 /* ---------------------------------------------------------------------
    FOOTER
@@ -379,7 +441,6 @@ code:not(pre code) {
   line-height: 1.6;
 }
 .footer-social { display: flex; flex-wrap: wrap; gap: 0.15rem; margin-left: -0.4rem; }
-.footer-social md-icon-button { --md-icon-button-icon-size: 20px; }
 
 .footer-links {
   display: grid;
@@ -418,7 +479,7 @@ code:not(pre code) {
 .footer-bottom a { color: var(--md-sys-color-on-surface); font-weight: 600; text-decoration: none; }
 .footer-bottom a:hover { color: var(--md-sys-color-primary); }
 .footer-madeby { display: inline-flex; align-items: center; gap: 0.35rem; }
-.footer-madeby .material-symbols-rounded { font-size: 1rem; color: var(--md-sys-color-error); }
+.footer-madeby .bi { font-size: 1rem; color: var(--md-sys-color-error); }
 
 /* Section divider (used on some content pages) */
 .md3-footer-divider { border-color: var(--md-sys-color-outline-variant); opacity: 0.4; }
@@ -460,29 +521,23 @@ a.md3-chip:hover { filter: brightness(0.96); text-decoration: none; }
   letter-spacing: 0.2px;
   border-radius: var(--md-sys-shape-corner-small);
 }
-.text-bg-primary   { background-color: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary); }
-.text-bg-secondary { background-color: var(--md-sys-color-secondary-container); color: var(--md-sys-color-on-secondary-container); }
-.text-bg-success   { background-color: var(--md-sys-color-success-container); color: var(--md-sys-color-on-success-container); }
-.text-bg-info      { background-color: var(--md-sys-color-tertiary-container); color: var(--md-sys-color-on-tertiary-container); }
-.text-bg-dark      { background-color: var(--md-sys-color-inverse-surface); color: var(--md-sys-color-inverse-on-surface); }
-.text-bg-light     { background-color: var(--md-sys-color-surface-container-highest); color: var(--md-sys-color-on-surface); }
+.text-bg-primary   { background-color: var(--md-sys-color-primary) !important; color: var(--md-sys-color-on-primary) !important; }
+.text-bg-secondary { background-color: var(--md-sys-color-secondary-container) !important; color: var(--md-sys-color-on-secondary-container) !important; }
+.text-bg-success   { background-color: var(--md-sys-color-success-container) !important; color: var(--md-sys-color-on-success-container) !important; }
+.text-bg-info      { background-color: var(--md-sys-color-tertiary-container) !important; color: var(--md-sys-color-on-tertiary-container) !important; }
+.text-bg-dark      { background-color: var(--md-sys-color-inverse-surface) !important; color: var(--md-sys-color-inverse-on-surface) !important; }
+.text-bg-light     { background-color: var(--md-sys-color-surface-container-highest) !important; color: var(--md-sys-color-on-surface) !important; }
 
 /* ---------------------------------------------------------------------
-   TABLES
+   TABLES — skin Bootstrap .table with M3 colours
    --------------------------------------------------------------------- */
-.table-responsive { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .table {
-  width: 100%;
-  margin-bottom: 1rem;
-  border-collapse: collapse;
+  --bs-table-color: var(--md-sys-color-on-surface);
+  --bs-table-bg: transparent;
+  --bs-table-border-color: var(--md-sys-color-outline-variant);
+  --bs-table-hover-color: var(--md-sys-color-on-surface);
+  --bs-table-hover-bg: var(--md-sys-color-surface-container-high);
   color: var(--md-sys-color-on-surface);
-}
-.table th,
-.table td {
-  padding: 0.75rem;
-  border-bottom: 1px solid var(--md-sys-color-outline-variant);
-  text-align: left;
-  vertical-align: top;
 }
 .table thead th {
   color: var(--md-sys-color-on-surface-variant);
@@ -491,20 +546,25 @@ a.md3-chip:hover { filter: brightness(0.96); text-decoration: none; }
   font-size: 0.78rem;
   letter-spacing: 0.4px;
 }
-.table-hover tbody tr:hover { background-color: var(--md-sys-color-surface-container-high); }
-
-/* Form selects are now md-outlined-select (Google Material Web). */
 
 /* ---------------------------------------------------------------------
-   NAV (generic vertical/horizontal link lists — e.g. doc sidebar)
+   LIST GROUPS — skin Bootstrap .list-group
    --------------------------------------------------------------------- */
-.nav { display: flex; flex-wrap: wrap; list-style: none; padding-left: 0; margin: 0; }
-.nav .nav-item { list-style: none; }
+.list-group {
+  --bs-list-group-color: var(--md-sys-color-on-surface);
+  --bs-list-group-bg: transparent;
+  --bs-list-group-border-color: var(--md-sys-card-border);
+  --bs-list-group-action-color: var(--md-sys-color-on-surface);
+  --bs-list-group-action-hover-color: var(--md-sys-color-on-surface);
+  --bs-list-group-action-hover-bg: var(--md-sys-color-surface-container-high);
+  --bs-list-group-action-active-bg: var(--md-sys-color-surface-container-high);
+}
+
+/* ---------------------------------------------------------------------
+   NAV (generic link lists — e.g. doc sidebar) + doc sidebar
+   --------------------------------------------------------------------- */
 .nav .nav-link {
-  display: block;
-  padding: 0.5rem 0.9rem;
   color: var(--md-sys-color-on-surface-variant);
-  text-decoration: none;
   border-radius: var(--md-sys-shape-corner-full);
   transition: background-color 0.2s ease, color 0.2s ease;
 }
@@ -514,8 +574,6 @@ a.md3-chip:hover { filter: brightness(0.96); text-decoration: none; }
   background-color: var(--md-sys-color-secondary-container);
   text-decoration: none;
 }
-
-/* Documentation sidebar */
 .sidebar {
   top: 5.75rem;
   z-index: 1000;
@@ -526,91 +584,8 @@ a.md3-chip:hover { filter: brightness(0.96); text-decoration: none; }
 .sidebar .position-sticky { max-height: calc(100vh - 5.75rem); overflow-y: auto; }
 
 /* ---------------------------------------------------------------------
-   LIST GROUPS
+   DESCRIPTION / APP / FEATURE LISTS
    --------------------------------------------------------------------- */
-.list-group { display: flex; flex-direction: column; padding-left: 0; margin-bottom: 0; list-style: none; }
-.list-group-item {
-  display: block;
-  background-color: transparent;
-  color: var(--md-sys-color-on-surface);
-  border: 1px solid var(--md-sys-card-border);
-  text-decoration: none;
-}
-.list-group-flush > .list-group-item { border-width: 0 0 1px; }
-.list-group-flush > .list-group-item:last-child { border-bottom-width: 0; }
-.list-group-item-action { cursor: pointer; transition: background-color 0.2s ease; }
-.list-group-item-action:hover,
-.list-group-item-action:focus {
-  background-color: var(--md-sys-color-surface-container-high) !important;
-  color: var(--md-sys-color-on-surface);
-  text-decoration: none;
-}
-
-/* ---------------------------------------------------------------------
-   ACCORDION (collapse driven by JS toggling .show / .collapsed)
-   --------------------------------------------------------------------- */
-.md3-accordion,
-.accordion.md3-accordion {
-  gap: 1.25rem;
-  display: flex;
-  flex-direction: column;
-}
-.accordion-item,
-.md3-accordion-item {
-  background-color: var(--md-sys-color-surface-container);
-  border: 1px solid var(--md-sys-card-border);
-  border-radius: var(--md-sys-shape-corner-large);
-  overflow: hidden;
-  transition: box-shadow 0.2s, background-color 0.3s;
-}
-.md3-accordion-item:hover {
-  box-shadow: var(--md-sys-elevation-1);
-  background-color: var(--md-sys-color-surface-container-high);
-}
-.accordion-header { margin: 0; }
-.accordion-button,
-.md3-accordion-button {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  width: 100%;
-  padding: 1.25rem 1.5rem;
-  background-color: transparent;
-  color: var(--md-sys-color-on-surface);
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: left;
-}
-.accordion-button > * { min-width: 0; }
-.accordion-button::after {
-  content: "";
-  flex-shrink: 0;
-  width: 1.4rem;
-  height: 1.4rem;
-  margin-left: auto;
-  background-color: currentColor;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 15.4 6.6 10 8 8.6l4 4 4-4 1.4 1.4z'/%3E%3C/svg%3E") no-repeat center / contain;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 15.4 6.6 10 8 8.6l4 4 4-4 1.4 1.4z'/%3E%3C/svg%3E") no-repeat center / contain;
-  transition: transform 0.3s var(--md-sys-motion-emphasized);
-}
-.accordion-button:not(.collapsed) {
-  color: var(--md-sys-color-primary);
-  background-color: var(--md-sys-color-surface-container-high);
-}
-.accordion-button:not(.collapsed)::after { transform: rotate(180deg); }
-
-.accordion-collapse {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 0.35s var(--md-sys-motion-emphasized);
-}
-.accordion-collapse.show { grid-template-rows: 1fr; }
-.accordion-collapse > .accordion-body { overflow: hidden; min-height: 0; }
-.accordion-body { padding: 0 1.5rem 1.5rem; }
-
 .md3-desc-box {
   background-color: var(--md-sys-color-surface-container-low);
   border-radius: var(--md-sys-shape-corner-medium);
@@ -644,7 +619,6 @@ a.md3-chip:hover { filter: brightness(0.96); text-decoration: none; }
   background-color: var(--md-sys-color-primary);
 }
 
-/* Feature list (ticks / tips) */
 .md3-feature-list { list-style: none; padding-left: 0; margin-bottom: 0; }
 .md3-feature-list li {
   display: flex;
@@ -655,18 +629,17 @@ a.md3-chip:hover { filter: brightness(0.96); text-decoration: none; }
   line-height: 1.6;
 }
 .md3-feature-list li:last-child { border-bottom: none; }
-.md3-feature-list .material-symbols-rounded {
+.md3-feature-list .bi {
   color: var(--md-sys-color-primary);
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   flex-shrink: 0;
-  margin-top: 0.1rem;
+  margin-top: 0.15rem;
 }
 
 /* ---------------------------------------------------------------------
-   PAGINATION
+   PAGINATION — skin Bootstrap .pagination
    --------------------------------------------------------------------- */
-.pagination { display: flex; flex-wrap: wrap; gap: 0.35rem; list-style: none; padding-left: 0; margin: 0; }
-.page-item { display: inline-flex; }
+.pagination { gap: 0.35rem; }
 .page-link,
 .pagination-link {
   min-width: 42px;
@@ -688,8 +661,7 @@ a.md3-chip:hover { filter: brightness(0.96); text-decoration: none; }
   color: var(--md-sys-color-on-secondary-container);
   text-decoration: none;
 }
-.page-item.active .page-link[href],
-.page-link[rel] { color: var(--md-sys-color-on-surface); }
+.page-link:focus { box-shadow: none; }
 .pagination-ellipsis { padding: 0 0.5rem; color: var(--md-sys-color-outline); }
 
 /* ---------------------------------------------------------------------

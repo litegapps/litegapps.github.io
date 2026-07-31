@@ -1,10 +1,8 @@
 /* =====================================================================
-   LITEGAPPS · Material 3 (Expressive) design system entry point
-   Self-contained — no Bootstrap dependency.
+   LITEGAPPS · Material 3 override layer on top of Bootstrap 5.3
+   Loaded AFTER Bootstrap so these M3 rules win. Bootstrap provides the
+   grid, utilities, and component structure; this re-skins them to M3.
    ===================================================================== */
 @import "tokens";
 @import "base";
-@import "layout";
-@import "utilities";
 @import "components";
-@import "material-web";

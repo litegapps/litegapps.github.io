@@ -136,28 +136,8 @@ time { color: inherit; }
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--md-sys-color-outline); }
 
-/* --- Google Material Symbols (Rounded) --- */
-.material-symbols-rounded {
-  font-family: "Material Symbols Rounded";
-  font-weight: normal;
-  font-style: normal;
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-flex;
-  white-space: nowrap;
-  word-wrap: normal;
-  direction: ltr;
-  vertical-align: middle;
-  -webkit-font-smoothing: antialiased;
-  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
-}
-.material-symbols-rounded.fill { font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24; }
-.material-symbols-rounded.w-500 { font-variation-settings: "FILL" 0, "wght" 500, "GRAD" 0, "opsz" 24; }
-.msym-sm { font-size: 1.1rem; }
-.msym-md { font-size: 1.5rem; }
-.msym-lg { font-size: 2rem; }
-.msym-xl { font-size: 2.5rem; }
+/* Bootstrap Icons render inline with the text; nudge alignment */
+.bi { vertical-align: -0.125em; line-height: 1; }
 
 /* Brand/social logos — inline SVG (self-contained, no icon font) */
 .social-svg { display: inline-block; vertical-align: -0.125em; fill: currentColor; }
