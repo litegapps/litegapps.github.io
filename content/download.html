@@ -79,7 +79,7 @@ url: /download.html
                                     </a>
                                 </td>
                                 <td class="border-bottom-0 py-3"><small class="opacity-75">arm, arm64, x86_64, x86</small></td>
-                                <td class="border-bottom-0 py-3"><small class="opacity-75">5.0 - 17.0</small></td>
+                                <td class="border-bottom-0 py-3"><small class="opacity-75">7.0 - 17.0<br>(x86: 7.0 - 15.0)</small></td>
                             </tr>
                         </tbody>
                     </table>
@@ -173,10 +173,10 @@ url: /download.html
             { value: "31", text: "12.0" }, { value: "30", text: "11.0" }, 
             { value: "29", text: "10.0" }, { value: "28", text: "9.0" },  
             { value: "27", text: "8.1" },  { value: "26", text: "8.0" },  
-            { value: "25", text: "7.1" },  { value: "24", text: "7.0" },  
-            { value: "23", text: "6.0" },  { value: "22", text: "5.1" },  
-            { value: "21", text: "5.0" }
+            { value: "25", text: "7.1" },  { value: "24", text: "7.0" }
         ];
+        // x86 (32-bit) builds stop at Android 15 (API 35).
+        const maxApiByPlatform = { x86: 35 };
 
         // Populate a native <select> with <option> children.
         function populateSelect(selectElement, options, defaultValue = null) {
@@ -209,6 +209,21 @@ url: /download.html
         populateSelect(typeSelect, typeOptions, "litegapps");
         populateSelect(platformSelect, platformOptions, "arm64");
         populateSelect(androidSelect, androidOptions, "37");
+
+        // Rebuild the Android list for the selected platform, keeping the
+        // current choice when it is still valid, else the newest allowed one.
+        function updateAndroidOptions() {
+            if (!androidSelect || !platformSelect) return;
+            const maxApi = maxApiByPlatform[platformSelect.value];
+            const allowed = maxApi ? androidOptions.filter(o => Number(o.value) <= maxApi) : androidOptions;
+            const current = androidSelect.value;
+            const keep = allowed.some(o => o.value === current) ? current : allowed[0].value;
+            populateSelect(androidSelect, allowed, keep);
+        }
+
+        if (platformSelect) {
+            platformSelect.addEventListener("change", updateAndroidOptions);
+        }
 
         if (typeSelect) {
             typeSelect.addEventListener("change", updateDownloadButtonText);
