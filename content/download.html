@@ -79,7 +79,7 @@ url: /download.html
                                     </a>
                                 </td>
                                 <td class="border-bottom-0 py-3"><small class="opacity-75">arm, arm64, x86_64, x86</small></td>
-                                <td class="border-bottom-0 py-3"><small class="opacity-75">7.0 - 17.0<br>(x86: 7.0 - 11.0)</small></td>
+                                <td class="border-bottom-0 py-3"><small class="opacity-75">7.0 - 17.0<br>(arm: 7.0 - 16.0; x86: 7.0 - 11.0)</small></td>
                             </tr>
                         </tbody>
                     </table>
@@ -175,8 +175,8 @@ url: /download.html
             { value: "27", text: "8.1" },  { value: "26", text: "8.0" },  
             { value: "25", text: "7.1" },  { value: "24", text: "7.0" }
         ];
-        // x86 (32-bit) builds stop at Android 11 (API 30).
-        const maxApiByPlatform = { x86: 30 };
+        // 32-bit builds stop at Android 16 for arm and Android 11 for x86.
+        const maxApiByPlatform = { arm: 36, x86: 30 };
 
         // Populate a native <select> with <option> children.
         function populateSelect(selectElement, options, defaultValue = null) {
