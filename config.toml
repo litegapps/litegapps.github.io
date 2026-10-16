@@ -1,3 +1,4 @@
+noBuildLock = true
 baseurl = "https://litegapps.github.io"
 title = "LiteGapps - Custom Google Apps Android"
 contentdir    = "content"
