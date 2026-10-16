@@ -4,7 +4,7 @@ title = "LiteGapps - Custom Google Apps Android"
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
-languageCode = "en"
+locale = "en"
 resourceDir = "../resources"
 DefaultContentLanguage = "en"
 

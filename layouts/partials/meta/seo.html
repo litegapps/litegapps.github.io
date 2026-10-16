@@ -10,7 +10,7 @@
 {{- if .Page.Params.Excerpt }}
 <meta name="description" content="{{ replace .Page.Params.Excerpt "\n" " " }}">
 {{- end }}
-<meta property="og:locale"  content="{{ $.Site.LanguageCode | default "en" }}">
+<meta property="og:locale"  content="{{ $.Site.Language.Locale | default "en" }}">
 {{- if .Page.Params.Excerpt }}
 <meta property="og:description"   content="{{ replace .Page.Params.Excerpt "\n" "," }}">
 {{- end }}
