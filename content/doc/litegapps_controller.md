@@ -1,7 +1,7 @@
 ---
 type: doc
 layout: doc
-title: LiteGapps Controller Documentation
+title: Lico (LiteGapps Controller) Documentation
 language : en
 adstera: true
 monetag: true
@@ -9,80 +9,65 @@ url: /doc/litegapps_controller.html
 ---
 
 
-**LiteGapps Controller** is an additional feature of LiteGapps and LiteGapps++ which has many features that can be used by users.  Users can activate features such as **Boost**, **Battery Saver**, **Gms Dose**, **GPU/CPU Tweaks**, **Download/Install Package** and of course many other features that can be used.  use.
+**Lico** (formerly **LiteGapps Controller**) is the companion Android app for managing **LiteGapps** and **LiteGapps++**. It comes with a Material 3 interface with dynamic color, and it runs in both **root** (Magisk, KernelSU, APatch) and **non-root** mode.
+
+> The old terminal-based flashable module (`su` → `litegapps`) has been discontinued. Its last release is **v1.3**. Lico replaces it as a regular Android app.
 
 ## Download
-<p><div class="MID"><a href="/download.html">Click Here</a></div></p>
+Get the latest APK from GitHub Releases:
+
+<p><div class="MID"><a href="https://github.com/litegapps/litegapps-controller/releases/latest">Download Lico</a></div></p>
+
+Source code: [github.com/litegapps/litegapps-controller](https://github.com/litegapps/litegapps-controller)
+
+## Requirements
+- Android **8.0** or newer
+- Root is **optional**. Features marked with **(root)** need Magisk, KernelSU or APatch.
 
 ## Install
-You Can Install LiteGapps Controller in Recovery or magisk,apatch, and kernelsu app.
+1. Download the latest `.apk` from the [Releases page](https://github.com/litegapps/litegapps-controller/releases/latest).
+2. Open the APK and allow installing from unknown sources if asked.
+3. Open **Lico**. On a rooted device, grant root access when the root manager asks.
 
-## How To Use
-Open terminal (termux recomended)
+## Features
 
-``su``
+### Play Integrity Doctor (root)
+Checks your Play Integrity setup: **Play Integrity Fix**, **Tricky Store OSS**, **Yuri Keybox Manager**, **Zygisk**, and whether your keybox has been revoked. It includes an **auto-fix** option.
 
-``litegapps``
+### Gapps Doctor (root)
+Checks and fixes the core Google components: **Google Services Framework**, **Google Play services** and **Google Play Store**.
 
-<img src="/img/lc1.png" class="img-fluid" alt="ss device info hw">
+### Backup & Restore (root)
+Back up and restore:
+- Apps with their data
+- OBB files
+- Contacts and SMS
+- Default apps
 
+Backups can be saved to internal storage, an SD card or a USB OTG drive.
 
-### 1. Boost
-This will force stop the applications installed on your device and some of the default application list of Litegapps Controller.  So that it will reduce the use of RAM, battery and speed up your phone.</p>
+### Memory Doctor (root)
+Frees up storage by cleaning caches, trash, leftover files, large or old files, and unused apps.
 
-#### Tips
-Use this after booting or use it before playing games
+### Memory Speed Test
+Measures the read/write speed of your RAM and storage.
 
-### Gaming Mode
-Before going into gaming mode, it is recommended that you install ``Device Info HW`` : 
-<a href="https://play.google.com/store/apps/details?id=ru.andr7e.deviceinfohw&hl=in&gl=US&auao=false&referrer=utm_source%3Dgoogle%26utm_medium%3Dorganic%26utm_term%3Ddevice+hw+info&pcampaignid=APPU_1_Jey2YYuhO9fXz7sPn7ePmA8">Google Play Store</a>
+### Boost, App Frozen & Battery Saver
+Performance and power tools:
+- **Boost**: stops background apps to free RAM and speed up your device.
+- **App Frozen**: freezes apps you don't use.
+- **Battery Saver**: lowers power usage.
 
-- Then open
-- Go to the application menu
-- See in the picture that is circled in red it is the name of the package</p>
-	<img src="/img/device_hw.png" class="img-fluid" alt="ss device info hw">
-	
-### Gaming Mode 1
-every 60 seconds the installed application will be forced to stop and will continue to be repeated until you stop
+### Modules & Addons (root)
+Manage **Magisk**, **KernelSU** and **APatch** modules, and install **LiteGapps addons**, all from one place.
 
-#### Stop
-``Vol Down + z``
+### Transfer File
+Send files between two phones running Lico over **Wi-Fi Direct**, with no internet connection needed.
 
-``CTRL + z (using termux)``
+### Other Tools
+- Device info
+- Device props
+- Gapps check
 
-#### Add black list
-Add an application blacklist, you can edit it using a text editor in ``/sdcard/android/litegapps/data/black_list_gaming1``
-
-### Gaming Mode 2
-This mode will disable applications installed on your device and some default lists <strong>Litegapps Controller</strong>This will reduce the use of ram, battery, CPU and your ping will be more stable because the internet connection only focuses on your game.  will not be disturbed by app notifications when playing games.
-
-#### Enable/Disable
-Select 1x = enable
-
-Select 2x = disable
-
-#### Add black list App
-To add an application blacklist, you can edit it using a text editor in ``/sdcard/android/litegapps/data/black_list_gaming2``
-
-### Gaming Mode 3
-This mode will disable the apps that are in the list ``/sdcard/android/litegapps/data/black_list_gaming3``
-
-#### Enable/Disable</h4>
-Select 1x = enable
-
-Select 2x = disable
-
-#### Add list App
-To add an application blacklist, you can edit it using a text editor in ``/sdcard/android/litegapps/data/black_list_gaming3``
-
-## Baterry Saver
-This will force stop installed apps on your device (same as a booster) and disable some Google Play Services components and also lower CPU and GPU performance.
-
-### Enable/Disable
-Select 1x = enable
-
-Select 2x = disable
-
-## Check Ping
-Test ping : whether your connection is stable or not
-
+## License
+Lico is licensed under the **BSD 3-Clause** license.
