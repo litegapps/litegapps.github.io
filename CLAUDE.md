@@ -9,6 +9,7 @@ Situs statis Hugo untuk https://litegapps.github.io, di-deploy otomatis lewat Gi
 - `assets/scss/` — style Material 3 di atas Bootstrap 5 (`_tokens.scss` warna/token, `_components.scss` komponen).
 
 ## Cara kerja
+- Jangan menumpuk card/panel (card di dalam card, atau card di dalam panel berlatar), dan jangan gabungkan border dengan bayangan tajam — pemilik repo menganggapnya "double border".
 - Cek perubahan UI dengan build Hugo dan screenshot di lebar desktop dan HP (±390px), termasuk mode gelap bila relevan.
 
 ## Git (diizinkan pemilik repo)

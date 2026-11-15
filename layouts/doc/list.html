@@ -1,40 +1,33 @@
 {{ define "doc" }}
 <div class="row justify-content-center">
     <div class="col-lg-10 col-xl-9">
-        
-        <div class="text-center mb-5">
+
+        <div class="text-center mb-4 mb-md-5">
             <div class="md3-icon-container mx-auto mb-3">
                 <i class="bi bi-book"></i>
             </div>
             <h1 class="display-5 fw-bold" style="color: var(--md-sys-color-primary);">{{ .Title }}</h1>
-            <div class="fs-5 opacity-75 mt-2">
-                {{ .Content }}
-            </div>
+            {{ with .Content }}<div class="fs-5 opacity-75 mt-2">{{ . }}</div>{{ else }}<p class="opacity-75 mt-2 mb-0">Guides, fixes and references for LiteGapps.</p>{{ end }}
         </div>
 
-        <div class="md3-card border-0 shadow-sm mb-5">
-            <div class="list-group list-group-flush">
-                {{ range .Pages }}
-                    <a href="{{ .RelPermalink }}" class="list-group-item list-group-item-action p-4" style="background-color: transparent; border-color: var(--md-sys-card-border);">
-                        <div class="d-flex w-100 justify-content-between align-items-center">
-                            
-                            <div>
-                                <h5 class="mb-2 fw-bold" style="color: var(--md-sys-color-on-surface);">{{ .LinkTitle }}</h5>
-                                <p class="mb-0 opacity-75 small" style="line-height: 1.6; color: var(--md-sys-color-on-surface);">
-                                    {{ if .Params.Excerpt -}}
-                                        {{ .Params.Excerpt | plainify | truncate 120 }}
-                                    {{- else -}}
-                                        {{ .Summary | plainify | truncate 120 }}
-                                    {{ end }}
-                                </p>
-                            </div>
-
-                            <i class="bi bi-chevron-right ms-3 opacity-50 d-none d-sm-block" style="color: var(--md-sys-color-primary);"></i>
-
-                        </div>
-                    </a>
-                {{ end }}
+        <div class="row g-3">
+            {{ range .Pages }}
+            <div class="col-md-6 d-flex">
+                <a href="{{ .RelPermalink }}" class="list-tile flex-fill">
+                    <span class="list-tile-body">
+                        <span class="list-tile-title">{{ .LinkTitle }}</span>
+                        <span class="list-tile-desc">
+                            {{- if .Params.Excerpt -}}
+                                {{ .Params.Excerpt | plainify | truncate 100 }}
+                            {{- else -}}
+                                {{ .Summary | plainify | truncate 100 }}
+                            {{- end -}}
+                        </span>
+                    </span>
+                    <i class="bi bi-chevron-right list-tile-arrow" aria-hidden="true"></i>
+                </a>
             </div>
+            {{ end }}
         </div>
 
     </div>

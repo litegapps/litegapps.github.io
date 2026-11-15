@@ -1,54 +1,16 @@
-<div class="md3-card mb-4 border-0">
-    <div class="row g-0">
-        {{/* Blok ini akan menampilkan gambar jika ada di front matter */}}
-        {{ with .Params.image }}
-        <div class="col-lg-4 d-none d-lg-block border-end" style="border-color: var(--md-sys-card-border) !important;">
-            <a href="{{ $.Permalink }}">
-                <img src="{{ . | absURL }}" class="w-100 h-100 object-fit-cover" style="min-height: 250px;" alt="{{ $.Title }}">
-            </a>
-        </div>
-        {{ end }}
-
-        <div class="col-lg-8">
-            <div class="card-body p-4 d-flex flex-column h-100">
-                
-                {{/* Menampilkan kategori sebagai badge/chip MD3 */}}
-                {{ if .Params.categories }}
-                <div class="mb-3 d-flex gap-2 flex-wrap">
-                    {{ range .Params.categories }}
-                    <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}" class="md3-chip text-decoration-none">
-                        {{ . }}
-                    </a>
-                    {{ end }}
-                </div>
-                {{ end }}
-                
-                <h3 class="mb-2 h4">
-                    <a class="text-decoration-none fw-bold" style="color: var(--md-sys-color-on-surface);" href="{{ .Permalink }}">
-                        {{ .Title }}
-                    </a>
-                </h3>
-
-                <div class="mb-3 opacity-75 small d-flex align-items-center gap-2">
-                    <i class="bi bi-calendar3"></i>
-                    <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
-                        {{ .Date.Format "January 2, 2006" }}
-                    </time>
-                </div>
-                
-                <p class="mb-auto opacity-75" style="line-height: 1.6;">
-                    {{/* Menggunakan .Summary yang dipotong agar tinggi kartu seragam */}}
-                    {{ .Summary | plainify | truncate 150 }}
-                </p>
-                
-                <div class="mt-4">
-                    <a href="{{ .Permalink }}" class="text-decoration-none fw-bold d-inline-flex align-items-center gap-1 stretched-link transition-hover" style="color: var(--md-sys-color-primary);">
-                        Continue reading
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-</div>
+{{/* Changelog entry tile. Params: page, latest (bool) */}}
+{{ $p := .page }}
+<a href="{{ $p.RelPermalink }}" class="list-tile">
+    <span class="list-tile-body">
+        <span class="d-flex flex-wrap align-items-center gap-2 mb-1">
+            <span class="list-tile-title mb-0">{{ $p.Title }}</span>
+            {{ if .latest }}<span class="variant-size">Latest</span>{{ end }}
+        </span>
+        <span class="list-tile-meta">
+            <i class="bi bi-calendar3" aria-hidden="true"></i>
+            <time datetime='{{ $p.Date.Format "2006-01-02" }}'>{{ $p.Date.Format "January 2, 2006" }}</time>
+        </span>
+        <span class="list-tile-desc">{{ $p.Summary | plainify | truncate 140 }}</span>
+    </span>
+    <i class="bi bi-chevron-right list-tile-arrow" aria-hidden="true"></i>
+</a>

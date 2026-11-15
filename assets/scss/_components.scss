@@ -807,3 +807,42 @@ a.md3-chip:hover { filter: brightness(0.96); text-decoration: none; }
   overflow-wrap: normal;
   word-break: normal;
 }
+
+/* ---------------------------------------------------------------------
+   LIST TILES (doc index, changelog index)
+   --------------------------------------------------------------------- */
+.list-tile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--md-sys-color-outline-variant);
+  border-radius: var(--md-sys-shape-corner-large);
+  background-color: var(--md-sys-color-surface-container);
+  color: var(--md-sys-color-on-surface);
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.list-tile:hover,
+.list-tile:focus-visible {
+  background-color: var(--md-sys-color-surface-container-high);
+  border-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-surface);
+}
+.list-tile-body { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+.list-tile-title { display: block; font-weight: 700; margin-bottom: 0.25rem; }
+.list-tile-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-bottom: 0.4rem;
+}
+.list-tile-desc { display: block; font-size: 0.875rem; line-height: 1.55; opacity: 0.75; }
+.list-tile-arrow {
+  flex-shrink: 0;
+  color: var(--md-sys-color-primary);
+  transition: transform 0.2s ease;
+}
+.list-tile:hover .list-tile-arrow { transform: translateX(3px); }
