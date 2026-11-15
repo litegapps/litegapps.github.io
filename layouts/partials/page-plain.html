@@ -1,0 +1,8 @@
+{{/* Page whose content brings its own cards: render title + content without the
+     wrapper card, so cards are not nested (no double border/padding). */}}
+<div class="row justify-content-center">
+    <div class="col-lg-10 col-xl-9">
+        <h1 class="display-5 fw-bold text-center mb-4" style="color: var(--md-sys-color-primary);">{{ .Title }}</h1>
+        {{ .Content }}
+    </div>
+</div>

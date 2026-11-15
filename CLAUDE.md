@@ -4,7 +4,7 @@ Situs statis Hugo untuk https://litegapps.github.io, di-deploy otomatis lewat Gi
 
 ## Struktur
 - `layouts/index.html` — halaman Home.
-- `layouts/_default/single.html` — layout halaman biasa. Pakai `nocard: true` di front matter kalau isi halaman sudah punya card sendiri (contoh: `content/download.html`), supaya tidak ada card bertumpuk / border dobel.
+- `layouts/_default/single.html` dan `layouts/doc/single.html` — membungkus isi halaman dengan card. Pakai `nocard: true` di front matter kalau isi halaman sudah punya card sendiri (contoh: `content/download.html`, `content/doc/litegapps_variant.html`), supaya tidak ada card bertumpuk / border dobel. Versi tanpa card ada di `layouts/partials/page-plain.html`.
 - `content/` — isi halaman (download, doc, changelog).
 - `assets/scss/` — style Material 3 di atas Bootstrap 5 (`_tokens.scss` warna/token, `_components.scss` komponen).
 

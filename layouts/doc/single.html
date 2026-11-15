@@ -1,4 +1,7 @@
 {{ define "doc" }}
+{{ if .Params.nocard }}
+{{ partial "page-plain.html" . }}
+{{ else }}
 <div class="row justify-content-center">
     <div class="col-lg-10 col-xl-9">
         
@@ -9,4 +12,5 @@
 
     </div>
 </div>
+{{ end }}
 {{ end }}
