@@ -3,156 +3,170 @@ title: Download LiteGapps
 description: Official download page of all LiteGapps products.
 language : en
 url: /download.html
+nocard: true
 ---
 
-<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
-    <defs>
-        <linearGradient id="gradDefIcon" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#3BAEF8"/>
-            <stop offset="100%" stop-color="#5F5DFF"/>
-        </linearGradient>
-        <symbol id="icon-download-grad" viewBox="0 0 512 512">
-            <circle cx="256" cy="256" r="256" fill="url(#gradDefIcon)"/>
-            <path fill="none" stroke="#FFFFFF" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"
-                  d="M128 320v48c0 17.7 14.3 32 32 32h192c17.7 0 32-14.3 32-32v-48M176 256l80 80 80-80M256 80v176"/>
-        </symbol>
-    </defs>
-</svg>
+<div class="col-lg-9 col-xl-8 mx-auto download-page">
 
-<div class="container py-4 py-md-5">
-    <div class="col-lg-9 col-xl-8 mx-auto">
-        
-        <div class="md3-card mb-5 border-0">
-            <div class="card-body p-4 p-md-5">
-                <div class="text-center mb-4">
-                    <div class="md3-icon-container mx-auto mb-3">
-                        <i class="bi bi-cloud-download"></i>
+    <p class="text-center opacity-75 mt-2 mb-4 mb-md-5">Official download page of all LiteGapps products.</p>
+
+    <section class="md3-card download-card mb-4">
+        <div class="card-body p-4 p-md-5">
+            <div class="dl-head">
+                <div class="md3-icon-container mb-0"><i class="bi bi-cloud-download"></i></div>
+                <div>
+                    <h2 class="h4 mb-1">LiteGapps &amp; Addons</h2>
+                    <p class="mb-0 small opacity-75">Choose a product, architecture and Android version.</p>
+                </div>
+            </div>
+            <div class="row g-3 mb-4">
+                <div class="col-md-4">
+                    <label for="type" class="form-label small fw-medium opacity-75">Product</label>
+                    <select id="type" class="form-select"></select>
+                </div>
+                <div class="col-md-4">
+                    <label for="platform" class="form-label small fw-medium opacity-75">Architecture</label>
+                    <select id="platform" class="form-select"></select>
+                </div>
+                <div class="col-md-4">
+                    <label for="android" class="form-label small fw-medium opacity-75">Android Version</label>
+                    <select id="android" class="form-select"></select>
+                </div>
+            </div>
+            <div class="d-grid">
+                <button type="button" id="download-button" class="btn btn-primary btn-lg"></button>
+            </div>
+            <p class="small text-center mt-3 mb-0 opacity-75">
+                Not sure about Lite, Core, Nano or Pixel?
+                <a href="/doc/litegapps_variant.html" class="text-decoration-none fw-semibold">Compare variants <i class="bi bi-arrow-right"></i></a>
+            </p>
+        </div>
+    </section>
+
+    <section class="md3-card download-card mb-4">
+        <div class="card-body p-4">
+            <div class="dl-head">
+                <div class="md3-icon-container mb-0"><i class="bi bi-box-seam"></i></div>
+                <div>
+                    <h2 class="h5 mb-1">LiteGappsX</h2>
+                    <p class="mb-0 small opacity-75">Alternative Google-free builds.</p>
+                </div>
+            </div>
+            <div class="dl-item">
+                <div class="dl-item-info">
+                    <a href="https://microg.org/" target="_blank" rel="noopener noreferrer" class="fw-semibold text-decoration-none">MicroG</a>
+                    <div class="small opacity-75">arm, arm64, x86_64, x86 · Android 7.0 – 17.0</div>
+                    <div class="small opacity-50">arm: 7.0 – 16.0 · x86: 7.0 – 11.0</div>
+                </div>
+                <a href="https://www.opendesktop.org/p/2147210/" class="btn btn-tonal"><i class="bi bi-download"></i> Download</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="md3-card download-card mb-4">
+        <div class="card-body p-4">
+            <div class="dl-head">
+                <div class="md3-icon-container mb-0"><i class="bi bi-eraser"></i></div>
+                <div>
+                    <h2 class="h5 mb-1">LiteGapps Remover</h2>
+                    <p class="mb-0 small opacity-75">arm64 only. Pick your Android version.</p>
+                </div>
+            </div>
+            <div class="row g-2">
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <a class="dl-tile" href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/37/" aria-label="Download Remover for Android 17.0">
+                            <span><span class="dl-tile-title">Android 17.0</span><span class="dl-tile-sub">API 37 · v1</span></span>
+                            <i class="bi bi-download" aria-hidden="true"></i>
+                        </a>
                     </div>
-                    <p class="mb-2 opacity-75">
-                        Confused about the differences between Lite, Core, Nano, or Pixel variants?
-                    </p>
-                    <a href="/doc/litegapps_variant.html" class="text-decoration-none fw-semibold d-inline-flex align-items-center gap-1 justify-content-center">Click Here to Learn More <i class="bi bi-arrow-right"></i></a>
-                </div>
-                <hr class="my-4 border-secondary opacity-25">
-                <h2 class="h4 text-center mb-4"><strong>LiteGapps & Addons Downloader</strong></h2>
-                <div class="row g-4 mb-5">
-                    <div class="col-md-4">
-                        <label for="type" class="form-label small fw-medium opacity-75">Product</label>
-                        <select id="type" class="form-select"></select>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <a class="dl-tile" href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/36/" aria-label="Download Remover for Android 16.0">
+                            <span><span class="dl-tile-title">Android 16.0</span><span class="dl-tile-sub">API 36 · v1</span></span>
+                            <i class="bi bi-download" aria-hidden="true"></i>
+                        </a>
                     </div>
-                    <div class="col-md-4">
-                        <label for="platform" class="form-label small fw-medium opacity-75">Architecture</label>
-                        <select id="platform" class="form-select"></select>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <a class="dl-tile" href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/35/" aria-label="Download Remover for Android 15.0">
+                            <span><span class="dl-tile-title">Android 15.0</span><span class="dl-tile-sub">API 35 · v1</span></span>
+                            <i class="bi bi-download" aria-hidden="true"></i>
+                        </a>
                     </div>
-                    <div class="col-md-4">
-                        <label for="android" class="form-label small fw-medium opacity-75">Android Version</label>
-                        <select id="android" class="form-select"></select>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <a class="dl-tile" href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/34/" aria-label="Download Remover for Android 14.0">
+                            <span><span class="dl-tile-title">Android 14.0</span><span class="dl-tile-sub">API 34 · v1</span></span>
+                            <i class="bi bi-download" aria-hidden="true"></i>
+                        </a>
                     </div>
-                </div>
-                <div class="d-grid gap-2">
-                    <button type="button" id="download-button" class="btn btn-primary"></button>
-                </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <a class="dl-tile" href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/33/" aria-label="Download Remover for Android 13.0">
+                            <span><span class="dl-tile-title">Android 13.0</span><span class="dl-tile-sub">API 33 · v1</span></span>
+                            <i class="bi bi-download" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <a class="dl-tile" href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/32/" aria-label="Download Remover for Android 12.1">
+                            <span><span class="dl-tile-title">Android 12.1</span><span class="dl-tile-sub">API 32 · v1</span></span>
+                            <i class="bi bi-download" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <a class="dl-tile" href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/31/" aria-label="Download Remover for Android 12.0">
+                            <span><span class="dl-tile-title">Android 12.0</span><span class="dl-tile-sub">API 31 · v1</span></span>
+                            <i class="bi bi-download" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <a class="dl-tile" href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/30/" aria-label="Download Remover for Android 11.0">
+                            <span><span class="dl-tile-title">Android 11.0</span><span class="dl-tile-sub">API 30 · v1</span></span>
+                            <i class="bi bi-download" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <div class="col-6 col-sm-4 col-md-3">
+                        <a class="dl-tile" href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/29/" aria-label="Download Remover for Android 10.0">
+                            <span><span class="dl-tile-title">Android 10.0</span><span class="dl-tile-sub">API 29 · v1</span></span>
+                            <i class="bi bi-download" aria-hidden="true"></i>
+                        </a>
+                    </div>
             </div>
         </div>
+    </section>
 
-        <div class="md3-card mb-5 border-0">
-            <div class="card-body p-4 p-md-5">
-                <h2 class="h4 text-center mb-4"><strong>LiteGappsX</strong></h2>
-                <div class="table-responsive">
-                    <table class="table table-hover align-middle text-center mb-0">
-                        <thead style="background-color: var(--md-sys-color-surface-container-high);">
-                            <tr>
-                                <th scope="col" class="py-3 border-0 rounded-start">Variant</th>
-                                <th scope="col" class="py-3 border-0">Download</th>
-                                <th scope="col" class="py-3 border-0">Architecture</th>
-                                <th scope="col" class="py-3 border-0 rounded-end">Android</th>
-                            </tr>
-                        </thead>
-                        <tbody class="border-top-0">
-                            <tr>
-                                <th scope="row" class="fw-medium border-bottom-0 py-3">
-                                    <a href="https://microg.org/" target="_blank" rel="noopener noreferrer" class="text-decoration-none">MicroG</a>
-                                </th>
-                                <td class="border-bottom-0 py-3">
-                                    <a href="https://www.opendesktop.org/p/2147210/" aria-label="Download MicroG" class="icon-button d-inline-block transition-hover">
-                                        <svg aria-hidden="true" width="32" height="32"> <use xlink:href="#icon-download-grad"></use> </svg>
-                                    </a>
-                                </td>
-                                <td class="border-bottom-0 py-3"><small class="opacity-75">arm, arm64, x86_64, x86</small></td>
-                                <td class="border-bottom-0 py-3"><small class="opacity-75">7.0 - 17.0<br>(arm: 7.0 - 16.0; x86: 7.0 - 11.0)</small></td>
-                            </tr>
-                        </tbody>
-                    </table>
+    <section class="md3-card download-card mb-4">
+        <div class="card-body p-4">
+            <div class="dl-head">
+                <div class="md3-icon-container mb-0"><i class="bi bi-tools"></i></div>
+                <div>
+                    <h2 class="h5 mb-1">Other Tools</h2>
+                    <p class="mb-0 small opacity-75">Configuration file and the Lico companion app.</p>
                 </div>
             </div>
+            <div class="d-grid gap-2 d-sm-flex">
+                <a class="btn btn-primary flex-sm-fill" href="https://www.pling.com/p/2128704/"><i class="bi bi-file-earmark-text"></i> Download Config File</a>
+                <a class="btn btn-tonal flex-sm-fill" href="https://github.com/litegapps/litegapps-controller/releases/latest"><i class="bi bi-phone"></i> Download Lico</a>
+            </div>
         </div>
+    </section>
 
-        <div class="md3-card mb-5 border-0">
-             <div class="card-body p-4 p-md-5">
-                <h2 class="h4 text-center mb-4"><strong>LiteGapps Remover (arm64)</strong></h2>
-                <div class="table-responsive">
-                    <table class="table table-hover align-middle text-center mb-0">
-                        <thead style="background-color: var(--md-sys-color-surface-container-high);">
-                            <tr>
-                                <th scope="col" class="py-3 border-0 rounded-start">Android</th>
-                                <th scope="col" class="py-3 border-0">Download</th>
-                                <th scope="col" class="py-3 border-0">API</th>
-                                <th scope="col" class="py-3 border-0 rounded-end">Version</th>
-                            </tr>
-                        </thead>
-                        <tbody class="border-top-0">
-                            <tr><th scope="row" class="fw-normal py-3">17.0</th><td class="py-3"><a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/37/" aria-label="Download Remover for Android 17.0" class="icon-button"><svg aria-hidden="true" width="28" height="28"><use xlink:href="#icon-download-grad"></use></svg></a></td><td class="py-3"><small class="opacity-75">37</small></td><td class="py-3"><small class="opacity-75">v1</small></td></tr>
-                            <tr><th scope="row" class="fw-normal py-3">16.0</th><td class="py-3"><a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/36/" aria-label="Download Remover for Android 16.0" class="icon-button"><svg aria-hidden="true" width="28" height="28"><use xlink:href="#icon-download-grad"></use></svg></a></td><td class="py-3"><small class="opacity-75">36</small></td><td class="py-3"><small class="opacity-75">v1</small></td></tr>
-                            <tr><th scope="row" class="fw-normal py-3">15.0</th><td class="py-3"><a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/35/" aria-label="Download Remover for Android 15.0" class="icon-button"><svg aria-hidden="true" width="28" height="28"><use xlink:href="#icon-download-grad"></use></svg></a></td><td class="py-3"><small class="opacity-75">35</small></td><td class="py-3"><small class="opacity-75">v1</small></td></tr>
-                            <tr><th scope="row" class="fw-normal py-3">14.0</th><td class="py-3"><a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/34/" aria-label="Download Remover for Android 14.0" class="icon-button"><svg aria-hidden="true" width="28" height="28"><use xlink:href="#icon-download-grad"></use></svg></a></td><td class="py-3"><small class="opacity-75">34</small></td><td class="py-3"><small class="opacity-75">v1</small></td></tr>
-                            <tr><th scope="row" class="fw-normal py-3">13.0</th><td class="py-3"><a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/33/" aria-label="Download Remover for Android 13.0" class="icon-button"><svg aria-hidden="true" width="28" height="28"><use xlink:href="#icon-download-grad"></use></svg></a></td><td class="py-3"><small class="opacity-75">33</small></td><td class="py-3"><small class="opacity-75">v1</small></td></tr>
-                            <tr><th scope="row" class="fw-normal py-3">12.1</th><td class="py-3"><a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/32/" aria-label="Download Remover for Android 12.1" class="icon-button"><svg aria-hidden="true" width="28" height="28"><use xlink:href="#icon-download-grad"></use></svg></a></td><td class="py-3"><small class="opacity-75">32</small></td><td class="py-3"><small class="opacity-75">v1</small></td></tr>
-                            <tr><th scope="row" class="fw-normal py-3">12.0</th><td class="py-3"><a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/31/" aria-label="Download Remover for Android 12.0" class="icon-button"><svg aria-hidden="true" width="28" height="28"><use xlink:href="#icon-download-grad"></use></svg></a></td><td class="py-3"><small class="opacity-75">31</small></td><td class="py-3"><small class="opacity-75">v1</small></td></tr>
-                            <tr><th scope="row" class="fw-normal py-3">11.0</th><td class="py-3"><a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/30/" aria-label="Download Remover for Android 11.0" class="icon-button"><svg aria-hidden="true" width="28" height="28"><use xlink:href="#icon-download-grad"></use></svg></a></td><td class="py-3"><small class="opacity-75">30</small></td><td class="py-3"><small class="opacity-75">v1</small></td></tr>
-                            <tr><th scope="row" class="fw-normal py-3 border-bottom-0">10.0</th><td class="py-3 border-bottom-0"><a href="https://sourceforge.net/projects/litegapps/files/litegapps_remover/arm64/29/" aria-label="Download Remover for Android 10.0" class="icon-button"><svg aria-hidden="true" width="28" height="28"><use xlink:href="#icon-download-grad"></use></svg></a></td><td class="py-3 border-bottom-0"><small class="opacity-75">29</small></td><td class="py-3 border-bottom-0"><small class="opacity-75">v1</small></td></tr>
-                        </tbody>
-                    </table>
+    <section class="md3-card download-card mb-4">
+        <div class="card-body p-4">
+            <div class="dl-head">
+                <div class="md3-icon-container mb-0"><i class="bi bi-bar-chart"></i></div>
+                <div>
+                    <h2 class="h5 mb-1">Download Analytics</h2>
+                    <p class="mb-0 small opacity-75">Live statistics from SourceForge.</p>
                 </div>
             </div>
-        </div>
-        
-        <div class="md3-card mb-5 border-0">
-            <div class="card-body p-4 p-md-5">
-                <h2 class="h4 text-center mb-4"><strong>Other Tools</strong></h2>
-                 <div class="d-grid gap-3 d-md-flex justify-content-md-center">
-                    <a class="btn btn-primary" href="https://www.pling.com/p/2128704/">
-                        Download Config File
-                    </a>
-                    <a class="btn btn-tonal" href="https://github.com/litegapps/litegapps-controller/releases/latest">
-                        Download Lico (LiteGapps Controller)
-                    </a>
-                 </div>
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <a href="https://sourceforge.net/projects/litegapps/files/latest/download" target="_blank" rel="noopener noreferrer" class="transition-hover"><img class="rounded img-fluid" alt="Total LiteGapps Downloads" src="https://img.shields.io/sourceforge/dt/litegapps.svg?style=for-the-badge&logo=sourceforge&color=0b57d0"></a>
+                <a href="https://sourceforge.net/projects/litegapps/files/latest/download" target="_blank" rel="noopener noreferrer" class="transition-hover"><img class="rounded img-fluid" alt="Monthly LiteGapps Downloads" src="https://img.shields.io/sourceforge/dm/litegapps.svg?style=for-the-badge&logo=sourceforge&color=004a77"></a>
+                <a href="https://sourceforge.net/projects/litegapps/files/latest/download" target="_blank" rel="noopener noreferrer" class="transition-hover"><img class="rounded img-fluid" alt="Weekly LiteGapps Downloads" src="https://img.shields.io/sourceforge/dw/litegapps.svg?style=for-the-badge&logo=sourceforge&color=334b4e"></a>
+                <a href="https://sourceforge.net/projects/litegapps/files/latest/download" target="_blank" rel="noopener noreferrer" class="transition-hover"><img class="rounded img-fluid" alt="Daily LiteGapps Downloads" src="https://img.shields.io/sourceforge/dd/litegapps.svg?style=for-the-badge&logo=sourceforge&color=74777f"></a>
             </div>
         </div>
+    </section>
 
-        <div class="md3-card mb-4 border-0">
-            <div class="card-body p-4 p-md-5">
-                <h2 class="h4 text-center mb-4"><strong>Download Analytics</strong></h2>
-                <div class="d-flex flex-column flex-md-row flex-wrap justify-content-center align-items-center gap-3">
-                    <a href="https://sourceforge.net/projects/litegapps/files/latest/download" target="_blank" rel="noopener noreferrer" class="transition-hover">
-                        <img class="shadow-sm rounded img-fluid" alt="Total LiteGapps Downloads" src="https://img.shields.io/sourceforge/dt/litegapps.svg?style=for-the-badge&logo=sourceforge&color=0b57d0">
-                    </a>
-                    <a href="https://sourceforge.net/projects/litegapps/files/latest/download" target="_blank" rel="noopener noreferrer" class="transition-hover">
-                        <img class="shadow-sm rounded img-fluid" alt="Monthly LiteGapps Downloads" src="https://img.shields.io/sourceforge/dm/litegapps.svg?style=for-the-badge&logo=sourceforge&color=004a77">
-                    </a>
-                    <a href="https://sourceforge.net/projects/litegapps/files/latest/download" target="_blank" rel="noopener noreferrer" class="transition-hover">
-                        <img class="shadow-sm rounded img-fluid" alt="Weekly LiteGapps Downloads" src="https://img.shields.io/sourceforge/dw/litegapps.svg?style=for-the-badge&logo=sourceforge&color=334b4e">
-                    </a>
-                    <a href="https://sourceforge.net/projects/litegapps/files/latest/download" target="_blank" rel="noopener noreferrer" class="transition-hover">
-                        <img class="shadow-sm rounded img-fluid" alt="Daily LiteGapps Downloads" src="https://img.shields.io/sourceforge/dd/litegapps.svg?style=for-the-badge&logo=sourceforge&color=74777f">
-                    </a>
-                </div>
-            </div>
-        </div>
-
-    </div>
 </div>
-    
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const typeSelect = document.getElementById('type');

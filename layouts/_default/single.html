@@ -1,4 +1,11 @@
 {{ define "main" }}
+{{ if .Params.nocard }}
+{{/* Page content provides its own cards — skip the wrapper card to avoid nested (double) borders. */}}
+<h1 class="display-5 fw-bold text-center mb-0" style="color: var(--md-sys-color-primary);">
+    {{ .Title }}
+</h1>
+{{ .Content }}
+{{ else }}
 <div class="row justify-content-center">
     <div class="col-lg-10 col-xl-9">
         
@@ -8,4 +15,5 @@
 
     </div>
 </div>
+{{ end }}
 {{ end }}
