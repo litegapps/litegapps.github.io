@@ -1,0 +1,22 @@
+{{/* Renders the variant accordion from data/variants.yaml */}}
+<div class="variants">
+{{ range $i, $v := hugo.Data.variants }}
+    <details class="variant"{{ if eq $i 0 }} open{{ end }}>
+        <summary class="variant__head">
+            <span class="variant__name">{{ $v.name }}</span>
+            <span class="variant__meta"><span class="variant__size">{{ $v.size }}</span><i class="variant__chevron bi bi-chevron-down"></i></span>
+        </summary>
+        <div class="variant__body">
+            <p class="variant__desc"><strong>Description:</strong> {{ $v.description }}</p>
+            <div class="var-cols">
+            {{ range $v.groups }}
+                <div>
+                    <h3 class="var-cat">{{ .title }}</h3>
+                    <ul class="var-apps">{{ range .apps }}<li>{{ . }}</li>{{ end }}</ul>
+                </div>
+            {{ end }}
+            </div>
+        </div>
+    </details>
+{{ end }}
+</div>

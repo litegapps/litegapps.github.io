@@ -173,54 +173,14 @@
             <h2 class="text-center display-6 mb-2">Available Variants</h2>
             <p class="text-center opacity-75 mb-5">Not sure which one? <a href="/doc/litegapps_variant.html" class="text-decoration-none fw-semibold">Compare all variants <i class="bi bi-arrow-right"></i></a></p>
             <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
+                {{ range hugo.Data.variants }}
+                <div class="col-md-6 col-lg-4">
                     <div class="md3-card p-4 h-100">
-                        <div class="d-flex align-items-center justify-content-between gap-2 mb-2"><h3 class="h5 mb-0"><strong>Pixel</strong></h3><span class="variant-size">600MB – 1GB</span></div>
-                        <p class="opacity-75 small mb-0">Includes all Google Apps from the latest Pixel devices. Large size (600MB - 1GB). Not recommended for devices with limited storage/RAM.</p>
+                        <div class="d-flex align-items-center justify-content-between gap-2 mb-2"><h3 class="h5 mb-0"><strong>{{ .name }}</strong></h3><span class="variant-size">{{ .size }}</span></div>
+                        <p class="opacity-75 small mb-0">{{ .summary }}</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="md3-card p-4 h-100">
-                        <div class="d-flex align-items-center justify-content-between gap-2 mb-2"><h3 class="h5 mb-0"><strong>Micro</strong></h3><span class="variant-size">300 – 600MB</span></div>
-                        <p class="opacity-75 small mb-0">A smaller subset of the Pixel variant (300MB - 600MB). Still may be heavily demanding for low-spec devices.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="md3-card p-4 h-100">
-                        <div class="d-flex align-items-center justify-content-between gap-2 mb-2"><h3 class="h5 mb-0"><strong>Nano</strong></h3><span class="variant-size">150 – 300MB</span></div>
-                        <p class="opacity-75 small mb-0">A lighter version with fewer components (150MB - 300MB). Highly recommended for devices with average memory capacity.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="md3-card p-4 h-100">
-                        <div class="d-flex align-items-center justify-content-between gap-2 mb-2"><h3 class="h5 mb-0"><strong>Basic</strong></h3><span class="variant-size">150 – 200MB</span></div>
-                        <p class="opacity-75 small mb-0">Contains only essential components while maintaining core functionality (150MB - 200MB). Ideal for low-spec devices.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="md3-card p-4 h-100">
-                        <div class="d-flex align-items-center justify-content-between gap-2 mb-2"><h3 class="h5 mb-0"><strong>User</strong></h3><span class="variant-size">Community</span></div>
-                        <p class="opacity-75 small mb-0">A community-driven customized package where app selection is based purely on user votes from our Telegram group.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="md3-card p-4 h-100">
-                        <div class="d-flex align-items-center justify-content-between gap-2 mb-2"><h3 class="h5 mb-0"><strong>Go</strong></h3><span class="variant-size">Go apps</span></div>
-                        <p class="opacity-75 small mb-0">Designed explicitly for low-memory devices, featuring Google's lightweight "Go" edition apps (e.g., Maps Go, Gmail Go).</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="md3-card p-4 h-100">
-                        <div class="d-flex align-items-center justify-content-between gap-2 mb-2"><h3 class="h5 mb-0"><strong>Core</strong></h3><span class="variant-size">60 – 80MB</span></div>
-                        <p class="opacity-75 small mb-0">A minimal, barebones package with only the most crucial components (60MB - 80MB). One of our absolute most popular variants.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="md3-card p-4 h-100">
-                        <div class="d-flex align-items-center justify-content-between gap-2 mb-2"><h3 class="h5 mb-0"><strong>Lite</strong></h3><span class="variant-size">Smallest</span></div>
-                        <p class="opacity-75 small mb-0">The smallest, most minimalist variant. Contains only Google Play Services, Play Store, and GSF. Perfect for users who want maximum control.</p>
-                    </div>
-                </div>
+                {{ end }}
             </div>
         </div>
 

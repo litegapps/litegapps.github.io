@@ -1,0 +1,88 @@
+# Single source of truth for LiteGapps variants.
+# Used by the home page (layouts/index.html) and the variant doc page (shortcode `variants`).
+
+- name: "Pixel"
+  size: "1.2 GB"
+  summary: "Includes all Google Apps from the latest Pixel devices. Not recommended for devices with limited storage or RAM."
+  description: "LiteGapps Pixel is a complete package of Google apps ported directly from Google Pixel. You will get Google Apps on Google Pixel and their features, but they are large in size."
+  groups:
+    - title: "Core Packages"
+      apps: ["Android Migrate", "Carrier Services", "Carrier Setup", "Common", "Config Updater", "Google Play Services", "Google Backup Transport", "Google Calendar Sync Adapter", "Google Contacts Sync Adapter", "Google ExtServices", "Google ExtShared", "Google Feedback", "Google One Time Initializer", "Google Partner Setup", "Google Restore", "Google Services Framework", "Google Play Store", "Setup Wizard"]
+    - title: "Gapps Packages"
+      apps: ["Android Auto", "Arcore", "Chrome", "Desk Clock Google", "Device Policy", "Dream Liner", "Drive", "Files", "Gmail", "Google Assistant", "Google Calculator", "Google Calendar", "Google Contacts", "Google Dialer", "Google Keyboard", "Google Pixel Wallpaper", "Google TTS", "Google Vr Core", "Google Web View", "Keep", "Location History", "Maps", "Markup Google", "Messaging", "Photos", "Pixel Launcher", "Pixel Live Wallpaper", "Play Games", "Recorder", "Sound Picker", "Sribe", "Talkback", "Turbo", "Tycho", "Google Search", "Videos", "Wallpaper Picker", "Wellbeing", "Youtube", "Youtube Music"]
+
+- name: "Micro"
+  size: "616.0 MB"
+  summary: "A smaller subset of the Pixel variant. May still be demanding for low-spec devices."
+  description: "LiteGapps Micro is a package containing half of the pixel variants that you consider important and necessary for the user."
+  groups:
+    - title: "Core Packages"
+      apps: ["Android Migrate", "Carrier Services", "Carrier Setup", "Common", "Config Updater", "Google Play Services", "Google Backup Transport", "Google Calendar Sync Adapter", "Google Contacts Sync Adapter", "Google ExtServices", "Google ExtShared", "Google Feedback", "Google One Time Initializer", "Google Partner Setup", "Google Restore", "Google Services Framework", "Playstore", "Setup Wizard"]
+    - title: "Gapps Packages"
+      apps: ["AndroidAuto", "Arcore", "DeskClockGoogle", "DevicePolicy", "Chrome", "Gmail", "Files", "GoogleAssistant", "GoogleCalculator", "GoogleCalendar", "GoogleContacts", "GoogleDialer", "GoogleKeyboard", "GoogleTTS", "LocationHistory", "MarkupGoogle", "Messaging", "PixelLauncher", "PixelLiveWallpaper", "SoundPicker", "Talkback", "Turbo", "Velvet", "GoogleSearch", "WallpaperPicker", "Wellbeing"]
+
+- name: "Nano"
+  size: "353.4 MB"
+  summary: "A lighter version with fewer components. Recommended for devices with average memory."
+  description: "LiteGapps Nano is a package that has a medium size, so it is not too heavy to install on your device."
+  groups:
+    - title: "Core Packages"
+      apps: ["Android Migrate", "Carrier Services", "Carrier Setup", "Common", "Config Updater", "Google Play Services", "Google Backup Transport", "Google Calendar Sync Adapter", "Google Contacts Sync Adapter", "Google ExtServices", "Google ExtShared", "Google Feedback", "Google One Time Initializer", "Google Partner Setup", "Google Restore", "Google Services Framework", "Playstore", "Setup Wizard"]
+    - title: "Gapps Packages"
+      apps: ["Android Auto", "Arcore", "Desk Clock Google", "Device Policy", "Dream Liner", "Gmail", "Google Assistant", "Google Calculator", "Google Calendar", "Google Contacts", "Google Dialer", "Google Keyboard", "Google Vr Core", "Location History", "Markup Google", "Messaging", "Play Games", "Sound Picker", "Wallpaper Picker", "Wellbeing"]
+
+- name: "Basic"
+  size: "161.4 MB"
+  summary: "Only essential apps while keeping core functionality. Ideal for low-spec devices."
+  description: "LiteGapps Basic is a light version but still maintains some of the general functions of Google Apps."
+  groups:
+    - title: "Core Packages"
+      apps: ["Android Migrate", "Carrier Services", "Carrier Setup", "Common", "Config Updater", "Google Play Services", "Google Backup Transport", "Google Calendar Sync Adapter", "Google Contacts Sync Adapter", "Google ExtServices", "Google ExtShared", "Google Feedback", "Google One Time Initializer", "Google Partner Setup", "Google Restore", "Google Services Framework", "Playstore", "Setup Wizard"]
+    - title: "Gapps Packages"
+      apps: ["Android Auto", "Arcore", "Device Policy", "Gmail", "Google Vr Core", "Location History", "Markup Google", "Play Games", "Sound Picker", "Wellbeing"]
+
+- name: "User"
+  size: "338.7 MB"
+  summary: "Community-driven package: app selection is based on user votes in our Telegram group."
+  description: "LiteGapps User is a variant of google apps that contains apps that are frequently used by users."
+  groups:
+    - title: "Core Packages"
+      apps: ["Android Migrate", "Carrier Services", "Carrier Setup", "Common", "Config Updater", "Google Play Services", "Google Backup Transport", "Google Calendar Sync Adapter", "Google Contacts Sync Adapter", "Google ExtServices", "Google ExtShared", "Google Feedback", "Google One Time Initializer", "Google Partner Setup", "Google Restore", "Google Services Framework", "Playstore", "Setup Wizard"]
+    - title: "Gapps Packages"
+      apps: ["Chrome", "Google Keyboard", "Pixel Launcher", "Pixel Live Wallpaper", "Play Games"]
+    - title: "Go Packages"
+      apps: ["Gallery Go", "Gmail Go"]
+
+- name: "Go"
+  size: "118.3 MB"
+  summary: "Built for low-memory devices with Google's lightweight Go apps (Maps Go, Gmail Go, …)."
+  description: "LiteGapps Go is a package containing Google Apps Go which is designed for devices with low specifications, but can still use commonly used Google applications."
+  groups:
+    - title: "Core Packages"
+      apps: ["Android Migrate", "Carrier Services", "Carrier Setup", "Common", "Config Updater", "Google Play Services", "Google Backup Transport", "Google Calendar Sync Adapter", "Google Contacts Sync Adapter", "Google ExtServices", "Google ExtShared", "Google Feedback", "Google One Time Initializer", "Google Partner Setup", "Google Restore", "Google Services Framework", "Playstore", "Setup Wizard"]
+    - title: "Gapps Packages"
+      apps: ["Assistant Go", "Gallery Go", "Gmail Go", "Maps Go", "Navigation Go", "Google Search Go"]
+
+- name: "Core"
+  size: "74.0 MB"
+  summary: "A minimal package with only the core Google components. One of our most popular variants."
+  description: "LiteGapps Core is a package that contains the core package of google apps."
+  groups:
+    - title: "Core Packages"
+      apps: ["Android Migrate", "Carrier Services", "Carrier Setup", "Common", "Config Updater", "Google Play Services", "Google Backup Transport", "Google Calendar Sync Adapter", "Google Contacts Sync Adapter", "Google ExtServices", "Google ExtShared", "Google Feedback", "Google One Time Initializer", "Google Partner Setup", "Google Restore", "Google Services Framework", "Playstore", "Setup Wizard"]
+
+- name: "Lite"
+  size: "60.6 MB"
+  summary: "Small and light: just the essentials such as Google Play Services, Play Store and GSF."
+  description: "LiteGapps Lite is a small and light version of google apps."
+  groups:
+    - title: "Core Packages"
+      apps: ["Common", "Google Contacts Sync Adapter", "Google Services Framework", "Google Play Services", "PlayStore"]
+
+- name: "SuperLite"
+  size: "50.6 MB"
+  summary: "Like Lite, but with an older GMS Core and Play Store so it is even smaller. For 1–2 GB RAM phones."
+  description: "Same as the lite variant but the difference is that it uses gmscore and the old playstore, so it is smaller. Suitable for mobile phones with 1/2 GB RAM."
+  groups:
+    - title: "Core Packages"
+      apps: ["Common", "Google Services Framework", "Google Play Services", "PlayStore"]
