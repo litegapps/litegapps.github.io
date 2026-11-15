@@ -1,10 +1,40 @@
 {{ define "changelog" }}
 <div class="row justify-content-center">
     <div class="col-lg-10 col-xl-9">
-        
-        <article class="md3-card p-4 p-md-5 border-0 shadow-sm" style="border-top: 4px solid var(--md-sys-color-primary) !important;">
-            {{ partial "single.html" . }}
+
+        <a href="{{ "changelog/" | relURL }}" class="back-link mb-3"><i class="bi bi-arrow-left" aria-hidden="true"></i> All changelogs</a>
+
+        <article class="md3-card article-card p-4 p-md-5">
+            <header class="mb-4 pb-3 article-head">
+                <h1 class="h2 fw-bold mb-2 text-start" style="color: var(--md-sys-color-primary);">{{ .Title }}</h1>
+                <div class="d-flex flex-wrap align-items-center gap-2 small opacity-75">
+                    <i class="bi bi-calendar3" aria-hidden="true"></i>
+                    <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "January 2, 2006" }}</time>
+                </div>
+            </header>
+            <div class="prose">
+                {{ .Content }}
+            </div>
         </article>
+
+        <nav class="row g-3 mt-2" aria-label="More changelogs">
+            {{ with .NextInSection }}
+            <div class="col-sm-6">
+                <a href="{{ .RelPermalink }}" class="list-tile h-100">
+                    <i class="bi bi-chevron-left list-tile-arrow" aria-hidden="true"></i>
+                    <span class="list-tile-body"><span class="list-tile-meta mb-0">Newer</span><span class="list-tile-title mb-0">{{ .Title }}</span></span>
+                </a>
+            </div>
+            {{ end }}
+            {{ with .PrevInSection }}
+            <div class="col-sm-6 ms-auto">
+                <a href="{{ .RelPermalink }}" class="list-tile h-100 text-end">
+                    <span class="list-tile-body"><span class="list-tile-meta mb-0 justify-content-end">Older</span><span class="list-tile-title mb-0">{{ .Title }}</span></span>
+                    <i class="bi bi-chevron-right list-tile-arrow" aria-hidden="true"></i>
+                </a>
+            </div>
+            {{ end }}
+        </nav>
 
     </div>
 </div>

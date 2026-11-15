@@ -846,3 +846,37 @@ a.md3-chip:hover { filter: brightness(0.96); text-decoration: none; }
   transition: transform 0.2s ease;
 }
 .list-tile:hover .list-tile-arrow { transform: translateX(3px); }
+
+/* ---------------------------------------------------------------------
+   ARTICLE (single pages)
+   --------------------------------------------------------------------- */
+.article-card { border: 1px solid var(--md-sys-color-outline-variant); }
+.article-card:hover {
+  transform: none;
+  box-shadow: none;
+  background-color: var(--md-sys-color-surface-container);
+}
+.article-head { border-bottom: 1px solid var(--md-sys-color-outline-variant); }
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: var(--md-sys-color-primary);
+}
+.back-link:hover { text-decoration: underline; }
+.prose { line-height: 1.75; }
+.prose ul, .prose ol { padding-left: 1.25rem; }
+.prose li { margin-bottom: 0.35rem; }
+.prose li::marker { color: var(--md-sys-color-primary); }
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  text-align: left;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+}
+.prose h1, .prose h2 { font-size: 1.35rem; }
+.prose h3 { font-size: 1.15rem; }
+.prose h4 { font-size: 1rem; }
+.prose > :first-child { margin-top: 0; }
